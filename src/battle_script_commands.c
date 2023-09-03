@@ -336,6 +336,32 @@ static const u16 sWhiteOutBadgeMoney[9] = { 8, 16, 24, 36, 48, 64, 80, 100, 120 
 
 #define TAG_LVLUP_BANNER_MON_ICON 55130
 
+//Level Logic
+enum LevelCap {
+    LEVEL_CAP_NO_BADGES,
+    LEVEL_CAP_BADGE_1,
+    LEVEL_CAP_BADGE_2,
+    LEVEL_CAP_BADGE_3,
+    LEVEL_CAP_BADGE_4,
+    LEVEL_CAP_BADGE_5,
+    LEVEL_CAP_BADGE_6,
+    LEVEL_CAP_BADGE_7,
+    LEVEL_CAP_BADGE_8
+};
+
+static const u8 levelCapTable[] = 
+{
+    [LEVEL_CAP_NO_BADGES]   = 15,
+    [LEVEL_CAP_BADGE_1]     = 19,
+    [LEVEL_CAP_BADGE_2]     = 29,
+    [LEVEL_CAP_BADGE_3]     = 42,
+    [LEVEL_CAP_BADGE_4]     = 48,
+    [LEVEL_CAP_BADGE_5]     = 55,
+    [LEVEL_CAP_BADGE_6]     = 70,
+    [LEVEL_CAP_BADGE_7]     = 77,
+    [LEVEL_CAP_BADGE_8]     = 100,
+};
+
 static bool8 IsTwoTurnsMove(u16 move);
 static void TrySetDestinyBondToHappen(void);
 static u8 AttacksThisTurn(u8 battlerId, u16 move); // Note: returns 1 if it's a charging turn, otherwise 2.
@@ -4264,6 +4290,24 @@ static void Cmd_jumpbasedontype(void)
     }
 }
 
+u8 CurrentLevelCap(void)
+{
+    return levelCapTable[GetNumberOfBadges()];
+}
+
+u8 GetNumberOfBadges(void)
+{
+    u8 i;
+
+    for (i = 0; i < NUM_BADGES; i++)
+    {
+        if (!FlagGet(sBadgeFlags[i]))
+            break;
+    }
+
+    return i;
+}
+
 static void Cmd_getexp(void)
 {
     CMD_ARGS(u8 battler);
@@ -4485,7 +4529,7 @@ static void Cmd_getexp(void)
         if (gBattleControllerExecFlags == 0)
         {
             gBattleResources->bufferB[gBattleStruct->expGetterBattlerId][0] = 0;
-            if (GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_HP) && GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL) != MAX_LEVEL)
+            if (GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_HP) && GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL) != CurrentLevelCap())
             {
                 gBattleResources->beforeLvlUp->stats[STAT_HP]    = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_MAX_HP);
                 gBattleResources->beforeLvlUp->stats[STAT_ATK]   = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_ATK);
