@@ -51,6 +51,7 @@
 #include "constants/items.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "constants/item_effects.h"
 
 #define TAG_POCKET_SCROLL_ARROW 110
 #define TAG_BAG_SCROLL_ARROW    111
@@ -1527,6 +1528,20 @@ static void CancelItemSwap(u8 taskId)
     gTasks[taskId].func = Task_BagMenu_HandleInput;
 }
 
+static const bool8 itemUsageRules[] = 
+{
+    [ITEM_EFFECT_X_ITEM]                    = TRUE,
+    [ITEM_EFFECT_HEAL_HP]                   = FALSE,
+    [ITEM_EFFECT_CURE_POISON]               = FALSE,
+    [ITEM_EFFECT_CURE_SLEEP]                = FALSE,
+    [ITEM_EFFECT_CURE_BURN]                 = FALSE,
+    [ITEM_EFFECT_CURE_FREEZE_FROSTBITE]     = FALSE,
+    [ITEM_EFFECT_CURE_PARALYSIS]            = FALSE,
+    [ITEM_EFFECT_CURE_ALL_STATUS]           = FALSE,
+    [ITEM_EFFECT_CURE_INFATUATION]          = FALSE,
+    [ITEM_EFFECT_HEAL_PP]                   = FALSE,
+};
+
 static void OpenContextMenu(u8 taskId)
 {
     switch (gBagPosition.location)
@@ -1535,8 +1550,16 @@ static void OpenContextMenu(u8 taskId)
     case ITEMMENULOCATION_WALLY:
         if (ItemId_GetBattleUsage(gSpecialVar_ItemId))
         {
-            gBagMenu->contextMenuItemsPtr = sContextMenuItems_BattleUse;
-            gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BattleUse);
+            if(itemUsageRules[GetItemEffectType(gSpecialVar_ItemId)])
+            {
+                gBagMenu->contextMenuItemsPtr = sContextMenuItems_BattleUse;
+                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BattleUse);
+            }
+            else
+            {
+                gBagMenu->contextMenuItemsPtr = sContextMenuItems_Cancel;
+                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_Cancel);
+            }
         }
         else
         {
