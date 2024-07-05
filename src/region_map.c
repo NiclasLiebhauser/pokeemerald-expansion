@@ -81,6 +81,13 @@ static EWRAM_DATA struct {
 
 static bool32 sDrawFlyDestTextWindow;
 
+static const u16 flyDestinations[]  =
+{
+    MAPSEC_PACIFIDLOG_TOWN,
+    MAPSEC_AQUA_HIDEOUT,
+    MAPSEC_SACRED_CITY
+};
+
 static u8 ProcessRegionMapInput_Full(void);
 static u8 MoveRegionMapCursor_Full(void);
 static u8 ProcessRegionMapInput_Zoomed(void);
@@ -1838,7 +1845,6 @@ static void LoadFlyDestIcons(void)
 
 static void CreateFlyDestIcons(void)
 {
-    u16 canFlyFlag;
     u16 mapSecId;
     u16 x;
     u16 y;
@@ -1847,10 +1853,10 @@ static void CreateFlyDestIcons(void)
     u16 shape;
     u8 spriteId;
 
-    canFlyFlag = FLAG_VISITED_LITTLEROOT_TOWN;
-    for (mapSecId = MAPSEC_LITTLEROOT_TOWN; mapSecId <= MAPSEC_EVER_GRANDE_CITY; mapSecId++)
+    for (mapSecId = 0; mapSecId < (sizeof(flyDestinations) / sizeof(flyDestinations[0])); mapSecId++)
     {
-        GetMapSecDimensions(mapSecId, &x, &y, &width, &height);
+        GetMapSecDimensions(flyDestinations[mapSecId], &x, &y, &width, &height);
+
         x = (x + MAPCURSOR_X_MIN) * 8 + 4;
         y = (y + MAPCURSOR_Y_MIN) * 8 + 4;
 
@@ -1866,15 +1872,14 @@ static void CreateFlyDestIcons(void)
         {
             gSprites[spriteId].oam.shape = shape;
 
-            if (FlagGet(canFlyFlag))
+            if (GetMapsecType(flyDestinations[mapSecId]) == MAPSECTYPE_CITY_CANFLY)
                 gSprites[spriteId].callback = SpriteCB_FlyDestIcon;
             else
                 shape += 3;
 
             StartSpriteAnim(&gSprites[spriteId], shape);
-            gSprites[spriteId].sIconMapSec = mapSecId;
+            gSprites[spriteId].sIconMapSec = flyDestinations[mapSecId];
         }
-        canFlyFlag++;
     }
 }
 

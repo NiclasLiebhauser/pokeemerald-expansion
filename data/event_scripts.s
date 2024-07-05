@@ -1072,3 +1072,21 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+	.include "data/maps/Route201/scripts.inc"
+	.include "data/maps/Route201/text.inc"
+
+	.include "data/maps/Route202/scripts.inc"
+	.include "data/maps/Route202/text.inc"
+
+	.include "data/maps/Route203/scripts.inc"
+	.include "data/maps/Route203/text.inc"
+
+	.include "data/maps/Route204/scripts.inc"
+	.include "data/maps/Route204/text.inc"
+
+	.include "data/maps/Route205/scripts.inc"
+	.include "data/maps/Route205/text.inc"
+
+	.include "data/maps/AquaHideout/scripts.inc"
+	.include "data/maps/AquaHideout/text.inc"

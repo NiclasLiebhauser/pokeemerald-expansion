@@ -174,7 +174,13 @@ static const u8 sRegionMapSectionId_To_PopUpThemeIdMapping[] =
     [MAPSEC_DESERT_UNDERPASS - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_STONE,
     [MAPSEC_ALTERING_CAVE - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_STONE,
     [MAPSEC_NAVEL_ROCK - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_STONE,
-    [MAPSEC_TRAINER_HILL - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_MARBLE
+    [MAPSEC_TRAINER_HILL - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_MARBLE,
+    [MAPSEC_ROUTE_201] = MAPPOPUP_THEME_WOOD,
+    [MAPSEC_ROUTE_202] = MAPPOPUP_THEME_WOOD,
+    [MAPSEC_ROUTE_203] = MAPPOPUP_THEME_WOOD,
+    [MAPSEC_ROUTE_204] = MAPPOPUP_THEME_WOOD,
+    [MAPSEC_ROUTE_205] = MAPPOPUP_THEME_WOOD,
+    [MAPSEC_ROUTE_206] = MAPPOPUP_THEME_WOOD,
 };
 
 static const u8 sText_PyramidFloor1[] = _("PYRAMID FLOOR 1");
@@ -355,6 +361,7 @@ static void ShowMapNamePopUpWindow(void)
         withoutPrefixPtr = &(mapDisplayHeader[3]);
         GetMapName(withoutPrefixPtr, gMapHeader.regionMapSectionId, 0);
     }
+
     AddMapNamePopUpWindow();
     LoadMapNamePopUpWindowBg();
     x = GetStringCenterAlignXOffset(FONT_NARROW, withoutPrefixPtr, 80);
