@@ -4470,6 +4470,56 @@
       "secondary_tileset": "gTileset_Pacifidlog",
       "border_filepath": "data/layouts/AquaHideout/border.bin",
       "blockdata_filepath": "data/layouts/AquaHideout/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE206",
+      "name": "Route206_Layout",
+      "width": 60,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/Route206/border.bin",
+      "blockdata_filepath": "data/layouts/Route206/map.bin"
+    },
+    {
+      "id": "LAYOUT_SACRED_ISLAND_NORTH",
+      "name": "SacredIslandNorth_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/SacredIslandNorth/border.bin",
+      "blockdata_filepath": "data/layouts/SacredIslandNorth/map.bin"
+    },
+    {
+      "id": "LAYOUT_SACRED_ISLAND_SOUTH",
+      "name": "SacredIslandSouth_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/SacredIslandSouth/border.bin",
+      "blockdata_filepath": "data/layouts/SacredIslandSouth/map.bin"
+    },
+    {
+      "id": "LAYOUT_SACRED_CITY",
+      "name": "SacredCity_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/SacredCity/border.bin",
+      "blockdata_filepath": "data/layouts/SacredCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_SACRED_ISLAND_EAST",
+      "name": "SacredIslandEast_Layout",
+      "width": 25,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/SacredIslandEast/border.bin",
+      "blockdata_filepath": "data/layouts/SacredIslandEast/map.bin"
     }
   ]
 }

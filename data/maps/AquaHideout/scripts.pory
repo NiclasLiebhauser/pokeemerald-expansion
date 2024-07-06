@@ -1,0 +1,8 @@
+mapscripts AquaHideout_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: AquaHideout_OnTransition
+}
+
+script AquaHideout_OnTransition {
+    setflag(FLAG_VISITED_AQUA_HIDEOUT)
+    end
+}

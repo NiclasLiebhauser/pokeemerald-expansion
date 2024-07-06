@@ -14,6 +14,16 @@
       "map": "MAP_ROUTE203",
       "offset": 0,
       "direction": "down"
+    },
+    {
+      "map": "MAP_AQUA_HIDEOUT",
+      "offset": 6,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE206",
+      "offset": 0,
+      "direction": "right"
     }
   ],
   "object_events": [

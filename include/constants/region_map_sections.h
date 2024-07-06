@@ -221,11 +221,13 @@
 #define MAPSEC_ROUTE_204                    0xD8
 #define MAPSEC_ROUTE_205                    0xD9
 #define MAPSEC_ROUTE_206                    0xDA
-#define MAPSEC_SACRED_ISLAND                0xDB
-#define MAPSEC_SACRED_CITY                  0xDC
-#define MAPSEC_MAGMA_ISLAND                 0xDD
+#define MAPSEC_SACRED_ISLAND_NORTH          0xDB
+#define MAPSEC_SACRED_ISLAND_EAST           0xDC
+#define MAPSEC_SACRED_ISLAND_SOUTH          0xDD
+#define MAPSEC_SACRED_CITY                  0xDE
+#define MAPSEC_MAGMA_ISLAND                 0xDF
 
-#define MAPSEC_NONE                         0xDF
+#define MAPSEC_NONE                         0xE0
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE

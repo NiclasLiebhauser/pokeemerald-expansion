@@ -1,0 +1,8 @@
+mapscripts SacredCity_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: SacredCity_OnTransition
+}
+
+script SacredCity_OnTransition {
+    setflag(FLAG_VISITED_SACRED_CITY)
+    end
+}

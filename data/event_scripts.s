@@ -1090,3 +1090,18 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/AquaHideout/scripts.inc"
 	.include "data/maps/AquaHideout/text.inc"
+
+	.include "data/maps/Route206/scripts.inc"
+	.include "data/maps/Route206/text.inc"
+
+	.include "data/maps/SacredIslandNorth/scripts.inc"
+	.include "data/maps/SacredIslandNorth/text.inc"
+
+	.include "data/maps/SacredIslandSouth/scripts.inc"
+	.include "data/maps/SacredIslandSouth/text.inc"
+
+	.include "data/maps/SacredCity/scripts.inc"
+	.include "data/maps/SacredCity/text.inc"
+
+	.include "data/maps/SacredIslandEast/scripts.inc"
+	.include "data/maps/SacredIslandEast/text.inc"

@@ -98,7 +98,12 @@
     "Route203",
     "Route204",
     "Route205",
-    "AquaHideout"
+    "AquaHideout",
+    "Route206",
+    "SacredIslandNorth",
+    "SacredIslandSouth",
+    "SacredCity",
+    "SacredIslandEast"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

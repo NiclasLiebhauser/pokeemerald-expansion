@@ -69,6 +69,11 @@
 #define MAP_ROUTE204            (60 | (0 << 8))
 #define MAP_ROUTE205            (61 | (0 << 8))
 #define MAP_AQUA_HIDEOUT        (62 | (0 << 8))
+#define MAP_ROUTE206            (63 | (0 << 8))
+#define MAP_SACRED_ISLAND_NORTH (64 | (0 << 8))
+#define MAP_SACRED_ISLAND_SOUTH (65 | (0 << 8))
+#define MAP_SACRED_CITY         (66 | (0 << 8))
+#define MAP_SACRED_ISLAND_EAST  (67 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))

@@ -1,24 +1,19 @@
 {
-  "id": "MAP_ROUTE203",
-  "name": "Route203",
-  "layout": "LAYOUT_ROUTE203",
-  "music": "MUS_ROUTE119",
-  "region_map_section": "MAPSEC_ROUTE_203",
+  "id": "MAP_SACRED_CITY",
+  "name": "SacredCity",
+  "layout": "LAYOUT_SACRED_CITY",
+  "music": "MUS_LILYCOVE",
+  "region_map_section": "MAPSEC_SACRED_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_ROUTE",
+  "map_type": "MAP_TYPE_CITY",
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE202",
-      "offset": 8,
-      "direction": "left"
-    },
-    {
-      "map": "MAP_ROUTE205",
-      "offset": 0,
-      "direction": "up"
+      "map": "MAP_SACRED_ISLAND_EAST",
+      "offset": -3,
+      "direction": "right"
     }
   ],
   "object_events": [

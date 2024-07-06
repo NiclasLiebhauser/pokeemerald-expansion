@@ -1,9 +1,9 @@
 {
-  "id": "MAP_ROUTE203",
-  "name": "Route203",
-  "layout": "LAYOUT_ROUTE203",
-  "music": "MUS_ROUTE119",
-  "region_map_section": "MAPSEC_ROUTE_203",
+  "id": "MAP_SACRED_ISLAND_EAST",
+  "name": "SacredIslandEast",
+  "layout": "LAYOUT_SACRED_ISLAND_EAST",
+  "music": "MUS_ROUTE101",
+  "region_map_section": "MAPSEC_SACRED_ISLAND_EAST",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
@@ -11,14 +11,19 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE202",
-      "offset": 8,
+      "map": "MAP_SACRED_CITY",
+      "offset": 3,
       "direction": "left"
     },
     {
-      "map": "MAP_ROUTE205",
-      "offset": 0,
+      "map": "MAP_SACRED_ISLAND_NORTH",
+      "offset": -15,
       "direction": "up"
+    },
+    {
+      "map": "MAP_SACRED_ISLAND_SOUTH",
+      "offset": -15,
+      "direction": "down"
     }
   ],
   "object_events": [
