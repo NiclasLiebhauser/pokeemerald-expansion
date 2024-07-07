@@ -9,6 +9,7 @@
 #include "task.h"
 #include "constants/event_objects.h"
 #include "constants/field_effects.h"
+#include "pokemon.h"
 
 // static functions
 static void FieldCallback_Strength(void);
@@ -38,7 +39,14 @@ bool8 FldEff_UseStrength(void)
     u8 taskId = CreateFieldMoveTask();
     gTasks[taskId].data[8] = (u32)StartStrengthFieldEffect >> 16;
     gTasks[taskId].data[9] = (u32)StartStrengthFieldEffect;
-    GetMonNickname(&gPlayerParty[gFieldEffectArguments[0]], gStringVar1);
+    if(gFieldEffectArguments[0] > PARTY_SIZE)
+    {
+        StringCopy(gStringVar1, GetSpeciesName(SPECIES_HARIYAMA));
+    }
+    else
+    {
+        GetMonNickname(&gPlayerParty[gFieldEffectArguments[0]], gStringVar1);
+    }
     return FALSE;
 }
 

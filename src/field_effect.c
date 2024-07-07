@@ -2,6 +2,7 @@
 #include "data.h"
 #include "decompress.h"
 #include "event_object_movement.h"
+#include "event_data.h"
 #include "field_camera.h"
 #include "field_control_avatar.h"
 #include "field_effect.h"
@@ -702,6 +703,8 @@ u32 FieldEffectStart(u8 id)
     FieldEffectActiveListAdd(id);
 
     script = gFieldEffectScriptPointers[id];
+    
+    DebugPrintfLevel(MGBA_LOG_DEBUG, "ScriptPointer %d | id %d", script, id);
 
     while (gFieldEffectScriptFuncs[*script](&script, &val))
         ;
@@ -711,6 +714,7 @@ u32 FieldEffectStart(u8 id)
 
 bool8 FieldEffectCmd_loadtiles(u8 **script, u32 *val)
 {
+    DebugPrintfLevel(MGBA_LOG_DEBUG, "[FieldEffectCmd_loadtiles] script %d | val %d", script, val);
     (*script)++;
     FieldEffectScript_LoadTiles(script);
     return TRUE;
@@ -718,6 +722,7 @@ bool8 FieldEffectCmd_loadtiles(u8 **script, u32 *val)
 
 bool8 FieldEffectCmd_loadfadedpal(u8 **script, u32 *val)
 {
+    DebugPrintfLevel(MGBA_LOG_DEBUG, "[FieldEffectCmd_loadfadedpal] script %d | val %d", script, val);
     (*script)++;
     FieldEffectScript_LoadFadedPalette(script);
     return TRUE;
@@ -725,6 +730,7 @@ bool8 FieldEffectCmd_loadfadedpal(u8 **script, u32 *val)
 
 bool8 FieldEffectCmd_loadpal(u8 **script, u32 *val)
 {
+    DebugPrintfLevel(MGBA_LOG_DEBUG, "[FieldEffectCmd_loadpal] script %d | val %d", script, val);
     (*script)++;
     FieldEffectScript_LoadPalette(script);
     return TRUE;
@@ -732,6 +738,7 @@ bool8 FieldEffectCmd_loadpal(u8 **script, u32 *val)
 
 bool8 FieldEffectCmd_callnative(u8 **script, u32 *val)
 {
+    DebugPrintfLevel(MGBA_LOG_DEBUG, "[FieldEffectCmd_callnative] script %d | val %d", script, val);
     (*script)++;
     FieldEffectScript_CallNative(script, val);
     return TRUE;
@@ -739,11 +746,13 @@ bool8 FieldEffectCmd_callnative(u8 **script, u32 *val)
 
 bool8 FieldEffectCmd_end(u8 **script, u32 *val)
 {
+    DebugPrintfLevel(MGBA_LOG_DEBUG, "[FieldEffectCmd_end] script %d | val %d", script, val);
     return FALSE;
 }
 
 bool8 FieldEffectCmd_loadgfx_callnative(u8 **script, u32 *val)
 {
+    DebugPrintfLevel(MGBA_LOG_DEBUG, "[FieldEffectCmd_loadgfx_callnative] script %d | val %d", script, val);
     (*script)++;
     FieldEffectScript_LoadTiles(script);
     FieldEffectScript_LoadFadedPalette(script);
@@ -753,6 +762,7 @@ bool8 FieldEffectCmd_loadgfx_callnative(u8 **script, u32 *val)
 
 bool8 FieldEffectCmd_loadtiles_callnative(u8 **script, u32 *val)
 {
+    DebugPrintfLevel(MGBA_LOG_DEBUG, "[FieldEffectCmd_loadtiles_callnative] script %d | val %d", script, val);
     (*script)++;
     FieldEffectScript_LoadTiles(script);
     FieldEffectScript_CallNative(script, val);
@@ -761,6 +771,7 @@ bool8 FieldEffectCmd_loadtiles_callnative(u8 **script, u32 *val)
 
 bool8 FieldEffectCmd_loadfadedpal_callnative(u8 **script, u32 *val)
 {
+    DebugPrintfLevel(MGBA_LOG_DEBUG, "[FieldEffectCmd_loadfadedpal_callnative] script %d | val %d", script, val);
     (*script)++;
     FieldEffectScript_LoadFadedPalette(script);
     FieldEffectScript_CallNative(script, val);
@@ -929,6 +940,7 @@ u8 CreateMonSprite_PicBox(u16 species, s16 x, s16 y, u8 subpriority)
 
 u8 CreateMonSprite_FieldMove(u16 species, bool8 isShiny, u32 personality, s16 x, s16 y, u8 subpriority)
 {
+    DebugPrintfLevel(MGBA_LOG_DEBUG, "[CreateMonSprite_FieldMove] species %d", species);
     u16 spriteId = CreateMonPicSprite(species, isShiny, personality, TRUE, x, y, 0, species);
     PreservePaletteInWeather(gSprites[spriteId].oam.paletteNum + 0x10);
     if (spriteId == 0xFFFF)
@@ -1366,6 +1378,12 @@ static void Task_UseFly(u8 taskId)
         gFieldEffectArguments[0] = GetCursorSelectionMonId();
         if ((int)gFieldEffectArguments[0] > PARTY_SIZE - 1)
             gFieldEffectArguments[0] = 0;
+
+        if(FlagGet(FLAG_FLY_FROM_MENU))
+        {
+            FlagClear(FLAG_FLY_FROM_MENU);
+            gFieldEffectArguments[0] = FLY_MON;
+        }
 
         FieldEffectStart(FLDEFF_USE_FLY);
         task->data[0]++;
@@ -2584,10 +2602,51 @@ bool8 FldEff_FieldMoveShowMonInit(void)
 {
     struct Pokemon *pokemon;
     bool32 noDucking = gFieldEffectArguments[0] & SHOW_MON_CRY_NO_DUCKING;
-    pokemon = &gPlayerParty[(u8)gFieldEffectArguments[0]];
-    gFieldEffectArguments[0] = GetMonData(pokemon, MON_DATA_SPECIES);
-    gFieldEffectArguments[1] = GetMonData(pokemon, MON_DATA_IS_SHINY);
-    gFieldEffectArguments[2] = GetMonData(pokemon, MON_DATA_PERSONALITY);
+
+    if((u8)gFieldEffectArguments[0] < PARTY_SIZE)
+    {
+        pokemon = &gPlayerParty[(u8)gFieldEffectArguments[0]];
+        gFieldEffectArguments[0] = GetMonData(pokemon, MON_DATA_SPECIES);
+        gFieldEffectArguments[1] = GetMonData(pokemon, MON_DATA_IS_SHINY);
+        gFieldEffectArguments[2] = GetMonData(pokemon, MON_DATA_PERSONALITY);
+    }
+    else
+    {
+        switch((u8)gFieldEffectArguments[0])
+        {
+            case CUT_MON:
+                gFieldEffectArguments[0] = SPECIES_BRELOOM;
+                break;
+            case FLY_MON:
+                gFieldEffectArguments[0] = SPECIES_CHARIZARD;
+                break;                
+            case SURF_MON:
+                gFieldEffectArguments[0] = SPECIES_SHARPEDO;
+                break;
+            case STRENGTH_MON:
+                gFieldEffectArguments[0] = SPECIES_HARIYAMA;
+                break;
+            case FLASH_MON:
+                gFieldEffectArguments[0] = SPECIES_PIKACHU;
+                break;
+            case ROCK_SMASH_MON:
+                gFieldEffectArguments[0] = SPECIES_HITMONLEE;
+                break;
+            case WATERFALL_MON:
+                gFieldEffectArguments[0] = SPECIES_LAPRAS;
+                break;
+            case DIVE_MON:
+                gFieldEffectArguments[0] = SPECIES_WAILORD;
+                break;
+            default:
+                gFieldEffectArguments[0] = SPECIES_ARCEUS;
+                break;
+        }
+
+        gFieldEffectArguments[1] = TRUE;
+        gFieldEffectArguments[2] = 0;
+    }
+    
     gFieldEffectArguments[0] |= noDucking;
     FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON);
     FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
@@ -2927,10 +2986,11 @@ static bool8 SlideIndoorBannerOffscreen(struct Task *task)
 #undef tMonSpriteId
 
 static u8 InitFieldMoveMonSprite(u32 species, bool8 isShiny, u32 personality)
-{
+{  
     bool16 noDucking;
     u8 monSprite;
     struct Sprite *sprite;
+    DebugPrintfLevel(MGBA_LOG_DEBUG, "[InitFieldMoveMonSprite] species %d", species);
     noDucking = (species & SHOW_MON_CRY_NO_DUCKING) >> 16;
     species &= ~SHOW_MON_CRY_NO_DUCKING;
     monSprite = CreateMonSprite_FieldMove(species, isShiny, personality, 320, 80, 0);
@@ -3032,6 +3092,7 @@ static void SurfFieldEffect_ShowMon(struct Task *task)
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     if (ObjectEventCheckHeldMovementStatus(objectEvent))
     {
+        DebugPrintfLevel(MGBA_LOG_DEBUG, "MonId %d", task->tMonId);
         gFieldEffectArguments[0] = task->tMonId | SHOW_MON_CRY_NO_DUCKING;
         FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
         task->tState++;

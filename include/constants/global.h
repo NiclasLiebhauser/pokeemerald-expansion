@@ -49,6 +49,14 @@
                                     max(FRONTIER_DOUBLES_PARTY_SIZE,\
                                         FRONTIER_MULTI_PARTY_SIZE)))
 #define UNION_ROOM_PARTY_SIZE       2
+#define CUT_MON                     6
+#define FLY_MON                     7
+#define SURF_MON                    8
+#define STRENGTH_MON                9
+#define FLASH_MON                   10
+#define ROCK_SMASH_MON              11
+#define WATERFALL_MON               12
+#define DIVE_MON                    13
 
 // capacities of various saveblock objects
 #define DAYCARE_MON_COUNT 2

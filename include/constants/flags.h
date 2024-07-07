@@ -1498,18 +1498,18 @@
 #define FLAG_ARRIVED_AT_NAVEL_ROCK                  (SYSTEM_FLAGS + 0x81)
 #define FLAG_LANDMARK_TRAINER_HILL                  (SYSTEM_FLAGS + 0x82)
 
-#define FLAG_UNUSED_0x8E3                           (SYSTEM_FLAGS + 0x83) // Unused Flag
+#define FLAG_FLY_FROM_MENU                          (SYSTEM_FLAGS + 0x83)
 
 #define FLAG_RECEIVED_POKEDEX_FROM_BIRCH            (SYSTEM_FLAGS + 0x84)
 
-#define FLAG_UNUSED_0x8E5                           (SYSTEM_FLAGS + 0x85) // Unused Flag
-#define FLAG_UNUSED_0x8E6                           (SYSTEM_FLAGS + 0x86) // Unused Flag
-#define FLAG_UNUSED_0x8E7                           (SYSTEM_FLAGS + 0x87) // Unused Flag
-#define FLAG_UNUSED_0x8E8                           (SYSTEM_FLAGS + 0x88) // Unused Flag
-#define FLAG_UNUSED_0x8E9                           (SYSTEM_FLAGS + 0x89) // Unused Flag
-#define FLAG_UNUSED_0x8EA                           (SYSTEM_FLAGS + 0x8A) // Unused Flag
-#define FLAG_UNUSED_0x8EB                           (SYSTEM_FLAGS + 0x8B) // Unused Flag
-#define FLAG_UNUSED_0x8EC                           (SYSTEM_FLAGS + 0x8C) // Unused Flag
+#define FLAG_PLAYER_CAN_USE_CUT                     (SYSTEM_FLAGS + 0x85)
+#define FLAG_PLAYER_CAN_USE_FLY                     (SYSTEM_FLAGS + 0x86)
+#define FLAG_PLAYER_CAN_USE_SURF                    (SYSTEM_FLAGS + 0x87)
+#define FLAG_PLAYER_CAN_USE_STRENGTH                (SYSTEM_FLAGS + 0x88)
+#define FLAG_PLAYER_CAN_USE_FLASH                   (SYSTEM_FLAGS + 0x89)
+#define FLAG_PLAYER_CAN_USE_ROCK_SMASH              (SYSTEM_FLAGS + 0x8A)
+#define FLAG_PLAYER_CAN_USE_WATERFALL               (SYSTEM_FLAGS + 0x8B)
+#define FLAG_PLAYER_CAN_USE_DIVE                    (SYSTEM_FLAGS + 0x8C)
 #define FLAG_UNUSED_0x8ED                           (SYSTEM_FLAGS + 0x8D) // Unused Flag
 #define FLAG_UNUSED_0x8EE                           (SYSTEM_FLAGS + 0x8E) // Unused Flag
 #define FLAG_UNUSED_0x8EF                           (SYSTEM_FLAGS + 0x8F) // Unused Flag
