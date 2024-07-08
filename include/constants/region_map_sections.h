@@ -227,7 +227,9 @@
 #define MAPSEC_SACRED_CITY                  0xDE
 #define MAPSEC_MAGMA_ISLAND                 0xDF
 
-#define MAPSEC_NONE                         0xE0
+#define MAPSEC_MYSTERY_CAVE                 0xE0
+
+#define MAPSEC_NONE                         0xE1
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE

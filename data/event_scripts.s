@@ -1105,3 +1105,6 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/SacredIslandEast/scripts.inc"
 	.include "data/maps/SacredIslandEast/text.inc"
+
+	.include "data/maps/MysteryCave/scripts.inc"
+	.include "data/maps/MysteryCave/text.inc"

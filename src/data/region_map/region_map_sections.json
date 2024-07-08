@@ -103,6 +103,14 @@
       "y": 10,
       "width": 2,
       "height": 1
+    },
+    {
+      "map_section": "MAPSEC_MYSTERY_CAVE",
+      "name": "Mystery Cave",
+      "x": 1,
+      "y": 9,
+      "width": 1,
+      "height": 1
     }
   ]
 }

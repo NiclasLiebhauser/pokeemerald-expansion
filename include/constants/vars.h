@@ -267,8 +267,8 @@
 #define VAR_START_QUESTION_1                             0x40F7 // Used to determine the player region
 #define VAR_START_QUESTION_2                             0x40F8 // Used to determine the starter mon
 #define VAR_START_QUESTION_3                             0x40F9 // Used to determine the secondary mon
-#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
-#define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
+#define VAR_START_QUESTION_4                             0x40FA // Used to determine the starting items
+#define VAR_START_ADVENTURE_STATE                        0x40FB
 #define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var

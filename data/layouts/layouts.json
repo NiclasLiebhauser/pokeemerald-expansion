@@ -4520,6 +4520,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/SacredIslandEast/border.bin",
       "blockdata_filepath": "data/layouts/SacredIslandEast/map.bin"
+    },
+    {
+      "id": "LAYOUT_MYSTERY_CAVE",
+      "name": "MysteryCave_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MysteryCave/border.bin",
+      "blockdata_filepath": "data/layouts/MysteryCave/map.bin"
     }
   ]
 }

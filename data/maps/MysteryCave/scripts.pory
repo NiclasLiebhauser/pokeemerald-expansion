@@ -1,0 +1,305 @@
+const LOCAL_LEVEL = 15
+const LOCAL_MANIAC_ID = 7
+
+mapscripts MysteryCave_MapScripts {}
+
+script ManiacTriggeredEventScript1 {
+    lockall
+    playse(SE_PIN)
+    applymovement(LOCAL_MANIAC_ID, ManiacExclamationMovement)
+    waitmovement(LOCAL_MANIAC_ID)
+    delay(24)
+    applymovement(LOCAL_MANIAC_ID, ManiacWalkOn1Movement)
+    waitmovement(0)
+    call(StartAdventureEventScript)
+    call(ManiacWalkOff)
+    releaseall
+    end
+}
+
+script ManiacTriggeredEventScript2 {
+    lockall
+    playse(SE_PIN)
+    applymovement(LOCAL_MANIAC_ID, ManiacExclamationMovement)
+    waitmovement(LOCAL_MANIAC_ID)
+    delay(24)
+    applymovement(LOCAL_MANIAC_ID, ManiacWalkOn2Movement)
+    waitmovement(0)
+    call(StartAdventureEventScript)
+    call(ManiacWalkOff)
+    releaseall
+    end
+}
+
+script ManiacWalkOff {
+    applymovement(LOCAL_MANIAC_ID, ManiacWalkOffMovement)
+    waitmovement(0)
+    removeobject(LOCAL_MANIAC_ID)
+    return
+}
+
+script StartAdventureEventScript {
+    msgbox(ArceusServantTextStart, MSGBOX_DEFAULT)
+    call(ReceivePokedex)
+    call(ReceivePokenav)
+    call(ReceiveRunningShoes)
+    call(ReceiveBike)
+    call(GiveFirstMon)
+    call(GiveSecondMon)
+    setvar(VAR_START_ADVENTURE_STATE, 1)
+
+    waitmessage
+    waitbuttonpress
+    closemessage
+    return
+}
+
+script ReceivePokedex {
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(ReceivedPokedexText, MSGBOX_DEFAULT)
+    waitfanfare
+    setflag(FLAG_SYS_POKEMON_GET)
+    setflag(FLAG_ADVENTURE_STARTED)
+    setflag(FLAG_SYS_POKEDEX_GET)
+    special(SetUnlockedPokedexFlags)
+    setflag(FLAG_SYS_NATIONAL_DEX)
+    special(EnableNationalPokedex)
+    return
+}
+
+script ReceiveBike {
+    playfanfare(MUS_OBTAIN_ITEM)
+    giveitem(ITEM_ACRO_BIKE)
+    waitfanfare
+    return
+}
+
+script ReceiveRunningShoes {
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(ReceivedRunningShoesText, MSGBOX_DEFAULT)
+    waitfanfare
+    setflag(FLAG_SYS_B_DASH)
+    return
+}
+
+script ReceivePokenav {
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(ReceivedPokenavText, MSGBOX_DEFAULT)
+    waitfanfare
+    setflag(FLAG_SYS_POKENAV_GET)
+    return
+}
+
+script GiveFirstMon {
+    if(var(VAR_START_QUESTION_1) == 1)
+    {
+        call(GiveFirstMonKanto)
+    }
+    elif(var(VAR_START_QUESTION_1) == 2)
+    {
+        call(GiveFirstMonJohto)
+    }
+    elif(var(VAR_START_QUESTION_1) == 3)
+    {
+        call(GiveFirstMonHoenn)
+    }
+
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(ReceivedMonText, MSGBOX_DEFAULT)
+    waitfanfare
+    call(GiveMonNick)
+    return
+}
+
+script GiveSecondMon {
+    if(var(VAR_START_QUESTION_1) == 1)
+    {
+        call(GiveSecondMonKanto)
+    }
+    elif(var(VAR_START_QUESTION_1) == 2)
+    {
+        call(GiveSecondMonJohto)
+    }
+    elif(var(VAR_START_QUESTION_1) == 3)
+    {
+        call(GiveSecondMonHoenn)
+    }
+
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(ReceivedMonText, MSGBOX_DEFAULT)
+    waitfanfare
+    call(GiveMonNick)
+    return
+}
+
+script GiveFirstMonKanto {
+    if(var(VAR_START_QUESTION_2) == 1)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_POLIWAG)
+        givemon(SPECIES_POLIWAG, LOCAL_LEVEL)
+    }
+    elif(var(VAR_START_QUESTION_2) == 2)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_VULPIX)
+        givemon(SPECIES_VULPIX, LOCAL_LEVEL)
+    }
+    elif(var(VAR_START_QUESTION_2) == 3)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_ODDISH)
+        givemon(SPECIES_ODDISH, LOCAL_LEVEL)
+    }
+    
+    return
+}
+
+script GiveFirstMonJohto {
+    if(var(VAR_START_QUESTION_2) == 1)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_REMORAID)
+        givemon(SPECIES_REMORAID, LOCAL_LEVEL)
+    }
+    elif(var(VAR_START_QUESTION_2) == 2)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_SLUGMA)
+        givemon(SPECIES_SLUGMA, LOCAL_LEVEL)
+    }
+    elif(var(VAR_START_QUESTION_2) == 3)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_SUNKERN)
+        givemon(SPECIES_SUNKERN, LOCAL_LEVEL)
+    }
+
+    return
+}
+
+script GiveFirstMonHoenn {
+    if(var(VAR_START_QUESTION_2) == 1)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_SPHEAL)
+        givemon(SPECIES_SPHEAL, LOCAL_LEVEL)
+    }
+    elif(var(VAR_START_QUESTION_2) == 2)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_NUMEL)
+        givemon(SPECIES_NUMEL, LOCAL_LEVEL)
+    }
+    elif(var(VAR_START_QUESTION_2) == 3)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_SEEDOT)
+        givemon(SPECIES_SEEDOT, LOCAL_LEVEL)
+    }
+
+    call(GiveMonNick)
+    return
+}
+
+script GiveSecondMonKanto {
+    if(var(VAR_START_QUESTION_2) == 1)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_GROWLITHE)
+        givemon(SPECIES_GROWLITHE, LOCAL_LEVEL)
+    }
+    elif(var(VAR_START_QUESTION_2) == 2)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_SANDSHREW_ALOLAN)
+        givemon(SPECIES_SANDSHREW_ALOLAN, LOCAL_LEVEL)
+    }
+    elif(var(VAR_START_QUESTION_2) == 3)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_JYNX)
+        givemon(SPECIES_JYNX, LOCAL_LEVEL)
+    }
+    
+    return
+}
+
+script GiveSecondMonJohto {
+    if(var(VAR_START_QUESTION_2) == 1)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_LARVITAR)
+        givemon(SPECIES_LARVITAR, LOCAL_LEVEL)
+    }
+    elif(var(VAR_START_QUESTION_2) == 2)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_QWILFISH_HISUIAN)
+        givemon(SPECIES_QWILFISH_HISUIAN, LOCAL_LEVEL)
+    }
+    elif(var(VAR_START_QUESTION_2) == 3)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_SUDOWOODO)
+        givemon(SPECIES_SUDOWOODO, LOCAL_LEVEL)
+    }
+    
+    return
+}
+
+script GiveSecondMonHoenn {
+    if(var(VAR_START_QUESTION_2) == 1)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_BAGON)
+        givemon(SPECIES_BAGON, LOCAL_LEVEL)
+    }
+    elif(var(VAR_START_QUESTION_2) == 2)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_ZIGZAGOON_GALARIAN)
+        givemon(SPECIES_ZIGZAGOON_GALARIAN, LOCAL_LEVEL)
+    }
+    elif(var(VAR_START_QUESTION_2) == 3)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_SEVIPER)
+        givemon(SPECIES_SEVIPER, LOCAL_LEVEL)
+    }
+    
+    return
+}
+
+script GiveMonNick {
+    msgbox(GiveMonNickText, MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES)
+    {
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+    return
+}
+
+text ArceusServantTextStart {
+    format("???: Ah you must be {PLAYER}.\nMy master had foretold your arrival.\lLet's see...\pHe told me to prepare some things for you.")
+}
+
+text ReceivedPokedexText {
+    format("{PLAYER} received the national POKéDEX!")
+}
+
+text ReceivedRunningShoesText {
+    format("{PLAYER} received the RUNNING SHOES!")
+}
+
+text ReceivedPokenavText {
+    format("{PLAYER} received the POKéNAV!")
+}
+
+text ReceivedMonText {
+    format("{PLAYER} received {STR_VAR_1}!")
+}
+
+text GiveMonNickText {
+    format("Give {STR_VAR_1} a nickname?")
+}
+
+movement ManiacWalkOffMovement {
+    walk_right * 7
+}
+
+movement ManiacExclamationMovement {
+    emote_exclamation_mark
+}
+
+movement ManiacWalkOn1Movement {
+    walk_left
+}
+
+movement ManiacWalkOn2Movement {
+    walk_left * 2
+}
