@@ -704,8 +704,6 @@ u32 FieldEffectStart(u8 id)
 
     script = gFieldEffectScriptPointers[id];
     
-    DebugPrintfLevel(MGBA_LOG_DEBUG, "ScriptPointer %d | id %d", script, id);
-
     while (gFieldEffectScriptFuncs[*script](&script, &val))
         ;
 
@@ -714,7 +712,6 @@ u32 FieldEffectStart(u8 id)
 
 bool8 FieldEffectCmd_loadtiles(u8 **script, u32 *val)
 {
-    DebugPrintfLevel(MGBA_LOG_DEBUG, "[FieldEffectCmd_loadtiles] script %d | val %d", script, val);
     (*script)++;
     FieldEffectScript_LoadTiles(script);
     return TRUE;
@@ -722,7 +719,6 @@ bool8 FieldEffectCmd_loadtiles(u8 **script, u32 *val)
 
 bool8 FieldEffectCmd_loadfadedpal(u8 **script, u32 *val)
 {
-    DebugPrintfLevel(MGBA_LOG_DEBUG, "[FieldEffectCmd_loadfadedpal] script %d | val %d", script, val);
     (*script)++;
     FieldEffectScript_LoadFadedPalette(script);
     return TRUE;
@@ -730,7 +726,6 @@ bool8 FieldEffectCmd_loadfadedpal(u8 **script, u32 *val)
 
 bool8 FieldEffectCmd_loadpal(u8 **script, u32 *val)
 {
-    DebugPrintfLevel(MGBA_LOG_DEBUG, "[FieldEffectCmd_loadpal] script %d | val %d", script, val);
     (*script)++;
     FieldEffectScript_LoadPalette(script);
     return TRUE;
@@ -738,7 +733,6 @@ bool8 FieldEffectCmd_loadpal(u8 **script, u32 *val)
 
 bool8 FieldEffectCmd_callnative(u8 **script, u32 *val)
 {
-    DebugPrintfLevel(MGBA_LOG_DEBUG, "[FieldEffectCmd_callnative] script %d | val %d", script, val);
     (*script)++;
     FieldEffectScript_CallNative(script, val);
     return TRUE;
@@ -746,13 +740,11 @@ bool8 FieldEffectCmd_callnative(u8 **script, u32 *val)
 
 bool8 FieldEffectCmd_end(u8 **script, u32 *val)
 {
-    DebugPrintfLevel(MGBA_LOG_DEBUG, "[FieldEffectCmd_end] script %d | val %d", script, val);
     return FALSE;
 }
 
 bool8 FieldEffectCmd_loadgfx_callnative(u8 **script, u32 *val)
 {
-    DebugPrintfLevel(MGBA_LOG_DEBUG, "[FieldEffectCmd_loadgfx_callnative] script %d | val %d", script, val);
     (*script)++;
     FieldEffectScript_LoadTiles(script);
     FieldEffectScript_LoadFadedPalette(script);
@@ -762,7 +754,6 @@ bool8 FieldEffectCmd_loadgfx_callnative(u8 **script, u32 *val)
 
 bool8 FieldEffectCmd_loadtiles_callnative(u8 **script, u32 *val)
 {
-    DebugPrintfLevel(MGBA_LOG_DEBUG, "[FieldEffectCmd_loadtiles_callnative] script %d | val %d", script, val);
     (*script)++;
     FieldEffectScript_LoadTiles(script);
     FieldEffectScript_CallNative(script, val);
@@ -771,7 +762,6 @@ bool8 FieldEffectCmd_loadtiles_callnative(u8 **script, u32 *val)
 
 bool8 FieldEffectCmd_loadfadedpal_callnative(u8 **script, u32 *val)
 {
-    DebugPrintfLevel(MGBA_LOG_DEBUG, "[FieldEffectCmd_loadfadedpal_callnative] script %d | val %d", script, val);
     (*script)++;
     FieldEffectScript_LoadFadedPalette(script);
     FieldEffectScript_CallNative(script, val);
@@ -940,7 +930,6 @@ u8 CreateMonSprite_PicBox(u16 species, s16 x, s16 y, u8 subpriority)
 
 u8 CreateMonSprite_FieldMove(u16 species, bool8 isShiny, u32 personality, s16 x, s16 y, u8 subpriority)
 {
-    DebugPrintfLevel(MGBA_LOG_DEBUG, "[CreateMonSprite_FieldMove] species %d", species);
     u16 spriteId = CreateMonPicSprite(species, isShiny, personality, TRUE, x, y, 0, species);
     PreservePaletteInWeather(gSprites[spriteId].oam.paletteNum + 0x10);
     if (spriteId == 0xFFFF)
@@ -2990,7 +2979,6 @@ static u8 InitFieldMoveMonSprite(u32 species, bool8 isShiny, u32 personality)
     bool16 noDucking;
     u8 monSprite;
     struct Sprite *sprite;
-    DebugPrintfLevel(MGBA_LOG_DEBUG, "[InitFieldMoveMonSprite] species %d", species);
     noDucking = (species & SHOW_MON_CRY_NO_DUCKING) >> 16;
     species &= ~SHOW_MON_CRY_NO_DUCKING;
     monSprite = CreateMonSprite_FieldMove(species, isShiny, personality, 320, 80, 0);
@@ -3092,7 +3080,6 @@ static void SurfFieldEffect_ShowMon(struct Task *task)
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     if (ObjectEventCheckHeldMovementStatus(objectEvent))
     {
-        DebugPrintfLevel(MGBA_LOG_DEBUG, "MonId %d", task->tMonId);
         gFieldEffectArguments[0] = task->tMonId | SHOW_MON_CRY_NO_DUCKING;
         FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
         task->tState++;
