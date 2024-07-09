@@ -1,1 +1,55 @@
+const FISHERMAN_ID = 1
+
 mapscripts Route201_MapScripts {}
+
+script Route201_EventScript_Fisherman {
+    lock
+
+    call_if_unset(FLAG_PLAYER_CAN_USE_SURF, FishermanGiveSharpedoMachine)
+    call_if_set(FLAG_PLAYER_CAN_USE_SURF, FishermanGeneric)
+    end
+}
+
+script FishermanGiveSharpedoMachine {
+    applymovement(FISHERMAN_ID, FishermanFacePlayerMovement)
+    waitmovement(0)
+    msgbox(FishermanText, MSGBOX_DEFAULT)
+
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(SharpedoMachineObtained, MSGBOX_DEFAULT)
+    waitfanfare
+
+    setflag(FLAG_PLAYER_CAN_USE_SURF)
+
+    applymovement(FISHERMAN_ID, FishermanFaceWaterMovement)
+    waitmovement(0)
+    
+    release
+    end
+}
+
+script FishermanGeneric {
+    msgbox(FishermanGenericText, MSGBOX_DEFAULT)
+    release
+    end
+}
+
+text FishermanText {
+    format("You want to surf on your what?!\nThat is cruelty!\lHow barbaric.\pThese days we use MACHINES.\lHere you can have my SHARPEDO MACHINE.")
+}
+
+text SharpedoMachineObtained {
+    format("SHARPEDO MACHINE obtained.")
+}
+
+text FishermanGenericText {
+    format("I am all out of SHARPEDO MACHINES.\nHow am I gonna get home?")
+}
+
+movement FishermanFacePlayerMovement {
+    face_player    
+}
+
+movement FishermanFaceWaterMovement {
+    face_right    
+}
