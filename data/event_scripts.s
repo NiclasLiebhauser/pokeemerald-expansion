@@ -1108,3 +1108,9 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/MysteryCave/scripts.inc"
 	.include "data/maps/MysteryCave/text.inc"
+
+	.include "data/maps/PacifidlogTown_Mart/scripts.inc"
+	.include "data/maps/PacifidlogTown_Mart/text.inc"
+
+	.include "data/maps/PacifidlogTown_House6/scripts.inc"
+	.include "data/maps/PacifidlogTown_House6/text.inc"

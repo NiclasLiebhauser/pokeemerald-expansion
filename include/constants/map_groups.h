@@ -135,6 +135,8 @@
 #define MAP_PACIFIDLOG_TOWN_HOUSE3            (4 | (7 << 8))
 #define MAP_PACIFIDLOG_TOWN_HOUSE4            (5 | (7 << 8))
 #define MAP_PACIFIDLOG_TOWN_HOUSE5            (6 | (7 << 8))
+#define MAP_PACIFIDLOG_TOWN_MART              (7 | (7 << 8))
+#define MAP_PACIFIDLOG_TOWN_HOUSE6            (8 | (7 << 8))
 
 // gMapGroup_IndoorPetalburg
 #define MAP_PETALBURG_CITY_WALLYS_HOUSE      (0 | (8 << 8))

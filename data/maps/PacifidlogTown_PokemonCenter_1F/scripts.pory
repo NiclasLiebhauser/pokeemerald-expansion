@@ -1,0 +1,29 @@
+const LOCALID_NURSE = 1
+
+mapscripts PacifidlogTown_PokemonCenter_1F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: PacifidlogTown_PokemonCenter_1F_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script PacifidlogTown_PokemonCenter_1F_OnTransition {
+    setrespawn(HEAL_LOCATION_PACIFIDLOG_TOWN)
+    end
+}
+
+script PacifidlogTown_PokemonCenter_1F_EventScript_Nurse {
+    setvar(VAR_0x800B, LOCALID_NURSE)
+    call(Common_EventScript_PkmnCenterNurse)
+    waitmessage
+	waitbuttonpress
+	release
+	end
+}
+
+script PacifidlogTown_PokemonCenter_1F_EventScript_2F_Closed {
+    msgbox(PacifidlogTown_PokemonCenter_1F_Text_2F_Closed, MSGBOX_NPC)
+    end
+}
+
+text PacifidlogTown_PokemonCenter_1F_Text_2F_Closed {
+    format("Due to apocalyptic circumstances,\nthe second floor is currently unavailable.\lWe apologize for the inconvenience.")
+}

@@ -1,0 +1,74 @@
+const FISHERMAN_ID = 1
+
+mapscripts PacifidlogTown_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: PacifidlogTown_OnTransition
+    MAP_SCRIPT_ON_RESUME: PacifidlogTown_OnResume
+}
+
+script PacifidlogTown_OnTransition {
+    setflag(FLAG_VISITED_PACIFIDLOG_TOWN)
+}
+
+script PacifidlogTown_OnResume {
+    setstepcallback(STEP_CB_PACIFIDLOG_BRIDGE)
+}
+
+script PacifidlogTown_EventScript_Fisherman {
+    call_if_set(FLAG_PACIFIDLOGTOWN_DELIVERED_MILK, PacifidlogTown_EventScript_Fisherman_Thank_You)
+    call_if_unset(FLAG_PACIFIDLOGTOWN_DELIVERED_MILK, PacifidlogTown_EventScript_Fisherman_Takes_Milk)
+    applymovement(FISHERMAN_ID, Common_Movement_FaceRight)
+    waitmovement(0)
+    end
+}
+
+script PacifidlogTown_EventScript_Fisherman_Takes_Milk {
+    checkitem(ITEM_MOOMOO_MILK, 1)
+    if(var(VAR_RESULT) == TRUE)
+    {
+        bufferitemname(STR_VAR_1, ITEM_MOOMOO_MILK)
+        bufferitemname(STR_VAR_2, ITEM_OLD_ROD)
+        playse(SE_PIN)
+        applymovement(FISHERMAN_ID, Common_Movement_ExclamationMark)
+        waitmovement(0)
+        applymovement(FISHERMAN_ID, Common_Movement_Delay48)
+        waitmovement(0)
+        msgbox(PacifidlogTown_Text_Fisherman_Takes_Milk, MSGBOX_NPC)
+        removeitem(ITEM_MOOMOO_MILK, 1)
+
+        giveitem(ITEM_OLD_ROD)
+        waitmessage
+        closemessage
+        setflag(FLAG_PACIFIDLOGTOWN_DELIVERED_MILK)
+    }
+    else
+    {
+        bufferitemname(STR_VAR_1, ITEM_MOOMOO_MILK)
+        msgbox(PacifidlogTown_Text_Fisherman_Wants_Milk, MSGBOX_NPC)
+    }
+    return
+}
+
+script PacifidlogTown_EventScript_Fisherman_Thank_You {
+    msgbox(PacifidlogTown_Text_Fisherman_Thank_You_For_The_Milk, MSGBOX_NPC)
+    return
+}
+
+script PacifidlogTown_EventScript_TownSign {
+    msgbox(PacifidlogTown_Text_TownSign, MSGBOX_SIGN)
+}
+
+text PacifidlogTown_Text_TownSign {
+    format("PACIFIDLOG TOWN\p“Where the morning sun smiles upon\nthe waters.”\pIs what it used to read.\nThe text has been modified to now read:\p“Where even people frown upon\nthe waters.”")
+}
+
+text PacifidlogTown_Text_Fisherman_Wants_Milk {
+    format("Fishing is all good and such.\pBut nothing beets some cold {STR_VAR_1} to quensh your thirst.")
+}
+
+text PacifidlogTown_Text_Fisherman_Takes_Milk {
+    format("What do I smell here.\nA fresh can of {STR_VAR_1}.\pFisherman takes away your {STR_VAR_1}.\pHere you can have my {STR_VAR_2}\nfor bringing this to me.")
+}
+
+text PacifidlogTown_Text_Fisherman_Thank_You_For_The_Milk {
+    format("Thanks again for that delicous {STR_VAR_1}.")
+}

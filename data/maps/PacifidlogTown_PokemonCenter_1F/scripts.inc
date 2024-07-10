@@ -1,50 +1,40 @@
-.set LOCALID_NURSE, 1
-
 PacifidlogTown_PokemonCenter_1F_MapScripts::
+# 4 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, PacifidlogTown_PokemonCenter_1F_OnTransition
+# 5 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
 	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
 	.byte 0
 
-PacifidlogTown_PokemonCenter_1F_OnTransition:
+
+PacifidlogTown_PokemonCenter_1F_OnTransition::
+# 9 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
 	setrespawn HEAL_LOCATION_PACIFIDLOG_TOWN
 	end
 
+
 PacifidlogTown_PokemonCenter_1F_EventScript_Nurse::
-	setvar VAR_0x800B, LOCALID_NURSE
+# 14 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
+	setvar VAR_0x800B, 1
+# 15 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
 	call Common_EventScript_PkmnCenterNurse
+# 16 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
 	waitmessage
+# 17 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
 	waitbuttonpress
+# 18 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
 	release
 	end
 
-PacifidlogTown_PokemonCenter_1F_EventScript_Girl::
-	msgbox PacifidlogTown_PokemonCenter_1F_Text_WhatColorTrainerCard, MSGBOX_NPC
+
+PacifidlogTown_PokemonCenter_1F_EventScript_2F_Closed::
+# 23 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
+	msgbox PacifidlogTown_PokemonCenter_1F_Text_2F_Closed, MSGBOX_NPC
 	end
 
-PacifidlogTown_PokemonCenter_1F_EventScript_Woman::
-	msgbox PacifidlogTown_PokemonCenter_1F_Text_OnColonyOfCorsola, MSGBOX_NPC
-	end
 
-PacifidlogTown_PokemonCenter_1F_EventScript_OldMan::
-	msgbox PacifidlogTown_PokemonCenter_1F_Text_AncestorsLivedOnBoats, MSGBOX_NPC
-	end
-
-PacifidlogTown_PokemonCenter_1F_Text_WhatColorTrainerCard:
-	.string "What color is your TRAINER CARD?\n"
-	.string "Mine's copper!$"
-
-PacifidlogTown_PokemonCenter_1F_Text_OnColonyOfCorsola:
-	.string "PACIFIDLOG TOWN floats on top of\n"
-	.string "a colony of CORSOLA.\p"
-	.string "If I told you that, would you believe\n"
-	.string "me?$"
-
-PacifidlogTown_PokemonCenter_1F_Text_AncestorsLivedOnBoats:
-	.string "The ancestors of the people in\n"
-	.string "PACIFIDLOG were said to have been\l"
-	.string "born on boats and then lived and died \l"
-	.string "aboard them.\p"
-	.string "I understand that they lived that way\n"
-	.string "because they were searching for\l"
-	.string "something.$"
-
+PacifidlogTown_PokemonCenter_1F_Text_2F_Closed::
+# 27 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
+	.string "Due to apocalyptic circumstances,\n"
+	.string "the second floor is currently\l"
+	.string "unavailable.\l"
+	.string "We apologize for the inconvenience.$"
