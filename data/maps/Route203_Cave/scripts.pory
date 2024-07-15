@@ -1,0 +1,226 @@
+const LOCAL_AQUAGRUNT_1 = 1
+const LOCAL_AQUAGRUNT_2 = 2
+const LOCAL_AQUAGRUNT_3 = 3
+const LOCAL_AQUAGRUNT_4 = 13
+const LOCAL_AQUAGRUNT_5 = 14
+const LOCAL_AQUAGRUNT_6 = 15
+const LOCAL_AQUAGRUNT_WORKING_1 = 16
+const LOCAL_AQUAGRUNT_WORKING_2 = 17
+const LOCAL_AQUAGRUNT_WORKING_3 = 18
+const LOCAL_AQUA_ADMIN = 19
+const LOCAL_ROCK_SMASH_MACHINE = 20
+
+mapscripts Route203_Cave_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Route203_Cave_OnTransition
+}
+
+script Route203_Cave_OnTransition {
+    if(!flag(FLAG_AQUA_LEFT_ROUTE_203_CAVE))
+    {
+        hideobjectat(LOCAL_ROCK_SMASH_MACHINE, MAP_ROUTE203_CAVE)
+    }
+    end
+}
+
+script Route203_Cave_EventScript_AdminFight {
+    lock
+    playbgm(MUS_ENCOUNTER_AQUA, FALSE)
+    playse(SE_PIN)
+    applymovement(LOCAL_AQUA_ADMIN, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(LOCAL_AQUA_ADMIN, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(LOCAL_AQUA_ADMIN, Route203_Cave_Movement_AquaAdmin)
+    waitmovement(0)
+    msgbox(Route203_Cave_Text_AquaAdmin_PreBattle)
+    waitmessage
+    closemessage
+    trainerbattle_no_intro(TRAINER_AQUA_ADMIN_ROUTE203_CAVE, Route203_Cave_Text_AquaAdmin_Defeat)
+
+    msgbox(Route203_Cave_Text_AquaAdmin_PostBattle)
+    waitmessage
+    closemessage
+
+    fadescreen(FADE_TO_BLACK)
+    playse(SE_EXIT)
+    waitse
+    removeobject(LOCAL_AQUAGRUNT_1)
+    removeobject(LOCAL_AQUAGRUNT_2)
+    removeobject(LOCAL_AQUAGRUNT_3)
+    removeobject(LOCAL_AQUAGRUNT_4)
+    removeobject(LOCAL_AQUAGRUNT_5)
+    removeobject(LOCAL_AQUAGRUNT_6)
+    removeobject(LOCAL_AQUAGRUNT_WORKING_1)
+    removeobject(LOCAL_AQUAGRUNT_WORKING_2)
+    removeobject(LOCAL_AQUAGRUNT_WORKING_3)
+    removeobject(LOCAL_AQUA_ADMIN)
+    setflag(FLAG_AQUA_LEFT_ROUTE_203_CAVE)
+    setvar(VAR_ROUTE203_CAVE_STATE, 1)
+    showobjectat(LOCAL_ROCK_SMASH_MACHINE, MAP_ROUTE203_CAVE)
+    fadescreen(FADE_FROM_BLACK)
+
+    end
+}
+
+script Route203_Cave_EventScript_RockSmashMachine {
+    removeobject(LOCAL_ROCK_SMASH_MACHINE)
+    setflag(FLAG_ITEM_ROCK_SMASH_MACHINE)
+    setflag(FLAG_PLAYER_CAN_USE_ROCK_SMASH)
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(Route203_Cave_Text_RockSmashMachine)
+    waitfanfare
+    waitbuttonpress
+    closemessage
+}
+
+script Route203_Cave_EventScript_AquaGrunt_Working {
+    msgbox(Route203_Cave_Text_AquaGrunt_Working, MSGBOX_SIGN)
+}
+
+script Route203_Cave_EventScript_AquaGrunt_1 {
+    trainerbattle_single(TRAINER_AQUA_GRUNT_ROUTE203_CAVE_1, Route203_Cave_Text_AquaGrunt1_Intro, Route203_Cave_Text_AquaGrunt1_Defeat)
+    msgbox(Route203_Cave_Text_AquaGrunt1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route203_Cave_EventScript_AquaGrunt_2 {
+    trainerbattle_single(TRAINER_AQUA_GRUNT_ROUTE203_CAVE_2, Route203_Cave_Text_AquaGrunt2_Intro, Route203_Cave_Text_AquaGrunt2_Defeat)
+    msgbox(Route203_Cave_Text_AquaGrunt2_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route203_Cave_EventScript_AquaGrunt_3 {
+    trainerbattle_single(TRAINER_AQUA_GRUNT_ROUTE203_CAVE_3, Route203_Cave_Text_AquaGrunt3_Intro, Route203_Cave_Text_AquaGrunt3_Defeat)
+    msgbox(Route203_Cave_Text_AquaGrunt3_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route203_Cave_EventScript_AquaGrunt_4 {
+    trainerbattle_single(TRAINER_AQUA_GRUNT_ROUTE203_CAVE_4, Route203_Cave_Text_AquaGrunt4_Intro, Route203_Cave_Text_AquaGrunt4_Defeat)
+    msgbox(Route203_Cave_Text_AquaGrunt4_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route203_Cave_EventScript_AquaGrunt_5 {
+    trainerbattle_single(TRAINER_AQUA_GRUNT_ROUTE203_CAVE_5, Route203_Cave_Text_AquaGrunt5_Intro, Route203_Cave_Text_AquaGrunt5_Defeat)
+    msgbox(Route203_Cave_Text_AquaGrunt5_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route203_Cave_EventScript_AquaGrunt_6 {
+    trainerbattle_single(TRAINER_AQUA_GRUNT_ROUTE203_CAVE_6, Route203_Cave_Text_AquaGrunt6_Intro, Route203_Cave_Text_AquaGrunt6_Defeat)
+    msgbox(Route203_Cave_Text_AquaGrunt6_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaGrunt1_Intro {
+    format("Intro")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaGrunt1_Defeat {
+    format("Defeat")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaGrunt1_PostBattle {
+    format("Post")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaGrunt2_Intro {
+    format("Intro")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaGrunt2_Defeat {
+    format("Defeat")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaGrunt2_PostBattle {
+    format("Post")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaGrunt3_Intro {
+    format("Intro")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaGrunt3_Defeat {
+    format("Defeat")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaGrunt3_PostBattle {
+    format("Post")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaGrunt4_Intro {
+    format("Intro")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaGrunt4_Defeat {
+    format("Defeat")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaGrunt4_PostBattle {
+    format("Post")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaGrunt5_Intro {
+    format("Intro")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaGrunt5_Defeat {
+    format("Defeat")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaGrunt5_PostBattle {
+    format("Post")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaGrunt6_Intro {
+    format("Intro")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaGrunt6_Defeat {
+    format("Defeat")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaGrunt6_PostBattle {
+    format("Post")
+}
+
+text Route203_Cave_Text_AquaGrunt_Working {
+    format("Can't you see that I'm working.")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaAdmin_PreBattle {
+    format("Admin...")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaAdmin_Defeat {
+    format("Defeat")
+}
+
+//ToSolve
+text Route203_Cave_Text_AquaAdmin_PostBattle {
+    format("Post")
+}
+
+text Route203_Cave_Text_RockSmashMachine {
+    format("Obtained ROCK SMASH MACHINE!")
+}
+
+movement Route203_Cave_Movement_AquaAdmin {
+    walk_right
+    walk_up * 2
+}

@@ -11804,3 +11804,59 @@ static const struct TrainerMon sParty_MayLinkPlaceholder[] = {
     .species = SPECIES_KYOGRE,
     }
 };
+
+//ToSolve
+static const struct TrainerMon sParty_AquaGrunt_Route203Cave1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_AquaGrunt_Route203Cave2[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_AquaGrunt_Route203Cave3[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_AquaGrunt_Route203Cave4[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_AquaGrunt_Route203Cave5[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_AquaGrunt_Route203Cave6[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_AquaAdmin_Route203Cave[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    }
+};

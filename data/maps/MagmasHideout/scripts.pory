@@ -1,0 +1,18 @@
+const LOCAL_STRENGTH_MACHINE = 1
+
+mapscripts MagmasHideout_MapScripts {}
+
+script MagmasHideout_EventScript_StrengthMachine {
+    removeobject(LOCAL_STRENGTH_MACHINE)
+    setflag(FLAG_ITEM_STRENGTH_MACHINE)
+    setflag(FLAG_PLAYER_CAN_USE_STRENGTH)
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(Route203_Cave_Text_RockSmashMachine)
+    waitfanfare
+    waitbuttonpress
+    closemessage
+}
+
+text Route203_Cave_Text_RockSmashMachine {
+    format("Obtained STRENGTH MACHINE!")
+}

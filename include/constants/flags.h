@@ -1222,9 +1222,9 @@
 #define FLAG_ITEM_MYSTERY_CAVE_BIG_NUGGET                           0x494
 #define FLAG_HIDDEN_ITEM_MYSTERY_CAVE_TM_26                         0x495
 #define FLAG_PACIFIDLOGTOWN_DELIVERED_MILK                          0x496
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
+#define FLAG_AQUA_LEFT_ROUTE_203_CAVE                               0x497
+#define FLAG_ITEM_ROCK_SMASH_MACHINE                                0x498
+#define FLAG_ITEM_STRENGTH_MACHINE                                  0x499
 #define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
@@ -1341,9 +1341,9 @@
 
 // System Flags
 
-#define SYSTEM_FLAGS                                   (TRAINER_FLAGS_END + 1) // 0x860
+#define SYSTEM_FLAGS                                   (TRAINER_FLAGS_END + 1) // 0x964
 
-#define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x860
+#define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x964
 #define FLAG_SYS_POKEDEX_GET                         (SYSTEM_FLAGS + 0x1)
 #define FLAG_SYS_POKENAV_GET                         (SYSTEM_FLAGS + 0x2)
 #define FLAG_UNUSED_0x863                            (SYSTEM_FLAGS + 0x3) // Unused Flag

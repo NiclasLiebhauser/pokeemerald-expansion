@@ -4550,6 +4550,66 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/PacifidlogTown_House6/border.bin",
       "blockdata_filepath": "data/layouts/PacifidlogTown_House6/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE203_CAVE",
+      "name": "Route203_Cave_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Route203_Cave/border.bin",
+      "blockdata_filepath": "data/layouts/Route203_Cave/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGMA_ISLAND",
+      "name": "MagmaIsland_Layout",
+      "width": 84,
+      "height": 62,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/MagmaIsland/border.bin",
+      "blockdata_filepath": "data/layouts/MagmaIsland/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGMAS_HIDEOUT",
+      "name": "MagmasHideout_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/MagmasHideout/border.bin",
+      "blockdata_filepath": "data/layouts/MagmasHideout/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGMA_CAVE_1F",
+      "name": "MagmaCave_1F_Layout",
+      "width": 60,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/MagmaCave_1F/border.bin",
+      "blockdata_filepath": "data/layouts/MagmaCave_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGMA_CAVE_2F",
+      "name": "MagmaCave_2F_Layout",
+      "width": 30,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/MagmaCave_2F/border.bin",
+      "blockdata_filepath": "data/layouts/MagmaCave_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGMA_CAVE_3F",
+      "name": "MagmaCave_3F_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/MagmaCave_3F/border.bin",
+      "blockdata_filepath": "data/layouts/MagmaCave_3F/map.bin"
     }
   ]
 }

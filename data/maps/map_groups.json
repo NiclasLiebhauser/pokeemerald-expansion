@@ -34,7 +34,9 @@
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124",
-    "gMapGroup_IndoorRoute201"
+    "gMapGroup_IndoorRoute201",
+    "gMapGroup_IndoorRoute203",
+    "gMapGroup_MagmaIsland"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -104,7 +106,8 @@
     "SacredIslandNorth",
     "SacredIslandSouth",
     "SacredCity",
-    "SacredIslandEast"
+    "SacredIslandEast",
+    "MagmaIsland"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -637,5 +640,14 @@
   ],
   "gMapGroup_IndoorRoute201": [
     "MysteryCave"
+  ],
+  "gMapGroup_IndoorRoute203": [
+    "Route203_Cave"
+  ],
+  "gMapGroup_MagmaIsland": [
+    "MagmasHideout",
+    "MagmaCave_1F",
+    "MagmaCave_2F",
+    "MagmaCave_3F"
   ]
 }

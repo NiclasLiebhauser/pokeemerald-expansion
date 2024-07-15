@@ -24,13 +24,24 @@
       "map": "MAP_ROUTE204",
       "offset": 0,
       "direction": "down"
+    },
+    {
+      "map": "MAP_MAGMA_ISLAND",
+      "offset": -10,
+      "direction": "right"
     }
   ],
   "object_events": [
 
   ],
   "warp_events": [
-
+    {
+      "x": 63,
+      "y": 66,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE203_CAVE",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 

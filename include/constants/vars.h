@@ -269,7 +269,7 @@
 #define VAR_START_QUESTION_3                             0x40F9 // Used to determine the secondary mon
 #define VAR_START_QUESTION_4                             0x40FA // Used to determine the starting items
 #define VAR_START_ADVENTURE_STATE                        0x40FB
-#define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
+#define VAR_ROUTE203_CAVE_STATE                          0x40FC
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
 #define VAR_UNUSED_0x40FF                                0x40FF // Unused Var

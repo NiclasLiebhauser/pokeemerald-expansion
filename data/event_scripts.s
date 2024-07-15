@@ -1114,3 +1114,21 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/PacifidlogTown_House6/scripts.inc"
 	.include "data/maps/PacifidlogTown_House6/text.inc"
+
+	.include "data/maps/Route203_Cave/scripts.inc"
+	.include "data/maps/Route203_Cave/text.inc"
+
+	.include "data/maps/MagmaIsland/scripts.inc"
+	.include "data/maps/MagmaIsland/text.inc"
+
+	.include "data/maps/MagmasHideout/scripts.inc"
+	.include "data/maps/MagmasHideout/text.inc"
+
+	.include "data/maps/MagmaCave_1F/scripts.inc"
+	.include "data/maps/MagmaCave_1F/text.inc"
+
+	.include "data/maps/MagmaCave_2F/scripts.inc"
+	.include "data/maps/MagmaCave_2F/text.inc"
+
+	.include "data/maps/MagmaCave_3F/scripts.inc"
+	.include "data/maps/MagmaCave_3F/text.inc"
