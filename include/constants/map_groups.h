@@ -75,6 +75,8 @@
 #define MAP_SACRED_CITY         (66 | (0 << 8))
 #define MAP_SACRED_ISLAND_EAST  (67 | (0 << 8))
 #define MAP_MAGMA_ISLAND        (68 | (0 << 8))
+#define MAP_UNDERWATER_ROUTE205 (69 | (0 << 8))
+#define MAP_UNDERWATER_ROUTE206 (70 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))
@@ -617,6 +619,10 @@
 #define MAP_MAGMA_CAVE_2F  (2 | (36 << 8))
 #define MAP_MAGMA_CAVE_3F  (3 | (36 << 8))
 
-#define MAP_GROUPS_COUNT 37
+// gMapGroup_AquaHideout
+#define MAP_AQUAS_HIDEOUT_1F (0 | (37 << 8))
+#define MAP_AQUAS_HIDEOUT_2F (1 | (37 << 8))
+
+#define MAP_GROUPS_COUNT 38
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

@@ -4467,7 +4467,7 @@
       "width": 30,
       "height": 30,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Pacifidlog",
+      "secondary_tileset": "gTileset_Lilycove",
       "border_filepath": "data/layouts/AquaHideout/border.bin",
       "blockdata_filepath": "data/layouts/AquaHideout/map.bin"
     },
@@ -4610,6 +4610,46 @@
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/MagmaCave_3F/border.bin",
       "blockdata_filepath": "data/layouts/MagmaCave_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_AQUAS_HIDEOUT_1F",
+      "name": "AquasHideout_1F_Layout",
+      "width": 40,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/AquasHideout_1F/border.bin",
+      "blockdata_filepath": "data/layouts/AquasHideout_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_AQUAS_HIDEOUT_2F",
+      "name": "AquasHideout_2F_Layout",
+      "width": 45,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/AquasHideout_2F/border.bin",
+      "blockdata_filepath": "data/layouts/AquasHideout_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNDERWATER_ROUTE205",
+      "name": "Underwater_Route205_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Underwater_Route205/border.bin",
+      "blockdata_filepath": "data/layouts/Underwater_Route205/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNDERWATER_ROUTE206",
+      "name": "Underwater_Route206_Layout",
+      "width": 60,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Underwater_Route206/border.bin",
+      "blockdata_filepath": "data/layouts/Underwater_Route206/map.bin"
     }
   ]
 }

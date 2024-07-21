@@ -1,0 +1,44 @@
+{
+  "id": "MAP_UNDERWATER_ROUTE205",
+  "name": "Underwater_Route205",
+  "layout": "LAYOUT_UNDERWATER_ROUTE205",
+  "music": "MUS_UNDERWATER",
+  "region_map_section": "MAPSEC_UNDERWATER_205",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERWATER",
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_UNDERWATER_ROUTE206",
+      "offset": -5,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE205",
+      "offset": 0,
+      "direction": "emerge"
+    },
+    {
+      "map": "MAP_ROUTE205",
+      "offset": 0,
+      "direction": "emerge"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ],
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true
+}

@@ -1,0 +1,46 @@
+{
+  "id": "MAP_AQUAS_HIDEOUT_2F",
+  "name": "AquasHideout_2F",
+  "layout": "LAYOUT_AQUAS_HIDEOUT_2F",
+  "music": "MUS_AQUA_MAGMA_HIDEOUT",
+  "region_map_section": "MAPSEC_AQUA_HIDEOUT",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 34,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "AquasHideout_2F_EventScript_DiveMachine",
+      "flag": "FLAG_ITEM_DIVE_MACHINE"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 15,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_AQUAS_HIDEOUT_1F",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ],
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true
+}

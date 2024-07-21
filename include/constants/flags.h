@@ -1225,7 +1225,7 @@
 #define FLAG_AQUA_LEFT_ROUTE_203_CAVE                               0x497
 #define FLAG_ITEM_ROCK_SMASH_MACHINE                                0x498
 #define FLAG_ITEM_STRENGTH_MACHINE                                  0x499
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
+#define FLAG_ITEM_DIVE_MACHINE                                      0x49A
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
 #define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag

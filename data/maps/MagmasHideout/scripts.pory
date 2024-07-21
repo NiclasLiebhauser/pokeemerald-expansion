@@ -7,12 +7,12 @@ script MagmasHideout_EventScript_StrengthMachine {
     setflag(FLAG_ITEM_STRENGTH_MACHINE)
     setflag(FLAG_PLAYER_CAN_USE_STRENGTH)
     playfanfare(MUS_OBTAIN_ITEM)
-    msgbox(Route203_Cave_Text_RockSmashMachine)
+    msgbox(MagmasHideout_Text_StrengthMachine)
     waitfanfare
     waitbuttonpress
     closemessage
 }
 
-text Route203_Cave_Text_RockSmashMachine {
+text MagmasHideout_Text_StrengthMachine {
     format("Obtained STRENGTH MACHINE!")
 }

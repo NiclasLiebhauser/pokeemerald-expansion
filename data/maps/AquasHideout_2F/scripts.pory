@@ -1,0 +1,18 @@
+const LOCAL_DIVE_MACHINE = 1
+
+mapscripts AquasHideout_2F_MapScripts {}
+
+script AquasHideout_2F_EventScript_DiveMachine {
+    removeobject(LOCAL_DIVE_MACHINE)
+    setflag(FLAG_ITEM_DIVE_MACHINE)
+    setflag(FLAG_PLAYER_CAN_USE_DIVE)
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(AquasHideout_2F_Text_DiveMachine)
+    waitfanfare
+    waitbuttonpress
+    closemessage
+}
+
+text AquasHideout_2F_Text_DiveMachine {
+    format("Obtained DIVE MACHINE!")
+}

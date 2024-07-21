@@ -1132,3 +1132,15 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/MagmaCave_3F/scripts.inc"
 	.include "data/maps/MagmaCave_3F/text.inc"
+
+	.include "data/maps/AquasHideout_1F/scripts.inc"
+	.include "data/maps/AquasHideout_1F/text.inc"
+
+	.include "data/maps/AquasHideout_2F/scripts.inc"
+	.include "data/maps/AquasHideout_2F/text.inc"
+
+	.include "data/maps/Underwater_Route205/scripts.inc"
+	.include "data/maps/Underwater_Route205/text.inc"
+
+	.include "data/maps/Underwater_Route206/scripts.inc"
+	.include "data/maps/Underwater_Route206/text.inc"
