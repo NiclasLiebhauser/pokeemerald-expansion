@@ -642,7 +642,7 @@ static bool8 HandleStartMenuInput(void)
 
     if (JOY_NEW(A_BUTTON))
     {
-        if(IsMapTypeIndoors(gMapHeader.mapType) && sStartMenuItems[sCurrentStartMenuActions[sStartMenuCursorPos]].func.u8_void == StartMenuFlyCallback)
+        if(!Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) && sStartMenuItems[sCurrentStartMenuActions[sStartMenuCursorPos]].func.u8_void == StartMenuFlyCallback)
         {
             PlaySE(SE_FAILURE);
             return FALSE;
