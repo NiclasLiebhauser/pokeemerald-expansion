@@ -17,8 +17,13 @@
     },
     {
       "map": "MAP_SACRED_ISLAND_NORTH",
-      "offset": 13,
+      "offset": 58,
       "direction": "down"
+    },
+    {
+      "map": "MAP_UNDERWATER_ROUTE206",
+      "offset": 0,
+      "direction": "dive"
     }
   ],
   "object_events": [

@@ -12,12 +12,12 @@
   "connections": [
     {
       "map": "MAP_ROUTE206",
-      "offset": -13,
+      "offset": -58,
       "direction": "up"
     },
     {
       "map": "MAP_SACRED_ISLAND_EAST",
-      "offset": 15,
+      "offset": 16,
       "direction": "down"
     }
   ],

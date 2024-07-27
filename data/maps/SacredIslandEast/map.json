@@ -12,17 +12,17 @@
   "connections": [
     {
       "map": "MAP_SACRED_CITY",
-      "offset": 3,
+      "offset": 2,
       "direction": "left"
     },
     {
       "map": "MAP_SACRED_ISLAND_NORTH",
-      "offset": -15,
+      "offset": -16,
       "direction": "up"
     },
     {
       "map": "MAP_SACRED_ISLAND_SOUTH",
-      "offset": -15,
+      "offset": -16,
       "direction": "down"
     }
   ],

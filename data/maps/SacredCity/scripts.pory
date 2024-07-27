@@ -1,3 +1,5 @@
+const LOCAL_FLYING_MACHINE = 1
+
 mapscripts SacredCity_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: SacredCity_OnTransition
 }
@@ -5,4 +7,19 @@ mapscripts SacredCity_MapScripts {
 script SacredCity_OnTransition {
     setflag(FLAG_VISITED_SACRED_CITY)
     end
+}
+
+script SacredCity_EventScript_FlyMachine {
+    removeobject(LOCAL_FLYING_MACHINE)
+    setflag(FLAG_ITEM_FLYING_MACHINE)
+    setflag(FLAG_PLAYER_CAN_USE_FLY)
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(SacredCity_Text_FlyMachine)
+    waitfanfare
+    waitbuttonpress
+    closemessage
+}
+
+text SacredCity_Text_FlyMachine {
+    format("Obtained FLY MACHINE!")
 }
