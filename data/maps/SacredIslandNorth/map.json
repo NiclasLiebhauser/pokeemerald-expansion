@@ -2,7 +2,7 @@
   "id": "MAP_SACRED_ISLAND_NORTH",
   "name": "SacredIslandNorth",
   "layout": "LAYOUT_SACRED_ISLAND_NORTH",
-  "music": "MUS_ROUTE119",
+  "music": "MUS_ROUTE101",
   "region_map_section": "MAPSEC_SACRED_ISLAND_NORTH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

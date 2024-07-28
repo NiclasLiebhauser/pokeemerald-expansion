@@ -1,0 +1,8 @@
+mapscripts Underwater_CaveOfCreation_Entrance_MapScripts {
+    MAP_SCRIPT_ON_RESUME: Underwater_CaveOfCreation_Entrance_OnResume
+}
+
+script Underwater_CaveOfCreation_Entrance_OnResume {
+    setdivewarp(MAP_CAVE_OF_CREATION, 14, 24)
+    end
+}

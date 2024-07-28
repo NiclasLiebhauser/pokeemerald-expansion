@@ -1,0 +1,18 @@
+const LOCAL_CUT_MACHINE = 2
+
+mapscripts AnabelsHouse_MapScripts {}
+
+script AnabelsHouse_EventScript_CutMachine {
+    removeobject(LOCAL_CUT_MACHINE)
+    setflag(FLAG_ITEM_CUT_MACHINE)
+    setflag(FLAG_PLAYER_CAN_USE_CUT)
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(AnabelsHouse_Text_CutMachine)
+    waitfanfare
+    waitbuttonpress
+    closemessage
+}
+
+text AnabelsHouse_Text_CutMachine {
+    format("Obtained CUT MACHINE!")
+}

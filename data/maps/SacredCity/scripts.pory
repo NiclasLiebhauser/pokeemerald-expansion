@@ -2,10 +2,16 @@ const LOCAL_FLYING_MACHINE = 1
 
 mapscripts SacredCity_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: SacredCity_OnTransition
+    MAP_SCRIPT_ON_RESUME: SacredCity_OnResume
 }
 
 script SacredCity_OnTransition {
     setflag(FLAG_VISITED_SACRED_CITY)
+    end
+}
+
+script SacredCity_OnResume {
+    setdivewarp(MAP_UNDERWATER_SACRED_CITY, 9, 6)
     end
 }
 

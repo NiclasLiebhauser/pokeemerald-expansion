@@ -37,7 +37,11 @@
     "gMapGroup_IndoorRoute201",
     "gMapGroup_IndoorRoute203",
     "gMapGroup_MagmaIsland",
-    "gMapGroup_AquaHideout"
+    "gMapGroup_AquaHideout",
+    "gMapGroup_SacredCityIndoor",
+    "gMapGroup_SacredMountainDungeon",
+    "gMapGroup_SacredIslandSouthIndoor",
+    "gMapGroup_CaveOfCreation"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -110,7 +114,8 @@
     "SacredIslandEast",
     "MagmaIsland",
     "Underwater_Route205",
-    "Underwater_Route206"
+    "Underwater_Route206",
+    "Underwater_SacredCity"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -656,5 +661,20 @@
   "gMapGroup_AquaHideout": [
     "AquasHideout_1F",
     "AquasHideout_2F"
+  ],
+  "gMapGroup_SacredCityIndoor": [
+    "SacredCity_House1",
+    "SacredCity_House2"
+  ],
+  "gMapGroup_SacredMountainDungeon": [
+
+  ],
+  "gMapGroup_SacredIslandSouthIndoor": [
+    "AnabelsHouse"
+  ],
+  "gMapGroup_CaveOfCreation": [
+    "Underwater_CaveOfCreation",
+    "Underwater_CaveOfCreation_Entrance",
+    "CaveOfCreation"
   ]
 }

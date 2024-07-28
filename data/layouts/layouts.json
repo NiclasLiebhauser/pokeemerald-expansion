@@ -4650,6 +4650,76 @@
       "secondary_tileset": "gTileset_Underwater",
       "border_filepath": "data/layouts/Underwater_Route206/border.bin",
       "blockdata_filepath": "data/layouts/Underwater_Route206/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANABELS_HOUSE",
+      "name": "AnabelsHouse_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/AnabelsHouse/border.bin",
+      "blockdata_filepath": "data/layouts/AnabelsHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_SACRED_CITY_HOUSE1",
+      "name": "SacredCity_House1_Layout",
+      "width": 8,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SacredCity_House1/border.bin",
+      "blockdata_filepath": "data/layouts/SacredCity_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_SACRED_CITY_HOUSE2",
+      "name": "SacredCity_House2_Layout",
+      "width": 8,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SacredCity_House2/border.bin",
+      "blockdata_filepath": "data/layouts/SacredCity_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNDERWATER_SACRED_CITY",
+      "name": "Underwater_SacredCity_Layout",
+      "width": 20,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Underwater_SacredCity/border.bin",
+      "blockdata_filepath": "data/layouts/Underwater_SacredCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNDERWATER_CAVE_OF_CREATION",
+      "name": "Underwater_CaveOfCreation_Layout",
+      "width": 60,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Underwater_CaveOfCreation/border.bin",
+      "blockdata_filepath": "data/layouts/Underwater_CaveOfCreation/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNDERWATER_CAVE_OF_CREATION_ENTRANCE",
+      "name": "Underwater_CaveOfCreation_Entrance_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Underwater_CaveOfCreation_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/Underwater_CaveOfCreation_Entrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_CAVE_OF_CREATION",
+      "name": "CaveOfCreation_Layout",
+      "width": 30,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/CaveOfCreation/border.bin",
+      "blockdata_filepath": "data/layouts/CaveOfCreation/map.bin"
     }
   ]
 }

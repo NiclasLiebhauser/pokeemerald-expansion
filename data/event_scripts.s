@@ -1144,3 +1144,24 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/Underwater_Route206/scripts.inc"
 	.include "data/maps/Underwater_Route206/text.inc"
+
+	.include "data/maps/AnabelsHouse/scripts.inc"
+	.include "data/maps/AnabelsHouse/text.inc"
+
+	.include "data/maps/SacredCity_House1/scripts.inc"
+	.include "data/maps/SacredCity_House1/text.inc"
+
+	.include "data/maps/SacredCity_House2/scripts.inc"
+	.include "data/maps/SacredCity_House2/text.inc"
+
+	.include "data/maps/Underwater_SacredCity/scripts.inc"
+	.include "data/maps/Underwater_SacredCity/text.inc"
+
+	.include "data/maps/Underwater_CaveOfCreation/scripts.inc"
+	.include "data/maps/Underwater_CaveOfCreation/text.inc"
+
+	.include "data/maps/Underwater_CaveOfCreation_Entrance/scripts.inc"
+	.include "data/maps/Underwater_CaveOfCreation_Entrance/text.inc"
+
+	.include "data/maps/CaveOfCreation/scripts.inc"
+	.include "data/maps/CaveOfCreation/text.inc"

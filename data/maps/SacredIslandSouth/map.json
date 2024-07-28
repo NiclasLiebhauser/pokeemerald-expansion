@@ -45,7 +45,13 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 8,
+      "y": 55,
+      "elevation": 0,
+      "dest_map": "MAP_ANABELS_HOUSE",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 

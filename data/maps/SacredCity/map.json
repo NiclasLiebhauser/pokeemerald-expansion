@@ -2,7 +2,7 @@
   "id": "MAP_SACRED_CITY",
   "name": "SacredCity",
   "layout": "LAYOUT_SACRED_CITY",
-  "music": "MUS_LILYCOVE",
+  "music": "MUS_SOOTOPOLIS",
   "region_map_section": "MAPSEC_SACRED_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -32,7 +32,20 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 14,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_SACRED_CITY_HOUSE1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 45,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_SACRED_CITY_HOUSE2",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 
