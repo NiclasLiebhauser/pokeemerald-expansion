@@ -1,1 +1,103 @@
-mapscripts InfernoCavern_3F_MapScripts {}
+const LOCALID_GROUDON = 1
+
+mapscripts InfernoCavern_3F_MapScripts {
+    MAP_SCRIPT_ON_RESUME: InfernoCavern_3F_OnResume
+    MAP_SCRIPT_ON_TRANSITION: InfernoCavern_3F_OnTransition
+}
+
+script InfernoCavern_3F_OnResume {
+    call_if_set(FLAG_SYS_CTRL_OBJ_DELETE, InfernoCavern_3F_EventScript_TryRemoveGroudon)
+    end
+}
+
+script InfernoCavern_3F_OnTransition {
+    call_if_unset(FLAG_DEFEATED_GROUDON, InfernoCavern_3F_EventScript_Enable_Groudon_Battle)
+    call_if_set(FLAG_DEFEATED_GROUDON, InfernoCavern_3F_EventScript_Disable_Groudon_Battle)
+    end
+}
+
+script InfernoCavern_3F_EventScript_Enable_Groudon_Battle {
+    setvar(VAR_TEMP_1, 0)
+    return
+}
+
+script InfernoCavern_3F_EventScript_Disable_Groudon_Battle {
+    setvar(VAR_TEMP_1, 1)
+    return
+}
+
+script InfernoCavern_3F_EventScript_TryRemoveGroudon {
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    call_if_eq(VAR_RESULT, B_OUTCOME_CAUGHT, InfernoCavern_3F_EventScript_RemoveGroudon)
+    return
+}
+
+script InfernoCavern_3F_EventScript_RemoveGroudon {
+    removeobject(LOCALID_GROUDON)
+    return
+}
+
+script InfernoCavern_3F_EventScript_Groudon {
+    lockall
+    //ToSolve: Red orb stuff
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+    waitmovement(0)
+    applymovement(LOCALID_GROUDON, InfernoCavern_3F_Movement_GroudonApproach)
+    waitmovement(0)
+    waitse
+    playmoncry(SPECIES_GROUDON, CRY_MODE_ENCOUNTER)
+    delay(40)
+    waitmoncry
+    setvar(VAR_LAST_TALKED, LOCALID_GROUDON)
+    setwildbattle(SPECIES_GROUDON_PRIMAL, 50)
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    setflag(FLAG_NO_CATCHING)
+    settotemboost(B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1, 1, 1)
+    special(BattleSetup_StartLegendaryBattle)
+    waitstate
+    clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    clearflag(FLAG_NO_CATCHING)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    call_if_eq(VAR_RESULT, B_OUTCOME_WON, InfernoCavern_3F_EventScript_DefeatedGroudon)
+    call_if_eq(VAR_RESULT, B_OUTCOME_RAN, InfernoCavern_3F_EventScript_RanGroudon)
+    call_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, InfernoCavern_3F_EventScript_RanGroudon)
+    setvar(VAR_TEMP_1, 1)
+    releaseall
+    end
+}
+
+script InfernoCavern_3F_EventScript_DefeatedGroudon {
+    setflag(FLAG_DEFEATED_GROUDON)
+    setvar(VAR_TEMP_1, 1)
+    call(Common_EventScript_RemoveStaticPokemon)
+    end
+}
+
+script InfernoCavern_3F_EventScript_RanGroudon {
+    fadescreen(FADE_TO_BLACK)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown2)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+    waitmovement(0)
+    applymovement(LOCALID_GROUDON, InfernoCavern_3F_Movement_GroudonReset)
+    waitmovement(0)
+    fadescreen(FADE_FROM_BLACK)
+    releaseall
+    end
+}
+
+movement InfernoCavern_3F_Movement_GroudonApproach {
+    init_affine_anim
+	walk_down_start_affine
+	delay_16
+	delay_16
+	walk_down_affine
+	delay_16
+	delay_16
+	walk_down_affine
+	step_end
+}
+
+movement InfernoCavern_3F_Movement_GroudonReset {
+    walk_up * 3
+}

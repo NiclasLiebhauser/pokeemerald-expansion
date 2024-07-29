@@ -70,7 +70,7 @@ AncientGrotto_EventScript_Kyogre::
 # 52 "data/maps/AncientGrotto/scripts.pory"
 	setvar VAR_LAST_TALKED, 1
 # 53 "data/maps/AncientGrotto/scripts.pory"
-	setwildbattle SPECIES_KYOGRE, 50, ITEM_BLUE_ORB
+	setwildbattle SPECIES_KYOGRE_PRIMAL, 50
 # 54 "data/maps/AncientGrotto/scripts.pory"
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 # 55 "data/maps/AncientGrotto/scripts.pory"

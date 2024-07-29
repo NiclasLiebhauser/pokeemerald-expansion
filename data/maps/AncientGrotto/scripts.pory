@@ -50,7 +50,7 @@ script AncientGrotto_EventScript_Kyogre {
     delay(40)
     waitmoncry
     setvar(VAR_LAST_TALKED, LOCALID_KYOGRE)
-    setwildbattle(SPECIES_KYOGRE, 50, ITEM_BLUE_ORB)
+    setwildbattle(SPECIES_KYOGRE_PRIMAL, 50)
     setflag(FLAG_SYS_CTRL_OBJ_DELETE)
     setflag(FLAG_NO_CATCHING)
     settotemboost(B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1, 1, 1)
