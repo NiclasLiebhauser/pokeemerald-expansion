@@ -12,30 +12,30 @@
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_GROUDON_ASLEEP",
-      "x": 24,
+      "graphics_id": "OBJ_EVENT_GFX_MAXIE",
+      "x": 31,
       "y": 20,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "MagmaCave_3F_Evenscript_Maxie",
+      "flag": "FLAG_MAGMA_LEFT_HIDEOUT"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAXIE",
-      "x": 26,
-      "y": 15,
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 28,
+      "y": 26,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "MagmaCave_3F_Evenscript_StealRedOrb",
+      "flag": "FLAG_RED_ORB_RECEIVED"
     }
   ],
   "warp_events": [

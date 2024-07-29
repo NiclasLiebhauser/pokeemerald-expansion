@@ -11868,3 +11868,12 @@ static const struct TrainerMon sParty_Archie_Aqua_HQ[] = {
     .species = SPECIES_POOCHYENA,
     }
 };
+
+//ToSolve
+static const struct TrainerMon sParty_Maxie_Magma_HQ[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};

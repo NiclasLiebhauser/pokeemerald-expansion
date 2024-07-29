@@ -1,1 +1,99 @@
+const LOCALID_MAXIE = 1
+const LOCALID_MACHINE = 2
+
 mapscripts MagmaCave_3F_MapScripts {}
+
+script MagmaCave_3F_Evenscript_Maxie {
+    lock
+    faceplayer
+    call_if_set(FLAG_RED_ORB_RECEIVED, MagmaCave_3F_BattleMaxie)
+    msgbox("I am studying the magma. Go away.")
+    waitmessage
+    applymovement(LOCALID_MAXIE, Common_Movement_FaceLeft)
+    waitmovement(0)
+    release
+    end
+}
+
+script MagmaCave_3F_Evenscript_StealRedOrb {
+    lock
+    msgbox(MagmaCave_3F_Text_RedOrb, MSGBOX_YESNO)
+    call_if_eq(VAR_RESULT, YES, MagmaCave_3F_Evenscript_RedOrbTaken)
+    release
+    end
+}
+
+script MagmaCave_3F_Evenscript_RedOrbTaken {
+    setflag(FLAG_RED_ORB_RECEIVED)
+    giveitem(ITEM_RED_ORB)
+    playse(SE_PIN)
+    playbgm(MUS_ENCOUNTER_AQUA, FALSE)
+    playse(SE_PIN)
+    waitse
+    applymovement(LOCALID_MAXIE, MagmaCave_3F_Movement_MaxieApproach)
+    waitmovement(0)
+    call(MagmaCave_3F_BattleMaxie)
+    
+    release
+    end
+}
+
+script MagmaCave_3F_BattleMaxie {
+    msgbox(MagmaCave_3F_Text_MaxieCaught)
+    waitmessage
+    closemessage
+    trainerbattle_no_intro(TRAINER_MAXIE_MAGMA_HQ, MagmaCave_3F_Text_MaxieDefeated)
+    call(MagmaCave_3F_MaxieDefeated)
+
+    release
+    end
+}
+
+script MagmaCave_3F_MaxieDefeated {
+    msgbox(MagmaCave_3F_Text_MaxiePostBattle)
+    waitmessage
+    closemessage
+
+    setflag(FLAG_MAGMA_LEFT_HIDEOUT)
+    call(MagmaCave_3F_RemoveMagma)
+
+    release
+    end
+}
+
+script MagmaCave_3F_RemoveMagma {
+    fadescreen(FADE_TO_BLACK)
+    playse(SE_EXIT)
+    waitse
+
+    removeobject(LOCALID_MAXIE)
+    removeobject(LOCALID_MACHINE)
+
+    fadescreen(FADE_FROM_BLACK)
+    return
+}
+
+text MagmaCave_3F_Text_RedOrb {
+    format("You see a Red Orb inside this machine.\nDo you want to take it?")
+}
+
+text MagmaCave_3F_Text_MaxieCaught {
+    format("Hey! I saw that. Give me back my Red Orb.")
+}
+
+text MagmaCave_3F_Text_MaxieDefeated {
+    format("Defeated by a kid again...\nWhat shall now become of my ambitions.")
+}
+
+//ToSolve
+text MagmaCave_3F_Text_MaxiePostBattle {
+    format("Post")
+}
+
+movement MagmaCave_3F_Movement_MaxieApproach {
+    walk_down*3
+    walk_left
+    walk_down*4
+    walk_left
+    face_player
+}

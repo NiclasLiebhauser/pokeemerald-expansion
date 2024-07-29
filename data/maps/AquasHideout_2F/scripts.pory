@@ -39,7 +39,6 @@ script AquasHideout_2F_RemoveAqua {
 
     removeobject(LOCAL_ARCHIE)
 
-    setvar(VAR_ROUTE203_CAVE_STATE, 1)
     fadescreen(FADE_FROM_BLACK)
     return
 }

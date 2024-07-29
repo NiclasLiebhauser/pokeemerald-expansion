@@ -1230,9 +1230,9 @@
 #define FLAG_ITEM_CUT_MACHINE                                       0x49C
 #define FLAG_MOUNTAIN_PATH_FREE                                     0x49D
 #define FLAG_AQUA_LEFT_HIDEOUT                                      0x49E
-#define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
-#define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
-#define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
+#define FLAG_RED_ORB_RECEIVED                                       0x49F
+#define FLAG_MAGMA_LEFT_HIDEOUT                                     0x4A0
+#define FLAG_BLUE_ORB_RECEIVED                                      0x4A1
 #define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
 #define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
 #define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
