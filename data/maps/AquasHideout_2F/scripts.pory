@@ -1,4 +1,6 @@
 const LOCAL_DIVE_MACHINE = 1
+const LOCAL_ARCHIE = 2
+
 
 mapscripts AquasHideout_2F_MapScripts {}
 
@@ -13,6 +15,50 @@ script AquasHideout_2F_EventScript_DiveMachine {
     closemessage
 }
 
+script AquasHideout_2F_EventScript_Archie {
+    lockall
+    msgbox(AquasHideout_2F_Text_Archie_PreBattel)
+    waitmessage
+    closemessage
+    trainerbattle_no_intro(TRAINER_ARCHIE_AQUA_HQ, AquasHideout_2F_Text_Archie_Defeat)
+    msgbox(AquasHideout_2F_Text_Archie_PostBattel)
+    giveitem(ITEM_BLUE_ORB)
+    waitse
+    waitmessage
+    closemessage
+    setflag(FLAG_AQUA_LEFT_HIDEOUT)
+    call(AquasHideout_2F_RemoveAqua)
+    releaseall
+    end
+}
+
+script AquasHideout_2F_RemoveAqua {
+    fadescreen(FADE_TO_BLACK)
+    playse(SE_EXIT)
+    waitse
+
+    removeobject(LOCAL_ARCHIE)
+
+    setvar(VAR_ROUTE203_CAVE_STATE, 1)
+    fadescreen(FADE_FROM_BLACK)
+    return
+}
+
 text AquasHideout_2F_Text_DiveMachine {
     format("Obtained DIVE MACHINE!")
+}
+
+//ToSolve: Writing
+text AquasHideout_2F_Text_Archie_PreBattel {
+    format("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+}
+
+//ToSolve: Writing
+text AquasHideout_2F_Text_Archie_PostBattel {
+    format("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+}
+
+//ToSolve: Writing
+text AquasHideout_2F_Text_Archie_Defeat {
+    format("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
 }

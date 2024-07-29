@@ -11860,3 +11860,11 @@ static const struct TrainerMon sParty_AquaAdmin_Route203Cave[] = {
     .species = SPECIES_POOCHYENA,
     }
 };
+
+//ToSolve
+static const struct TrainerMon sParty_Archie_Aqua_HQ[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    }
+};

@@ -1229,7 +1229,7 @@
 #define FLAG_ITEM_FLYING_MACHINE                                    0x49B
 #define FLAG_ITEM_CUT_MACHINE                                       0x49C
 #define FLAG_MOUNTAIN_PATH_FREE                                     0x49D
-#define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
+#define FLAG_AQUA_LEFT_HIDEOUT                                      0x49E
 #define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
 #define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
