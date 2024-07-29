@@ -1174,3 +1174,12 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/AncientGrotto/scripts.inc"
 	.include "data/maps/AncientGrotto/text.inc"
+
+	.include "data/maps/InfernoCavern_1F/scripts.inc"
+	.include "data/maps/InfernoCavern_1F/text.inc"
+
+	.include "data/maps/InfernoCavern_2F/scripts.inc"
+	.include "data/maps/InfernoCavern_2F/text.inc"
+
+	.include "data/maps/InfernoCavern_3F/scripts.inc"
+	.include "data/maps/InfernoCavern_3F/text.inc"

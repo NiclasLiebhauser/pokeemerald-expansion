@@ -644,6 +644,9 @@
 #define MAP_ANCIENT_GROTTO            (1 | (42 << 8))
 
 // gMapGroup_InfernoCavern
+#define MAP_INFERNO_CAVERN_1F (0 | (43 << 8))
+#define MAP_INFERNO_CAVERN_2F (1 | (43 << 8))
+#define MAP_INFERNO_CAVERN_3F (2 | (43 << 8))
 
 #define MAP_GROUPS_COUNT 44
 

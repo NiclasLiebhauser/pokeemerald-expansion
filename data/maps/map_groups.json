@@ -684,6 +684,8 @@
     "AncientGrotto"
   ],
   "gMapGroup_InfernoCavern": [
-
+    "InfernoCavern_1F",
+    "InfernoCavern_2F",
+    "InfernoCavern_3F"
   ]
 }

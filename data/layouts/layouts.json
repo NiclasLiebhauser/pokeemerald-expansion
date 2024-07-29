@@ -4750,6 +4750,36 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/AncientGrotto/border.bin",
       "blockdata_filepath": "data/layouts/AncientGrotto/map.bin"
+    },
+    {
+      "id": "LAYOUT_INFERNO_CAVERN_1F",
+      "name": "InfernoCavern_1F_Layout",
+      "width": 34,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/InfernoCavern_1F/border.bin",
+      "blockdata_filepath": "data/layouts/InfernoCavern_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_INFERNO_CAVERN_2F",
+      "name": "InfernoCavern_2F_Layout",
+      "width": 34,
+      "height": 55,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/InfernoCavern_2F/border.bin",
+      "blockdata_filepath": "data/layouts/InfernoCavern_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_INFERNO_CAVERN_3F",
+      "name": "InfernoCavern_3F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/InfernoCavern_3F/border.bin",
+      "blockdata_filepath": "data/layouts/InfernoCavern_3F/map.bin"
     }
   ]
 }
