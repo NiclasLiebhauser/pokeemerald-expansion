@@ -629,6 +629,7 @@
 #define MAP_SACRED_CITY_HOUSE2 (1 | (38 << 8))
 
 // gMapGroup_SacredMountainDungeon
+#define MAP_SACRED_MOUNTAIN_1F (0 | (39 << 8))
 
 // gMapGroup_SacredIslandSouthIndoor
 #define MAP_ANABELS_HOUSE (0 | (40 << 8))
@@ -638,6 +639,12 @@
 #define MAP_UNDERWATER_CAVE_OF_CREATION_ENTRANCE (1 | (41 << 8))
 #define MAP_CAVE_OF_CREATION                     (2 | (41 << 8))
 
-#define MAP_GROUPS_COUNT 42
+// gMapGroup_AncientGrotto
+#define MAP_UNDERWATER_ANCIENT_GROTTO (0 | (42 << 8))
+#define MAP_ANCIENT_GROTTO            (1 | (42 << 8))
+
+// gMapGroup_InfernoCavern
+
+#define MAP_GROUPS_COUNT 44
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

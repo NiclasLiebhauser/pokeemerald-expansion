@@ -25,7 +25,20 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 59,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_UNDERWATER_ANCIENT_GROTTO",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 60,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_UNDERWATER_ANCIENT_GROTTO",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 

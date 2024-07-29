@@ -652,7 +652,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
-#define FLAG_UNUSED_0x264  0x264 // Unused Flag
+#define FLAG_NO_CATCHING   0x264
 #define FLAG_UNUSED_0x265  0x265 // Unused Flag
 #define FLAG_UNUSED_0x266  0x266 // Unused Flag
 #define FLAG_UNUSED_0x267  0x267 // Unused Flag
@@ -1228,7 +1228,7 @@
 #define FLAG_ITEM_DIVE_MACHINE                                      0x49A
 #define FLAG_ITEM_FLYING_MACHINE                                    0x49B
 #define FLAG_ITEM_CUT_MACHINE                                       0x49C
-#define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
+#define FLAG_MOUNTAIN_PATH_FREE                                     0x49D
 #define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
 #define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag

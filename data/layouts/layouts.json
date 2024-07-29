@@ -4720,6 +4720,36 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/CaveOfCreation/border.bin",
       "blockdata_filepath": "data/layouts/CaveOfCreation/map.bin"
+    },
+    {
+      "id": "LAYOUT_SACRED_MOUNTAIN_1F",
+      "name": "SacredMountain_1F_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/SacredMountain_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SacredMountain_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNDERWATER_ANCIENT_GROTTO",
+      "name": "Underwater_AncientGrotto_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Underwater_AncientGrotto/border.bin",
+      "blockdata_filepath": "data/layouts/Underwater_AncientGrotto/map.bin"
+    },
+    {
+      "id": "LAYOUT_ANCIENT_GROTTO",
+      "name": "AncientGrotto_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/AncientGrotto/border.bin",
+      "blockdata_filepath": "data/layouts/AncientGrotto/map.bin"
     }
   ]
 }

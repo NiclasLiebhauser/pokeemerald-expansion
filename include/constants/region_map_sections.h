@@ -228,11 +228,15 @@
 #define MAPSEC_MAGMA_ISLAND                 0xDF
 
 #define MAPSEC_MYSTERY_CAVE                 0xE0
+#define MAPSEC_SACRED_MOUNTAIN              0xE1
 
-#define MAPSEC_UNDERWATER_205               0xE1
-#define MAPSEC_UNDERWATER_206               0xE2
+#define MAPSEC_UNDERWATER_205               0xE2
+#define MAPSEC_UNDERWATER_206               0xE3
 
-#define MAPSEC_NONE                         0xE3
+#define MAPSEC_ANCIENT_GROTTO               0xE4
+#define MAPSEC_INFERNO_CAVERN               0xE5
+
+#define MAPSEC_NONE                         0xE6
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE

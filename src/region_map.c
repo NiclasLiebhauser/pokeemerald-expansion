@@ -167,6 +167,7 @@ static const u16 sRegionMap_SpecialPlaceLocations[][2] =
     {MAPSEC_ABANDONED_SHIP,             MAPSEC_ROUTE_108},
     {MAPSEC_UNDERWATER_205,             MAPSEC_ROUTE_205},
     {MAPSEC_UNDERWATER_206,             MAPSEC_ROUTE_206},
+    {MAPSEC_SACRED_MOUNTAIN,            MAPSEC_SACRED_CITY},
     {MAPSEC_NONE,                       MAPSEC_NONE}
 };
 

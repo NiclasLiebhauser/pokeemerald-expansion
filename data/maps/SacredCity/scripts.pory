@@ -3,6 +3,7 @@ const LOCAL_FLYING_MACHINE = 1
 mapscripts SacredCity_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: SacredCity_OnTransition
     MAP_SCRIPT_ON_RESUME: SacredCity_OnResume
+    MAP_SCRIPT_ON_LOAD: SacredCity_OnLoad
 }
 
 script SacredCity_OnTransition {
@@ -12,6 +13,17 @@ script SacredCity_OnTransition {
 
 script SacredCity_OnResume {
     setdivewarp(MAP_UNDERWATER_SACRED_CITY, 9, 6)
+    end
+}
+
+script SacredCity_OnLoad {
+    call_if_unset(FLAG_MOUNTAIN_PATH_FREE, SacredCity_Hide_Cave_Entrance)
+    end
+}
+
+script SacredCity_Hide_Cave_Entrance {
+    setmetatile(25, 6, METATILE_Sootopolis_Sootopolis_RockWall, TRUE)
+    setmetatile(25, 7, METATILE_Sootopolis_Sootopolis_RockWall, TRUE)
     end
 }
 

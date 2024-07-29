@@ -1,13 +1,13 @@
 {
-  "id": "MAP_MARINE_CAVE_END",
-  "name": "MarineCave_End",
-  "layout": "LAYOUT_MARINE_CAVE_END",
-  "music": "MUS_PETALBURG_WOODS",
-  "region_map_section": "MAPSEC_MARINE_CAVE",
+  "id": "MAP_ANCIENT_GROTTO",
+  "name": "AncientGrotto",
+  "layout": "LAYOUT_ANCIENT_GROTTO",
+  "music": "MUS_CAVE_OF_ORIGIN",
+  "region_map_section": "MAPSEC_ANCIENT_GROTTO",
   "requires_flash": false,
-  "weather": "WEATHER_FOG_HORIZONTAL",
+  "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
@@ -22,17 +22,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_MARINE_CAVE_KYOGRE"
+      "flag": "FLAG_DEFEATED_KYOGRE"
     }
   ],
   "warp_events": [
-    {
-      "x": 20,
-      "y": 4,
-      "elevation": 0,
-      "dest_map": "MAP_MARINE_CAVE_ENTRANCE",
-      "dest_warp_id": "0"
-    }
+
   ],
   "coord_events": [
     {
@@ -41,14 +35,14 @@
       "y": 26,
       "elevation": 3,
       "var": "VAR_TEMP_1",
-      "var_value": "1",
-      "script": "MarineCave_End_EventScript_Kyogre"
+      "var_value": "0",
+      "script": "AncientGrotto_EventScript_Kyogre"
     }
   ],
   "bg_events": [
 
   ],
-  "allow_cycling": false,
-  "allow_escaping": true,
+  "allow_cycling": true,
+  "allow_escaping": false,
   "allow_running": true
 }

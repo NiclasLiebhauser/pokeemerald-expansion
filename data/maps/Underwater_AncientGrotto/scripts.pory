@@ -1,0 +1,8 @@
+mapscripts Underwater_AncientGrotto_MapScripts {
+    MAP_SCRIPT_ON_RESUME: Underwater_AncientGrotto_OnResume
+}
+
+script Underwater_AncientGrotto_OnResume {
+    setdivewarp(MAP_ANCIENT_GROTTO, 13, 3)
+    end
+}

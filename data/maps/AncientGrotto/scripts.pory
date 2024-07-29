@@ -1,0 +1,104 @@
+const LOCALID_KYOGRE = 1
+
+mapscripts AncientGrotto_MapScripts {
+    MAP_SCRIPT_ON_RESUME: AncientGrotto_OnResume
+    MAP_SCRIPT_ON_TRANSITION: AncientGrotto_OnTransition
+}
+
+script AncientGrotto_OnResume {
+    setdivewarp(MAP_UNDERWATER_ANCIENT_GROTTO, 7, 6)
+    call_if_set(FLAG_SYS_CTRL_OBJ_DELETE, AncientGrotto_EventScript_TryRemoveKyogre)
+    end
+}
+
+script AncientGrotto_OnTransition {
+    call_if_unset(FLAG_DEFEATED_KYOGRE, AncientGrotto_EventScript_Enable_Kyogre_Battle)
+    call_if_set(FLAG_DEFEATED_KYOGRE, AncientGrotto_EventScript_Disable_Kyogre_Battle)
+    end
+}
+
+script AncientGrotto_EventScript_Enable_Kyogre_Battle {
+    setvar(VAR_TEMP_1, 0)
+    return
+}
+
+script AncientGrotto_EventScript_Disable_Kyogre_Battle {
+    setvar(VAR_TEMP_1, 1)
+    return
+}
+
+script AncientGrotto_EventScript_TryRemoveKyogre {
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    call_if_eq(VAR_RESULT, B_OUTCOME_CAUGHT, AncientGrotto_EventScript_RemoveKyogre)
+    return
+}
+
+script AncientGrotto_EventScript_RemoveKyogre {
+    removeobject(LOCALID_KYOGRE)
+    return
+}
+
+script AncientGrotto_EventScript_Kyogre {
+    lockall
+    //ToSolve: Blue orb stuff
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+    waitmovement(0)
+    applymovement(LOCALID_KYOGRE, AncientGrotto_Movement_KyogreApproach)
+    waitmovement(0)
+    waitse
+    playmoncry(SPECIES_KYOGRE, CRY_MODE_ENCOUNTER)
+    delay(40)
+    waitmoncry
+    setvar(VAR_LAST_TALKED, LOCALID_KYOGRE)
+    setwildbattle(SPECIES_KYOGRE, 50, ITEM_BLUE_ORB)
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    setflag(FLAG_NO_CATCHING)
+    settotemboost(B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1, 1, 1)
+    special(BattleSetup_StartLegendaryBattle)
+    waitstate
+    clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    clearflag(FLAG_NO_CATCHING)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    call_if_eq(VAR_RESULT, B_OUTCOME_WON, AncientGrotto_EventScript_DefeatedKyogre)
+    call_if_eq(VAR_RESULT, B_OUTCOME_RAN, AncientGrotto_EventScript_RanKyogre)
+    call_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, AncientGrotto_EventScript_RanKyogre)
+    setvar(VAR_TEMP_1, 1)
+    releaseall
+    end
+}
+
+script AncientGrotto_EventScript_DefeatedKyogre {
+    setflag(FLAG_DEFEATED_KYOGRE)
+    setvar(VAR_TEMP_1, 1)
+    call(Common_EventScript_RemoveStaticPokemon)
+    end
+}
+
+script AncientGrotto_EventScript_RanKyogre {
+    fadescreen(FADE_TO_BLACK)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+    waitmovement(0)
+    applymovement(LOCALID_KYOGRE, AncientGrotto_Movement_KyogreReset)
+    waitmovement(0)
+    fadescreen(FADE_FROM_BLACK)
+    releaseall
+    end
+}
+
+movement AncientGrotto_Movement_KyogreApproach {
+    init_affine_anim
+	walk_down_start_affine
+	delay_16
+	delay_16
+	walk_down_affine
+	delay_16
+	delay_16
+	walk_down_affine
+	step_end
+}
+
+movement AncientGrotto_Movement_KyogreReset {
+    walk_up * 3
+}

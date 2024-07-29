@@ -1165,3 +1165,12 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/CaveOfCreation/scripts.inc"
 	.include "data/maps/CaveOfCreation/text.inc"
+
+	.include "data/maps/SacredMountain_1F/scripts.inc"
+	.include "data/maps/SacredMountain_1F/text.inc"
+
+	.include "data/maps/Underwater_AncientGrotto/scripts.inc"
+	.include "data/maps/Underwater_AncientGrotto/text.inc"
+
+	.include "data/maps/AncientGrotto/scripts.inc"
+	.include "data/maps/AncientGrotto/text.inc"

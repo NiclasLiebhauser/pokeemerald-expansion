@@ -41,7 +41,9 @@
     "gMapGroup_SacredCityIndoor",
     "gMapGroup_SacredMountainDungeon",
     "gMapGroup_SacredIslandSouthIndoor",
-    "gMapGroup_CaveOfCreation"
+    "gMapGroup_CaveOfCreation",
+    "gMapGroup_AncientGrotto",
+    "gMapGroup_InfernoCavern"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -667,7 +669,7 @@
     "SacredCity_House2"
   ],
   "gMapGroup_SacredMountainDungeon": [
-
+    "SacredMountain_1F"
   ],
   "gMapGroup_SacredIslandSouthIndoor": [
     "AnabelsHouse"
@@ -676,5 +678,12 @@
     "Underwater_CaveOfCreation",
     "Underwater_CaveOfCreation_Entrance",
     "CaveOfCreation"
+  ],
+  "gMapGroup_AncientGrotto": [
+    "Underwater_AncientGrotto",
+    "AncientGrotto"
+  ],
+  "gMapGroup_InfernoCavern": [
+
   ]
 }
