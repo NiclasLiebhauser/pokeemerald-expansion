@@ -1,1 +1,19 @@
 mapscripts AquasHideout_1F_MapScripts {}
+
+script AquasHideout_1F_EventScript_Mart {
+    lock
+    faceplayer
+    message("Hey psst... Wanna buy something?")
+    waitmessage
+    pokemart(AquasHideout_1F_Mart)
+    msgbox("Please Come Again.")
+    release
+    end
+}
+
+mart AquasHideout_1F_Mart {
+    ITEM_MOOMOO_MILK
+    ITEM_SODA_POP
+    ITEM_LEMONADE
+    ITEM_LAVA_COOKIE
+}
