@@ -1,8 +1,135 @@
+const LOCALID_NINJA_RED_ORB = 1
+const LOCALID_NINJA_BLUE_ORB = 2
+
 mapscripts CaveOfCreation_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: CaveOfCreation_OnTransition
     MAP_SCRIPT_ON_RESUME: CaveOfCreation_OnResume
 }
 
 script CaveOfCreation_OnResume {
     setdivewarp(MAP_UNDERWATER_CAVE_OF_CREATION_ENTRANCE, 7, 5)
     end
+}
+
+script CaveOfCreation_OnTransition {
+    setflag(FLAG_HIDE_NINJA_RED_ORB)
+    setflag(FLAG_HIDE_NINJA_BLUE_ORB)
+    removeobject(LOCALID_NINJA_RED_ORB)
+    removeobject(LOCALID_NINJA_BLUE_ORB)
+
+    if(flag(FLAG_DEFEATED_GROUDON) && !flag(FLAG_RED_ORB_USED))
+    {
+        clearflag(FLAG_HIDE_NINJA_RED_ORB)
+        addobject(LOCALID_NINJA_RED_ORB)
+    }
+    if(flag(FLAG_DEFEATED_KYOGRE) && !flag(FLAG_BLUE_ORB_USED))
+    {    
+        clearflag(FLAG_HIDE_NINJA_BLUE_ORB)
+        addobject(LOCALID_NINJA_BLUE_ORB)
+    }
+    end
+}
+
+script CaveOfCreation_Eventscript_ShowRedOrb {
+    lock
+    checkitem(ITEM_RED_ORB)
+    if(flag(FLAG_DEFEATED_GROUDON) && var(VAR_RESULT) == TRUE && !flag(FLAG_RED_ORB_USED))
+    {
+        msgbox(CaveOfCreation_Text_ShowRedOrb)
+        waitmessage
+        closemessage
+        setvar(VAR_RESULT, 2)
+        special(DoOrbEffect)
+        playse(SE_ORB)
+        waitse
+        delay(150)
+        special(FadeOutOrbEffect)
+        waitstate
+        setflag(FLAG_RED_ORB_USED)
+        removeobject(LOCALID_NINJA_RED_ORB)
+
+        if(flag(FLAG_BLUE_ORB_USED))
+        {
+            call(CaveOfCreation_Eventscript_PathOpen)
+        }
+    }
+    release
+    end
+}
+
+script CaveOfCreation_Eventscript_ShowBlueOrb {
+    lock
+    checkitem(ITEM_BLUE_ORB)
+    if(flag(FLAG_DEFEATED_KYOGRE) && var(VAR_RESULT) == TRUE && !flag(FLAG_BLUE_ORB_USED))
+    {
+        msgbox(CaveOfCreation_Text_ShowBlueOrb)
+        waitmessage
+        closemessage
+        setvar(VAR_RESULT, 3)
+        special(DoOrbEffect)
+        playse(SE_ORB)
+        waitse
+        delay(150)
+        special(FadeOutOrbEffect)
+        waitstate
+        setflag(FLAG_BLUE_ORB_USED)
+        removeobject(LOCALID_NINJA_BLUE_ORB)
+
+        if(flag(FLAG_RED_ORB_USED))
+        {
+            call(CaveOfCreation_Eventscript_PathOpen)
+        }
+    }
+    release
+    end
+}
+
+script CaveOfCreation_Eventscript_PathOpen {
+    playse(SE_M_EARTHQUAKE)
+
+    setvar(VAR_0x8004, 4)   // vertical pan
+	setvar(VAR_0x8005, 2)   // horizontal pan
+	setvar(VAR_0x8006, 8)   // num shakes
+	setvar(VAR_0x8007, 5)   // shake delay
+	special(ShakeCamera)
+	waitstate
+
+    delay(60)
+    waitse
+
+    msgbox(CaveOfCreation_Text_PathOpen)
+    waitmessage
+    closemessage
+    setflag(FLAG_MOUNTAIN_PATH_FREE)
+
+    release
+    end
+}
+
+script CaveOfCreation_Sign_RedOrb {
+    msgbox(CaveOfCreation_Text_RedOrb, MSGBOX_SIGN)
+}
+
+script CaveOfCreation_Sign_BlueOrb {
+    msgbox(CaveOfCreation_Text_BlueOrb, MSGBOX_SIGN)
+}
+
+text CaveOfCreation_Text_RedOrb {
+    format("Hold the RED ORB high above your head.\nAs proof that you have gained dominance over the element of fire.")
+}
+
+text CaveOfCreation_Text_BlueOrb {
+    format("Hold the BLUE ORB high above your head.\nAs proof that you have gained dominance over the element of water.")
+}
+
+text CaveOfCreation_Text_ShowRedOrb {
+    format("You hold the RED ORB high above your\n head.\pIt shimmers with a beatiful ruby light.")
+}
+
+text CaveOfCreation_Text_ShowBlueOrb {
+    format("You hold the BLUE ORB high above your\n head.\pIt shimmers with a beatiful sapphire light.")
+}
+
+text CaveOfCreation_Text_PathOpen {
+    format("A path to the mountain has been revealed.")
 }
