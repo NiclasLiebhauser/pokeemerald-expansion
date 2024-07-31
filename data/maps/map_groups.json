@@ -669,7 +669,11 @@
     "SacredCity_House2"
   ],
   "gMapGroup_SacredMountainDungeon": [
-    "SacredMountain_1F"
+    "SacredMountain_1F",
+    "SacredMountain_2F",
+    "SacredMountain_3F",
+    "SacredMountain_4F",
+    "SacredMountain_Peak"
   ],
   "gMapGroup_SacredIslandSouthIndoor": [
     "AnabelsHouse"

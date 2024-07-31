@@ -4780,6 +4780,46 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/InfernoCavern_3F/border.bin",
       "blockdata_filepath": "data/layouts/InfernoCavern_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SACRED_MOUNTAIN_2F",
+      "name": "SacredMountain_2F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/SacredMountain_2F/border.bin",
+      "blockdata_filepath": "data/layouts/SacredMountain_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SACRED_MOUNTAIN_3F",
+      "name": "SacredMountain_3F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/SacredMountain_3F/border.bin",
+      "blockdata_filepath": "data/layouts/SacredMountain_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SACRED_MOUNTAIN_4F",
+      "name": "SacredMountain_4F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/SacredMountain_4F/border.bin",
+      "blockdata_filepath": "data/layouts/SacredMountain_4F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SACRED_MOUNTAIN_PEAK",
+      "name": "SacredMountain_Peak_Layout",
+      "width": 36,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/SacredMountain_Peak/border.bin",
+      "blockdata_filepath": "data/layouts/SacredMountain_Peak/map.bin"
     }
   ]
 }
