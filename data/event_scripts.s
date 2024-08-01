@@ -1187,8 +1187,8 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/SacredMountain_2F/scripts.inc"
 	.include "data/maps/SacredMountain_2F/text.inc"
 
-	.include "data/maps/SacredMountain_3D/scripts.inc"
-	.include "data/maps/SacredMountain_3D/text.inc"
+	.include "data/maps/SacredMountain_3F/scripts.inc"
+	.include "data/maps/SacredMountain_3F/text.inc"
 
 	.include "data/maps/SacredMountain_4F/scripts.inc"
 	.include "data/maps/SacredMountain_4F/text.inc"
