@@ -4661,7 +4661,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dialga = {
     .width = 64,
     .height = 64,
     .paletteSlot = PALSLOT_NPC_1,
-    .shadowSize = SHADOW_SIZE_M,
+    .shadowSize = SHADOW_SIZE_XL,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = TRUE,
     .tracks = TRACKS_FOOT,
@@ -4669,5 +4669,24 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dialga = {
     .subspriteTables = sOamTables_64x64,
     .anims = sAnimTable_Standard,
     .images = sPicTable_Dialga,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Palkia = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_PALKIA,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 2048,
+    .width = 64,
+    .height = 64,
+    .paletteSlot = PALSLOT_NPC_1,
+    .shadowSize = SHADOW_SIZE_XL,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = TRUE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_64x64,
+    .subspriteTables = sOamTables_64x64,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Palkia,
     .affineAnims = gDummySpriteAffineAnimTable,
 };

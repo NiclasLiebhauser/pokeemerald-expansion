@@ -375,3 +375,5 @@ const u32 gObjectEventPic_HoOh[] = INCBIN_U32("graphics/object_events/pics/pokem
 const u16 gObjectEventPal_HoOh[] = INCBIN_U16("graphics/object_events/palettes/ho_oh.gbapal");
 const u32 gObjectEventPic_Dialga[] = INCBIN_U32("graphics/object_events/pics/pokemon/dialga.4bpp");
 const u16 gObjectEventPal_Dialga[] = INCBIN_U16("graphics/object_events/palettes/dialga.gbapal");
+const u32 gObjectEventPic_Palkia[] = INCBIN_U32("graphics/object_events/pics/pokemon/palkia.4bpp");
+const u16 gObjectEventPal_Palkia[] = INCBIN_U16("graphics/object_events/palettes/palkia.gbapal");
