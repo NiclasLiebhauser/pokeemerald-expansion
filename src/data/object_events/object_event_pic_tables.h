@@ -641,6 +641,42 @@ static const struct SpriteFrameImage sPicTable_Tate[] = {
     overworld_frame(gObjectEventPic_Tate, 2, 4, 2),
 };
 
+static const struct SpriteFrameImage sPicTable_Giovanni[] = {
+    overworld_frame(gObjectEventPic_Giovanni, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Giovanni, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Giovanni, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Giovanni, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Giovanni, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Giovanni, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Giovanni, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Giovanni, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Giovanni, 4, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_Rocketgruntf[] = {
+    overworld_frame(gObjectEventPic_Rocketgruntf, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Rocketgruntf, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Rocketgruntf, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Rocketgruntf, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Rocketgruntf, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Rocketgruntf, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Rocketgruntf, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Rocketgruntf, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Rocketgruntf, 4, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_Rocketgruntm[] = {
+    overworld_frame(gObjectEventPic_Rocketgruntm, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Rocketgruntm, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Rocketgruntm, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Rocketgruntm, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Rocketgruntm, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Rocketgruntm, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Rocketgruntm, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Rocketgruntm, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Rocketgruntm, 4, 4, 8),
+};
+
 static const struct SpriteFrameImage sPicTable_Wallace[] = {
     overworld_ascending_frames(gObjectEventPic_Wallace, 2, 4),
 };
