@@ -895,6 +895,10 @@ u8 GetTrainerBattleTransition(void)
         || trainerClass == TRAINER_CLASS_AQUA_ADMIN)
         return B_TRANSITION_AQUA;
 
+    if (trainerClass == TRAINER_CLASS_TEAM_ROCKET
+        || trainerClass == TRAINER_CLASS_ROCKET_LEADER)
+        return B_TRANSITION_POKEBALLS_TRAIL;
+        
     if (IsTrainerDoubleBattle(trainerId))
         minPartyCount = 2; // double battles always at least have 2 Pokémon.
     else
@@ -1586,6 +1590,9 @@ void PlayTrainerEncounterMusic(void)
             break;
         case TRAINER_ENCOUNTER_MUSIC_RICH:
             music = MUS_ENCOUNTER_RICH;
+            break;
+        case TRAINER_ENCOUNTER_MUSIC_ROCKET:
+            music = MUS_RG_ENCOUNTER_ROCKET;
             break;
         default:
             music = MUS_ENCOUNTER_SUSPICIOUS;
