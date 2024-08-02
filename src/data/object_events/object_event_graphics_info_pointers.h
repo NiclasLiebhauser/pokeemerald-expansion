@@ -246,6 +246,8 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvi
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldMan2;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dialga;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Palkia;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Giratina;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Giratina_origin;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -489,6 +491,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_HOOH] =                     &gObjectEventGraphicsInfo_HoOh,
     [OBJ_EVENT_GFX_DIALGA] =                   &gObjectEventGraphicsInfo_Dialga,
     [OBJ_EVENT_GFX_PALKIA] =                   &gObjectEventGraphicsInfo_Palkia,
+    [OBJ_EVENT_GFX_GIRATINA] =                   &gObjectEventGraphicsInfo_Giratina,
+    [OBJ_EVENT_GFX_GIRATINA_ORIGIN] =                   &gObjectEventGraphicsInfo_Giratina_origin,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

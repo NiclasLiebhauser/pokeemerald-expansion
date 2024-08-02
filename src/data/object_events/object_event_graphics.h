@@ -377,3 +377,7 @@ const u32 gObjectEventPic_Dialga[] = INCBIN_U32("graphics/object_events/pics/pok
 const u16 gObjectEventPal_Dialga[] = INCBIN_U16("graphics/object_events/palettes/dialga.gbapal");
 const u32 gObjectEventPic_Palkia[] = INCBIN_U32("graphics/object_events/pics/pokemon/palkia.4bpp");
 const u16 gObjectEventPal_Palkia[] = INCBIN_U16("graphics/object_events/palettes/palkia.gbapal");
+const u32 gObjectEventPic_Giratina[] = INCBIN_U32("graphics/object_events/pics/pokemon/giratina.4bpp");
+const u16 gObjectEventPal_Giratina[] = INCBIN_U16("graphics/object_events/palettes/giratina.gbapal");
+const u32 gObjectEventPic_Giratina_origin[] = INCBIN_U32("graphics/object_events/pics/pokemon/giratina_origin.4bpp");
+const u16 gObjectEventPal_Giratina_origin[] = INCBIN_U16("graphics/object_events/palettes/giratina_origin.gbapal");
