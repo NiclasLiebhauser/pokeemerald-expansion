@@ -1,1 +1,389 @@
-mapscripts SacredMountain_Peak_MapScripts {}
+const LOCALID_DIALGA = 1
+const LOCALID_PALKIA = 2
+const LOCALID_GIOVANNI_CUTSCENE = 3
+const LOCALID_GIRATINA = 4
+const LOCALID_SPENSER = 5
+const LOCALID_GIRATINA_ORIGIN = 6
+const LOCALID_GIOVANNI_TRAINER = 7
+
+mapscripts SacredMountain_Peak_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: SacredMountain_EventScript_OnTransition
+    MAP_SCRIPT_ON_RESUME: SacredMountain_EventScript_OnResume
+}
+
+//SacredMountain_EventScript_
+
+script SacredMountain_EventScript_OnResume {
+    call_if_set(FLAG_SYS_CTRL_OBJ_DELETE, SacredMountain_EventScript_TryRemoveGiratinaOrigin)
+
+}
+
+script SacredMountain_EventScript_OnTransition {
+    //setmetatile(18, 17, METATILE_Cave_SacredMountain_Peak_MountainOverhang, TRUE)
+    if(var(VAR_SACRED_MOUNTAIN_PEAK_STATE) == 0)
+    {
+        setflag(FLAG_HIDE_PALKIA)
+        setflag(FLAG_HIDE_DIALGA)
+        setflag(FLAG_HIDE_GIOVANNI_CUSCENE)
+        setflag(FLAG_HIDE_GIRATINA)
+        setflag(FLAG_HIDE_GIRATINA_ORIGIN)
+        setflag(FLAG_HIDE_GIOVANNI_TRAINER)
+        removeobject(LOCALID_DIALGA)
+        removeobject(LOCALID_PALKIA)
+        removeobject(LOCALID_GIRATINA)
+        removeobject(LOCALID_GIRATINA_ORIGIN)
+        removeobject(LOCALID_GIOVANNI_CUTSCENE)
+        removeobject(LOCALID_GIOVANNI_TRAINER)
+    }
+    elif(var(VAR_SACRED_MOUNTAIN_PEAK_STATE) == 1)
+    {
+        setflag(FLAG_HIDE_SPENSER)
+        clearflag(FLAG_HIDE_GIOVANNI_TRAINER)
+        clearflag(FLAG_HIDE_PALKIA)
+        clearflag(FLAG_HIDE_DIALGA)
+        removeobject(LOCALID_SPENSER)
+        addobject(LOCALID_GIOVANNI_TRAINER)
+        addobject(LOCALID_DIALGA)
+        addobject(LOCALID_PALKIA)
+    }
+    end
+}
+
+script SacredMountain_EventScript_TryRemoveGiratinaOrigin {
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    call_if_eq(VAR_RESULT, B_OUTCOME_WON, SacredMountain_EventScript_RemoveGiratinaOrigin)
+    return
+}
+
+script SacredMountain_EventScript_RemoveGiratinaOrigin {
+    removeobject(LOCALID_GIRATINA_ORIGIN)
+    return
+}
+
+script SacredMountain_EventScript_Cutscene_Trigger_Left {
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+    waitmovement(0)
+    call(SacredMountain_EventScript_Cutscene_Main)
+    release
+    end
+}
+
+script SacredMountain_EventScript_Cutscene_Trigger_Middle {
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+    waitmovement(0)
+    call(SacredMountain_EventScript_Cutscene_Main)
+    release
+    end
+}
+
+script SacredMountain_EventScript_Cutscene_Trigger_Right {
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+    waitmovement(0)
+    call(SacredMountain_EventScript_Cutscene_Main)
+    release
+    end
+}
+
+script SacredMountain_EventScript_Cutscene_Main {
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanUp)
+    waitmovement(0)
+    msgbox(SacredMountain_Text_Spenser1, MSGBOX_AUTOCLOSE)
+    waitmessage
+
+    applymovement(LOCALID_SPENSER, Common_Movement_FaceDown)
+    waitmovement(0)
+    delay(30)
+
+    msgbox(SacredMountain_Text_Spenser2, MSGBOX_NPC)
+
+    msgbox("???: Halt!", MSGBOX_NPC)
+
+    playse(SE_PIN)
+    applymovement(LOCALID_SPENSER, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(LOCALID_SPENSER, Common_Movement_Delay48)
+    waitmovement(0)
+
+    playbgm(MUS_RG_ENCOUNTER_ROCKET, FALSE)
+    addobject(LOCALID_GIOVANNI_CUTSCENE)
+    applymovement(LOCALID_GIOVANNI_CUTSCENE, SacredMountain_Movement_Giovanni_WalkOn)
+    waitmovement(0)
+    playse(SE_WALL_HIT)
+    applymovement(LOCALID_SPENSER,SacredMountain_Movement_Spenser_PushedBack)
+    waitmovement(0)
+
+    msgbox(SacredMountain_Text_Giovanni1, MSGBOX_NPC)
+    applymovement(OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanUp)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanUp)
+    waitmovement(0)
+
+    playse(SE_M_DETECT)
+    dofieldeffectsparkle(18, 21, 0)
+    delay(30)
+    playfanfare(MUS_AWAKEN_LEGEND)
+
+    fadescreen(FADE_TO_WHITE)
+    delay(90)
+    playmoncry(SPECIES_DIALGA, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    playmoncry(SPECIES_PALKIA, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    clearflag(FLAG_HIDE_PALKIA)
+    clearflag(FLAG_HIDE_DIALGA)
+    addobject(LOCALID_DIALGA)
+    addobject(LOCALID_PALKIA)
+    fadescreen(FADE_FROM_WHITE)
+
+    msgbox(SacredMountain_Text_Giovanni2, MSGBOX_NPC)
+    applymovement(LOCALID_GIOVANNI_CUTSCENE, SacredMountain_Movement_Giovanni_Push)
+    waitmovement(0)
+    playse(SE_WALL_HIT)
+    setmetatile(18, 17, METATILE_Cave_SacredMountain_Peak_MountainOverhang, FALSE)
+    applymovement(LOCALID_SPENSER,SacredMountain_Movement_Spenser_PushedOff)
+    delay(10)
+    playse(SE_FALL)
+    waitmovement(0)
+    setmetatile(18, 17, METATILE_Cave_SacredMountain_Peak_MountainOverhang, TRUE)
+    removeobject(LOCALID_SPENSER)
+
+    delay(30)
+    applymovement(LOCALID_GIOVANNI_CUTSCENE, Common_Movement_FaceDown)
+    waitmovement(0)
+
+    applymovement(OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanDown)
+    waitmovement(0)
+    special(RemoveCameraObject)
+
+    clearflag(FLAG_HIDE_GIOVANNI_TRAINER)
+    removeobject(LOCALID_GIOVANNI_CUTSCENE)
+    addobject(LOCALID_GIOVANNI_TRAINER)
+    fadedefaultbgm
+
+    setvar(VAR_SACRED_MOUNTAIN_PEAK_STATE, 1)
+    release
+    end
+}
+
+script SacredMountain_EventScript_Giovanni {
+    lock
+    applymovement(LOCALID_GIOVANNI_TRAINER, Common_Movement_FacePlayer)
+    msgbox(SacredMountain_Text_Giovanni_PreBattle, MSGBOX_NPC)
+    trainerbattle_no_intro(TRAINER_GIOVANNI_SACRED_MOUNTAIN, SacredMountain_Text_Giovanni_Deafeat)
+    msgbox(SacredMountain_Text_Giovanni_PostBattle, MSGBOX_NPC)
+    
+    playse(SE_M_DETECT)
+    dofieldeffectsparkle(18, 20, 0)
+    delay(30)
+
+    fadescreen(FADE_TO_BLACK)
+    delay(90)
+    msgbox(SacredMountain_Text_Giovanni_CallForGiratina, MSGBOX_NPC)
+    playmoncry(SPECIES_GIRATINA, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    clearflag(FLAG_HIDE_GIRATINA)
+    addobject(LOCALID_GIRATINA)
+    fadescreen(FADE_FROM_BLACK)
+
+    call(SacredMountain_EventScript_DoGiratinaBattle)
+
+    release
+    end
+}
+
+script SacredMountain_EventScript_DoGiratinaBattle {
+    setvar(VAR_TEMP_0, 0)
+    setwildbattle(SPECIES_GIRATINA, 70)
+    setflag(FLAG_NO_CATCHING)
+    special(BattleSetup_StartLegendaryBattle)
+    waitstate
+    clearflag(FLAG_NO_CATCHING)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    call_if_eq(VAR_RESULT, B_OUTCOME_WON, SacredMountain_EventScript_GiratinaBattleWon)
+    call_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SacredMountain_EventScript_ThereIsNoEscape)
+
+    release
+    end
+}
+
+script SacredMountain_EventScript_GiratinaBattleWon {
+    delay(30)
+    playmoncry(SPECIES_GIRATINA, CRY_MODE_FAINT)
+    waitmoncry
+
+    msgbox(SacredMountain_Text_Giovanni_PostBattleGiratina, MSGBOX_NPC)
+    applymovement(LOCALID_GIOVANNI_TRAINER, Common_Movement_FaceUp)
+    waitmovement(0)
+
+    playse(SE_M_DETECT)
+    dofieldeffectsparkle(18, 20, 0)
+    delay(30)
+
+    playse(SE_M_DETECT)
+    dofieldeffectsparkle(18, 19, 0)
+    dofieldeffectsparkle(18, 18, 0)
+    delay(30)
+
+    playmoncry(SPECIES_GIRATINA, CRY_MODE_ENCOUNTER)
+    waitmoncry
+
+    fadescreen(FADE_TO_BLACK)
+    delay(90)
+    msgbox(SacredMountain_Text_Giovanni_Giratina_Kills_Giovanni, MSGBOX_NPC)
+    playse(SE_M_DRAGON_RAGE)
+    waitse
+    playmoncry(SPECIES_GIRATINA_ORIGIN, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    setflag(FLAG_HIDE_GIRATINA)
+    setflag(FLAG_HIDE_GIOVANNI_TRAINER)
+    removeobject(LOCALID_GIRATINA)
+    removeobject(LOCALID_GIOVANNI_TRAINER)
+    clearflag(FLAG_HIDE_GIRATINA_ORIGIN)
+    addobject(LOCALID_GIRATINA_ORIGIN)
+    fadescreen(FADE_FROM_BLACK)
+
+    applymovement(LOCALID_GIRATINA_ORIGIN, Common_Movement_WalkDown)
+    waitmovement(0)
+
+    call(SacredMountain_EventScript_DoGiratinaOriginBattle)
+
+    release
+    end
+}
+
+script SacredMountain_EventScript_ThereIsNoEscape {
+    if(var(VAR_TEMP_0) == 0)
+    {
+        //Todo more dialogue
+        call(SacredMountain_EventScript_DoGiratinaBattle)
+    }
+    if(var(VAR_TEMP_0) == 1)
+    {
+        //Todo more dialogue
+        call(SacredMountain_EventScript_DoGiratinaOriginBattle)
+    }
+
+    release
+    end
+}
+
+script SacredMountain_EventScript_DoGiratinaOriginBattle {
+    setvar(VAR_TEMP_0, 1)
+    setvar(VAR_LAST_TALKED, LOCALID_GIRATINA_ORIGIN)
+    setwildbattle(SPECIES_GIRATINA_ORIGIN, 70)
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    setflag(FLAG_NO_CATCHING)
+    special(BattleSetup_StartLegendaryBattle)
+    waitstate
+    clearflag(FLAG_NO_CATCHING)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    call_if_eq(VAR_RESULT, B_OUTCOME_WON, SacredMountain_EventScript_GiratinaOriginBattleWon)
+    call_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SacredMountain_EventScript_ThereIsNoEscape)
+
+    release
+    end
+}
+
+script SacredMountain_EventScript_GiratinaOriginBattleWon {
+    setvar(VAR_SACRED_MOUNTAIN_PEAK_STATE, 2)
+    release
+    end
+}
+
+script SacredMountain_EventScript_WalkBack {
+    lock
+    msgbox(format("GIOVANNI: And where do you think you are going?"))
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
+    waitmovement(0)
+    release
+    end
+}
+
+//ToSolve
+text SacredMountain_Text_Spenser1 {
+    format("SPENSER: Lorem Ipsum!\nLorem Lorem\pIpsum")
+}
+
+//ToSolve
+text SacredMountain_Text_Spenser2 {
+    format("Lorem Ipsum!")
+}
+
+//ToSolve
+text SacredMountain_Text_Giovanni1 {
+    format("GIOVANNI: Lorem Ipsum!")
+}
+
+//ToSolve
+text SacredMountain_Text_Giovanni2 {
+    format("GIOVANNI: Lorem Ipsum!")
+}
+
+//ToSolve
+text SacredMountain_Text_Giovanni_PreBattle {
+    format("GIOVANNI: So you want to stop me?\nCome an try.")
+}
+
+//ToSolve
+text SacredMountain_Text_Giovanni_Deafeat {
+    format("Lost to a mere child...")
+}
+
+//ToSolve
+text SacredMountain_Text_Giovanni_PostBattle {
+    format("No! This is inconceivable.\nHow... how did I lose.\pYou leave me no choice. I would not\n wish this upon my worst enemy...")
+}
+
+//ToSolve
+text SacredMountain_Text_Giovanni_CallForGiratina {
+    format("Let the rule of darkness be eternal.\pCome forth GIRATINA!")
+}
+
+//ToSolve
+text SacredMountain_Text_Giovanni_PostBattleGiratina {
+    format("Impossible! How could GIRATINA lose?\nIt is the strongest POKéMON known to man.\pNo...\pI can not accept this. RED NECLACE, give GIRATINA the power to continue battle!")
+}
+
+//ToSolve
+text SacredMountain_Text_Giovanni_Giratina_Kills_Giovanni {
+    format("Huh? GIRATINA?\pWhat are you doing?\pNo stop...")
+}
+
+movement SacredMountain_Movement_Giovanni_WalkOn {
+    walk_up*9
+    walk_right
+    face_up
+}
+
+movement SacredMountain_Movement_Giovanni_Push {
+    walk_fast_up
+}
+
+movement SacredMountain_Movement_Spenser_PushedBack {
+    jump_up
+    face_down
+}
+
+movement SacredMountain_Movement_Spenser_PushedOff {
+    jump_2_up*2
+}
+
+movement SacredMountain_Movement_Camera_PanUp {
+    walk_slow_up
+}
+
+movement SacredMountain_Movement_Camera_PanDown {
+    walk_slow_down*3
+}
