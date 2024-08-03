@@ -1,44 +1,48 @@
 const LOCAL_LEVEL = 15
-const LOCAL_MANIAC_ID = 7
+const LOCALID_SPENSER = 7
 
 mapscripts MysteryCave_MapScripts {}
 
-script ManiacTriggeredEventScript1 {
+script MysteryCave_EventScript_ManiacTriggered1 {
     lockall
     playse(SE_PIN)
-    applymovement(LOCAL_MANIAC_ID, ManiacExclamationMovement)
-    waitmovement(LOCAL_MANIAC_ID)
-    delay(24)
-    applymovement(LOCAL_MANIAC_ID, ManiacWalkOn1Movement)
+    applymovement(LOCALID_SPENSER, Common_Movement_ExclamationMark)
+    waitmovement(0)     
+    applymovement(LOCALID_SPENSER, Common_Movement_Delay48)
     waitmovement(0)
-    call(StartAdventureEventScript)
-    call(ManiacWalkOff)
+    applymovement(LOCALID_SPENSER, Common_Movement_WalkLeft)
+    waitmovement(0)
+    call(MysteryCave_EventScript_StartAdventure)
+    call(MysteryCave_EventScript_SpenserWalkOff)
     releaseall
     end
 }
 
-script ManiacTriggeredEventScript2 {
+script MysteryCave_EventScript_ManiacTriggered2 {
     lockall
     playse(SE_PIN)
-    applymovement(LOCAL_MANIAC_ID, ManiacExclamationMovement)
-    waitmovement(LOCAL_MANIAC_ID)
-    delay(24)
-    applymovement(LOCAL_MANIAC_ID, ManiacWalkOn2Movement)
+    applymovement(LOCALID_SPENSER, Common_Movement_ExclamationMark)
+    waitmovement(0)     
+    applymovement(LOCALID_SPENSER, Common_Movement_Delay48)
     waitmovement(0)
-    call(StartAdventureEventScript)
-    call(ManiacWalkOff)
+    applymovement(LOCALID_SPENSER, Common_Movement_WalkLeft)
+    waitmovement(0)
+    applymovement(LOCALID_SPENSER, Common_Movement_WalkLeft)
+    waitmovement(0)
+    call(MysteryCave_EventScript_StartAdventure)
+    call(MysteryCave_EventScript_SpenserWalkOff)
     releaseall
     end
 }
 
-script ManiacWalkOff {
-    applymovement(LOCAL_MANIAC_ID, ManiacWalkOffMovement)
+script MysteryCave_EventScript_SpenserWalkOff {
+    applymovement(LOCALID_SPENSER, MysteryCave_Movement_SpenserWalkOff)
     waitmovement(0)
-    removeobject(LOCAL_MANIAC_ID)
+    removeobject(LOCALID_SPENSER)
     return
 }
 
-script StartAdventureEventScript {
+script MysteryCave_EventScript_StartAdventure {
     msgbox(ArceusServantTextStart, MSGBOX_DEFAULT)
     call(ReceivePokedex)
     call(ReceivePokenav)
@@ -50,7 +54,7 @@ script StartAdventureEventScript {
 
     waitmessage
     waitbuttonpress
-    closemessage
+    msgbox(MysteryCave_Text_ArceusServant_Goodbye, MSGBOX_NPC)
     return
 }
 
@@ -288,18 +292,10 @@ text GiveMonNickText {
     format("Give {STR_VAR_1} a nickname?")
 }
 
-movement ManiacWalkOffMovement {
+text MysteryCave_Text_ArceusServant_Goodbye {
+    format("Now then. Fare thee well until our next meeting.\pI will be waiting for you at the top of the Sacred Mountain.")
+}
+
+movement MysteryCave_Movement_SpenserWalkOff {
     walk_right * 7
-}
-
-movement ManiacExclamationMovement {
-    emote_exclamation_mark
-}
-
-movement ManiacWalkOn1Movement {
-    walk_left
-}
-
-movement ManiacWalkOn2Movement {
-    walk_left * 2
 }
