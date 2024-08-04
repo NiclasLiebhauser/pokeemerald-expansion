@@ -4820,6 +4820,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/SacredMountain_Peak/border.bin",
       "blockdata_filepath": "data/layouts/SacredMountain_Peak/map.bin"
+    },
+    {
+      "id": "LAYOUT_BLACK_VOID",
+      "name": "BlackVoid_Layout",
+      "width": 8,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/BlackVoid/border.bin",
+      "blockdata_filepath": "data/layouts/BlackVoid/map.bin"
     }
   ]
 }

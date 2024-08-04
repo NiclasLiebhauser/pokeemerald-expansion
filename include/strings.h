@@ -3062,4 +3062,12 @@ extern const u8 gText_BasePointsResetToZero[];
 extern const u8 gText_Fertilize[];
 extern const u8 gText_PlantBerry[];
 
+extern const u8 gText_Kanto[];
+extern const u8 gText_Johto[];
+extern const u8 gText_Calm[]; 
+extern const u8 gText_Excited[];
+extern const u8 gText_Joyful[]; 
+extern const u8 gText_Adventure[];
+extern const u8 gText_Mysteries[];
+
 #endif // GUARD_STRINGS_H

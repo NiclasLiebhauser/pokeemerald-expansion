@@ -1195,3 +1195,6 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/SacredMountain_Peak/scripts.inc"
 	.include "data/maps/SacredMountain_Peak/text.inc"
+
+	.include "data/maps/BlackVoid/scripts.inc"
+	.include "data/maps/BlackVoid/text.inc"

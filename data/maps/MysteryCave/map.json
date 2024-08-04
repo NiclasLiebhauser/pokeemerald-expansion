@@ -115,7 +115,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 7,
+      "x": 6,
       "y": 21,
       "elevation": 0,
       "var": "VAR_START_ADVENTURE_STATE",
@@ -124,7 +124,7 @@
     },
     {
       "type": "trigger",
-      "x": 6,
+      "x": 7,
       "y": 21,
       "elevation": 0,
       "var": "VAR_START_ADVENTURE_STATE",

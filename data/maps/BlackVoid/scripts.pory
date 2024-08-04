@@ -1,0 +1,167 @@
+mapscripts BlackVoid_MapScripts {
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE [VAR_TEMP_0, 0: BlackVoid_EventScript_WarpIntoMap]
+    MAP_SCRIPT_ON_FRAME_TABLE 
+    [
+        VAR_TEMP_0, 0: BlackVoid_EventScript_OnFrameTable0
+        VAR_TEMP_2, 1: BlackVoid_EventScript_OnFrameTable1
+    ]
+}
+
+//BlackVoid_EventScript_
+
+script BlackVoid_EventScript_OnFrameTable0 {
+    if(var(VAR_TEMP_1 == 0))
+    {
+        lock
+        playbgm(MUS_ABANDONED_SHIP, FALSE)
+    }
+    if(var(VAR_TEMP_1) >= 60)
+    {
+        setvar(VAR_TEMP_0, 1)
+        setvar(VAR_TEMP_2, 1)
+    }
+    addvar(VAR_TEMP_1, 1)
+    end
+}
+
+script BlackVoid_EventScript_OnFrameTable1 {
+    setvar(VAR_TEMP_2, 0)
+    message(BlackVoid_Text_Intro)
+    waitmessage
+
+    message(BlackVoid_Text_WhereAreYouFrom)
+    waitmessage
+    multichoice(25, 5, MULTI_ORIGIN_REGION, TRUE)
+    if(var(VAR_RESULT) == 0)
+    {
+        setvar(VAR_START_QUESTION_1, 0)
+        message(BlackVoid_Text_Comment_Kanto)
+    }
+    elif(var(VAR_RESULT) == 1)
+    {
+        setvar(VAR_START_QUESTION_1, 1)
+        message(BlackVoid_Text_Comment_Johto)
+    }
+    elif(var(VAR_RESULT) == 2)
+    {
+        setvar(VAR_START_QUESTION_1, 2)
+        message(BlackVoid_Text_Comment_Hoenn)
+    }
+    waitmessage
+    
+
+    message(BlackVoid_Text_HowAreYouFeeling)
+    waitmessage
+    multichoice(25, 5, MULTI_FEELING, TRUE)
+    if(var(VAR_RESULT) == 0)
+    {
+        setvar(VAR_START_QUESTION_2, 0)
+        message(BlackVoid_Text_Comment_Calm)
+    }
+    elif(var(VAR_RESULT) == 1)
+    {
+        setvar(VAR_START_QUESTION_2, 1)
+        message(BlackVoid_Text_Comment_Excited)
+    }
+    elif(var(VAR_RESULT) == 2)
+    {
+        setvar(VAR_START_QUESTION_2, 2)
+        message(BlackVoid_Text_Comment_Joyful)
+    }
+    waitmessage
+    
+
+    message(BlackVoid_Text_WhatIsMotivation)
+    waitmessage
+    multichoice(25, 5, MULTI_MOTIVATION, TRUE)
+    if(var(VAR_RESULT) == 0)
+    {
+        setvar(VAR_START_QUESTION_3, 0)
+        message(BlackVoid_Text_Comment_Power)
+    }
+    elif(var(VAR_RESULT) == 1)
+    {
+        setvar(VAR_START_QUESTION_3, 1)
+        message(BlackVoid_Text_Comment_Adventure)
+    }
+    elif(var(VAR_RESULT) == 2)
+    {
+        setvar(VAR_START_QUESTION_3, 2)
+        message(BlackVoid_Text_Comment_Mysteries)
+    }
+    waitmessage
+
+    message(BlackVoid_Text_Outro)
+    waitmessage
+    closemessage
+
+    fadescreen(FADE_TO_BLACK)
+    warpsilent(MAP_MYSTERY_CAVE, 33, 5)
+    delay(10)
+    fadescreen(FADE_FROM_BLACK)
+    release
+
+    end
+}
+
+script BlackVoid_EventScript_WarpIntoMap {
+    hideobjectat(OBJ_EVENT_ID_PLAYER, MAP_BLACK_VOID)
+    end
+}
+
+text BlackVoid_Text_Intro {
+    format("Intro\p")
+}
+
+text BlackVoid_Text_Outro {
+    format("Outro\p")
+}
+
+
+text BlackVoid_Text_WhereAreYouFrom {
+    format("Where are you from?")
+}
+
+text BlackVoid_Text_HowAreYouFeeling {
+    format("How are you feeling right now?")
+}
+
+text BlackVoid_Text_WhatIsMotivation {
+    format("What is your motivation?")
+}
+
+text BlackVoid_Text_Comment_Kanto {
+    format("KANTO\p")
+}
+
+text BlackVoid_Text_Comment_Johto {
+    format("JOHTO\p")
+}
+
+text BlackVoid_Text_Comment_Hoenn {
+    format("HOENN\p")
+}
+
+text BlackVoid_Text_Comment_Calm {
+    format("Calm\p")
+}
+
+text BlackVoid_Text_Comment_Excited {
+    format("Excited\p")
+}
+
+text BlackVoid_Text_Comment_Joyful {
+    format("Joyful\p")
+}
+
+text BlackVoid_Text_Comment_Power {
+    format("Power\p")
+}
+
+text BlackVoid_Text_Comment_Adventure {
+    format("Adventure\p")
+}
+
+text BlackVoid_Text_Comment_Mysteries {
+    format("Mysteries\p")
+}

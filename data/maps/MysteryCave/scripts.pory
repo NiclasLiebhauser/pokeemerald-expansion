@@ -54,7 +54,9 @@ script MysteryCave_EventScript_StartAdventure {
 
     waitmessage
     waitbuttonpress
-    msgbox(MysteryCave_Text_ArceusServant_Goodbye, MSGBOX_NPC)
+    message(MysteryCave_Text_ArceusServant_Goodbye)
+    waitmessage
+    closemessage
     return
 }
 
@@ -95,15 +97,15 @@ script ReceivePokenav {
 }
 
 script GiveFirstMon {
-    if(var(VAR_START_QUESTION_1) == 1)
+    if(var(VAR_START_QUESTION_1) == 0)
     {
         call(GiveFirstMonKanto)
     }
-    elif(var(VAR_START_QUESTION_1) == 2)
+    elif(var(VAR_START_QUESTION_1) == 1)
     {
         call(GiveFirstMonJohto)
     }
-    elif(var(VAR_START_QUESTION_1) == 3)
+    elif(var(VAR_START_QUESTION_1) == 2)
     {
         call(GiveFirstMonHoenn)
     }
@@ -116,15 +118,15 @@ script GiveFirstMon {
 }
 
 script GiveSecondMon {
-    if(var(VAR_START_QUESTION_1) == 1)
+    if(var(VAR_START_QUESTION_1) == 0)
     {
         call(GiveSecondMonKanto)
     }
-    elif(var(VAR_START_QUESTION_1) == 2)
+    elif(var(VAR_START_QUESTION_1) == 1)
     {
         call(GiveSecondMonJohto)
     }
-    elif(var(VAR_START_QUESTION_1) == 3)
+    elif(var(VAR_START_QUESTION_1) == 2)
     {
         call(GiveSecondMonHoenn)
     }
@@ -137,17 +139,17 @@ script GiveSecondMon {
 }
 
 script GiveFirstMonKanto {
-    if(var(VAR_START_QUESTION_2) == 1)
+    if(var(VAR_START_QUESTION_2) == 0)
     {
         bufferspeciesname(STR_VAR_1, SPECIES_POLIWAG)
         givemon(SPECIES_POLIWAG, LOCAL_LEVEL)
     }
-    elif(var(VAR_START_QUESTION_2) == 2)
+    elif(var(VAR_START_QUESTION_2) == 1)
     {
         bufferspeciesname(STR_VAR_1, SPECIES_VULPIX)
         givemon(SPECIES_VULPIX, LOCAL_LEVEL)
     }
-    elif(var(VAR_START_QUESTION_2) == 3)
+    elif(var(VAR_START_QUESTION_2) == 2)
     {
         bufferspeciesname(STR_VAR_1, SPECIES_ODDISH)
         givemon(SPECIES_ODDISH, LOCAL_LEVEL)
@@ -157,17 +159,17 @@ script GiveFirstMonKanto {
 }
 
 script GiveFirstMonJohto {
-    if(var(VAR_START_QUESTION_2) == 1)
+    if(var(VAR_START_QUESTION_2) == 0)
     {
         bufferspeciesname(STR_VAR_1, SPECIES_REMORAID)
         givemon(SPECIES_REMORAID, LOCAL_LEVEL)
     }
-    elif(var(VAR_START_QUESTION_2) == 2)
+    elif(var(VAR_START_QUESTION_2) == 1)
     {
         bufferspeciesname(STR_VAR_1, SPECIES_SLUGMA)
         givemon(SPECIES_SLUGMA, LOCAL_LEVEL)
     }
-    elif(var(VAR_START_QUESTION_2) == 3)
+    elif(var(VAR_START_QUESTION_2) == 2)
     {
         bufferspeciesname(STR_VAR_1, SPECIES_SUNKERN)
         givemon(SPECIES_SUNKERN, LOCAL_LEVEL)
@@ -177,17 +179,17 @@ script GiveFirstMonJohto {
 }
 
 script GiveFirstMonHoenn {
-    if(var(VAR_START_QUESTION_2) == 1)
+    if(var(VAR_START_QUESTION_2) == 0)
     {
         bufferspeciesname(STR_VAR_1, SPECIES_SPHEAL)
         givemon(SPECIES_SPHEAL, LOCAL_LEVEL)
     }
-    elif(var(VAR_START_QUESTION_2) == 2)
+    elif(var(VAR_START_QUESTION_2) == 1)
     {
         bufferspeciesname(STR_VAR_1, SPECIES_NUMEL)
         givemon(SPECIES_NUMEL, LOCAL_LEVEL)
     }
-    elif(var(VAR_START_QUESTION_2) == 3)
+    elif(var(VAR_START_QUESTION_2) == 2)
     {
         bufferspeciesname(STR_VAR_1, SPECIES_SEEDOT)
         givemon(SPECIES_SEEDOT, LOCAL_LEVEL)
@@ -198,17 +200,17 @@ script GiveFirstMonHoenn {
 }
 
 script GiveSecondMonKanto {
-    if(var(VAR_START_QUESTION_2) == 1)
+    if(var(VAR_START_QUESTION_2) == 0)
     {
         bufferspeciesname(STR_VAR_1, SPECIES_GROWLITHE)
         givemon(SPECIES_GROWLITHE, LOCAL_LEVEL)
     }
-    elif(var(VAR_START_QUESTION_2) == 2)
+    elif(var(VAR_START_QUESTION_2) == 1)
     {
         bufferspeciesname(STR_VAR_1, SPECIES_SANDSHREW_ALOLAN)
         givemon(SPECIES_SANDSHREW_ALOLAN, LOCAL_LEVEL)
     }
-    elif(var(VAR_START_QUESTION_2) == 3)
+    elif(var(VAR_START_QUESTION_2) == 2)
     {
         bufferspeciesname(STR_VAR_1, SPECIES_JYNX)
         givemon(SPECIES_JYNX, LOCAL_LEVEL)
@@ -218,17 +220,17 @@ script GiveSecondMonKanto {
 }
 
 script GiveSecondMonJohto {
-    if(var(VAR_START_QUESTION_2) == 1)
+    if(var(VAR_START_QUESTION_2) == 0)
     {
         bufferspeciesname(STR_VAR_1, SPECIES_LARVITAR)
         givemon(SPECIES_LARVITAR, LOCAL_LEVEL)
     }
-    elif(var(VAR_START_QUESTION_2) == 2)
+    elif(var(VAR_START_QUESTION_2) == 1)
     {
         bufferspeciesname(STR_VAR_1, SPECIES_QWILFISH_HISUIAN)
         givemon(SPECIES_QWILFISH_HISUIAN, LOCAL_LEVEL)
     }
-    elif(var(VAR_START_QUESTION_2) == 3)
+    elif(var(VAR_START_QUESTION_2) == 2)
     {
         bufferspeciesname(STR_VAR_1, SPECIES_SUDOWOODO)
         givemon(SPECIES_SUDOWOODO, LOCAL_LEVEL)
@@ -238,17 +240,17 @@ script GiveSecondMonJohto {
 }
 
 script GiveSecondMonHoenn {
-    if(var(VAR_START_QUESTION_2) == 1)
+    if(var(VAR_START_QUESTION_2) == 0)
     {
         bufferspeciesname(STR_VAR_1, SPECIES_BAGON)
         givemon(SPECIES_BAGON, LOCAL_LEVEL)
     }
-    elif(var(VAR_START_QUESTION_2) == 2)
+    elif(var(VAR_START_QUESTION_2) == 1)
     {
         bufferspeciesname(STR_VAR_1, SPECIES_ZIGZAGOON_GALARIAN)
         givemon(SPECIES_ZIGZAGOON_GALARIAN, LOCAL_LEVEL)
     }
-    elif(var(VAR_START_QUESTION_2) == 3)
+    elif(var(VAR_START_QUESTION_2) == 2)
     {
         bufferspeciesname(STR_VAR_1, SPECIES_SEVIPER)
         givemon(SPECIES_SEVIPER, LOCAL_LEVEL)
@@ -293,7 +295,7 @@ text GiveMonNickText {
 }
 
 text MysteryCave_Text_ArceusServant_Goodbye {
-    format("Now then. Fare thee well until our next meeting.\pI will be waiting for you at the top of the Sacred Mountain.")
+    format("Now then. Fare thee well until our next meeting.\pI will be waiting for you at the top of the Sacred Mountain.\p")
 }
 
 movement MysteryCave_Movement_SpenserWalkOff {

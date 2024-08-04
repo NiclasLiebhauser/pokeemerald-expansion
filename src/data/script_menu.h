@@ -771,6 +771,27 @@ static const struct MenuAction MultichoiceList_TagMatchType[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_Origin_Region[] =
+{
+    {gText_Kanto},
+    {gText_Johto},
+    {gText_Hoenn},
+};
+
+static const struct MenuAction MultichoiceList_Feeling[] =
+{
+    {gText_Calm},
+    {gText_Excited},
+    {gText_Joyful},
+};
+
+static const struct MenuAction MultichoiceList_Motivation[] =
+{
+    {gText_Power},
+    {gText_Adventure},
+    {gText_Mysteries},
+};
+
 static const struct MenuAction MultichoiceList_BerryPlot[] =
 {
     {gText_Fertilize},
@@ -906,6 +927,9 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
+    [MULTI_ORIGIN_REGION]              = MULTICHOICE(MultichoiceList_Origin_Region),
+    [MULTI_FEELING]                    = MULTICHOICE(MultichoiceList_Feeling),
+    [MULTI_MOTIVATION]                 = MULTICHOICE(MultichoiceList_Motivation),
 };
 
 const u8 *const gStdStrings[] =
