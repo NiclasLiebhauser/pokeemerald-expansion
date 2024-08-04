@@ -466,12 +466,6 @@ static void BattleScene_DrawChoices(u8 selection)
 
 static u8 BattleStyle_ProcessInput(u8 selection)
 {
-    if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
-    {
-        selection ^= 1;
-        sArrowPressed = TRUE;
-    }
-
     return selection;
 }
 
@@ -483,8 +477,7 @@ static void BattleStyle_DrawChoices(u8 selection)
     styles[1] = 0;
     styles[selection] = 1;
 
-    DrawOptionMenuChoice(gText_BattleStyleShift, 104, YPOS_BATTLESTYLE, styles[0]);
-    DrawOptionMenuChoice(gText_BattleStyleSet, GetStringRightAlignXOffset(FONT_NORMAL, gText_BattleStyleSet, 198), YPOS_BATTLESTYLE, styles[1]);
+    DrawOptionMenuChoice(gText_BattleStyleSet, 104, YPOS_BATTLESTYLE, styles[1]);
 }
 
 static u8 Sound_ProcessInput(u8 selection)
