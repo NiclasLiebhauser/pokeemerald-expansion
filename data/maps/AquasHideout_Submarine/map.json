@@ -1,0 +1,38 @@
+{
+  "id": "MAP_AQUAS_HIDEOUT_SUBMARINE",
+  "name": "AquasHideout_Submarine",
+  "layout": "LAYOUT_AQUAS_HIDEOUT_SUBMARINE",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_AQUA_HIDEOUT",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 31,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_UNDERWATER_AQUAS_HIDEOUT_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 32,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_UNDERWATER_AQUAS_HIDEOUT_1F",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

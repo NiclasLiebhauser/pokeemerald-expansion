@@ -4464,7 +4464,7 @@
     {
       "id": "LAYOUT_AQUA_HIDEOUT",
       "name": "AquaHideout_Layout",
-      "width": 30,
+      "width": 31,
       "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lilycove",
@@ -4830,6 +4830,26 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/BlackVoid/border.bin",
       "blockdata_filepath": "data/layouts/BlackVoid/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNDERWATER_AQUAS_HIDEOUT_1F",
+      "name": "Underwater_AquasHideout_1F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Underwater_AquasHideout_1F/border.bin",
+      "blockdata_filepath": "data/layouts/Underwater_AquasHideout_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_AQUAS_HIDEOUT_SUBMARINE",
+      "name": "AquasHideout_Submarine_Layout",
+      "width": 60,
+      "height": 35,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BikeShop",
+      "border_filepath": "data/layouts/AquasHideout_Submarine/border.bin",
+      "blockdata_filepath": "data/layouts/AquasHideout_Submarine/map.bin"
     }
   ]
 }

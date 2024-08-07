@@ -1,1 +1,25 @@
+const LOCALID_ANGLER = 1
+
 mapscripts SacredCity_House1_MapScripts {}
+
+script SacredCity_House1_Angler {
+    lock
+    faceplayer
+    if(flag(FLAG_RECEIVED_SUPER_ROD))
+    {
+        message(format("Oh a visitor. Whata rare event. You can have this, now that I'm retired I won't be needing it anymore.\p"))
+        waitmessage
+        playfanfare(MUS_OBTAIN_ITEM)
+        giveitem(ITEM_SUPER_ROD)
+        waitfanfare
+        setflag(FLAG_RECEIVED_SUPER_ROD)
+    }
+    else
+    {
+        message(format("Retirement on this secluded island really is something, right?\p"))
+        waitmessage
+    }
+    applymovement(LOCALID_ANGLER, Common_Movement_FaceRight)
+    release
+    end
+}

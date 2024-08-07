@@ -1198,3 +1198,9 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/BlackVoid/scripts.inc"
 	.include "data/maps/BlackVoid/text.inc"
+
+	.include "data/maps/Underwater_AquasHideout_1F/scripts.inc"
+	.include "data/maps/Underwater_AquasHideout_1F/text.inc"
+
+	.include "data/maps/AquasHideout_Submarine/scripts.inc"
+	.include "data/maps/AquasHideout_Submarine/text.inc"

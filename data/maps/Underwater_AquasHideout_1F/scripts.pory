@@ -1,0 +1,8 @@
+mapscripts Underwater_AquasHideout_1F_MapScripts {
+    MAP_SCRIPT_ON_RESUME: Underwater_AquasHideout_1F_OnResume
+}
+
+script Underwater_AquasHideout_1F_OnResume {
+    setdivewarp(MAP_AQUAS_HIDEOUT_1F, 32, 15)
+    end    
+}

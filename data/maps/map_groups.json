@@ -663,7 +663,9 @@
   ],
   "gMapGroup_AquaHideout": [
     "AquasHideout_1F",
-    "AquasHideout_2F"
+    "AquasHideout_2F",
+    "Underwater_AquasHideout_1F",
+    "AquasHideout_Submarine"
   ],
   "gMapGroup_SacredCityIndoor": [
     "SacredCity_House1",

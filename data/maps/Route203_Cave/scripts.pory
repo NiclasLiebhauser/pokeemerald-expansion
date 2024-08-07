@@ -22,6 +22,14 @@ script Route203_Cave_OnTransition {
     end
 }
 
+script Route203_Cave_EventScript_NpcRockSmash {
+    random(100)
+    if(!flag(FLAG_AQUA_LEFT_ROUTE_203_CAVE) && var(VAR_RESULT) < 50)
+    {
+        playse(SE_M_ROCK_THROW)
+    }    
+}
+
 script Route203_Cave_EventScript_AdminFight {
     lock
     playbgm(MUS_ENCOUNTER_AQUA, FALSE)

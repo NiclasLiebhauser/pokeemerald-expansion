@@ -622,8 +622,10 @@
 #define MAP_MAGMA_CAVE_3F  (3 | (36 << 8))
 
 // gMapGroup_AquaHideout
-#define MAP_AQUAS_HIDEOUT_1F (0 | (37 << 8))
-#define MAP_AQUAS_HIDEOUT_2F (1 | (37 << 8))
+#define MAP_AQUAS_HIDEOUT_1F            (0 | (37 << 8))
+#define MAP_AQUAS_HIDEOUT_2F            (1 | (37 << 8))
+#define MAP_UNDERWATER_AQUAS_HIDEOUT_1F (2 | (37 << 8))
+#define MAP_AQUAS_HIDEOUT_SUBMARINE     (3 | (37 << 8))
 
 // gMapGroup_SacredCityIndoor
 #define MAP_SACRED_CITY_HOUSE1 (0 | (38 << 8))

@@ -1,9 +1,18 @@
-mapscripts AquasHideout_1F_MapScripts {}
+const LOCALID_AQUA_MART = 1
+
+mapscripts AquasHideout_1F_MapScripts {
+    MAP_SCRIPT_ON_RESUME: AquasHideout_1F_OnResume
+}
+
+script AquasHideout_1F_OnResume {
+    setdivewarp(MAP_UNDERWATER_AQUAS_HIDEOUT_1F, 10, 11)
+    end    
+}
 
 script AquasHideout_1F_EventScript_Mart {
     lock
     faceplayer
-    message("Hey psst... Wanna buy something?")
+    message(format("Hey psst... Wanna buy something?\p"))
     waitmessage
     pokemart(AquasHideout_1F_Mart)
     msgbox("Please Come Again.")

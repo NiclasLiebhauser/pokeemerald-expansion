@@ -1,0 +1,25 @@
+const LOCALID_AQUA_ANGLER = 1
+
+mapscripts Route205_MapScripts {}
+
+script Route205_EventScript_Angler {
+    lock
+    faceplayer
+    if(!flag(FLAG_RECEIVED_GOOD_ROD))
+    {
+        message(format("Me? No we don't need to fight I am only interested in the sea, you see?\pHere you can have it as token of my affection for the sea\p"))
+        waitmessage
+        playfanfare(MUS_OBTAIN_ITEM)
+        giveitem(ITEM_GOOD_ROD)
+        waitfanfare
+        setflag(FLAG_RECEIVED_GOOD_ROD)
+    }
+    else
+    {
+        message(format("I already gave you something. Please just let me admire the beauty of the sea.\p"))
+        waitmessage
+    }
+    applymovement(LOCALID_AQUA_ANGLER, Common_Movement_FaceDown)
+    release
+    end
+}
