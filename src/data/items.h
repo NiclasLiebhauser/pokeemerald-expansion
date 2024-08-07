@@ -12639,4 +12639,17 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_InfiniteRepel,
     },
+
+    [ITEM_AZURE_FLUTE] =
+    {
+        .name = _("Azure Flute"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A flute made from an\n"
+            "azure material.\n"
+            "Who created this?"),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
 };

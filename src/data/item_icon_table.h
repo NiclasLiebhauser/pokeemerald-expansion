@@ -876,4 +876,5 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
     [ITEM_INFINITE_REPEL] = {gItemIcon_Repel, gItemIconPalette_InfiniteRepel},
+    [ITEM_AZURE_FLUTE] = {gItemIcon_AzureFlute, gItemIconPalette_AzureFlute}
 };
