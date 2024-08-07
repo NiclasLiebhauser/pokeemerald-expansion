@@ -49,6 +49,7 @@ script MysteryCave_EventScript_StartAdventure {
     call(ReceiveRunningShoes)
     call(ReceiveBike)
     call(ReceiveExpShare)
+    call(ReceiveInfiniteRepel)
     call(GiveFirstMon)
     call(GiveSecondMon)
     setvar(VAR_START_ADVENTURE_STATE, 1)
@@ -102,6 +103,13 @@ script ReceiveExpShare {
     setflag(FLAG_EXP_SHARE)
     playfanfare(MUS_OBTAIN_ITEM)
     giveitem(ITEM_EXP_SHARE)
+    waitfanfare
+    return
+}
+
+script ReceiveInfiniteRepel {
+    playfanfare(MUS_OBTAIN_ITEM)
+    giveitem(ITEM_INFINITE_REPEL)
     waitfanfare
     return
 }

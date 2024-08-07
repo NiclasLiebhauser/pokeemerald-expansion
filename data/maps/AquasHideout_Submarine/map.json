@@ -34,5 +34,8 @@
   ],
   "bg_events": [
 
-  ]
+  ],
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true
 }

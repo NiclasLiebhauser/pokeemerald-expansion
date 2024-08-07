@@ -1857,3 +1857,5 @@ const u8 gText_Excited[] = _("Excited");
 const u8 gText_Joyful[] = _("Joyful");
 const u8 gText_Adventure[] = _("Adventure");
 const u8 gText_Mysteries[] = _("Mysteries");
+const u8 gText_InfiniteRepelOn[] = _("Repel active, use again to turn off.{PAUSE_UNTIL_PRESS}");
+const u8 gText_InfiniteRepelOff[] = _("Repel deactivated. You can now encounter\nPokémon again.{PAUSE_UNTIL_PRESS}");

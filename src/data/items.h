@@ -12626,4 +12626,17 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
+
+    [ITEM_INFINITE_REPEL] =
+    {
+        .name = _("Inf. Repel"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A can of repel which\n"
+            "can be used to\n"
+            "avoid wild pokemon."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_InfiniteRepel,
+    },
 };

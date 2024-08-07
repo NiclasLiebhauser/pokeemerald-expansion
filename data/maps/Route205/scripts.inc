@@ -8,7 +8,7 @@ Route205_EventScript_Angler::
 # 7 "data/maps/Route205/scripts.pory"
 	faceplayer
 # 8 "data/maps/Route205/scripts.pory"
-	goto_if_set FLAG_RECEIVED_GOOD_ROD, Route205_EventScript_Angler_2
+	goto_if_unset FLAG_RECEIVED_GOOD_ROD, Route205_EventScript_Angler_2
 # 19 "data/maps/Route205/scripts.pory"
 	message Route205_EventScript_Angler_Text_1
 # 20 "data/maps/Route205/scripts.pory"

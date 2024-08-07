@@ -3070,4 +3070,8 @@ extern const u8 gText_Joyful[];
 extern const u8 gText_Adventure[];
 extern const u8 gText_Mysteries[];
 
+// Infinite Repel
+extern const u8 gText_InfiniteRepelOn[];
+extern const u8 gText_InfiniteRepelOff[];
+
 #endif // GUARD_STRINGS_H

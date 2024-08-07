@@ -287,6 +287,7 @@ const u32 gItemIconPalette_Repel[] = INCBIN_U32("graphics/items/icon_palettes/re
 const u32 gItemIconPalette_SuperRepel[] = INCBIN_U32("graphics/items/icon_palettes/super_repel.gbapal.lz");
 
 const u32 gItemIconPalette_MaxRepel[] = INCBIN_U32("graphics/items/icon_palettes/max_repel.gbapal.lz");
+const u32 gItemIconPalette_InfiniteRepel[] = INCBIN_U32("graphics/items/icon_palettes/infinite_repel.gbapal.lz");
 
 const u32 gItemIcon_Lure[] = INCBIN_U32("graphics/items/icons/lure.4bpp.lz");
 const u32 gItemIconPalette_Lure[] = INCBIN_U32("graphics/items/icon_palettes/lure.gbapal.lz");
