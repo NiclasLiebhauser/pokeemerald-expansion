@@ -99,6 +99,8 @@ script BlackVoid_EventScript_OnFrameTable1 {
     warpsilent(MAP_MYSTERY_CAVE, 33, 5)
     delay(10)
     fadescreen(FADE_FROM_BLACK)
+    setrespawn(HEAL_LOCATION_MYSTERY_CAVE)
+
     release
 
     end

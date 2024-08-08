@@ -122,6 +122,8 @@ BlackVoid_EventScript_OnFrameTable1_15:
 # 101 "data/maps/BlackVoid/scripts.pory"
 	fadescreen FADE_FROM_BLACK
 # 102 "data/maps/BlackVoid/scripts.pory"
+	setrespawn HEAL_LOCATION_MYSTERY_CAVE
+# 104 "data/maps/BlackVoid/scripts.pory"
 	release
 	end
 
@@ -190,74 +192,74 @@ BlackVoid_EventScript_OnFrameTable1_18:
 
 
 BlackVoid_EventScript_WarpIntoMap::
-# 108 "data/maps/BlackVoid/scripts.pory"
+# 110 "data/maps/BlackVoid/scripts.pory"
 	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_BLACK_VOID
 	end
 
 
 BlackVoid_Text_Intro::
-# 112 "data/maps/BlackVoid/scripts.pory"
+# 114 "data/maps/BlackVoid/scripts.pory"
 	.string "Intro\p"
 	.string "$"
 
 BlackVoid_Text_Outro::
-# 116 "data/maps/BlackVoid/scripts.pory"
+# 118 "data/maps/BlackVoid/scripts.pory"
 	.string "Outro\p"
 	.string "$"
 
 BlackVoid_Text_WhereAreYouFrom::
-# 121 "data/maps/BlackVoid/scripts.pory"
+# 123 "data/maps/BlackVoid/scripts.pory"
 	.string "Where are you from?$"
 
 BlackVoid_Text_HowAreYouFeeling::
-# 125 "data/maps/BlackVoid/scripts.pory"
+# 127 "data/maps/BlackVoid/scripts.pory"
 	.string "How are you feeling right now?$"
 
 BlackVoid_Text_WhatIsMotivation::
-# 129 "data/maps/BlackVoid/scripts.pory"
+# 131 "data/maps/BlackVoid/scripts.pory"
 	.string "What is your motivation?$"
 
 BlackVoid_Text_Comment_Kanto::
-# 133 "data/maps/BlackVoid/scripts.pory"
+# 135 "data/maps/BlackVoid/scripts.pory"
 	.string "KANTO\p"
 	.string "$"
 
 BlackVoid_Text_Comment_Johto::
-# 137 "data/maps/BlackVoid/scripts.pory"
+# 139 "data/maps/BlackVoid/scripts.pory"
 	.string "JOHTO\p"
 	.string "$"
 
 BlackVoid_Text_Comment_Hoenn::
-# 141 "data/maps/BlackVoid/scripts.pory"
+# 143 "data/maps/BlackVoid/scripts.pory"
 	.string "HOENN\p"
 	.string "$"
 
 BlackVoid_Text_Comment_Calm::
-# 145 "data/maps/BlackVoid/scripts.pory"
+# 147 "data/maps/BlackVoid/scripts.pory"
 	.string "Calm\p"
 	.string "$"
 
 BlackVoid_Text_Comment_Excited::
-# 149 "data/maps/BlackVoid/scripts.pory"
+# 151 "data/maps/BlackVoid/scripts.pory"
 	.string "Excited\p"
 	.string "$"
 
 BlackVoid_Text_Comment_Joyful::
-# 153 "data/maps/BlackVoid/scripts.pory"
+# 155 "data/maps/BlackVoid/scripts.pory"
 	.string "Joyful\p"
 	.string "$"
 
 BlackVoid_Text_Comment_Power::
-# 157 "data/maps/BlackVoid/scripts.pory"
+# 159 "data/maps/BlackVoid/scripts.pory"
 	.string "Power\p"
 	.string "$"
 
 BlackVoid_Text_Comment_Adventure::
-# 161 "data/maps/BlackVoid/scripts.pory"
+# 163 "data/maps/BlackVoid/scripts.pory"
 	.string "Adventure\p"
 	.string "$"
 
 BlackVoid_Text_Comment_Mysteries::
-# 165 "data/maps/BlackVoid/scripts.pory"
+# 167 "data/maps/BlackVoid/scripts.pory"
 	.string "Mysteries\p"
 	.string "$"
