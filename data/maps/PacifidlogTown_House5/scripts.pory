@@ -1,1 +1,49 @@
+const LOCALID_OLD_MAN = 1
+
 mapscripts PacifidlogTown_House5_MapScripts {}
+
+script PacifidlogTown_House5_EventScript_OldMan{
+    lockall
+    faceplayer
+    checkitem(ITEM_GOLD_TEETH)
+    if(var(VAR_RESULT) == TRUE)
+    {
+        call(PacifidlogTown_House5_EventScript_OldMan_GiveTeeth)
+    }
+    elif(flag(FLAG_PACIFIDLOG_PARCEL_RECEIVED) && !flag(FLAG_PACIFIDLOG_PARCEL_DELIVERED))
+    {
+        msgbox(format("Have you delivered my parcel to Anabel?\nShe lives on SACRED ISLAND to the west."), MSGBOX_NPC)
+    }
+    elif(flag(FLAG_PACIFIDLOG_PARCEL_DELIVERED))
+    {
+        msgbox(format("Thank you for delivering that parcel to Anabel for me."), MSGBOX_NPC)
+    }
+    else
+    {
+        msgbox("If only I had dentures.\nI lost them at work.\pYou see I was a marine biologist.\pAnd during an evacuation I had forgotton my teeth on the sub.\pOh how I miss them.", MSGBOX_NPC)
+    }
+
+    applymovement(LOCALID_OLD_MAN, Common_Movement_FaceRight)
+    waitmovement(0)
+    releaseall
+    end
+}
+
+script PacifidlogTown_House5_EventScript_OldMan_GiveTeeth {
+    msgbox(format("Oh?! You have found my teeth?\nCould I have them back?"), MSGBOX_YESNO)
+    waitmessage
+    if(var(VAR_RESULT) == TRUE)
+    {
+        setflag(FLAG_PACIFIDLOG_PARCEL_RECEIVED)
+        removeitem(ITEM_GOLD_TEETH)
+        msgbox(format("Thank you kindly stranger.\pIt pains me to impose on you once again but could you deliver a parcel to my niece Anabel? She lives on Sacred Island."), MSGBOX_NPC)
+        playfanfare(MUS_OBTAIN_ITEM)
+        giveitem(ITEM_PARCEL)
+    }
+    else
+    {
+        msgbox(format("How lamentable. Come back once you feel more generous."), MSGBOX_NPC)
+    }
+
+    return
+}

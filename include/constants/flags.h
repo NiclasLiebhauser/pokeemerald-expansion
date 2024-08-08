@@ -1245,11 +1245,11 @@
 #define FLAG_HIDE_GIRATINA                                          0x4AB
 #define FLAG_HIDE_GIRATINA_ORIGIN                                   0x4AC
 #define FLAG_ITEM_SUBMARINE_GOLD_TEETH                              0x4AD
-#define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
-#define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
-#define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag
-#define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag
-#define FLAG_UNUSED_0x4B2                                           0x4B2 // Unused Flag
+#define FLAG_PACIFIDLOG_PARCEL_RECEIVED                             0x4AE
+#define FLAG_PACIFIDLOG_PARCEL_DELIVERED                            0x4AF
+#define FLAG_DEFEATED_ANABEL_FIRST_FIGHT                            0x4B0
+#define FLAG_ANABEL_HIDE_AND_SEEK                                   0x4B1
+#define FLAG_DEFEATED_ANABEL_SECOND_FIGHT                           0x4B2
 #define FLAG_UNUSED_0x4B3                                           0x4B3 // Unused Flag
 #define FLAG_UNUSED_0x4B4                                           0x4B4 // Unused Flag
 #define FLAG_UNUSED_0x4B5                                           0x4B5 // Unused Flag

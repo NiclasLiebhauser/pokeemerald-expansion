@@ -12645,8 +12645,8 @@ const struct Item gItemsInfo[] =
         .name = _("Azure Flute"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A flute made from an\n"
-            "azure material.\n"
+            "A flute made from a\n"
+            "strange material.\n"
             "Who created this?"),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,

@@ -1,6 +1,95 @@
+const LOCALID_ANABEL = 1
 const LOCAL_CUT_MACHINE = 2
 
 mapscripts AnabelsHouse_MapScripts {}
+
+script AnabelsHouse_EventScript_Anabel{
+    lockall
+    faceplayer
+    checkitem(ITEM_PARCEL)
+    if(var(VAR_RESULT) == TRUE)
+    {
+        call(AnabelsHouse_EventScript_Anabel_GiveParcel)
+    }
+    elif(flag(FLAG_DEFEATED_ANABEL_SECOND_FIGHT))
+    {
+        msgbox(format("ANANBEL: The flute was a gift from a friend. So keep it safe, yeah?"), MSGBOX_NPC)
+    }
+    elif(var(VAR_HIDE_AND_SEEK) >= 3)
+    {
+        if(var(VAR_HIDE_AND_SEEK) == 3)
+        {
+            addvar(VAR_HIDE_AND_SEEK, 1)
+            msgbox(format("ANABEL: Color me supprised. You managed to find them all and quickly too.\pWanna have a go at another round with me? I'll even throw in a rare item as a reward."), MSGBOX_YESNO)
+        }
+        else
+        {
+            msgbox(format("ANABEL: Wanna have a go at another round with me? I'll even throw in a rare item as a reward."), MSGBOX_YESNO)
+        }
+
+        if(var(VAR_RESULT) == TRUE)
+        {
+            call(AnabelsHouse_EventScript_Anabel_SecondFight)
+        }
+    }
+    elif(flag(FLAG_ANABEL_HIDE_AND_SEEK))
+    {
+        msgbox(format("ANANBEL: Have you found all of my bird yet?"), MSGBOX_NPC)
+    }
+    elif(flag(FLAG_DEFEATED_ANABEL_FIRST_FIGHT))
+    {
+        msgbox(format("ANABEL: You seem quite capable. Wanna play a round of hide and seek with my birds?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == TRUE)
+        {
+            call(AnabelsHouse_EventScript_Anabel_StartHideAndSeek)
+        }
+    }
+    elif(flag(FLAG_PACIFIDLOG_PARCEL_DELIVERED))
+    {
+        msgbox(format("ANABEL: Did you have a change of mind and want to fight against me?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == TRUE)
+        {
+            call(AnabelsHouse_EventScript_Anabel_FirstFight)
+        }
+    }
+    else
+    {
+        msgbox(format("ANABEL: I'm Anabel, nice to meet ya. You might know me from the battle frontier way before this mess.\p Anyways I'm retired. But it's nice to have a visitor, so make yourself at home."), MSGBOX_NPC)
+    }
+
+    releaseall
+    end
+}
+
+script AnabelsHouse_EventScript_Anabel_GiveParcel {
+    msgbox(format("ANABEL: You have something for me? A parcel from my uncle?"))
+    playfanfare(MUS_OBTAIN_ITEM)
+    message(format("You give Anabel the parcel."))
+    waitfanfare
+    setflag(FLAG_PACIFIDLOG_PARCEL_DELIVERED)
+    removeitem(ITEM_PARCEL)
+    msgbox(format("ANABEL: Thank you for going out of your way to deliver it to me.\pAs a token of my appreciation why not have a fight with me?"), MSGBOX_YESNO)
+    
+    if(var(VAR_RESULT) == TRUE)
+    {
+        call(AnabelsHouse_EventScript_Anabel_FirstFight)
+    }
+
+    return
+}
+
+script AnabelsHouse_EventScript_Anabel_FirstFight {
+    //TODO actual fight
+    setflag(FLAG_DEFEATED_ANABEL_FIRST_FIGHT)
+    releaseall
+    end
+}
+
+script AnabelsHouse_EventScript_Anabel_StartHideAndSeek {
+    setflag(FLAG_ANABEL_HIDE_AND_SEEK)
+    releaseall
+    end
+}
 
 script AnabelsHouse_EventScript_CutMachine {
     removeobject(LOCAL_CUT_MACHINE)
@@ -11,6 +100,17 @@ script AnabelsHouse_EventScript_CutMachine {
     waitfanfare
     waitbuttonpress
     closemessage
+}
+
+script AnabelsHouse_EventScript_Anabel_SecondFight {
+    //TODO actual fight
+    setflag(FLAG_DEFEATED_ANABEL_SECOND_FIGHT)
+
+    playfanfare(MUS_OBTAIN_ITEM)
+    giveitem(ITEM_AZURE_FLUTE)
+
+    releaseall
+    end  
 }
 
 text AnabelsHouse_Text_CutMachine {

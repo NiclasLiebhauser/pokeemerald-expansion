@@ -272,7 +272,7 @@
 #define VAR_ROUTE203_CAVE_STATE                          0x40FC
 #define VAR_SACRED_MOUNTAIN_PEAK_STATE                   0x40FD
 #define VAR_LEVEL_CAP                                    0x40FE
-#define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
+#define VAR_HIDE_AND_SEEK                                0x40FF
 #define VAR_UNUSED_0x4100                                0x4100 // Unused Var
 #define VAR_UNUSED_0x4101                                0x4101 // Unused Var
 #define VAR_UNUSED_0x4102                                0x4102 // Unused Var
