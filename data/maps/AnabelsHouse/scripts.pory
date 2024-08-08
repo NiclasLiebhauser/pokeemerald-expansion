@@ -34,7 +34,7 @@ script AnabelsHouse_EventScript_Anabel{
     }
     elif(flag(FLAG_ANABEL_HIDE_AND_SEEK))
     {
-        msgbox(format("ANANBEL: Have you found all of my bird yet?"), MSGBOX_NPC)
+        msgbox(format("ANANBEL: Have you found all of my birds yet?"), MSGBOX_NPC)
     }
     elif(flag(FLAG_DEFEATED_ANABEL_FIRST_FIGHT))
     {

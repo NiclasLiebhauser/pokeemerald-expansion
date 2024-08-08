@@ -448,6 +448,9 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_GIOVANNI                0x1128
 #define OBJ_EVENT_PAL_TAG_ROCKETGRUNT_F           0x1129
 #define OBJ_EVENT_PAL_TAG_ROCKETGRUNT_M           0x1130
+#define OBJ_EVENT_PAL_TAG_ARTICUNO                0x1131
+#define OBJ_EVENT_PAL_TAG_MOLTRES                 0x1132
+#define OBJ_EVENT_PAL_TAG_ZAPDOS                  0x1133
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/field_effects/field_effect_object_template_pointers.h"
@@ -501,6 +504,9 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Giovanni,              OBJ_EVENT_PAL_TAG_GIOVANNI},
     {gObjectEventPal_Rocketgruntf,          OBJ_EVENT_PAL_TAG_ROCKETGRUNT_F},
     {gObjectEventPal_Rocketgruntm,          OBJ_EVENT_PAL_TAG_ROCKETGRUNT_M},
+    {gObjectEventPal_Articuno,              OBJ_EVENT_PAL_TAG_ARTICUNO},
+    {gObjectEventPal_Moltres,               OBJ_EVENT_PAL_TAG_MOLTRES},
+    {gObjectEventPal_Zapdos,                OBJ_EVENT_PAL_TAG_ZAPDOS},
 #ifdef BUGFIX
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE},
 #else

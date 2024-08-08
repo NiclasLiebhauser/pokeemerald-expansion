@@ -193,7 +193,8 @@ AnabelsHouse_EventScript_Anabel_Text_2:
 
 AnabelsHouse_EventScript_Anabel_Text_3:
 # 37 "data/maps/AnabelsHouse/scripts.pory"
-	.string "Have you found all of my bird yet?$"
+	.string "ANANBEL: Have you found all of my bird\n"
+	.string "yet?$"
 
 AnabelsHouse_EventScript_Anabel_Text_4:
 # 41 "data/maps/AnabelsHouse/scripts.pory"
