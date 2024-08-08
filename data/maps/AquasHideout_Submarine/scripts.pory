@@ -1,1 +1,72 @@
 mapscripts AquasHideout_Submarine_MapScripts {}
+
+
+script AquasHideout_Submarine_Trigger_BlueButton {
+    lockall
+    setvar(VAR_TEMP_1, 1)
+    setvar(VAR_TEMP_2, 0)
+    playse(SE_PIN)
+    call(AquasHideout_Submarine_EventScript_BlueButton_Pressed)
+    special(DrawWholeMapView)
+    releaseall
+    end
+}
+
+script AquasHideout_Submarine_Trigger_GreenButton {
+    lockall
+    setvar(VAR_TEMP_1, 0)
+    setvar(VAR_TEMP_2, 1)
+    playse(SE_PIN)
+    call(AquasHideout_Submarine_EventScript_GreenButton_Pressed)
+    special(DrawWholeMapView)
+    releaseall
+    end
+}
+
+script AquasHideout_Submarine_EventScript_BlueButton_Pressed {
+    setmetatile(14, 17, METATILE_BikeShop_Barrier_Hidden_Top, TRUE)
+	setmetatile(14, 18, METATILE_BikeShop_Barrier_Hidden_Bottom, TRUE)
+	setmetatile(14, 19, METATILE_BikeShop_Floor_Shadow_Top, FALSE)
+	setmetatile(14, 20, METATILE_BikeShop_Wall_Edge_Top, FALSE)
+
+    setmetatile(28, 3, METATILE_BikeShop_Barrier_Hidden_Top, TRUE)
+	setmetatile(28, 4, METATILE_BikeShop_Barrier_Hidden_Bottom, TRUE)
+	setmetatile(28, 5, METATILE_BikeShop_Floor_Shadow_Top, FALSE)
+	setmetatile(28, 6, METATILE_BikeShop_Wall_Edge_Top, FALSE)
+
+    setmetatile(9, 3, METATILE_BikeShop_Barrier_Green_Top, TRUE)
+	setmetatile(9, 4, METATILE_BikeShop_Barrier_Green_TopMid, TRUE)
+	setmetatile(9, 5, METATILE_BikeShop_Barrier_Green_BottomMid, TRUE)
+	setmetatile(9, 6, METATILE_BikeShop_Barrier_Green_Bottom, TRUE)
+
+    setmetatile(47, 10, METATILE_BikeShop_Barrier_Green_Top, TRUE)
+	setmetatile(47, 11, METATILE_BikeShop_Barrier_Green_TopMid, TRUE)
+	setmetatile(47, 12, METATILE_BikeShop_Barrier_Green_BottomMid, TRUE)
+	setmetatile(47, 13, METATILE_BikeShop_Barrier_Green_Bottom, TRUE)
+
+    return
+}
+
+script AquasHideout_Submarine_EventScript_GreenButton_Pressed {
+    setmetatile(14, 17, METATILE_BikeShop_Barrier_Blue_Top, TRUE)
+	setmetatile(14, 18, METATILE_BikeShop_Barrier_Blue_TopMid, TRUE)
+	setmetatile(14, 19, METATILE_BikeShop_Barrier_Blue_BottomMid, TRUE)
+	setmetatile(14, 20, METATILE_BikeShop_Barrier_Blue_Bottom, TRUE)
+
+    setmetatile(28, 3, METATILE_BikeShop_Barrier_Blue_Top, TRUE)
+	setmetatile(28, 4, METATILE_BikeShop_Barrier_Blue_TopMid, TRUE)
+	setmetatile(28, 5, METATILE_BikeShop_Barrier_Blue_BottomMid, TRUE)
+	setmetatile(28, 6, METATILE_BikeShop_Barrier_Blue_Bottom, TRUE)   
+    
+    setmetatile(9, 3, METATILE_BikeShop_Barrier_Hidden_Top, TRUE)
+	setmetatile(9, 4, METATILE_BikeShop_Barrier_Hidden_Bottom, TRUE)
+	setmetatile(9, 5, METATILE_BikeShop_Floor_Shadow_Top, FALSE)
+	setmetatile(9, 6, METATILE_BikeShop_Wall_Edge_Top, FALSE)
+
+    setmetatile(47, 10, METATILE_BikeShop_Barrier_Hidden_Top, TRUE)
+	setmetatile(47, 11, METATILE_BikeShop_Barrier_Hidden_Bottom, TRUE)
+	setmetatile(47, 12, METATILE_BikeShop_Floor_Shadow_Top, FALSE)
+	setmetatile(47, 13, METATILE_BikeShop_Wall_Edge_Top, FALSE)
+
+    return
+}

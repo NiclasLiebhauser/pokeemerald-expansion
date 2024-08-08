@@ -1244,7 +1244,7 @@
 #define FLAG_HIDE_GIOVANNI_TRAINER                                  0x4AA
 #define FLAG_HIDE_GIRATINA                                          0x4AB
 #define FLAG_HIDE_GIRATINA_ORIGIN                                   0x4AC
-#define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
+#define FLAG_ITEM_SUBMARINE_GOLD_TEETH                              0x4AD
 #define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
 #define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
 #define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag

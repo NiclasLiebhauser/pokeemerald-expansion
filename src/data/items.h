@@ -11555,8 +11555,8 @@ const struct Item gItemsInfo[] =
         .price = 0,
         .description = COMPOUND_STRING(
             "Gold dentures lost\n"
-            "by the Safari\n"
-            "Zone's Warden."),
+            "by someone who had\n"
+            "to leave in a hurry."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
