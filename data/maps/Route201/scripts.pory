@@ -1,6 +1,17 @@
 const FISHERMAN_ID = 1
+const LOCALID_ZAPDOS = 2
 
-mapscripts Route201_MapScripts {}
+mapscripts Route201_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Route201_EventScript_OnTransition
+}
+
+script Route201_EventScript_OnTransition {
+    if(!flag(FLAG_ANABEL_HIDE_AND_SEEK) || flag(FLAG_ZAPDOS_FOUND))
+    {
+        call(Route201_EventScript_HideZapdos)
+    }
+    end
+}
 
 script Route201_EventScript_Fisherman {
     lock
@@ -30,6 +41,26 @@ script FishermanGiveSharpedoMachine {
 
 script FishermanGeneric {
     msgbox(FishermanGenericText, MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script Route201_EventScript_HideZapdos {
+    setflag(FLAG_TEMP_1)
+    removeobject(LOCALID_ZAPDOS)
+    return
+}
+
+script Route201_EventScript_Zapdos {
+    lock
+    playmoncry(SPECIES_ZAPDOS, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    setfieldeffectargument(0, LOCALID_ZAPDOS)
+    dofieldeffect(FLDEFF_NPCFLY_OUT)
+    delay(15)
+    call(Route201_EventScript_HideZapdos)
+    addvar(VAR_HIDE_AND_SEEK, 1)
+    setflag(FLAG_ZAPDOS_FOUND)
     release
     end
 }

@@ -4574,7 +4574,7 @@
     {
       "id": "LAYOUT_MAGMAS_HIDEOUT",
       "name": "MagmasHideout_Layout",
-      "width": 40,
+      "width": 41,
       "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lavaridge",

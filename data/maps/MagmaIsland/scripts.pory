@@ -1,1 +1,34 @@
-mapscripts MagmaIsland_MapScripts {}
+const LOCALID_MOLTRES = 2
+
+mapscripts MagmaIsland_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: MagmaIsland_EventScript_OnTransition
+}
+
+
+script MagmaIsland_EventScript_OnTransition {
+    if(!flag(FLAG_ANABEL_HIDE_AND_SEEK) || flag(FLAG_MOLTRES_FOUND))
+    {
+        call(MagmaIsland_EventScript_HideMoltres)
+    }
+    end
+}
+
+script MagmaIsland_EventScript_HideMoltres {
+    setflag(FLAG_TEMP_1)
+    removeobject(LOCALID_MOLTRES)
+    return
+}
+
+script MagmaIsland_EventScript_Moltres {
+    lock
+    playmoncry(SPECIES_MOLTRES, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    setfieldeffectargument(0, LOCALID_MOLTRES)
+    dofieldeffect(FLDEFF_NPCFLY_OUT)
+    delay(15)
+    call(MagmaIsland_EventScript_HideMoltres)
+    addvar(VAR_HIDE_AND_SEEK, 1)
+    setflag(FLAG_MOLTRES_FOUND)
+    release
+    end
+}
