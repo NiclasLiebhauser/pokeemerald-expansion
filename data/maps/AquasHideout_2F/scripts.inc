@@ -48,44 +48,46 @@ AquasHideout_2F_EventScript_Archie::
 # 30 "data/maps/AquasHideout_2F/scripts.pory"
 	call AquasHideout_2F_RemoveAqua
 # 31 "data/maps/AquasHideout_2F/scripts.pory"
+	setvar VAR_LEVEL_CAP, 60
+# 32 "data/maps/AquasHideout_2F/scripts.pory"
 	releaseall
 	end
 
 
 AquasHideout_2F_RemoveAqua::
-# 36 "data/maps/AquasHideout_2F/scripts.pory"
-	fadescreen FADE_TO_BLACK
 # 37 "data/maps/AquasHideout_2F/scripts.pory"
-	playse SE_EXIT
+	fadescreen FADE_TO_BLACK
 # 38 "data/maps/AquasHideout_2F/scripts.pory"
+	playse SE_EXIT
+# 39 "data/maps/AquasHideout_2F/scripts.pory"
 	waitse
-# 40 "data/maps/AquasHideout_2F/scripts.pory"
+# 41 "data/maps/AquasHideout_2F/scripts.pory"
 	removeobject 2
-# 42 "data/maps/AquasHideout_2F/scripts.pory"
+# 43 "data/maps/AquasHideout_2F/scripts.pory"
 	fadescreen FADE_FROM_BLACK
 	return
 
 
 AquasHideout_2F_Text_DiveMachine::
-# 46 "data/maps/AquasHideout_2F/scripts.pory"
+# 47 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Obtained DIVE MACHINE!$"
 
 AquasHideout_2F_Text_Archie_PreBattel::
-# 51 "data/maps/AquasHideout_2F/scripts.pory"
+# 52 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Lorem ipsum dolor sit amet, consectetur\n"
 	.string "adipiscing elit, sed do eiusmod tempor\l"
 	.string "incididunt ut labore et dolore magna\l"
 	.string "aliqua.$"
 
 AquasHideout_2F_Text_Archie_PostBattel::
-# 56 "data/maps/AquasHideout_2F/scripts.pory"
+# 57 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Lorem ipsum dolor sit amet, consectetur\n"
 	.string "adipiscing elit, sed do eiusmod tempor\l"
 	.string "incididunt ut labore et dolore magna\l"
 	.string "aliqua.$"
 
 AquasHideout_2F_Text_Archie_Defeat::
-# 61 "data/maps/AquasHideout_2F/scripts.pory"
+# 62 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Lorem ipsum dolor sit amet, consectetur\n"
 	.string "adipiscing elit, sed do eiusmod tempor\l"
 	.string "incididunt ut labore et dolore magna\l"

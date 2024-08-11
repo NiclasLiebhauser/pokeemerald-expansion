@@ -28,6 +28,7 @@ script AquasHideout_2F_EventScript_Archie {
     closemessage
     setflag(FLAG_AQUA_LEFT_HIDEOUT)
     call(AquasHideout_2F_RemoveAqua)
+    setvar(VAR_LEVEL_CAP, 60)
     releaseall
     end
 }

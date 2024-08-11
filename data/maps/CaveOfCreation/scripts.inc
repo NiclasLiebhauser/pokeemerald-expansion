@@ -197,6 +197,8 @@ CaveOfCreation_Eventscript_PathOpen::
 	closemessage
 # 103 "data/maps/CaveOfCreation/scripts.pory"
 	setflag FLAG_MOUNTAIN_PATH_FREE
+# 104 "data/maps/CaveOfCreation/scripts.pory"
+	setvar VAR_LEVEL_CAP, 80
 # 105 "data/maps/CaveOfCreation/scripts.pory"
 	release
 	end

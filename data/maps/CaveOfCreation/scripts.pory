@@ -101,7 +101,7 @@ script CaveOfCreation_Eventscript_PathOpen {
     waitmessage
     closemessage
     setflag(FLAG_MOUNTAIN_PATH_FREE)
-
+    setvar(VAR_LEVEL_CAP, 80)
     release
     end
 }
