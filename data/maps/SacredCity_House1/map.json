@@ -2,7 +2,7 @@
   "id": "MAP_SACRED_CITY_HOUSE1",
   "name": "SacredCity_House1",
   "layout": "LAYOUT_SACRED_CITY_HOUSE1",
-  "music": "MUS_SOOTOPOLIS",
+  "music": "MUS_RG_POKE_TOWER",
   "region_map_section": "MAPSEC_SACRED_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -21,7 +21,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SacredCity_House1_Angler",
       "flag": "0"
     }
   ],

@@ -2,7 +2,7 @@
   "id": "MAP_SACRED_CITY_HOUSE2",
   "name": "SacredCity_House2",
   "layout": "LAYOUT_SACRED_CITY_HOUSE2",
-  "music": "MUS_SOOTOPOLIS",
+  "music": "MUS_RG_POKE_TOWER",
   "region_map_section": "MAPSEC_SACRED_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

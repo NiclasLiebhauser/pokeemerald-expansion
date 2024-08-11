@@ -367,7 +367,7 @@ const struct Item gItemsInfo[] =
     [ITEM_LURE_BALL] =
     {
         .name = _("Lure Ball"),
-        .price = (I_PRICE >= GEN_7) ? 0 : 300,
+        .price = (I_PRICE >= GEN_7) ? 1000 : 300,
         .description = COMPOUND_STRING(
             "A Ball that works\n"
             "well on fished\n"

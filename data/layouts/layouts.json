@@ -4445,7 +4445,7 @@
       "id": "LAYOUT_ROUTE204",
       "name": "Route204_Layout",
       "width": 60,
-      "height": 30,
+      "height": 33,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Pacifidlog",
       "border_filepath": "data/layouts/Route204/border.bin",

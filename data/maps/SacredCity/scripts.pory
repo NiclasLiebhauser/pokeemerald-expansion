@@ -38,6 +38,41 @@ script SacredCity_EventScript_FlyMachine {
     closemessage
 }
 
+script SacredCity_EventScript_MountainGuardian{
+    lock
+    faceplayer
+    message(format("There used to be a path here which led up the mountain. But I has vanished since KYOGRE raised the water level.\p"))
+    waitmessage
+    
+    checkitem(ITEM_RED_ORB)
+    if(var(VAR_RESULT) == TRUE && !flag(FLAG_RED_ORB_USED))
+    {
+        message(format("I see you are carrying the sacred RED ORB. But it seems to have lost its luster.\pMaybe charging it with some energy will restore it to its former glory.\p"))
+        waitmessage
+        closemessage
+        release
+        end
+    }
+
+    checkitem(ITEM_BLUE_ORB)
+    if(var(VAR_RESULT) == TRUE && !flag(FLAG_BLUE_ORB_USED))
+    {
+        message(format("I see you are carrying the sacred BLUE ORB. But it seems to have lost its luster.\pMaybe charging it with some energy will restore it to its former glory.\p"))
+        waitmessage
+        closemessage
+        release
+        end
+    }
+
+    message(format("My grand father had once told me about a temple which could open the path to the mountain.\pAn ancient ritual involving two ORBs was once used to please the god and gain entrance to the mountain.\p"))
+    waitmessage
+    closemessage
+    release
+    end
+}
+
+
+
 text SacredCity_Text_FlyMachine {
     format("Obtained FLY MACHINE!")
 }
