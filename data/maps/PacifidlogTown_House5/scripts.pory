@@ -20,7 +20,7 @@ script PacifidlogTown_House5_EventScript_OldMan{
     }
     else
     {
-        msgbox("If only I had dentures.\nI lost them at work.\pYou see I was a marine biologist.\pAnd during an evacuation I had forgotton my teeth on the sub.\pOh how I miss them.", MSGBOX_NPC)
+        msgbox(format("If only I had dentures.\nI lost them at work.\pYou see I was a marine biologist.\pAnd during an evacuation I had forgotton my teeth on the sub.\pOh how I miss them."), MSGBOX_NPC)
     }
 
     applymovement(LOCALID_OLD_MAN, Common_Movement_FaceRight)

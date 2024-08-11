@@ -1,4 +1,4 @@
-const LOCAL_LEVEL = 15
+const LOCAL_LEVEL = 20
 const LOCALID_SPENSER = 7
 
 mapscripts MysteryCave_MapScripts {}

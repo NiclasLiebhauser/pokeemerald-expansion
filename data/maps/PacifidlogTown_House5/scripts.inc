@@ -88,7 +88,12 @@ PacifidlogTown_House5_EventScript_OldMan_Text_1:
 
 PacifidlogTown_House5_EventScript_OldMan_Text_2:
 # 23 "data/maps/PacifidlogTown_House5/scripts.pory"
-	.string "If only I had dentures.\nI lost them at work.\pYou see I was a marine biologist.\pAnd during an evacuation I had forgotton my teeth on the sub.\pOh how I miss them.$"
+	.string "If only I had dentures.\n"
+	.string "I lost them at work.\p"
+	.string "You see I was a marine biologist.\p"
+	.string "And during an evacuation I had\n"
+	.string "forgotton my teeth on the sub.\p"
+	.string "Oh how I miss them.$"
 
 PacifidlogTown_House5_EventScript_OldMan_GiveTeeth_Text_0:
 # 33 "data/maps/PacifidlogTown_House5/scripts.pory"

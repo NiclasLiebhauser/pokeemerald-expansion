@@ -273,21 +273,21 @@ GiveFirstMonKanto_2:
 # 162 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_POLIWAG
 # 163 "data/maps/MysteryCave/scripts.pory"
-	givemon SPECIES_POLIWAG, 15
+	givemon SPECIES_POLIWAG, 20
 	goto GiveFirstMonKanto_1
 
 GiveFirstMonKanto_3:
 # 167 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_VULPIX
 # 168 "data/maps/MysteryCave/scripts.pory"
-	givemon SPECIES_VULPIX, 15
+	givemon SPECIES_VULPIX, 20
 	goto GiveFirstMonKanto_1
 
 GiveFirstMonKanto_4:
 # 172 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_ODDISH
 # 173 "data/maps/MysteryCave/scripts.pory"
-	givemon SPECIES_ODDISH, 15
+	givemon SPECIES_ODDISH, 20
 	goto GiveFirstMonKanto_1
 
 
@@ -308,21 +308,21 @@ GiveFirstMonJohto_2:
 # 182 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_REMORAID
 # 183 "data/maps/MysteryCave/scripts.pory"
-	givemon SPECIES_REMORAID, 15
+	givemon SPECIES_REMORAID, 20
 	goto GiveFirstMonJohto_1
 
 GiveFirstMonJohto_3:
 # 187 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_SLUGMA
 # 188 "data/maps/MysteryCave/scripts.pory"
-	givemon SPECIES_SLUGMA, 15
+	givemon SPECIES_SLUGMA, 20
 	goto GiveFirstMonJohto_1
 
 GiveFirstMonJohto_4:
 # 192 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_SUNKERN
 # 193 "data/maps/MysteryCave/scripts.pory"
-	givemon SPECIES_SUNKERN, 15
+	givemon SPECIES_SUNKERN, 20
 	goto GiveFirstMonJohto_1
 
 
@@ -345,21 +345,21 @@ GiveFirstMonHoenn_2:
 # 202 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_SPHEAL
 # 203 "data/maps/MysteryCave/scripts.pory"
-	givemon SPECIES_SPHEAL, 15
+	givemon SPECIES_SPHEAL, 20
 	goto GiveFirstMonHoenn_1
 
 GiveFirstMonHoenn_3:
 # 207 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_NUMEL
 # 208 "data/maps/MysteryCave/scripts.pory"
-	givemon SPECIES_NUMEL, 15
+	givemon SPECIES_NUMEL, 20
 	goto GiveFirstMonHoenn_1
 
 GiveFirstMonHoenn_4:
 # 212 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_SEEDOT
 # 213 "data/maps/MysteryCave/scripts.pory"
-	givemon SPECIES_SEEDOT, 15
+	givemon SPECIES_SEEDOT, 20
 	goto GiveFirstMonHoenn_1
 
 
@@ -380,21 +380,21 @@ GiveSecondMonKanto_2:
 # 223 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_GROWLITHE
 # 224 "data/maps/MysteryCave/scripts.pory"
-	givemon SPECIES_GROWLITHE, 15
+	givemon SPECIES_GROWLITHE, 20
 	goto GiveSecondMonKanto_1
 
 GiveSecondMonKanto_3:
 # 228 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_SANDSHREW_ALOLAN
 # 229 "data/maps/MysteryCave/scripts.pory"
-	givemon SPECIES_SANDSHREW_ALOLAN, 15
+	givemon SPECIES_SANDSHREW_ALOLAN, 20
 	goto GiveSecondMonKanto_1
 
 GiveSecondMonKanto_4:
 # 233 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_JYNX
 # 234 "data/maps/MysteryCave/scripts.pory"
-	givemon SPECIES_JYNX, 15
+	givemon SPECIES_JYNX, 20
 	goto GiveSecondMonKanto_1
 
 
@@ -415,21 +415,21 @@ GiveSecondMonJohto_2:
 # 243 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_LARVITAR
 # 244 "data/maps/MysteryCave/scripts.pory"
-	givemon SPECIES_LARVITAR, 15
+	givemon SPECIES_LARVITAR, 20
 	goto GiveSecondMonJohto_1
 
 GiveSecondMonJohto_3:
 # 248 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_QWILFISH_HISUIAN
 # 249 "data/maps/MysteryCave/scripts.pory"
-	givemon SPECIES_QWILFISH_HISUIAN, 15
+	givemon SPECIES_QWILFISH_HISUIAN, 20
 	goto GiveSecondMonJohto_1
 
 GiveSecondMonJohto_4:
 # 253 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_SUDOWOODO
 # 254 "data/maps/MysteryCave/scripts.pory"
-	givemon SPECIES_SUDOWOODO, 15
+	givemon SPECIES_SUDOWOODO, 20
 	goto GiveSecondMonJohto_1
 
 
@@ -450,21 +450,21 @@ GiveSecondMonHoenn_2:
 # 263 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_BAGON
 # 264 "data/maps/MysteryCave/scripts.pory"
-	givemon SPECIES_BAGON, 15
+	givemon SPECIES_BAGON, 20
 	goto GiveSecondMonHoenn_1
 
 GiveSecondMonHoenn_3:
 # 268 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_ZIGZAGOON_GALARIAN
 # 269 "data/maps/MysteryCave/scripts.pory"
-	givemon SPECIES_ZIGZAGOON_GALARIAN, 15
+	givemon SPECIES_ZIGZAGOON_GALARIAN, 20
 	goto GiveSecondMonHoenn_1
 
 GiveSecondMonHoenn_4:
 # 273 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_SEVIPER
 # 274 "data/maps/MysteryCave/scripts.pory"
-	givemon SPECIES_SEVIPER, 15
+	givemon SPECIES_SEVIPER, 20
 	goto GiveSecondMonHoenn_1
 
 
