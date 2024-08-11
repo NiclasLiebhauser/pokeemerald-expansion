@@ -1,1 +1,19 @@
 mapscripts PacifidlogTown_Mart_MapScripts {}
+
+script PacifidlogTown_Mart_Clerk {
+    lock
+    faceplayer
+    message(gText_HowMayIServeYou)
+    waitmessage
+    pokemart(PacifidlogTown_Mart)
+    msgbox(gText_PleaseComeAgain)
+    release
+    end
+}
+
+mart PacifidlogTown_Mart {
+    ITEM_RARE_CANDY
+    ITEM_FULL_HEAL
+    ITEM_MAX_REVIVE
+    ITEM_FULL_RESTORE
+}
