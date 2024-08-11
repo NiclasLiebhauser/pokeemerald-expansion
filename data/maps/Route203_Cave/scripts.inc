@@ -99,7 +99,7 @@ Route203_Cave_EventScript_AdminFight::
 # 66 "data/maps/Route203_Cave/scripts.pory"
 	setvar VAR_ROUTE203_CAVE_STATE, 1
 # 67 "data/maps/Route203_Cave/scripts.pory"
-	setvar VAR_LEVEL_CAP, 35
+	setvar VAR_LEVEL_CAP, 40
 # 68 "data/maps/Route203_Cave/scripts.pory"
 	showobjectat 20, MAP_ROUTE203_CAVE
 # 69 "data/maps/Route203_Cave/scripts.pory"

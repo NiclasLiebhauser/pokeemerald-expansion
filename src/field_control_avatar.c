@@ -69,6 +69,7 @@ static bool8 TryStartWarpEventScript(struct MapPosition *, u16);
 static bool8 TryStartMiscWalkingScripts(u16);
 static bool8 TryStartStepCountScript(u16);
 static void UpdateFriendshipStepCounter(void);
+static void UpdateStepCounter(void);
 #if OW_POISON_DAMAGE < GEN_5
 static bool8 UpdatePoisonStepCounter(void);
 #endif // OW_POISON_DAMAGE
@@ -575,6 +576,7 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
             return TRUE;
         }
     #endif
+        UpdateStepCounter();
         if (ShouldEggHatch())
         {
             IncrementGameStat(GAME_STAT_HATCHED_EGGS);
@@ -689,6 +691,13 @@ static bool8 UpdatePoisonStepCounter(void)
     return FALSE;
 }
 #endif // OW_POISON_DAMAGE
+
+static void UpdateStepCounter(void)
+{
+    u16 *ptr = GetVarPointer(VAR_STEP_COUNTER);
+    (*ptr)++;
+    (*ptr) %= 5;
+}
 
 void RestartWildEncounterImmunitySteps(void)
 {

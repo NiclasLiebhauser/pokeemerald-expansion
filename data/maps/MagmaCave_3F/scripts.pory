@@ -1,7 +1,20 @@
 const LOCALID_MAXIE = 1
 const LOCALID_MACHINE = 2
 
-mapscripts MagmaCave_3F_MapScripts {}
+mapscripts MagmaCave_3F_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE[
+        VAR_STEP_COUNTER, 0: MagmaCave_3F_ShowRedOrbInteract
+    ]
+}
+
+script MagmaCave_3F_ShowRedOrbInteract{
+    if(!flag(FLAG_RED_ORB_RECEIVED))
+    {
+        dofieldeffectsparkle(28, 26, 0)
+        addvar(VAR_STEP_COUNTER, 1)
+    }
+    end
+}
 
 script MagmaCave_3F_Evenscript_Maxie {
     lock
@@ -56,7 +69,7 @@ script MagmaCave_3F_MaxieDefeated {
 
     setflag(FLAG_MAGMA_LEFT_HIDEOUT)
     call(MagmaCave_3F_RemoveMagma)
-    setvar(VAR_LEVEL_CAP, 45)
+    setvar(VAR_LEVEL_CAP, 50)
 
     release
     end

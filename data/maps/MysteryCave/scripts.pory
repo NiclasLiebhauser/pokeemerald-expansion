@@ -50,10 +50,11 @@ script MysteryCave_EventScript_StartAdventure {
     call(ReceiveBike)
     call(ReceiveExpShare)
     call(ReceiveInfiniteRepel)
+    call(ReceiveBalls)
     call(GiveFirstMon)
     call(GiveSecondMon)
     setvar(VAR_START_ADVENTURE_STATE, 1)
-    setvar(VAR_LEVEL_CAP, 25)
+    setvar(VAR_LEVEL_CAP, 30)
 
     waitmessage
     waitbuttonpress
@@ -112,6 +113,15 @@ script ReceiveInfiniteRepel {
     giveitem(ITEM_INFINITE_REPEL)
     waitfanfare
     return
+}
+
+script ReceiveBalls {
+    playfanfare(MUS_OBTAIN_ITEM)
+    giveitem(ITEM_POKE_BALL, 10)
+    waitfanfare
+    playfanfare(MUS_OBTAIN_ITEM)
+    giveitem(ITEM_GREAT_BALL, 5)
+    waitfanfare 
 }
 
 script GiveFirstMon {
