@@ -4634,7 +4634,7 @@ const struct Item gItemsInfo[] =
             "A red, glowing orb\n"
             "said to contain an\n"
             "ancient power."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
@@ -4648,7 +4648,7 @@ const struct Item gItemsInfo[] =
             "A blue, glowing orb\n"
             "said to contain an\n"
             "ancient power."),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
