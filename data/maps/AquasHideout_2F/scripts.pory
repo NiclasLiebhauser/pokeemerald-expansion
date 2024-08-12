@@ -22,7 +22,7 @@ script AquasHideout_2F_EventScript_Archie {
     closemessage
     trainerbattle_no_intro(TRAINER_ARCHIE_AQUA_HQ, AquasHideout_2F_Text_Archie_Defeat)
     msgbox(AquasHideout_2F_Text_Archie_PostBattel)
-    giveitem(ITEM_BLUE_ORB)
+    giveitem(ITEM_BLUE_ORB_OFF)
     waitse
     waitmessage
     closemessage

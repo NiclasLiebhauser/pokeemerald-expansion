@@ -3,160 +3,199 @@ InfernoCavern_3F_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, InfernoCavern_3F_OnResume
 # 5 "data/maps/InfernoCavern_3F/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, InfernoCavern_3F_OnTransition
+# 6 "data/maps/InfernoCavern_3F/scripts.pory"
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, InfernoCavern_3F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
+
+InfernoCavern_3F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
+# 7 "data/maps/InfernoCavern_3F/scripts.pory"
+	map_script_2 VAR_TEMP_2, 1, InfernoCavern_3F_EventScript_InformPowerUp
+	.2byte 0
 
 
 InfernoCavern_3F_OnResume::
-# 9 "data/maps/InfernoCavern_3F/scripts.pory"
+# 12 "data/maps/InfernoCavern_3F/scripts.pory"
 	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, InfernoCavern_3F_EventScript_TryRemoveGroudon
 	end
 
 
 InfernoCavern_3F_OnTransition::
-# 14 "data/maps/InfernoCavern_3F/scripts.pory"
+# 17 "data/maps/InfernoCavern_3F/scripts.pory"
 	call_if_unset FLAG_DEFEATED_GROUDON, InfernoCavern_3F_EventScript_Enable_Groudon_Battle
-# 15 "data/maps/InfernoCavern_3F/scripts.pory"
+# 18 "data/maps/InfernoCavern_3F/scripts.pory"
 	call_if_set FLAG_DEFEATED_GROUDON, InfernoCavern_3F_EventScript_Disable_Groudon_Battle
 	end
 
 
+InfernoCavern_3F_EventScript_InformPowerUp::
+# 23 "data/maps/InfernoCavern_3F/scripts.pory"
+	lock
+# 24 "data/maps/InfernoCavern_3F/scripts.pory"
+	msgbox InfernoCavern_3F_EventScript_InformPowerUp_Text_0
+# 25 "data/maps/InfernoCavern_3F/scripts.pory"
+	setvar VAR_TEMP_2, 0
+# 26 "data/maps/InfernoCavern_3F/scripts.pory"
+	release
+	end
+
+
 InfernoCavern_3F_EventScript_Enable_Groudon_Battle::
-# 20 "data/maps/InfernoCavern_3F/scripts.pory"
+# 31 "data/maps/InfernoCavern_3F/scripts.pory"
 	setvar VAR_TEMP_1, 0
 	return
 
 
 InfernoCavern_3F_EventScript_Disable_Groudon_Battle::
-# 25 "data/maps/InfernoCavern_3F/scripts.pory"
+# 36 "data/maps/InfernoCavern_3F/scripts.pory"
 	setvar VAR_TEMP_1, 1
 	return
 
 
 InfernoCavern_3F_EventScript_TryRemoveGroudon::
-# 30 "data/maps/InfernoCavern_3F/scripts.pory"
+# 41 "data/maps/InfernoCavern_3F/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 31 "data/maps/InfernoCavern_3F/scripts.pory"
+# 42 "data/maps/InfernoCavern_3F/scripts.pory"
 	call_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, InfernoCavern_3F_EventScript_RemoveGroudon
 	return
 
 
 InfernoCavern_3F_EventScript_RemoveGroudon::
-# 36 "data/maps/InfernoCavern_3F/scripts.pory"
+# 47 "data/maps/InfernoCavern_3F/scripts.pory"
 	removeobject 1
 	return
 
 
 InfernoCavern_3F_EventScript_Groudon::
-# 41 "data/maps/InfernoCavern_3F/scripts.pory"
-	lockall
-# 43 "data/maps/InfernoCavern_3F/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-# 44 "data/maps/InfernoCavern_3F/scripts.pory"
-	waitmovement 0
-# 45 "data/maps/InfernoCavern_3F/scripts.pory"
-	applymovement 1, InfernoCavern_3F_Movement_GroudonApproach
-# 46 "data/maps/InfernoCavern_3F/scripts.pory"
-	waitmovement 0
-# 47 "data/maps/InfernoCavern_3F/scripts.pory"
-	waitse
-# 48 "data/maps/InfernoCavern_3F/scripts.pory"
-	playmoncry SPECIES_GROUDON, CRY_MODE_ENCOUNTER
-# 49 "data/maps/InfernoCavern_3F/scripts.pory"
-	delay 40
-# 50 "data/maps/InfernoCavern_3F/scripts.pory"
-	waitmoncry
-# 51 "data/maps/InfernoCavern_3F/scripts.pory"
-	setvar VAR_LAST_TALKED, 1
 # 52 "data/maps/InfernoCavern_3F/scripts.pory"
-	setwildbattle SPECIES_GROUDON_PRIMAL, 50
+	lockall
 # 53 "data/maps/InfernoCavern_3F/scripts.pory"
-	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	checkitem ITEM_RED_ORB_OFF
 # 54 "data/maps/InfernoCavern_3F/scripts.pory"
-	setflag FLAG_NO_CATCHING
-# 55 "data/maps/InfernoCavern_3F/scripts.pory"
-	settotemboost B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1, 1, 1
-# 56 "data/maps/InfernoCavern_3F/scripts.pory"
-	special BattleSetup_StartLegendaryBattle
-# 57 "data/maps/InfernoCavern_3F/scripts.pory"
-	waitstate
-# 58 "data/maps/InfernoCavern_3F/scripts.pory"
-	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-# 59 "data/maps/InfernoCavern_3F/scripts.pory"
-	clearflag FLAG_NO_CATCHING
-# 60 "data/maps/InfernoCavern_3F/scripts.pory"
-	specialvar VAR_RESULT, GetBattleOutcome
-# 61 "data/maps/InfernoCavern_3F/scripts.pory"
-	call_if_eq VAR_RESULT, B_OUTCOME_WON, InfernoCavern_3F_EventScript_DefeatedGroudon
-# 62 "data/maps/InfernoCavern_3F/scripts.pory"
-	call_if_eq VAR_RESULT, B_OUTCOME_RAN, InfernoCavern_3F_EventScript_RanGroudon
-# 63 "data/maps/InfernoCavern_3F/scripts.pory"
-	call_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, InfernoCavern_3F_EventScript_RanGroudon
-# 64 "data/maps/InfernoCavern_3F/scripts.pory"
-	setvar VAR_TEMP_1, 1
-# 65 "data/maps/InfernoCavern_3F/scripts.pory"
+	compare VAR_RESULT, TRUE
+	goto_if_eq InfernoCavern_3F_EventScript_Groudon_2
+InfernoCavern_3F_EventScript_Groudon_1:
+# 79 "data/maps/InfernoCavern_3F/scripts.pory"
 	releaseall
 	end
 
+InfernoCavern_3F_EventScript_Groudon_2:
+# 56 "data/maps/InfernoCavern_3F/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+# 57 "data/maps/InfernoCavern_3F/scripts.pory"
+	waitmovement 0
+# 58 "data/maps/InfernoCavern_3F/scripts.pory"
+	applymovement 1, InfernoCavern_3F_Movement_GroudonApproach
+# 59 "data/maps/InfernoCavern_3F/scripts.pory"
+	waitmovement 0
+# 60 "data/maps/InfernoCavern_3F/scripts.pory"
+	waitse
+# 61 "data/maps/InfernoCavern_3F/scripts.pory"
+	playmoncry SPECIES_GROUDON, CRY_MODE_ENCOUNTER
+# 62 "data/maps/InfernoCavern_3F/scripts.pory"
+	delay 40
+# 63 "data/maps/InfernoCavern_3F/scripts.pory"
+	waitmoncry
+# 64 "data/maps/InfernoCavern_3F/scripts.pory"
+	setvar VAR_LAST_TALKED, 1
+# 65 "data/maps/InfernoCavern_3F/scripts.pory"
+	setwildbattle SPECIES_GROUDON_PRIMAL, 50
+# 66 "data/maps/InfernoCavern_3F/scripts.pory"
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+# 67 "data/maps/InfernoCavern_3F/scripts.pory"
+	setflag FLAG_NO_CATCHING
+# 68 "data/maps/InfernoCavern_3F/scripts.pory"
+	settotemboost B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1, 1, 1
+# 69 "data/maps/InfernoCavern_3F/scripts.pory"
+	special BattleSetup_StartLegendaryBattle
+# 70 "data/maps/InfernoCavern_3F/scripts.pory"
+	waitstate
+# 71 "data/maps/InfernoCavern_3F/scripts.pory"
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+# 72 "data/maps/InfernoCavern_3F/scripts.pory"
+	clearflag FLAG_NO_CATCHING
+# 73 "data/maps/InfernoCavern_3F/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 74 "data/maps/InfernoCavern_3F/scripts.pory"
+	call_if_eq VAR_RESULT, B_OUTCOME_WON, InfernoCavern_3F_EventScript_DefeatedGroudon
+# 75 "data/maps/InfernoCavern_3F/scripts.pory"
+	call_if_eq VAR_RESULT, B_OUTCOME_RAN, InfernoCavern_3F_EventScript_RanGroudon
+# 76 "data/maps/InfernoCavern_3F/scripts.pory"
+	call_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, InfernoCavern_3F_EventScript_RanGroudon
+# 77 "data/maps/InfernoCavern_3F/scripts.pory"
+	setvar VAR_TEMP_1, 1
+	goto InfernoCavern_3F_EventScript_Groudon_1
+
 
 InfernoCavern_3F_EventScript_DefeatedGroudon::
-# 70 "data/maps/InfernoCavern_3F/scripts.pory"
+# 84 "data/maps/InfernoCavern_3F/scripts.pory"
 	setflag FLAG_DEFEATED_GROUDON
-# 71 "data/maps/InfernoCavern_3F/scripts.pory"
+# 85 "data/maps/InfernoCavern_3F/scripts.pory"
 	setvar VAR_TEMP_1, 1
-# 72 "data/maps/InfernoCavern_3F/scripts.pory"
+# 86 "data/maps/InfernoCavern_3F/scripts.pory"
+	removeitem ITEM_RED_ORB_OFF
+# 87 "data/maps/InfernoCavern_3F/scripts.pory"
+	additem ITEM_RED_ORB
+# 88 "data/maps/InfernoCavern_3F/scripts.pory"
+	setvar VAR_TEMP_2, 1
+# 89 "data/maps/InfernoCavern_3F/scripts.pory"
 	call Common_EventScript_RemoveStaticPokemon
 	end
 
 
 InfernoCavern_3F_EventScript_RanGroudon::
-# 77 "data/maps/InfernoCavern_3F/scripts.pory"
+# 94 "data/maps/InfernoCavern_3F/scripts.pory"
 	fadescreen FADE_TO_BLACK
-# 78 "data/maps/InfernoCavern_3F/scripts.pory"
+# 95 "data/maps/InfernoCavern_3F/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown2
-# 79 "data/maps/InfernoCavern_3F/scripts.pory"
+# 96 "data/maps/InfernoCavern_3F/scripts.pory"
 	waitmovement 0
-# 80 "data/maps/InfernoCavern_3F/scripts.pory"
+# 97 "data/maps/InfernoCavern_3F/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-# 81 "data/maps/InfernoCavern_3F/scripts.pory"
+# 98 "data/maps/InfernoCavern_3F/scripts.pory"
 	waitmovement 0
-# 82 "data/maps/InfernoCavern_3F/scripts.pory"
+# 99 "data/maps/InfernoCavern_3F/scripts.pory"
 	applymovement 1, InfernoCavern_3F_Movement_GroudonReset
-# 83 "data/maps/InfernoCavern_3F/scripts.pory"
+# 100 "data/maps/InfernoCavern_3F/scripts.pory"
 	waitmovement 0
-# 84 "data/maps/InfernoCavern_3F/scripts.pory"
+# 101 "data/maps/InfernoCavern_3F/scripts.pory"
 	fadescreen FADE_FROM_BLACK
-# 85 "data/maps/InfernoCavern_3F/scripts.pory"
+# 102 "data/maps/InfernoCavern_3F/scripts.pory"
 	releaseall
 	end
 
 
-# 89 "data/maps/InfernoCavern_3F/scripts.pory"
+# 106 "data/maps/InfernoCavern_3F/scripts.pory"
 InfernoCavern_3F_Movement_GroudonApproach:
-# 90 "data/maps/InfernoCavern_3F/scripts.pory"
+# 107 "data/maps/InfernoCavern_3F/scripts.pory"
 	init_affine_anim
-# 91 "data/maps/InfernoCavern_3F/scripts.pory"
+# 108 "data/maps/InfernoCavern_3F/scripts.pory"
 	walk_down_start_affine
-# 92 "data/maps/InfernoCavern_3F/scripts.pory"
+# 109 "data/maps/InfernoCavern_3F/scripts.pory"
 	delay_16
-# 93 "data/maps/InfernoCavern_3F/scripts.pory"
+# 110 "data/maps/InfernoCavern_3F/scripts.pory"
 	delay_16
-# 94 "data/maps/InfernoCavern_3F/scripts.pory"
+# 111 "data/maps/InfernoCavern_3F/scripts.pory"
 	walk_down_affine
-# 95 "data/maps/InfernoCavern_3F/scripts.pory"
+# 112 "data/maps/InfernoCavern_3F/scripts.pory"
 	delay_16
-# 96 "data/maps/InfernoCavern_3F/scripts.pory"
+# 113 "data/maps/InfernoCavern_3F/scripts.pory"
 	delay_16
-# 97 "data/maps/InfernoCavern_3F/scripts.pory"
+# 114 "data/maps/InfernoCavern_3F/scripts.pory"
 	walk_down_affine
-# 98 "data/maps/InfernoCavern_3F/scripts.pory"
+# 115 "data/maps/InfernoCavern_3F/scripts.pory"
 	step_end
 
-# 101 "data/maps/InfernoCavern_3F/scripts.pory"
+# 118 "data/maps/InfernoCavern_3F/scripts.pory"
 InfernoCavern_3F_Movement_GroudonReset:
-# 102 "data/maps/InfernoCavern_3F/scripts.pory"
+# 119 "data/maps/InfernoCavern_3F/scripts.pory"
 	walk_up
-# 102 "data/maps/InfernoCavern_3F/scripts.pory"
+# 119 "data/maps/InfernoCavern_3F/scripts.pory"
 	walk_up
-# 102 "data/maps/InfernoCavern_3F/scripts.pory"
+# 119 "data/maps/InfernoCavern_3F/scripts.pory"
 	walk_up
 	step_end
+
+InfernoCavern_3F_EventScript_InformPowerUp_Text_0:
+# 24 "data/maps/InfernoCavern_3F/scripts.pory"
+	.string "Your RED ORB starts shining with new\n"
+	.string "power.$"

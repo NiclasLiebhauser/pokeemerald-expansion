@@ -13,13 +13,13 @@ MagmaCave_3F_ShowRedOrbInteract::
 # 11 "data/maps/MagmaCave_3F/scripts.pory"
 	goto_if_unset FLAG_RED_ORB_RECEIVED, MagmaCave_3F_ShowRedOrbInteract_2
 MagmaCave_3F_ShowRedOrbInteract_1:
+# 15 "data/maps/MagmaCave_3F/scripts.pory"
+	addvar VAR_STEP_COUNTER, 1
 	end
 
 MagmaCave_3F_ShowRedOrbInteract_2:
 # 13 "data/maps/MagmaCave_3F/scripts.pory"
 	dofieldeffectsparkle 28, 26, 0
-# 14 "data/maps/MagmaCave_3F/scripts.pory"
-	addvar VAR_STEP_COUNTER, 1
 	goto MagmaCave_3F_ShowRedOrbInteract_1
 
 
@@ -59,7 +59,7 @@ MagmaCave_3F_Evenscript_RedOrbTaken::
 # 40 "data/maps/MagmaCave_3F/scripts.pory"
 	setflag FLAG_RED_ORB_RECEIVED
 # 41 "data/maps/MagmaCave_3F/scripts.pory"
-	giveitem ITEM_RED_ORB
+	giveitem ITEM_RED_ORB_OFF
 # 42 "data/maps/MagmaCave_3F/scripts.pory"
 	playse SE_PIN
 # 43 "data/maps/MagmaCave_3F/scripts.pory"

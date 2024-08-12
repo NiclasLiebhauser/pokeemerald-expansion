@@ -40,7 +40,7 @@ Route205_EventScript_Angler_Text_0:
 # 10 "data/maps/Route205/scripts.pory"
 	.string "Me? No we don't need to fight I am only\n"
 	.string "interested in the sea, you see?\p"
-	.string "Here you can have it as token of my\n"
+	.string "Here you can have this as token of my\n"
 	.string "affection for the sea\p"
 	.string "$"
 

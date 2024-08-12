@@ -3,6 +3,9 @@ const LOCALID_GROUDON = 1
 mapscripts InfernoCavern_3F_MapScripts {
     MAP_SCRIPT_ON_RESUME: InfernoCavern_3F_OnResume
     MAP_SCRIPT_ON_TRANSITION: InfernoCavern_3F_OnTransition
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_2, 1: InfernoCavern_3F_EventScript_InformPowerUp
+    ]
 }
 
 script InfernoCavern_3F_OnResume {
@@ -13,6 +16,14 @@ script InfernoCavern_3F_OnResume {
 script InfernoCavern_3F_OnTransition {
     call_if_unset(FLAG_DEFEATED_GROUDON, InfernoCavern_3F_EventScript_Enable_Groudon_Battle)
     call_if_set(FLAG_DEFEATED_GROUDON, InfernoCavern_3F_EventScript_Disable_Groudon_Battle)
+    end
+}
+
+script InfernoCavern_3F_EventScript_InformPowerUp {
+    lock
+    msgbox(format("Your RED ORB starts shining with new power."))
+    setvar(VAR_TEMP_2, 0)
+    release
     end
 }
 
@@ -39,29 +50,32 @@ script InfernoCavern_3F_EventScript_RemoveGroudon {
 
 script InfernoCavern_3F_EventScript_Groudon {
     lockall
-    //ToSolve: Red orb stuff
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
-    waitmovement(0)
-    applymovement(LOCALID_GROUDON, InfernoCavern_3F_Movement_GroudonApproach)
-    waitmovement(0)
-    waitse
-    playmoncry(SPECIES_GROUDON, CRY_MODE_ENCOUNTER)
-    delay(40)
-    waitmoncry
-    setvar(VAR_LAST_TALKED, LOCALID_GROUDON)
-    setwildbattle(SPECIES_GROUDON_PRIMAL, 50)
-    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
-    setflag(FLAG_NO_CATCHING)
-    settotemboost(B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1, 1, 1)
-    special(BattleSetup_StartLegendaryBattle)
-    waitstate
-    clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
-    clearflag(FLAG_NO_CATCHING)
-    specialvar(VAR_RESULT, GetBattleOutcome)
-    call_if_eq(VAR_RESULT, B_OUTCOME_WON, InfernoCavern_3F_EventScript_DefeatedGroudon)
-    call_if_eq(VAR_RESULT, B_OUTCOME_RAN, InfernoCavern_3F_EventScript_RanGroudon)
-    call_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, InfernoCavern_3F_EventScript_RanGroudon)
-    setvar(VAR_TEMP_1, 1)
+    checkitem(ITEM_RED_ORB_OFF)
+    if(var(VAR_RESULT) == TRUE)
+    {
+        applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+        waitmovement(0)
+        applymovement(LOCALID_GROUDON, InfernoCavern_3F_Movement_GroudonApproach)
+        waitmovement(0)
+        waitse
+        playmoncry(SPECIES_GROUDON, CRY_MODE_ENCOUNTER)
+        delay(40)
+        waitmoncry
+        setvar(VAR_LAST_TALKED, LOCALID_GROUDON)
+        setwildbattle(SPECIES_GROUDON_PRIMAL, 50)
+        setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+        setflag(FLAG_NO_CATCHING)
+        settotemboost(B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1, 1, 1)
+        special(BattleSetup_StartLegendaryBattle)
+        waitstate
+        clearflag(FLAG_SYS_CTRL_OBJ_DELETE)
+        clearflag(FLAG_NO_CATCHING)
+        specialvar(VAR_RESULT, GetBattleOutcome)
+        call_if_eq(VAR_RESULT, B_OUTCOME_WON, InfernoCavern_3F_EventScript_DefeatedGroudon)
+        call_if_eq(VAR_RESULT, B_OUTCOME_RAN, InfernoCavern_3F_EventScript_RanGroudon)
+        call_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, InfernoCavern_3F_EventScript_RanGroudon)
+        setvar(VAR_TEMP_1, 1)
+    }
     releaseall
     end
 }
@@ -69,6 +83,9 @@ script InfernoCavern_3F_EventScript_Groudon {
 script InfernoCavern_3F_EventScript_DefeatedGroudon {
     setflag(FLAG_DEFEATED_GROUDON)
     setvar(VAR_TEMP_1, 1)
+    removeitem(ITEM_RED_ORB_OFF)
+    additem(ITEM_RED_ORB)
+    setvar(VAR_TEMP_2, 1)
     call(Common_EventScript_RemoveStaticPokemon)
     end
 }

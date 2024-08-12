@@ -7,7 +7,7 @@ script Route205_EventScript_Angler {
     faceplayer
     if(!flag(FLAG_RECEIVED_GOOD_ROD))
     {
-        message(format("Me? No we don't need to fight I am only interested in the sea, you see?\pHere you can have it as token of my affection for the sea\p"))
+        message(format("Me? No we don't need to fight I am only interested in the sea, you see?\pHere you can have this as token of my affection for the sea\p"))
         waitmessage
         playfanfare(MUS_OBTAIN_ITEM)
         giveitem(ITEM_GOOD_ROD)

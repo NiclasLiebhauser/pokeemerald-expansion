@@ -1004,7 +1004,10 @@
 #define ITEM_INFINITE_REPEL 828
 #define ITEM_AZURE_FLUTE 829
 
-#define ITEMS_COUNT 830
+#define ITEM_RED_ORB_OFF 830
+#define ITEM_BLUE_ORB_OFF 831
+
+#define ITEMS_COUNT 832
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

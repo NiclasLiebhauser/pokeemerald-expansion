@@ -4629,7 +4629,6 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Red Orb"),
         .price = 0,
-        .holdEffect = HOLD_EFFECT_PRIMAL_ORB,
         .description = COMPOUND_STRING(
             "A red, glowing orb\n"
             "said to contain an\n"
@@ -4643,11 +4642,36 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Blue Orb"),
         .price = 0,
-        .holdEffect = HOLD_EFFECT_PRIMAL_ORB,
         .description = COMPOUND_STRING(
             "A blue, glowing orb\n"
             "said to contain an\n"
             "ancient power."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_RED_ORB_OFF] =
+    {
+        .name = _("Red Orb"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A red orb. But it\n"
+            "seems to have lost\n"
+            "its power."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_BLUE_ORB_OFF] =
+    {
+        .name = _("Blue Orb"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A blue orb. But it\n"
+            "seems to have lost\n"
+            "its power."),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,

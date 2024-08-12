@@ -36,7 +36,7 @@ AquasHideout_2F_EventScript_Archie::
 # 24 "data/maps/AquasHideout_2F/scripts.pory"
 	msgbox AquasHideout_2F_Text_Archie_PostBattel
 # 25 "data/maps/AquasHideout_2F/scripts.pory"
-	giveitem ITEM_BLUE_ORB
+	giveitem ITEM_BLUE_ORB_OFF
 # 26 "data/maps/AquasHideout_2F/scripts.pory"
 	waitse
 # 27 "data/maps/AquasHideout_2F/scripts.pory"
