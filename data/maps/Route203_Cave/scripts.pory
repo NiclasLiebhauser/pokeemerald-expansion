@@ -16,8 +16,14 @@ mapscripts Route203_Cave_MapScripts {
 
 script Route203_Cave_OnTransition {
     if(!flag(FLAG_AQUA_LEFT_ROUTE_203_CAVE))
+    {        
+        setflag(FLAG_HIDE_ROCK_SMASH_MACHINE)
+        removeobject(LOCAL_ROCK_SMASH_MACHINE)
+    }
+    elif(flag(FLAG_AQUA_LEFT_ROUTE_203_CAVE) && !flag(FLAG_PLAYER_CAN_USE_ROCK_SMASH))
     {
-        hideobjectat(LOCAL_ROCK_SMASH_MACHINE, MAP_ROUTE203_CAVE)
+        clearflag(FLAG_HIDE_ROCK_SMASH_MACHINE)
+        addobject(LOCAL_ROCK_SMASH_MACHINE)
     }
     end
 }
@@ -65,9 +71,11 @@ script Route203_Cave_EventScript_AdminFight {
     setflag(FLAG_AQUA_LEFT_ROUTE_203_CAVE)
     setvar(VAR_ROUTE203_CAVE_STATE, 1)
     setvar(VAR_LEVEL_CAP, 40)
-    showobjectat(LOCAL_ROCK_SMASH_MACHINE, MAP_ROUTE203_CAVE)
+    clearflag(FLAG_HIDE_ROCK_SMASH_MACHINE)
+    addobject(LOCAL_ROCK_SMASH_MACHINE)
     fadescreen(FADE_FROM_BLACK)
-
+    
+    release
     end
 }
 
