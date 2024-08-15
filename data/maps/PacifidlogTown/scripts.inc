@@ -85,8 +85,42 @@ PacifidlogTown_EventScript_TownSign::
 	return
 
 
+PacifidlogTown_EventScript_LittleGirl::
+# 61 "data/maps/PacifidlogTown/scripts.pory"
+	lock
+# 62 "data/maps/PacifidlogTown/scripts.pory"
+	faceplayer
+# 63 "data/maps/PacifidlogTown/scripts.pory"
+	goto_if_set FLAG_AQUA_LEFT_ROUTE_203_CAVE, PacifidlogTown_EventScript_LittleGirl_2
+# 69 "data/maps/PacifidlogTown/scripts.pory"
+	msgbox PacifidlogTown_EventScript_LittleGirl_Text_1, MSGBOX_NPC
+PacifidlogTown_EventScript_LittleGirl_1:
+# 71 "data/maps/PacifidlogTown/scripts.pory"
+	release
+	end
+
+PacifidlogTown_EventScript_LittleGirl_2:
+# 65 "data/maps/PacifidlogTown/scripts.pory"
+	msgbox PacifidlogTown_EventScript_LittleGirl_Text_0, MSGBOX_NPC
+	goto PacifidlogTown_EventScript_LittleGirl_1
+
+
+PacifidlogTown_EventScript_LittleGirl_Text_0:
+# 65 "data/maps/PacifidlogTown/scripts.pory"
+	.string "Thank you for bringing peace to that\n"
+	.string "cave.\p"
+	.string "Maybe now some wild Pokémon can reclaim\n"
+	.string "it.$"
+
+PacifidlogTown_EventScript_LittleGirl_Text_1:
+# 69 "data/maps/PacifidlogTown/scripts.pory"
+	.string "Team Aqua has taken over a local mine\n"
+	.string "on Route 203. Please drive them away\l"
+	.string "they are disrupting an important\l"
+	.string "sanctuary to the local fauna.$"
+
 PacifidlogTown_Text_TownSign::
-# 60 "data/maps/PacifidlogTown/scripts.pory"
+# 75 "data/maps/PacifidlogTown/scripts.pory"
 	.string "PACIFIDLOG TOWN\p"
 	.string "“Where the morning sun smiles upon\n"
 	.string "the waters.”\p"
@@ -96,13 +130,13 @@ PacifidlogTown_Text_TownSign::
 	.string "the waters.”$"
 
 PacifidlogTown_Text_Fisherman_Wants_Milk::
-# 64 "data/maps/PacifidlogTown/scripts.pory"
+# 79 "data/maps/PacifidlogTown/scripts.pory"
 	.string "Fishing is all good and such.\p"
 	.string "But nothing beets some cold\n"
 	.string "{STR_VAR_1} to quensh your thirst.$"
 
 PacifidlogTown_Text_Fisherman_Takes_Milk::
-# 68 "data/maps/PacifidlogTown/scripts.pory"
+# 83 "data/maps/PacifidlogTown/scripts.pory"
 	.string "What do I smell here.\n"
 	.string "A fresh can of {STR_VAR_1}.\p"
 	.string "Fisherman takes away your\n"
@@ -111,6 +145,6 @@ PacifidlogTown_Text_Fisherman_Takes_Milk::
 	.string "for bringing this to me.$"
 
 PacifidlogTown_Text_Fisherman_Thank_You_For_The_Milk::
-# 72 "data/maps/PacifidlogTown/scripts.pory"
+# 87 "data/maps/PacifidlogTown/scripts.pory"
 	.string "Thanks again for that delicous\n"
 	.string "{STR_VAR_1}.$"

@@ -57,6 +57,21 @@ script PacifidlogTown_EventScript_TownSign {
     msgbox(PacifidlogTown_Text_TownSign, MSGBOX_SIGN)
 }
 
+script PacifidlogTown_EventScript_LittleGirl {
+    lock
+    faceplayer
+    if(flag(FLAG_AQUA_LEFT_ROUTE_203_CAVE))
+    {
+        msgbox(format("Thank you for bringing peace to that cave.\pMaybe now some wild Pokémon can reclaim it."), MSGBOX_NPC)
+    }
+    else
+    {
+        msgbox(format("Team Aqua has taken over a local mine on Route 203. Please drive them away they are disrupting an important sanctuary to the local fauna."), MSGBOX_NPC)
+    }    
+    release
+    end
+}
+
 text PacifidlogTown_Text_TownSign {
     format("PACIFIDLOG TOWN\p“Where the morning sun smiles upon\nthe waters.”\pIs what it used to read.\nThe text has been modified to now read:\p“Where even people frown upon\nthe waters.”")
 }
