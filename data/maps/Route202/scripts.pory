@@ -1,0 +1,9 @@
+mapscripts Route202_MapScripts {}
+
+script Route202_EventScript_BlackBelt {
+    lock
+    faceplayer
+    msgbox(format("I have heard rumors that Team Aqua is developing a DIVE MACHINE. Even though their leader is the one responsible for this mess. I have to admit it would be pretty cool to be able to dive again."), MSGBOX_NPC)    
+    release
+    end
+}

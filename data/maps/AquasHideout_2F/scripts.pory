@@ -1,18 +1,112 @@
 const LOCAL_DIVE_MACHINE = 1
 const LOCAL_ARCHIE = 2
+const LOCAL_DIVE_GRUNT = 3
 
 
-mapscripts AquasHideout_2F_MapScripts {}
+mapscripts AquasHideout_2F_MapScripts {
+    MAP_SCRIPT_ON_LOAD: AquasHideout_2F_EventScript_OnLoad
+}
+
+script AquasHideout_2F_EventScript_OnLoad {
+    if(flag(FLAG_PLAYER_CAN_USE_DIVE))
+    {
+        setvar(VAR_TEMP_0, 1)
+    }
+}
 
 script AquasHideout_2F_EventScript_DiveMachine {
-    removeobject(LOCAL_DIVE_MACHINE)
     setflag(FLAG_ITEM_DIVE_MACHINE)
     setflag(FLAG_PLAYER_CAN_USE_DIVE)
     playfanfare(MUS_OBTAIN_ITEM)
-    msgbox(AquasHideout_2F_Text_DiveMachine)
+    msgbox(AquasHideout_2F_Text_DiveMachine, MSGBOX_AUTOCLOSE)
     waitfanfare
-    waitbuttonpress
+    return
+}
+
+script AquasHideout_2F_EventScript_EnterLab_Up {
+    lock
+    call(AquasHideout_2F_DiveGrunt_FaceDown)
+    call(AquasHideout_2F_DiveGrunt_Cutscene)
+}
+
+script AquasHideout_2F_EventScript_EnterLab_Down {
+    lock
+    setflag(FLAG_TEMP_1)
+    call(AquasHideout_2F_DiveGrunt_FaceDown)
+    applymovement(LOCAL_DIVE_GRUNT, Common_Movement_WalkDown)
+    waitmovement(0)
+    call(AquasHideout_2F_DiveGrunt_Cutscene)
+}
+
+script AquasHideout_2F_DiveGrunt_Cutscene {
+    applymovement(LOCAL_DIVE_GRUNT, AquasHideout_2F_Movement_DiveGrunt_WalkOn)
+    waitmovement(0)
+
+    msgbox(format("Are you the guy?"), MSGBOX_YESNO)
+
+    if(var(VAR_RESULT) == YES)
+    {
+        message(format("Great! I was waiting for you.\p"))
+    }
+    else
+    {
+        message(format("No? Weird...\nAnyways I am looking for someone to test out my new DIVE MACHINE.\p"))
+    }
+
+    waitmessage
+    message(format("Just a moment...\p"))
+    waitmessage
     closemessage
+
+    applymovement(LOCAL_DIVE_GRUNT, Common_Movement_WalkRight2)
+    waitmovement(0)
+
+    if(flag(FLAG_TEMP_1))
+    {
+        applymovement(LOCAL_DIVE_GRUNT, Common_Movement_WalkUp)
+        waitmovement(0)
+    }
+
+    applymovement(LOCAL_DIVE_GRUNT, AquasHideout_2F_Movement_DiveGrunt_WalkItem)
+    waitmovement(0)
+
+    delay(30)
+    removeobject(LOCAL_DIVE_MACHINE)
+    playse(SE_BALL)
+    waitse
+    delay(15)
+
+    if(flag(FLAG_TEMP_1))
+    {
+        applymovement(LOCAL_DIVE_GRUNT, Common_Movement_WalkDown)
+        waitmovement(0)
+    }
+
+    applymovement(LOCAL_DIVE_GRUNT, AquasHideout_2F_Movement_DiveGrunt_WalkOn)
+    waitmovement(0)
+
+    call(AquasHideout_2F_EventScript_DiveMachine)
+
+    applymovement(LOCAL_DIVE_GRUNT, Common_Movement_WalkRight7)
+    waitmovement(0)
+
+    removeobject(LOCAL_DIVE_GRUNT)
+
+    setvar(VAR_TEMP_0, 1)
+
+    release
+    end
+}
+
+script AquasHideout_2F_DiveGrunt_FaceDown {
+    playse(SE_PIN)
+    applymovement(LOCAL_DIVE_GRUNT, Common_Movement_FaceDown)
+    waitmovement(0)
+    applymovement(LOCAL_DIVE_GRUNT, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(LOCAL_DIVE_GRUNT, Common_Movement_Delay48)
+    waitmovement(0)
+    return    
 }
 
 script AquasHideout_2F_EventScript_Archie {
@@ -61,4 +155,14 @@ text AquasHideout_2F_Text_Archie_PostBattel {
 //ToSolve: Writing
 text AquasHideout_2F_Text_Archie_Defeat {
     format("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+}
+
+movement AquasHideout_2F_Movement_DiveGrunt_WalkOn {
+    walk_down*3
+    walk_left*2
+}
+
+movement AquasHideout_2F_Movement_DiveGrunt_WalkItem {
+    walk_up*3
+    face_left
 }
