@@ -10,7 +10,11 @@ mapscripts MagmaCave_3F_MapScripts {
 script MagmaCave_3F_ShowRedOrbInteract{
     if(!flag(FLAG_RED_ORB_RECEIVED))
     {
-        dofieldeffectsparkle(28, 26, 0)
+        getplayerxy(VAR_TEMP_A, VAR_TEMP_B)
+        if(var(VAR_TEMP_B) >= 18)
+        {
+            dofieldeffectsparkle(28, 26, 0)
+        }
     }
     addvar(VAR_STEP_COUNTER, 1)
     end
@@ -40,7 +44,7 @@ script MagmaCave_3F_Evenscript_RedOrbTaken {
     setflag(FLAG_RED_ORB_RECEIVED)
     giveitem(ITEM_RED_ORB_OFF)
     playse(SE_PIN)
-    playbgm(MUS_ENCOUNTER_AQUA, FALSE)
+    playbgm(MUS_ENCOUNTER_MAGMA, FALSE)
     playse(SE_PIN)
     waitse
     applymovement(LOCALID_MAXIE, MagmaCave_3F_Movement_MaxieApproach)

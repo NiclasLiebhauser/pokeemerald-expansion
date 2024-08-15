@@ -1,4 +1,5 @@
 const LOCAL_STRENGTH_MACHINE = 1
+const LOCAL_STRENGTH_GRUNT = 7
 
 mapscripts MagmasHideout_MapScripts {}
 
@@ -15,4 +16,40 @@ script MagmasHideout_EventScript_StrengthMachine {
 
 text MagmasHideout_Text_StrengthMachine {
     format("Obtained STRENGTH MACHINE!")
+}
+
+script MagmasHideout_EventScript_StrengthGrunt{
+    lockall
+    playse(SE_PIN)
+    delay(48)
+    waitse
+
+    playbgm(MUS_ENCOUNTER_MAGMA, FALSE)
+    faceplayer
+
+    message(format("You can't have my STRENGTH MACHINE. You can't have it...\pIt's mine.\pAnd I wont give it to you.\pYou don't want it?\nLies! I say lies.\pYou can't trick me. Prepare yourself, you'll have pry that MACHINE from my cold dead hands.\p"))
+    waitmessage
+    closemessage
+
+    trainerbattle_no_intro(TRAINER_MAGMA_GRUNT_HQ_1, format("No! Noone can have my MACHINE!"))
+    special(GetBattleOutcome)
+
+    if(var(VAR_RESULT) == B_OUTCOME_WON)
+    {
+        message(format("You beat me...\nTake it. I don't want it anymore.\p"))
+        waitmessage
+        closemessage
+
+        fadescreen(FADE_TO_BLACK)
+        playse(SE_EXIT)
+        waitse  
+
+        setflag(FLAG_HIDE_STRENGTH_GRUNT)
+        removeobject(LOCAL_STRENGTH_GRUNT)
+
+        fadescreen(FADE_FROM_BLACK)
+    }
+
+    releaseall
+    end
 }

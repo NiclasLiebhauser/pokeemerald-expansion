@@ -6,9 +6,7 @@ More points of orienation on open maps
 Add NPCs to help the player
 Make HMs more integrated in the story
     [X] - Rock Smash
-    [ ] - Strength
+    [X] - Strength
     [ ] - Dive
 
 Escaperope, Teleport & Dig
-
-Sparkle Screenwraps!

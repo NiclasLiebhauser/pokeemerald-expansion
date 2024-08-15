@@ -1254,7 +1254,7 @@
 #define FLAG_MOLTRES_FOUND                                          0x4B4
 #define FLAG_ZAPDOS_FOUND                                           0x4B5
 #define FLAG_HIDE_ROCK_SMASH_MACHINE                                0x4B6
-#define FLAG_UNUSED_0x4B7                                           0x4B7 // Unused Flag
+#define FLAG_HIDE_STRENGTH_GRUNT                                    0x4B7
 #define FLAG_UNUSED_0x4B8                                           0x4B8 // Unused Flag
 #define FLAG_UNUSED_0x4B9                                           0x4B9 // Unused Flag
 #define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag
