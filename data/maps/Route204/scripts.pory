@@ -1,0 +1,17 @@
+mapscripts Route204_MapScripts {}
+
+script Route204_EventScript_Expert {
+    lock
+    faceplayer
+    if(!flag(FLAG_DEFEATED_KYOGRE))
+    {
+        msgbox(format("Rumors say, that the torrential downpour on Route 206 is because of a powerful water Pokémon hybernating there.\pBut where would such a majestic beast be?"), MSGBOX_NPC)
+    }
+    else
+    {
+        msgbox(format("They say the mysterious weather on Route 206 has stopped as suddenly as it had begun."))
+    }
+
+    release
+    end    
+}

@@ -1,1 +1,12 @@
-mapscripts SacredIslandNorth_MapScripts {}
+mapscripts SacredIslandNorth_MapScripts {
+    MAP_SCRIPT_ON_LOAD: SacredIslandNorth_EventScript_OnLoad
+}
+
+script SacredIslandNorth_EventScript_OnLoad {
+    if(!flag(FLAG_DEFEATED_GROUDON))
+    {
+        setweather(WEATHER_DROUGHT)
+        doweather
+    }   
+    end 
+}

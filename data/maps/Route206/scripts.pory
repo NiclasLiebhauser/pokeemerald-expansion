@@ -1,1 +1,12 @@
-mapscripts Route206_MapScripts {}
+mapscripts Route206_MapScripts {
+    MAP_SCRIPT_ON_LOAD: Route206_EventScript_OnLoad
+}
+
+script Route206_EventScript_OnLoad {
+    if(!flag(FLAG_DEFEATED_KYOGRE))
+    {
+        setweather(WEATHER_DOWNPOUR)
+        doweather
+    }   
+    end 
+}

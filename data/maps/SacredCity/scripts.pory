@@ -38,6 +38,22 @@ script SacredCity_EventScript_FlyMachine {
     closemessage
 }
 
+script SacredCity_EventScript_Artist {
+    lock
+    faceplayer
+    if(!flag(FLAG_DEFEATED_GROUDON))
+    {
+        msgbox(format("Rumors say, that the deadly drought on northern part of the island is because of a powerful Pokémon hybernating there.\pBut where would such a majestic beast be?"), MSGBOX_NPC)
+    }
+    else
+    {
+        msgbox(format("They say the mysterious weather on on northern part of the island has stopped as suddenly as it had begun."))
+    }
+
+    release
+    end    
+}
+
 script SacredCity_EventScript_MountainGuardian{
     lock
     faceplayer
