@@ -70,6 +70,7 @@ static bool8 TryStartMiscWalkingScripts(u16);
 static bool8 TryStartStepCountScript(u16);
 static void UpdateFriendshipStepCounter(void);
 static void UpdateStepCounter(void);
+static bool8 ShouldUpdateEscape();
 #if OW_POISON_DAMAGE < GEN_5
 static bool8 UpdatePoisonStepCounter(void);
 #endif // OW_POISON_DAMAGE
@@ -866,11 +867,18 @@ static void SetupWarp(struct MapHeader *unused, s8 warpEventId, struct MapPositi
         const struct MapHeader *mapHeader;
 
         SetWarpDestinationToMapWarp(warpEvent->mapGroup, warpEvent->mapNum, warpEvent->warpId);
-        UpdateEscapeWarp(position->x, position->y);
+        if(ShouldUpdateEscape() == TRUE)
+            UpdateEscapeWarp(position->x, position->y);
         mapHeader = Overworld_GetMapHeaderByGroupAndId(warpEvent->mapGroup, warpEvent->mapNum);
         if (mapHeader->events->warps[warpEvent->warpId].mapNum == MAP_NUM(DYNAMIC))
             SetDynamicWarp(mapHeader->events->warps[warpEventId].warpId, gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, warpEventId);
     }
+}
+
+static bool8 ShouldUpdateEscape()
+{
+    //This is a very dirty fix and not really expandable
+    return gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(UNDERWATER_AQUAS_HIDEOUT_1F) && gSaveBlock1Ptr->location.mapNum != MAP_NUM(UNDERWATER_AQUAS_HIDEOUT_1F);
 }
 
 static bool8 TryDoorWarp(struct MapPosition *position, u16 metatileBehavior, u8 direction)
