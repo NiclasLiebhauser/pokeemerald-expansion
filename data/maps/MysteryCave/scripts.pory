@@ -50,6 +50,7 @@ script MysteryCave_EventScript_StartAdventure {
     call(ReceiveBike)
     call(ReceiveExpShare)
     call(ReceiveInfiniteRepel)
+    call(ReceiveEscapeRope)
     call(ReceiveBalls)
     call(GiveFirstMon)
     call(GiveSecondMon)
@@ -122,6 +123,13 @@ script ReceiveBalls {
     playfanfare(MUS_OBTAIN_ITEM)
     giveitem(ITEM_GREAT_BALL, 5)
     waitfanfare 
+}
+
+script ReceiveEscapeRope {
+    playfanfare(MUS_OBTAIN_ITEM)
+    giveitem(ITEM_ESCAPE_ROPE)
+    waitfanfare
+    return
 }
 
 script GiveFirstMon {
