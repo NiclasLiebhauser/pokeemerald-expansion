@@ -1,8 +1,5 @@
-Add healing spots in Act I
 Add trainers
 
 More points of orienation on open maps
 
 Add NPCs to help the player
-
-Escaperope, Teleport & Dig

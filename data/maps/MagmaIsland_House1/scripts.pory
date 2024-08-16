@@ -1,0 +1,17 @@
+mapscripts MagmaIsland_House1_MapScripts {}
+
+script MagmaIsland_House1_EventScript_OldWoman {
+    lock
+    faceplayer
+
+    msgbox(format("Oh, dear.\nAren't your POKéMON exhausted?\pIf you'd like, rest up here.That's a fine idea! You should do that"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES)
+    {
+        msgbox(format("Take your time and rest up."))
+        closemessage
+        call(Common_EventScript_OutOfCenterPartyHeal)
+    }
+    msgbox(format("Come back at any time."), MSGBOX_NPC)
+    release
+    end
+}

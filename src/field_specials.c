@@ -68,6 +68,7 @@
 #include "constants/metatile_labels.h"
 #include "palette.h"
 #include "battle_util.h"
+#include "pokedex.h"
 
 #define TAG_ITEM_ICON 5500
 
@@ -4291,4 +4292,28 @@ void PreparePartyForSkyBattle(void)
     }
     VarSet(B_VAR_SKY_BATTLE,participatingPokemonSlot);
     CompactPartySlots();
+}
+
+bool8 GetMonDexEntry(void)
+{
+    if(VarGet(VAR_TEMP_2) == FLAG_GET_SEEN)
+        return GetSetPokedexFlag(SpeciesToNationalPokedexNum(VarGet(VAR_TEMP_1)), FLAG_GET_SEEN);
+    
+    
+    if(VarGet(VAR_TEMP_2) == FLAG_GET_CAUGHT)
+        return GetSetPokedexFlag(SpeciesToNationalPokedexNum(VarGet(VAR_TEMP_1)), FLAG_GET_CAUGHT);
+
+    return 0;
+}
+
+void UpdateMonDexEntry(void)
+{
+    if(VarGet(VAR_TEMP_2) == FLAG_SET_SEEN)
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(VarGet(VAR_TEMP_1)), FLAG_SET_SEEN);
+    
+    if(VarGet(VAR_TEMP_2) == FLAG_SET_CAUGHT)
+    {
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(VarGet(VAR_TEMP_1)), FLAG_SET_SEEN);
+        GetSetPokedexFlag(SpeciesToNationalPokedexNum(VarGet(VAR_TEMP_1)), FLAG_SET_CAUGHT);
+    }
 }

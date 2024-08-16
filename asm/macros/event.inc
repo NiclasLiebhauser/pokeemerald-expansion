@@ -2172,3 +2172,19 @@
 	.2byte \status1
 	.2byte \slot
 	.endm
+
+    @ Checks the state of the Pokédex Seen or Caught flag of the specified Pokemon
+    @ The result is stored in VAR_RESULT
+    .macro getmondexentry species:req, seen_caught:req 
+    setvar VAR_TEMP_1, \species
+	setvar VAR_TEMP_2, \seen_caught
+    specialvar VAR_RESULT, GetMonDexEntry
+    .endm
+
+    @ Checks the state of the Pokédex Seen or Caught flag of the specified Pokemon
+    @ The result is stored in VAR_RESULT
+    .macro updatemondexentry species:req, seen_caught:req 
+    setvar VAR_TEMP_1, \species
+	setvar VAR_TEMP_2, \seen_caught
+    special UpdateMonDexEntry
+    .endm

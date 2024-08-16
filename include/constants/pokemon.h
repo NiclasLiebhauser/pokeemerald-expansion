@@ -329,4 +329,9 @@
 
 #define LEGENDARY_PERFECT_IV_COUNT 3
 
+#define GET_SEEN 0
+#define GET_CAUGHT 1
+#define SET_SEEN 2
+#define SET_CAUGHT 3
+
 #endif // GUARD_CONSTANTS_POKEMON_H

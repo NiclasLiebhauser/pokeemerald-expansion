@@ -1204,3 +1204,7 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/AquasHideout_Submarine/scripts.inc"
 	.include "data/maps/AquasHideout_Submarine/text.inc"
+
+	.include "data/maps/MagmaIsland_House1/scripts.inc"
+
+	.include "data/maps/MagmaIsland_House2/scripts.inc"

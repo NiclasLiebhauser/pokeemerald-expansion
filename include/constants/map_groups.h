@@ -616,10 +616,12 @@
 #define MAP_ROUTE203_CAVE (0 | (35 << 8))
 
 // gMapGroup_MagmaIsland
-#define MAP_MAGMAS_HIDEOUT (0 | (36 << 8))
-#define MAP_MAGMA_CAVE_1F  (1 | (36 << 8))
-#define MAP_MAGMA_CAVE_2F  (2 | (36 << 8))
-#define MAP_MAGMA_CAVE_3F  (3 | (36 << 8))
+#define MAP_MAGMAS_HIDEOUT      (0 | (36 << 8))
+#define MAP_MAGMA_CAVE_1F       (1 | (36 << 8))
+#define MAP_MAGMA_CAVE_2F       (2 | (36 << 8))
+#define MAP_MAGMA_CAVE_3F       (3 | (36 << 8))
+#define MAP_MAGMA_ISLAND_HOUSE1 (4 | (36 << 8))
+#define MAP_MAGMA_ISLAND_HOUSE2 (5 | (36 << 8))
 
 // gMapGroup_AquaHideout
 #define MAP_AQUAS_HIDEOUT_1F            (0 | (37 << 8))

@@ -659,7 +659,9 @@
     "MagmasHideout",
     "MagmaCave_1F",
     "MagmaCave_2F",
-    "MagmaCave_3F"
+    "MagmaCave_3F",
+    "MagmaIsland_House1",
+    "MagmaIsland_House2"
   ],
   "gMapGroup_AquaHideout": [
     "AquasHideout_1F",

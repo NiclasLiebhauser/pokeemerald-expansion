@@ -1,0 +1,90 @@
+mapscripts MagmaIsland_House2_MapScripts {}
+
+script MagmaIsland_House2_EventScript_Box {
+    lock
+    msgbox(format("A box. Look inside?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES)
+    {
+        msgbox(format("It is full of POKéMON trading cards. Inspect the cards?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES)
+        {
+            message(format("The box is filled to the brim with WOOPER cards..."))
+            showmonpic(SPECIES_WOOPER, 10, 3)
+            waitbuttonpress
+            hidemonpic
+            getmondexentry(SPECIES_WOOPER, GET_SEEN)
+            if(var(VAR_RESULT) == FALSE)
+            {
+                updatemondexentry(SPECIES_WOOPER, SET_SEEN)
+                message(format("You jot down some information about WOOPER.\p"))
+                waitmessage
+            }
+            closemessage
+        }
+    }
+    release
+    end
+}
+
+script MagmaIsland_House2_EventScript_Camper {
+    lock
+    faceplayer
+
+    setvar(VAR_0x8008, INGAME_TRADE_SWABLU)
+    copyvar(VAR_0x8004, VAR_0x8008)
+    specialvar(VAR_0x8009, GetInGameTradeSpeciesInfo)
+
+    if(flag(FLAG_MAGMAISLAND_IN_GAME_TRADE))
+    {
+        call(MagmaIsland_House2_EventScript_Camper_ThankYou)
+    }
+    else
+    {
+        msgbox(format("Do you want to trade a {STR_VAR_1} for my {STR_VAR_2}?"), MSGBOX_YESNO)
+
+        if(var(VAR_RESULT) == YES)
+        {
+            special(ChoosePartyMon)
+            waitstate
+            
+            if(var(VAR_0x8004) != PARTY_NOTHING_CHOSEN)
+            {
+                copyvar(VAR_0x8005, VAR_0x8004)
+                specialvar(VAR_RESULT, GetTradeSpecies)
+
+                call_if_ne(VAR_RESULT, VAR_0x8009, MagmaIsland_House2_EventScript_Camper_NotRequestedMon)
+
+                copyvar(VAR_0x8004, VAR_0x8008)
+                special(CreateInGameTradePokemon)
+                special(DoInGameTradeScene)
+                waitstate
+
+                setflag(FLAG_MAGMAISLAND_IN_GAME_TRADE)
+                call(MagmaIsland_House2_EventScript_Camper_ThankYou)
+            }
+        }
+
+        msgbox(format("Come back once you are willing to trade."))
+    }
+
+    release 
+    end
+}
+
+script MagmaIsland_House2_EventScript_Camper_ThankYou {
+    setvar(VAR_0x8008, INGAME_TRADE_SWABLU)
+    copyvar(VAR_0x8004, VAR_0x8008)
+    specialvar(VAR_0x8009, GetInGameTradeSpeciesInfo)
+    msgbox(format("Thank you for trading me a {STR_VAR_1}."))
+    release
+    end
+}
+
+script MagmaIsland_House2_EventScript_Camper_NotRequestedMon {
+    setvar(VAR_0x8008, INGAME_TRADE_SWABLU)
+    copyvar(VAR_0x8004, VAR_0x8008)
+    specialvar(VAR_0x8009, GetInGameTradeSpeciesInfo)
+    msgbox(format("You know... That is not a {STR_VAR_1}.\pCome back once you are willing to trade for real."))
+    release
+    end
+}

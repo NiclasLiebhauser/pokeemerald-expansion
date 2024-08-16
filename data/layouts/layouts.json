@@ -4850,6 +4850,26 @@
       "secondary_tileset": "gTileset_BikeShop",
       "border_filepath": "data/layouts/AquasHideout_Submarine/border.bin",
       "blockdata_filepath": "data/layouts/AquasHideout_Submarine/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGMA_ISLAND_HOUSE1",
+      "name": "MagmaIsland_House1_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MagmaIsland_House1/border.bin",
+      "blockdata_filepath": "data/layouts/MagmaIsland_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGMA_ISLAND_HOUSE2",
+      "name": "MagmaIsland_House2_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MagmaIsland_House2/border.bin",
+      "blockdata_filepath": "data/layouts/MagmaIsland_House2/map.bin"
     }
   ]
 }

@@ -1255,7 +1255,7 @@
 #define FLAG_ZAPDOS_FOUND                                           0x4B5
 #define FLAG_HIDE_ROCK_SMASH_MACHINE                                0x4B6
 #define FLAG_HIDE_STRENGTH_GRUNT                                    0x4B7
-#define FLAG_UNUSED_0x4B8                                           0x4B8 // Unused Flag
+#define FLAG_MAGMAISLAND_IN_GAME_TRADE                              0x4B8
 #define FLAG_UNUSED_0x4B9                                           0x4B9 // Unused Flag
 #define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag
 #define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
