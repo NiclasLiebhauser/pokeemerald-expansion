@@ -656,90 +656,90 @@
 #define FLAG_EXP_SHARE                  0x265
 #define FLAG_NO_ENCOUNTERS              0x266
 #define FLAG_RANDOM_ITEM_ROUTE_201_1    0x267
-#define FLAG_UNUSED_0x268               0x268 // Unused Flag
-#define FLAG_UNUSED_0x269               0x269 // Unused Flag
-#define FLAG_UNUSED_0x26A               0x26A // Unused Flag
-#define FLAG_UNUSED_0x26B               0x26B // Unused Flag
-#define FLAG_UNUSED_0x26C               0x26C // Unused Flag
-#define FLAG_UNUSED_0x26D               0x26D // Unused Flag
-#define FLAG_UNUSED_0x26E               0x26E // Unused Flag
-#define FLAG_UNUSED_0x26F               0x26F // Unused Flag
-#define FLAG_UNUSED_0x270               0x270 // Unused Flag
-#define FLAG_UNUSED_0x271               0x271 // Unused Flag
-#define FLAG_UNUSED_0x272               0x272 // Unused Flag
-#define FLAG_UNUSED_0x273               0x273 // Unused Flag
-#define FLAG_UNUSED_0x274               0x274 // Unused Flag
-#define FLAG_UNUSED_0x275               0x275 // Unused Flag
-#define FLAG_UNUSED_0x276               0x276 // Unused Flag
-#define FLAG_UNUSED_0x277               0x277 // Unused Flag
-#define FLAG_UNUSED_0x278               0x278 // Unused Flag
-#define FLAG_UNUSED_0x279               0x279 // Unused Flag
-#define FLAG_UNUSED_0x27A               0x27A // Unused Flag
-#define FLAG_UNUSED_0x27B               0x27B // Unused Flag
-#define FLAG_UNUSED_0x27C               0x27C // Unused Flag
-#define FLAG_UNUSED_0x27D               0x27D // Unused Flag
-#define FLAG_UNUSED_0x27E               0x27E // Unused Flag
-#define FLAG_UNUSED_0x27F               0x27F // Unused Flag
-#define FLAG_UNUSED_0x280               0x280 // Unused Flag
-#define FLAG_UNUSED_0x281               0x281 // Unused Flag
-#define FLAG_UNUSED_0x282               0x282 // Unused Flag
-#define FLAG_UNUSED_0x283               0x283 // Unused Flag
-#define FLAG_UNUSED_0x284               0x284 // Unused Flag
-#define FLAG_UNUSED_0x285               0x285 // Unused Flag
-#define FLAG_UNUSED_0x286               0x286 // Unused Flag
-#define FLAG_UNUSED_0x287               0x287 // Unused Flag
-#define FLAG_UNUSED_0x288               0x288 // Unused Flag
-#define FLAG_UNUSED_0x289               0x289 // Unused Flag
-#define FLAG_UNUSED_0x28A               0x28A // Unused Flag
-#define FLAG_UNUSED_0x28B               0x28B // Unused Flag
-#define FLAG_UNUSED_0x28C               0x28C // Unused Flag
-#define FLAG_UNUSED_0x28D               0x28D // Unused Flag
-#define FLAG_UNUSED_0x28E               0x28E // Unused Flag
-#define FLAG_UNUSED_0x28F               0x28F // Unused Flag
-#define FLAG_UNUSED_0x290               0x290 // Unused Flag
-#define FLAG_UNUSED_0x291               0x291 // Unused Flag
-#define FLAG_UNUSED_0x292               0x292 // Unused Flag
-#define FLAG_UNUSED_0x293               0x293 // Unused Flag
-#define FLAG_UNUSED_0x294               0x294 // Unused Flag
-#define FLAG_UNUSED_0x295               0x295 // Unused Flag
-#define FLAG_UNUSED_0x296               0x296 // Unused Flag
-#define FLAG_UNUSED_0x297               0x297 // Unused Flag
-#define FLAG_UNUSED_0x298               0x298 // Unused Flag
-#define FLAG_UNUSED_0x299               0x299 // Unused Flag
-#define FLAG_UNUSED_0x29A               0x29A // Unused Flag
-#define FLAG_UNUSED_0x29B               0x29B // Unused Flag
-#define FLAG_UNUSED_0x29C               0x29C // Unused Flag
-#define FLAG_UNUSED_0x29D               0x29D // Unused Flag
-#define FLAG_UNUSED_0x29E               0x29E // Unused Flag
-#define FLAG_UNUSED_0x29F               0x29F // Unused Flag
-#define FLAG_UNUSED_0x2A0               0x2A0 // Unused Flag
-#define FLAG_UNUSED_0x2A1               0x2A1 // Unused Flag
-#define FLAG_UNUSED_0x2A2               0x2A2 // Unused Flag
-#define FLAG_UNUSED_0x2A3               0x2A3 // Unused Flag
-#define FLAG_UNUSED_0x2A4               0x2A4 // Unused Flag
-#define FLAG_UNUSED_0x2A5               0x2A5 // Unused Flag
-#define FLAG_UNUSED_0x2A6               0x2A6 // Unused Flag
-#define FLAG_UNUSED_0x2A7               0x2A7 // Unused Flag
-#define FLAG_UNUSED_0x2A8               0x2A8 // Unused Flag
-#define FLAG_UNUSED_0x2A9               0x2A9 // Unused Flag
-#define FLAG_UNUSED_0x2AA               0x2AA // Unused Flag
-#define FLAG_UNUSED_0x2AB               0x2AB // Unused Flag
-#define FLAG_UNUSED_0x2AC               0x2AC // Unused Flag
-#define FLAG_UNUSED_0x2AD               0x2AD // Unused Flag
-#define FLAG_UNUSED_0x2AE               0x2AE // Unused Flag
-#define FLAG_UNUSED_0x2AF               0x2AF // Unused Flag
-#define FLAG_UNUSED_0x2B0               0x2B0 // Unused Flag
-#define FLAG_UNUSED_0x2B1               0x2B1 // Unused Flag
-#define FLAG_UNUSED_0x2B2               0x2B2 // Unused Flag
-#define FLAG_UNUSED_0x2B3               0x2B3 // Unused Flag
-#define FLAG_UNUSED_0x2B4               0x2B4 // Unused Flag
-#define FLAG_UNUSED_0x2B5               0x2B5 // Unused Flag
-#define FLAG_UNUSED_0x2B6               0x2B6 // Unused Flag
-#define FLAG_UNUSED_0x2B7               0x2B7 // Unused Flag
-#define FLAG_UNUSED_0x2B8               0x2B8 // Unused Flag
-#define FLAG_UNUSED_0x2B9               0x2B9 // Unused Flag
-#define FLAG_UNUSED_0x2BA               0x2BA // Unused Flag
-#define FLAG_UNUSED_0x2BB               0x2BB // Unused Flag
+#define FLAG_RANDOM_ITEM_ROUTE_202_1    0x268
+#define FLAG_RANDOM_ITEM_ROUTE_203_1    0x269
+#define FLAG_RANDOM_ITEM_ROUTE_203_2    0x26A
+#define FLAG_RANDOM_ITEM_ROUTE_203_3    0x26B
+#define FLAG_RANDOM_ITEM_ROUTE_203_4    0x26C
+#define FLAG_RANDOM_ITEM_ROUTE_203_5    0x26D
+#define FLAG_RANDOM_ITEM_ROUTE_204_1    0x26E
+#define FLAG_RANDOM_ITEM_MAGMAISLAND_1  0x26F
+#define FLAG_RANDOM_ITEM_MAGMAISLAND_2  0x270
+#define FLAG_RANDOM_ITEM_MAGMAISLAND_3  0x271
+#define FLAG_RANDOM_ITEM_MAGMAISLAND_4  0x272
+#define FLAG_RANDOM_ITEM_MAGA_HQ_1      0x273
+#define FLAG_RANDOM_ITEM_MAGA_HQ_2      0x274
+#define FLAG_RANDOM_ITEM_MAGA_HQ_3      0x275
+#define FLAG_RANDOM_ITEM_MAGA_CAVE_1F_1 0x276
+#define FLAG_RANDOM_ITEM_MAGA_CAVE_1F_2 0x277
+#define FLAG_RANDOM_ITEM_MAGA_CAVE_1F_3 0x278
+#define FLAG_RANDOM_ITEM_MAGA_CAVE_1F_4 0x279
+#define FLAG_RANDOM_ITEM_MAGA_CAVE_1F_5 0x27A
+#define FLAG_RANDOM_ITEM_MAGA_CAVE_1F_6 0x27B
+#define FLAG_RANDOM_ITEM_MAGA_CAVE_2F_1 0x27C
+#define FLAG_RANDOM_ITEM_MAGA_CAVE_2F_2 0x27D
+#define FLAG_RANDOM_ITEM_MAGA_CAVE_2F_3 0x27E
+#define FLAG_RANDOM_ITEM_MAGA_CAVE_3F_1 0x27F
+#define FLAG_RANDOM_ITEM_ROUTE_205_1    0x280
+#define FLAG_RANDOM_ITEM_AQUA_HQ_1F_1   0x281
+#define FLAG_RANDOM_ITEM_AQUA_HQ_1F_2   0x282
+#define FLAG_RANDOM_ITEM_AQUA_HQ_1F_3   0x283
+#define FLAG_RANDOM_ITEM_AQUA_HQ_1F_4   0x284
+#define FLAG_RANDOM_ITEM_AQUA_HQ_1F_5   0x285
+#define FLAG_RANDOM_ITEM_AQUA_HQ_2F_1   0x286
+#define FLAG_RANDOM_ITEM_AQUA_HQ_2F_2   0x287
+#define FLAG_RANDOM_ITEM_AQUA_HQ_2F_3   0x288
+#define FLAG_RANDOM_ITEM_AQUA_HQ_2F_4   0x289
+#define FLAG_RANDOM_ITEM_UW_ROUTE_205_1 0x28A
+#define FLAG_RANDOM_ITEM_UW_ROUTE_206_1 0x28B
+#define FLAG_RANDOM_ITEM_UW_ROUTE_206_2 0x28C
+#define FLAG_RANDOM_ITEM_CAVE_OF_CREATION_1 0x28D
+#define FLAG_RANDOM_ITEM_INFERNO_CAVERN_1 0x28E
+#define FLAG_RANDOM_ITEM_INFERNO_CAVERN_2 0x28F
+#define FLAG_RANDOM_ITEM_INFERNO_CAVERN_3 0x290
+#define FLAG_RANDOM_ITEM_INFERNO_CAVERN_4 0x291
+#define FLAG_RANDOM_ITEM_INFERNO_CAVERN_5 0x292
+#define FLAG_RANDOM_ITEM_INFERNO_CAVERN_6 0x293
+#define FLAG_RANDOM_ITEM_SI_NORTH_1     0x294
+#define FLAG_RANDOM_ITEM_SI_NORTH_2     0x295
+#define FLAG_RANDOM_ITEM_SI_NORTH_3     0x296
+#define FLAG_RANDOM_ITEM_SI_NORTH_4     0x297
+#define FLAG_RANDOM_ITEM_SI_EAST_1      0x298
+#define FLAG_RANDOM_ITEM_SI_EAST_2      0x299
+#define FLAG_RANDOM_ITEM_SI_EAST_3      0x29A
+#define FLAG_RANDOM_ITEM_SI_EAST_4      0x29B
+#define FLAG_RANDOM_ITEM_SI_SOUTH_1     0x29C
+#define FLAG_RANDOM_ITEM_SI_SOUTH_2     0x29D
+#define FLAG_RANDOM_ITEM_SI_SOUTH_3     0x29E
+#define FLAG_RANDOM_ITEM_SI_SOUTH_4     0x29F
+#define FLAG_RANDOM_ITEM_SI_SOUTH_5     0x2A0
+#define FLAG_RANDOM_ITEM_SI_SOUTH_6     0x2A1
+#define FLAG_RANDOM_ITEM_SI_SOUTH_7     0x2A2
+#define FLAG_RANDOM_ITEM_SI_SOUTH_8     0x2A3
+#define FLAG_RANDOM_ITEM_SI_SOUTH_9     0x2A4
+#define FLAG_RANDOM_ITEM_SI_SOUTH_10    0x2A5
+#define FLAG_RANDOM_ITEM_SI_CITY_1      0x2A6
+#define FLAG_RANDOM_ITEM_SI_CITY_2      0x2A7
+#define FLAG_RANDOM_ITEM_SI_CITY_3      0x2A8
+#define FLAG_RANDOM_ITEM_SI_CITY_4      0x2A9
+#define FLAG_RANDOM_ITEM_SI_CITY_5      0x2AA
+#define FLAG_RANDOM_ITEM_SM_1F_1        0x2AB
+#define FLAG_RANDOM_ITEM_SM_1F_2        0x2AC
+#define FLAG_RANDOM_ITEM_SM_1F_3        0x2AD
+#define FLAG_RANDOM_ITEM_SM_1F_4        0x2AE
+#define FLAG_RANDOM_ITEM_SM_1F_5        0x2AF
+#define FLAG_RANDOM_ITEM_SM_1F_6        0x2B0
+#define FLAG_RANDOM_ITEM_SM_2F_1        0x2B1
+#define FLAG_RANDOM_ITEM_SM_2F_2        0x2B2
+#define FLAG_RANDOM_ITEM_SM_2F_3        0x2B3
+#define FLAG_RANDOM_ITEM_SM_2F_4        0x2B4
+#define FLAG_RANDOM_ITEM_SM_3F_1        0x2B5
+#define FLAG_RANDOM_ITEM_SM_3F_2        0x2B6
+#define FLAG_RANDOM_ITEM_SM_3F_3        0x2B7
+#define FLAG_RANDOM_ITEM_SM_3F_4        0x2B8
+#define FLAG_RANDOM_ITEM_SM_3F_5        0x2B9
+#define FLAG_RANDOM_ITEM_SM_4F_1        0x2BA
+#define FLAG_RANDOM_ITEM_SM_4F_2        0x2BB
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
