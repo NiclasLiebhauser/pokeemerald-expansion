@@ -18,15 +18,15 @@
   ],
   "warp_events": [
     {
-      "x": 9,
-      "y": 13,
+      "x": 44,
+      "y": 47,
       "elevation": 0,
       "dest_map": "MAP_SACRED_MOUNTAIN_1F",
       "dest_warp_id": "1"
     },
     {
-      "x": 9,
-      "y": 5,
+      "x": 18,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_SACRED_MOUNTAIN_3F",
       "dest_warp_id": "0"

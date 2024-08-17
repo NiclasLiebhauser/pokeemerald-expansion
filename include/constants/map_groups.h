@@ -634,11 +634,12 @@
 #define MAP_SACRED_CITY_HOUSE2 (1 | (38 << 8))
 
 // gMapGroup_SacredMountainDungeon
-#define MAP_SACRED_MOUNTAIN_1F   (0 | (39 << 8))
-#define MAP_SACRED_MOUNTAIN_2F   (1 | (39 << 8))
-#define MAP_SACRED_MOUNTAIN_3F   (2 | (39 << 8))
-#define MAP_SACRED_MOUNTAIN_4F   (3 | (39 << 8))
-#define MAP_SACRED_MOUNTAIN_PEAK (4 | (39 << 8))
+#define MAP_SACRED_MOUNTAIN_1F         (0 | (39 << 8))
+#define MAP_SACRED_MOUNTAIN_2F         (1 | (39 << 8))
+#define MAP_SACRED_MOUNTAIN_3F         (2 | (39 << 8))
+#define MAP_SACRED_MOUNTAIN_4F         (3 | (39 << 8))
+#define MAP_SACRED_MOUNTAIN_PEAK       (4 | (39 << 8))
+#define MAP_SACRED_MOUNTAIN_3F_OUTSIDE (5 | (39 << 8))
 
 // gMapGroup_SacredIslandSouthIndoor
 #define MAP_ANABELS_HOUSE (0 | (40 << 8))

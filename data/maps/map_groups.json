@@ -678,7 +678,8 @@
     "SacredMountain_2F",
     "SacredMountain_3F",
     "SacredMountain_4F",
-    "SacredMountain_Peak"
+    "SacredMountain_Peak",
+    "SacredMountain_3F_Outside"
   ],
   "gMapGroup_SacredIslandSouthIndoor": [
     "AnabelsHouse"

@@ -1208,3 +1208,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/MagmaIsland_House1/scripts.inc"
 
 	.include "data/maps/MagmaIsland_House2/scripts.inc"
+
+	.include "data/maps/SacredMountain_3F_Outside/scripts.inc"

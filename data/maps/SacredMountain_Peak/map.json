@@ -108,8 +108,8 @@
   ],
   "warp_events": [
     {
-      "x": 26,
-      "y": 70,
+      "x": 18,
+      "y": 71,
       "elevation": 0,
       "dest_map": "MAP_SACRED_MOUNTAIN_4F",
       "dest_warp_id": "1"
