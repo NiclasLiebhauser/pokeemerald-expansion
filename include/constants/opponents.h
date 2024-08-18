@@ -907,12 +907,39 @@
 #define TRAINER_AQUA_GRUNT_AQUAHQ_2F_2      901
 #define TRAINER_AQUA_GRUNT_AQUAHQ_2F_3      902
 #define TRAINER_AQUA_GRUNT_AQUAHQ_2F_4      903
+#define TRAINER_MANIAC_SI_NORTH_1           904
+#define TRAINER_CAMPER_SI_NORTH_1           905
+#define TRAINER_RICH_BOY_SI_NORTH_1         906
+#define TRAINER_HIKER_SI_NORTH_1            907
+#define TRAINER_BATTLE_GIRL_SI_EAST_1       908
+#define TRAINER_FISHERMAN_SI_EAST_1         909
+#define TRAINER_PICNICKER_SI_EAST_1         910
+#define TRAINER_BIRD_KEEPER_SI_EAST_1       911
+#define TRAINER_LADY_SI_EAST_1              912
+#define TRAINER_HEX_MANIAC_SACRED_CITY_1    913
+#define TRAINER_PSYCHIC_SACRED_CITY_1       914
+#define TRAINER_PSYCHIC_SACRED_CITY_2       915
+#define TRAINER_ANABEL_1                    916
+#define TRAINER_ANABEL_2                    917
+#define TRAINER_ROCKET_GRUNT_SM_1F_1        918
+#define TRAINER_ROCKET_GRUNT_SM_1F_2        919
+#define TRAINER_ROCKET_GRUNT_SM_1F_3        920
+#define TRAINER_ROCKET_GRUNT_SM_1F_4        921
+#define TRAINER_ROCKET_GRUNT_SM_2F_1        922
+#define TRAINER_ROCKET_GRUNT_SM_2F_2        923
+#define TRAINER_ROCKET_GRUNT_SM_2F_3        924
+#define TRAINER_ROCKET_GRUNT_SM_2F_4        925
+#define TRAINER_ROCKET_GRUNT_SM_3F_1        926
+#define TRAINER_ROCKET_GRUNT_SM_3F_2        927
+#define TRAINER_ROCKET_GRUNT_SM_3F_3        928
+#define TRAINER_ROCKET_GRUNT_SM_3F_4        929
+
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      904
+#define TRAINERS_COUNT                      930
 #define MAX_TRAINERS_COUNT                  964
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 

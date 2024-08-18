@@ -10,3 +10,71 @@ script SacredIslandNorth_EventScript_OnLoad {
     }   
     end 
 }
+
+script SacredIslandNorth_EventScript_RichBoy1 {
+    trainerbattle_single(TRAINER_RICH_BOY_SI_NORTH_1, SacredIslandNorth_Text_RichBoy1_Intro, SacredIslandNorth_Text_RichBoy1_Defeat)
+    msgbox(SacredIslandNorth_Text_RichBoy1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script SacredIslandNorth_EventScript_Maniac1 {
+    trainerbattle_single(TRAINER_MANIAC_SI_NORTH_1, SacredIslandNorth_Text_Maniac1_Intro, SacredIslandNorth_Text_Maniac1_Defeat)
+    msgbox(SacredIslandNorth_Text_Maniac1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script SacredIslandNorth_EventScript_Hiker1 {
+    trainerbattle_single(TRAINER_HIKER_SI_NORTH_1, SacredIslandNorth_Text_Hiker1_Intro, SacredIslandNorth_Text_Hiker1_Defeat)
+    msgbox(SacredIslandNorth_Text_Hiker1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script SacredIslandNorth_EventScript_Camper1 {
+    trainerbattle_single(TRAINER_CAMPER_SI_NORTH_1, SacredIslandNorth_Text_Camper1_Intro, SacredIslandNorth_Text_Camper1_Defeat)
+    msgbox(SacredIslandNorth_Text_Camper1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text SacredIslandNorth_Text_RichBoy1_Intro {
+    format("Intro")
+}
+
+text SacredIslandNorth_Text_RichBoy1_Defeat {
+    format("Defeat")
+}
+
+text SacredIslandNorth_Text_RichBoy1_PostBattle {
+    format("Post")
+}
+
+text SacredIslandNorth_Text_Maniac1_Intro {
+    format("Intro")
+}
+
+text SacredIslandNorth_Text_Maniac1_Defeat {
+    format("Defeat")
+}
+
+text SacredIslandNorth_Text_Maniac1_PostBattle {
+    format("Post")
+}
+
+text SacredIslandNorth_Text_Hiker1_Intro {
+    format("Intro")
+}
+
+text SacredIslandNorth_Text_Hiker1_Defeat {
+    format("Defeat")
+}
+
+text SacredIslandNorth_Text_Hiker1_PostBattle {
+    format("Post")
+}
+
+text SacredIslandNorth_Text_Camper1_Intro {
+    format("Intro")
+}
+
+text SacredIslandNorth_Text_Camper1_Defeat {
+    format("Defeat")
+}
+
+text SacredIslandNorth_Text_Camper1_PostBattle {
+    format("Post")
+}

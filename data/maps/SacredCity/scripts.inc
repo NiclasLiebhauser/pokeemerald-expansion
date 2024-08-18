@@ -138,6 +138,30 @@ SacredCity_EventScript_MountainGuardian_8:
 	goto SacredCity_EventScript_MountainGuardian_6
 
 
+SacredCity_EventScript_HexManiac1::
+# 91 "data/maps/SacredCity/scripts.pory"
+	trainerbattle_single TRAINER_HEX_MANIAC_SACRED_CITY_1, SacredCity_Text_HexManiac1_Intro, SacredCity_Text_HexManiac1_Defeat
+# 92 "data/maps/SacredCity/scripts.pory"
+	msgbox SacredCity_Text_HexManiac1_PostBattle, MSGBOX_AUTOCLOSE
+	return
+
+
+SacredCity_EventScript_Psychic1::
+# 96 "data/maps/SacredCity/scripts.pory"
+	trainerbattle_single TRAINER_PSYCHIC_SACRED_CITY_1, SacredCity_Text_Psychic1_Intro, SacredCity_Text_Psychic1_Defeat
+# 97 "data/maps/SacredCity/scripts.pory"
+	msgbox SacredCity_Text_Psychic1_PostBattle, MSGBOX_AUTOCLOSE
+	return
+
+
+SacredCity_EventScript_Psychic2::
+# 101 "data/maps/SacredCity/scripts.pory"
+	trainerbattle_single TRAINER_PSYCHIC_SACRED_CITY_2, SacredCity_Text_Psychic2_Intro, SacredCity_Text_Psychic2_Defeat
+# 102 "data/maps/SacredCity/scripts.pory"
+	msgbox SacredCity_Text_Psychic2_PostBattle, MSGBOX_AUTOCLOSE
+	return
+
+
 SacredCity_EventScript_Artist_Text_0:
 # 46 "data/maps/SacredCity/scripts.pory"
 	.string "Rumors say, that the deadly drought on\n"
@@ -156,7 +180,7 @@ SacredCity_EventScript_Artist_Text_1:
 SacredCity_EventScript_MountainGuardian_Text_0:
 # 60 "data/maps/SacredCity/scripts.pory"
 	.string "There used to be a path here which led\n"
-	.string "up the mountain. But I has vanished\l"
+	.string "up the mountain. But it has vanished\l"
 	.string "since KYOGRE raised the water level.\p"
 	.string "$"
 
@@ -188,6 +212,42 @@ SacredCity_EventScript_MountainGuardian_Text_3:
 	.string "gain entrance to the mountain.\p"
 	.string "$"
 
+SacredCity_Text_HexManiac1_Intro::
+# 105 "data/maps/SacredCity/scripts.pory"
+	.string "Intro$"
+
+SacredCity_Text_HexManiac1_Defeat::
+# 109 "data/maps/SacredCity/scripts.pory"
+	.string "Defeat$"
+
+SacredCity_Text_HexManiac1_PostBattle::
+# 113 "data/maps/SacredCity/scripts.pory"
+	.string "Post$"
+
+SacredCity_Text_Psychic1_Intro::
+# 117 "data/maps/SacredCity/scripts.pory"
+	.string "Intro$"
+
+SacredCity_Text_Psychic1_Defeat::
+# 121 "data/maps/SacredCity/scripts.pory"
+	.string "Defeat$"
+
+SacredCity_Text_Psychic1_PostBattle::
+# 125 "data/maps/SacredCity/scripts.pory"
+	.string "Post$"
+
+SacredCity_Text_Psychic2_Intro::
+# 129 "data/maps/SacredCity/scripts.pory"
+	.string "Intro$"
+
+SacredCity_Text_Psychic2_Defeat::
+# 133 "data/maps/SacredCity/scripts.pory"
+	.string "Defeat$"
+
+SacredCity_Text_Psychic2_PostBattle::
+# 137 "data/maps/SacredCity/scripts.pory"
+	.string "Post$"
+
 SacredCity_Text_FlyMachine::
-# 92 "data/maps/SacredCity/scripts.pory"
+# 141 "data/maps/SacredCity/scripts.pory"
 	.string "Obtained FLY MACHINE!$"

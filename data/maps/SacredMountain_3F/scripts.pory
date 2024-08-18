@@ -1,1 +1,69 @@
 mapscripts SacredMountain_3F_MapScripts {}
+
+script SacredMountain_3F_EventScript_Grunt1 {
+    trainerbattle_single(TRAINER_ROCKET_GRUNT_SM_3F_1, SacredMountain_3F_Text_Grunt1_Intro, SacredMountain_3F_Text_Grunt1_Defeat)
+    msgbox(SacredMountain_3F_Text_Grunt1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script SacredMountain_3F_EventScript_Grunt2 {
+    trainerbattle_single(TRAINER_ROCKET_GRUNT_SM_3F_2, SacredMountain_3F_Text_Grunt2_Intro, SacredMountain_3F_Text_Grunt2_Defeat)
+    msgbox(SacredMountain_3F_Text_Grunt2_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script SacredMountain_3F_EventScript_Grunt3 {
+    trainerbattle_single(TRAINER_ROCKET_GRUNT_SM_3F_3, SacredMountain_3F_Text_Grunt3_Intro, SacredMountain_3F_Text_Grunt3_Defeat)
+    msgbox(SacredMountain_3F_Text_Grunt3_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script SacredMountain_3F_EventScript_Grunt4 {
+    trainerbattle_single(TRAINER_ROCKET_GRUNT_SM_3F_4, SacredMountain_3F_Text_Grunt4_Intro, SacredMountain_3F_Text_Grunt4_Defeat)
+    msgbox(SacredMountain_3F_Text_Grunt4_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text SacredMountain_3F_Text_Grunt1_Intro {
+    format("Intro")
+}
+
+text SacredMountain_3F_Text_Grunt1_Defeat {
+    format("Defeat")
+}
+
+text SacredMountain_3F_Text_Grunt1_PostBattle {
+    format("Post")
+}
+
+text SacredMountain_3F_Text_Grunt2_Intro {
+    format("Intro")
+}
+
+text SacredMountain_3F_Text_Grunt2_Defeat {
+    format("Defeat")
+}
+
+text SacredMountain_3F_Text_Grunt2_PostBattle {
+    format("Post")
+}
+
+text SacredMountain_3F_Text_Grunt3_Intro {
+    format("Intro")
+}
+
+text SacredMountain_3F_Text_Grunt3_Defeat {
+    format("Defeat")
+}
+
+text SacredMountain_3F_Text_Grunt3_PostBattle {
+    format("Post")
+}
+
+text SacredMountain_3F_Text_Grunt4_Intro {
+    format("Intro")
+}
+
+text SacredMountain_3F_Text_Grunt4_Defeat {
+    format("Defeat")
+}
+
+text SacredMountain_3F_Text_Grunt4_PostBattle {
+    format("Post")
+}

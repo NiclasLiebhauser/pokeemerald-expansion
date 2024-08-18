@@ -104,6 +104,58 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Common_EventScript_FindRandomItem",
       "flag": "FLAG_RANDOM_ITEM_SM_1F_6"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKETGRUNT_M",
+      "x": 4,
+      "y": 40,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "SacredMountain_1F_EventScript_Grunt1",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKETGRUNT_M",
+      "x": 21,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_ROTATE_COUNTERCLOCKWISE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "SacredMountain_1F_EventScript_Grunt2",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKETGRUNT_F",
+      "x": 37,
+      "y": 44,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "SacredMountain_1F_EventScript_Grunt3",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKETGRUNT_F",
+      "x": 35,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "SacredMountain_1F_EventScript_Grunt4",
+      "flag": "0"
     }
   ],
   "warp_events": [

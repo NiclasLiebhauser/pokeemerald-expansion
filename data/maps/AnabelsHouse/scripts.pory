@@ -79,7 +79,7 @@ script AnabelsHouse_EventScript_Anabel_GiveParcel {
 }
 
 script AnabelsHouse_EventScript_Anabel_FirstFight {
-    //TODO actual fight
+    trainerbattle_no_intro(TRAINER_ANABEL_1, AnabelsHouse_Text_Fight1_Defeat)
     setflag(FLAG_DEFEATED_ANABEL_FIRST_FIGHT)
     releaseall
     end
@@ -103,7 +103,7 @@ script AnabelsHouse_EventScript_CutMachine {
 }
 
 script AnabelsHouse_EventScript_Anabel_SecondFight {
-    //TODO actual fight
+    trainerbattle_no_intro(TRAINER_ANABEL_2, AnabelsHouse_Text_Fight2_Defeat)
     setflag(FLAG_DEFEATED_ANABEL_SECOND_FIGHT)
 
     playfanfare(MUS_OBTAIN_ITEM)
@@ -115,4 +115,12 @@ script AnabelsHouse_EventScript_Anabel_SecondFight {
 
 text AnabelsHouse_Text_CutMachine {
     format("Obtained CUT MACHINE!")
+}
+
+text AnabelsHouse_Text_Fight1_Defeat {
+    format("Deafeat")
+}
+
+text AnabelsHouse_Text_Fight2_Defeat {
+    format("Deafeat")
 }

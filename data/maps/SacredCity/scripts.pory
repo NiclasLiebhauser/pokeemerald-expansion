@@ -57,7 +57,7 @@ script SacredCity_EventScript_Artist {
 script SacredCity_EventScript_MountainGuardian{
     lock
     faceplayer
-    message(format("There used to be a path here which led up the mountain. But I has vanished since KYOGRE raised the water level.\p"))
+    message(format("There used to be a path here which led up the mountain. But it has vanished since KYOGRE raised the water level.\p"))
     waitmessage
     
     checkitem(ITEM_RED_ORB)
@@ -87,7 +87,56 @@ script SacredCity_EventScript_MountainGuardian{
     end
 }
 
+script SacredCity_EventScript_HexManiac1 {
+    trainerbattle_single(TRAINER_HEX_MANIAC_SACRED_CITY_1, SacredCity_Text_HexManiac1_Intro, SacredCity_Text_HexManiac1_Defeat)
+    msgbox(SacredCity_Text_HexManiac1_PostBattle, MSGBOX_AUTOCLOSE)
+}
 
+script SacredCity_EventScript_Psychic1 {
+    trainerbattle_single(TRAINER_PSYCHIC_SACRED_CITY_1, SacredCity_Text_Psychic1_Intro, SacredCity_Text_Psychic1_Defeat)
+    msgbox(SacredCity_Text_Psychic1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script SacredCity_EventScript_Psychic2 {
+    trainerbattle_single(TRAINER_PSYCHIC_SACRED_CITY_2, SacredCity_Text_Psychic2_Intro, SacredCity_Text_Psychic2_Defeat)
+    msgbox(SacredCity_Text_Psychic2_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text SacredCity_Text_HexManiac1_Intro {
+    format("Intro")
+}
+
+text SacredCity_Text_HexManiac1_Defeat {
+    format("Defeat")
+}
+
+text SacredCity_Text_HexManiac1_PostBattle {
+    format("Post")
+}
+
+text SacredCity_Text_Psychic1_Intro {
+    format("Intro")
+}
+
+text SacredCity_Text_Psychic1_Defeat {
+    format("Defeat")
+}
+
+text SacredCity_Text_Psychic1_PostBattle {
+    format("Post")
+}
+
+text SacredCity_Text_Psychic2_Intro {
+    format("Intro")
+}
+
+text SacredCity_Text_Psychic2_Defeat {
+    format("Defeat")
+}
+
+text SacredCity_Text_Psychic2_PostBattle {
+    format("Post")
+}
 
 text SacredCity_Text_FlyMachine {
     format("Obtained FLY MACHINE!")

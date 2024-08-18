@@ -124,6 +124,8 @@ AnabelsHouse_EventScript_Anabel_GiveParcel_2:
 
 
 AnabelsHouse_EventScript_Anabel_FirstFight::
+# 82 "data/maps/AnabelsHouse/scripts.pory"
+	trainerbattle_no_intro TRAINER_ANABEL_1, AnabelsHouse_Text_Fight1_Defeat
 # 83 "data/maps/AnabelsHouse/scripts.pory"
 	setflag FLAG_DEFEATED_ANABEL_FIRST_FIGHT
 # 84 "data/maps/AnabelsHouse/scripts.pory"
@@ -160,6 +162,8 @@ AnabelsHouse_EventScript_CutMachine::
 
 
 AnabelsHouse_EventScript_Anabel_SecondFight::
+# 106 "data/maps/AnabelsHouse/scripts.pory"
+	trainerbattle_no_intro TRAINER_ANABEL_2, AnabelsHouse_Text_Fight2_Defeat
 # 107 "data/maps/AnabelsHouse/scripts.pory"
 	setflag FLAG_DEFEATED_ANABEL_SECOND_FIGHT
 # 109 "data/maps/AnabelsHouse/scripts.pory"
@@ -235,3 +239,11 @@ AnabelsHouse_EventScript_Anabel_GiveParcel_Text_2:
 AnabelsHouse_Text_CutMachine::
 # 116 "data/maps/AnabelsHouse/scripts.pory"
 	.string "Obtained CUT MACHINE!$"
+
+AnabelsHouse_Text_Fight1_Defeat::
+# 120 "data/maps/AnabelsHouse/scripts.pory"
+	.string "Deafeat$"
+
+AnabelsHouse_Text_Fight2_Defeat::
+# 124 "data/maps/AnabelsHouse/scripts.pory"
+	.string "Deafeat$"
