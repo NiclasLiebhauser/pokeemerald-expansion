@@ -880,12 +880,19 @@
 #define TRAINER_SWIMMER_ROUTE_203_2         874
 #define TRAINER_SWIMMER_ROUTE_203_3         875
 #define TRAINER_SWIMMER_ROUTE_204_1         876
+#define TRAINER_FISHERMAN_MAGMAISLAND_1     877
+#define TRAINER_TUBER_MAGMAISLAND_1         878
+#define TRAINER_TUBER_MAGMAISLAND_2         879
+#define TRAINER_BUG_CATCHER_MAGMAISLAND_1   880
+#define TRAINER_HIKER_MAGMAISLAND_1         881
+#define TRAINER_LASS_MAGMAISLAND_1          882
+#define TRAINER_SWIMMER_MAGMAISLAND_1       883
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      877
+#define TRAINERS_COUNT                      884
 #define MAX_TRAINERS_COUNT                  964
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 

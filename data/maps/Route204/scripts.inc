@@ -22,6 +22,14 @@ Route204_EventScript_Expert_2:
 	goto Route204_EventScript_Expert_1
 
 
+Route204_EventScript_Swimmer1::
+# 20 "data/maps/Route204/scripts.pory"
+	trainerbattle_single TRAINER_SWIMMER_ROUTE_204_1, Route204_Text_Swimmer1_Intro, Route204_Text_Swimmer1_Defeat
+# 21 "data/maps/Route204/scripts.pory"
+	msgbox Route204_Text_Swimmer1_PostBattle, MSGBOX_AUTOCLOSE
+	return
+
+
 Route204_EventScript_Expert_Text_0:
 # 8 "data/maps/Route204/scripts.pory"
 	.string "Rumors say, that the torrential\n"
@@ -36,3 +44,15 @@ Route204_EventScript_Expert_Text_1:
 	.string "They say the mysterious weather on\n"
 	.string "Route 206 has stopped as suddenly as\l"
 	.string "it had begun.$"
+
+Route204_Text_Swimmer1_Intro::
+# 24 "data/maps/Route204/scripts.pory"
+	.string "Intro$"
+
+Route204_Text_Swimmer1_Defeat::
+# 28 "data/maps/Route204/scripts.pory"
+	.string "Defeat$"
+
+Route204_Text_Swimmer1_PostBattle::
+# 32 "data/maps/Route204/scripts.pory"
+	.string "Post$"

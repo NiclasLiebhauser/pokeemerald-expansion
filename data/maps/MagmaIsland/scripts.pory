@@ -32,3 +32,122 @@ script MagmaIsland_EventScript_Moltres {
     release
     end
 }
+
+script MagmaIsland_EventScript_Fisherman1 {
+    trainerbattle_single(TRAINER_FISHERMAN_MAGMAISLAND_1, MagmaIsland_Text_Fisherman1_Intro, MagmaIsland_Text_Fisherman1_Defeat)
+    msgbox(MagmaIsland_Text_Fisherman1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script MagmaIsland_EventScript_Tuber1 {
+    trainerbattle_single(TRAINER_TUBER_MAGMAISLAND_1, MagmaIsland_Text_Tuber1_Intro, MagmaIsland_Text_Tuber1_Defeat)
+    msgbox(MagmaIsland_Text_Tuber1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script MagmaIsland_EventScript_Tuber2 {
+    trainerbattle_single(TRAINER_TUBER_MAGMAISLAND_2, MagmaIsland_Text_Tuber2_Intro, MagmaIsland_Text_Tuber2_Defeat)
+    msgbox(MagmaIsland_Text_Tuber2_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script MagmaIsland_EventScript_BugCatcher1 {
+    trainerbattle_single(TRAINER_BUG_CATCHER_MAGMAISLAND_1, MagmaIsland_Text_BugCatcher1_Intro, MagmaIsland_Text_BugCatcher1_Defeat)
+    msgbox(MagmaIsland_Text_BugCatcher1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script MagmaIsland_EventScript_Hiker1 {
+    trainerbattle_single(TRAINER_HIKER_MAGMAISLAND_1, MagmaIsland_Text_Hiker1_Intro, MagmaIsland_Text_Hiker1_Defeat)
+    msgbox(MagmaIsland_Text_Hiker1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script MagmaIsland_EventScript_Lass1 {
+    trainerbattle_single(TRAINER_LASS_MAGMAISLAND_1, MagmaIsland_Text_Lass1_Intro, MagmaIsland_Text_Lass1_Defeat)
+    msgbox(MagmaIsland_Text_Lass1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script MagmaIsland_EventScript_Swimmer1 {
+    trainerbattle_single(TRAINER_SWIMMER_MAGMAISLAND_1, MagmaIsland_Text_Swimmer1_Intro, MagmaIsland_Text_Swimmer1_Defeat)
+    msgbox(MagmaIsland_Text_Swimmer1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text MagmaIsland_Text_Fisherman1_Intro {
+    format("Intro")
+}
+
+text MagmaIsland_Text_Fisherman1_Defeat {
+    format("Defeat")
+}
+
+text MagmaIsland_Text_Fisherman1_PostBattle {
+    format("Post")
+}
+
+text MagmaIsland_Text_Tuber1_Intro {
+    format("Intro")
+}
+
+text MagmaIsland_Text_Tuber1_Defeat {
+    format("Defeat")
+}
+
+text MagmaIsland_Text_Tuber1_PostBattle {
+    format("Post")
+}
+
+text MagmaIsland_Text_Tuber2_Intro {
+    format("Intro")
+}
+
+text MagmaIsland_Text_Tuber2_Defeat {
+    format("Defeat")
+}
+
+text MagmaIsland_Text_Tuber2_PostBattle {
+    format("Post")
+}
+
+text MagmaIsland_Text_BugCatcher1_Intro {
+    format("Intro")
+}
+
+text MagmaIsland_Text_BugCatcher1_Defeat {
+    format("Defeat")
+}
+
+text MagmaIsland_Text_BugCatcher1_PostBattle {
+    format("Post")
+}
+
+text MagmaIsland_Text_Hiker1_Intro {
+    format("Intro")
+}
+
+text MagmaIsland_Text_Hiker1_Defeat {
+    format("Defeat")
+}
+
+text MagmaIsland_Text_Hiker1_PostBattle {
+    format("Post")
+}
+
+text MagmaIsland_Text_Lass1_Intro {
+    format("Intro")
+}
+
+text MagmaIsland_Text_Lass1_Defeat {
+    format("Defeat")
+}
+
+text MagmaIsland_Text_Lass1_PostBattle {
+    format("Post")
+}
+
+text MagmaIsland_Text_Swimmer1_Intro {
+    format("Intro")
+}
+
+text MagmaIsland_Text_Swimmer1_Defeat {
+    format("Defeat")
+}
+
+text MagmaIsland_Text_Swimmer1_PostBattle {
+    format("Post")
+}
