@@ -15,3 +15,20 @@ script Route204_EventScript_Expert {
     release
     end    
 }
+
+script Route204_EventScript_Swimmer1 {
+    trainerbattle_single(TRAINER_SWIMMER_ROUTE_204_1, Route204_Text_Swimmer1_Intro, Route204_Text_Swimmer1_Defeat)
+    msgbox(Route204_Text_Swimmer1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text Route204_Text_Swimmer1_Intro {
+    format("Intro")
+}
+
+text Route204_Text_Swimmer1_Defeat {
+    format("Defeat")
+}
+
+text Route204_Text_Swimmer1_PostBattle {
+    format("Post")
+}
