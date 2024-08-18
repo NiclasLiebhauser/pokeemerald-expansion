@@ -1,9 +1,0 @@
-mapscripts Route203_MapScripts {}
-
-script Route203_EventScript_Fisherman {
-    lock
-    faceplayer
-    msgbox(format("Since the rise of the water level the only way to the Sacred Island is accessible via diving. But since the ban of Pokémon using HM moves only pro dives can make the trip."), MSGBOX_NPC)    
-    release
-    end
-}

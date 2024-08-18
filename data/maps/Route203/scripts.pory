@@ -1,0 +1,145 @@
+mapscripts Route203_MapScripts {}
+
+script Route203_EventScript_Fisherman {
+    lock
+    faceplayer
+    msgbox(format("Since the rise of the water level the only way to the Sacred Island is accessible via diving. But since the ban of Pokémon using HM moves only pro dives can make the trip."), MSGBOX_NPC)    
+    release
+    end
+}
+
+script Route203_EventScript_Tuber1 {
+    trainerbattle_single(TRAINER_TUBER_ROUTE_203_1, Route203_Text_Tuber1_Intro, Route203_Text_Tuber1_Defeat)
+    msgbox(Route203_Text_Tuber1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route203_EventScript_Expert1 {
+    trainerbattle_single(TRAINER_EXPERT_ROUTE_203_1, Route203_Text_Expert1_Intro, Route203_Text_Expert1_Defeat)
+    msgbox(Route203_Text_Expert1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route203_EventScript_HexManiac1 {
+    trainerbattle_single(TRAINER_HEX_MANIAC_ROUTE_203_1, Route203_Text_HexManiac1_Intro, Route203_Text_HexManiac1_Defeat)
+    msgbox(Route203_Text_HexManiac1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route203_EventScript_BlackBelt1 {
+    trainerbattle_single(TRAINER_BLACK_BELT_ROUTE_203_1, Route203_Text_BlackBelt1_Intro, Route203_Text_BlackBelt1_Defeat)
+    msgbox(Route203_Text_BlackBelt1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route203_EventScript_Hiker1 {
+    trainerbattle_single(TRAINER_HIKER_ROUTE_203_1, Route203_Text_Hiker1_Intro, Route203_Text_Hiker1_Defeat)
+    msgbox(Route203_Text_Hiker1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route203_EventScript_Swimmer1 {
+    trainerbattle_single(TRAINER_SWIMMER_ROUTE_203_1, Route203_Text_Swimmer1_Intro, Route203_Text_Swimmer1_Defeat)
+    msgbox(Route203_Text_Swimmer1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route203_EventScript_Swimmer2 {
+    trainerbattle_single(TRAINER_SWIMMER_ROUTE_203_2, Route203_Text_Swimmer2_Intro, Route203_Text_Swimmer2_Defeat)
+    msgbox(Route203_Text_Swimmer2_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route203_EventScript_Swimmer3 {
+    trainerbattle_single(TRAINER_SWIMMER_ROUTE_203_3, Route203_Text_Swimmer3_Intro, Route203_Text_Swimmer3_Defeat)
+    msgbox(Route203_Text_Swimmer3_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text Route203_Text_Tuber1_Intro {
+    format("Intro")
+}
+
+text Route203_Text_Tuber1_Defeat {
+    format("Defeat")
+}
+
+text Route203_Text_Tuber1_PostBattle {
+    format("Post")
+}
+
+text Route203_Text_Expert1_Intro {
+    format("Intro")
+}
+
+text Route203_Text_Expert1_Defeat {
+    format("Defeat")
+}
+
+text Route203_Text_Expert1_PostBattle {
+    format("Post")
+}
+
+text Route203_Text_HexManiac1_Intro {
+    format("Intro")
+}
+
+text Route203_Text_HexManiac1_Defeat {
+    format("Defeat")
+}
+
+text Route203_Text_HexManiac1_PostBattle {
+    format("Post")
+}
+
+text Route203_Text_BlackBelt1_Intro {
+    format("Intro")
+}
+
+text Route203_Text_BlackBelt1_Defeat {
+    format("Defeat")
+}
+
+text Route203_Text_BlackBelt1_PostBattle {
+    format("Post")
+}
+
+text Route203_Text_Hiker1_Intro {
+    format("Intro")
+}
+
+text Route203_Text_Hiker1_Defeat {
+    format("Defeat")
+}
+
+text Route203_Text_Hiker1_PostBattle {
+    format("Post")
+}
+
+text Route203_Text_Swimmer1_Intro {
+    format("Intro")
+}
+
+text Route203_Text_Swimmer1_Defeat {
+    format("Defeat")
+}
+
+text Route203_Text_Swimmer1_PostBattle {
+    format("Post")
+}
+
+text Route203_Text_Swimmer2_Intro {
+    format("Intro")
+}
+
+text Route203_Text_Swimmer2_Defeat {
+    format("Defeat")
+}
+
+text Route203_Text_Swimmer2_PostBattle {
+    format("Post")
+}
+
+text Route203_Text_Swimmer3_Intro {
+    format("Intro")
+}
+
+text Route203_Text_Swimmer3_Defeat {
+    format("Defeat")
+}
+
+text Route203_Text_Swimmer3_PostBattle {
+    format("Post")
+}
