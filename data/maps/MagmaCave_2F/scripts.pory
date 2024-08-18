@@ -1,1 +1,52 @@
 mapscripts MagmaCave_2F_MapScripts {}
+
+script MagmaCave_2F_EventScript_Grunt1 {
+    trainerbattle_single(TRAINER_MAGMA_GRUNT_MAGMACAVE_2F_1, MagmaCave_2F_Text_Grunt1_Intro, MagmaCave_2F_Text_Grunt1_Defeat)
+    msgbox(MagmaCave_2F_Text_Grunt1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script MagmaCave_2F_EventScript_Grunt2 {
+    trainerbattle_single(TRAINER_MAGMA_GRUNT_MAGMACAVE_2F_2, MagmaCave_2F_Text_Grunt2_Intro, MagmaCave_2F_Text_Grunt2_Defeat)
+    msgbox(MagmaCave_2F_Text_Grunt2_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script MagmaCave_2F_EventScript_Grunt3 {
+    trainerbattle_single(TRAINER_MAGMA_GRUNT_MAGMACAVE_2F_3, MagmaCave_2F_Text_Grunt3_Intro, MagmaCave_2F_Text_Grunt3_Defeat)
+    msgbox(MagmaCave_2F_Text_Grunt3_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text MagmaCave_2F_Text_Grunt1_Intro {
+    format("Intro")
+}
+
+text MagmaCave_2F_Text_Grunt1_Defeat {
+    format("Defeat")
+}
+
+text MagmaCave_2F_Text_Grunt1_PostBattle {
+    format("Post")
+}
+
+text MagmaCave_2F_Text_Grunt2_Intro {
+    format("Intro")
+}
+
+text MagmaCave_2F_Text_Grunt2_Defeat {
+    format("Defeat")
+}
+
+text MagmaCave_2F_Text_Grunt2_PostBattle {
+    format("Post")
+}
+
+text MagmaCave_2F_Text_Grunt3_Intro {
+    format("Intro")
+}
+
+text MagmaCave_2F_Text_Grunt3_Defeat {
+    format("Defeat")
+}
+
+text MagmaCave_2F_Text_Grunt3_PostBattle {
+    format("Post")
+}

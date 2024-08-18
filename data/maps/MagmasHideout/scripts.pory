@@ -21,6 +21,8 @@ text MagmasHideout_Text_StrengthMachine {
 script MagmasHideout_EventScript_StrengthGrunt{
     lockall
     playse(SE_PIN)
+    applymovement(LOCAL_STRENGTH_GRUNT, Common_Movement_ExclamationMark)
+    waitmovement(0)
     delay(48)
     waitse
 
@@ -52,4 +54,72 @@ script MagmasHideout_EventScript_StrengthGrunt{
 
     releaseall
     end
+}
+
+script MagmasHideout_EventScript_Grunt1 {
+    trainerbattle_single(TRAINER_MAGMA_GRUNT_MAGMAHQ_1, MagmasHideout_Text_Grunt1_Intro, MagmasHideout_Text_Grunt1_Defeat)
+    msgbox(MagmasHideout_Text_Grunt1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script MagmasHideout_EventScript_Grunt2 {
+    trainerbattle_single(TRAINER_MAGMA_GRUNT_MAGMAHQ_2, MagmasHideout_Text_Grunt2_Intro, MagmasHideout_Text_Grunt2_Defeat)
+    msgbox(MagmasHideout_Text_Grunt2_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script MagmasHideout_EventScript_Grunt3 {
+    trainerbattle_single(TRAINER_MAGMA_GRUNT_MAGMAHQ_3, MagmasHideout_Text_Grunt3_Intro, MagmasHideout_Text_Grunt3_Defeat)
+    msgbox(MagmasHideout_Text_Grunt3_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script MagmasHideout_EventScript_Grunt4 {
+    trainerbattle_single(TRAINER_MAGMA_GRUNT_MAGMAHQ_4, MagmasHideout_Text_Grunt4_Intro, MagmasHideout_Text_Grunt4_Defeat)
+    msgbox(MagmasHideout_Text_Grunt4_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text MagmasHideout_Text_Grunt1_Intro {
+    format("Intro")
+}
+
+text MagmasHideout_Text_Grunt1_Defeat {
+    format("Defeat")
+}
+
+text MagmasHideout_Text_Grunt1_PostBattle {
+    format("Post")
+}
+
+text MagmasHideout_Text_Grunt2_Intro {
+    format("Intro")
+}
+
+text MagmasHideout_Text_Grunt2_Defeat {
+    format("Defeat")
+}
+
+text MagmasHideout_Text_Grunt2_PostBattle {
+    format("Post")
+}
+
+text MagmasHideout_Text_Grunt3_Intro {
+    format("Intro")
+}
+
+text MagmasHideout_Text_Grunt3_Defeat {
+    format("Defeat")
+}
+
+text MagmasHideout_Text_Grunt3_PostBattle {
+    format("Post")
+}
+
+text MagmasHideout_Text_Grunt4_Intro {
+    format("Intro")
+}
+
+text MagmasHideout_Text_Grunt4_Defeat {
+    format("Defeat")
+}
+
+text MagmasHideout_Text_Grunt4_PostBattle {
+    format("Post")
 }
