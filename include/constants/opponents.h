@@ -899,12 +899,20 @@
 #define TRAINER_MAGMA_GRUNT_MAGMACAVE_2F_1  893
 #define TRAINER_MAGMA_GRUNT_MAGMACAVE_2F_2  894
 #define TRAINER_MAGMA_GRUNT_MAGMACAVE_2F_3  895
+#define TRAINER_AQUA_GRUNT_AQUAHQ_1F_1      896
+#define TRAINER_AQUA_GRUNT_AQUAHQ_1F_2      897
+#define TRAINER_AQUA_GRUNT_AQUAHQ_1F_3      898
+#define TRAINER_AQUA_GRUNT_AQUAHQ_1F_4      899
+#define TRAINER_AQUA_GRUNT_AQUAHQ_2F_1      900
+#define TRAINER_AQUA_GRUNT_AQUAHQ_2F_2      901
+#define TRAINER_AQUA_GRUNT_AQUAHQ_2F_3      902
+#define TRAINER_AQUA_GRUNT_AQUAHQ_2F_4      903
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      896
+#define TRAINERS_COUNT                      904
 #define MAX_TRAINERS_COUNT                  964
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 

@@ -138,6 +138,73 @@ script AquasHideout_2F_RemoveAqua {
     return
 }
 
+script AquasHideout_2F_EventScript_Grunt1 {
+    trainerbattle_single(TRAINER_AQUA_GRUNT_AQUAHQ_2F_1, AquasHideout_2F_Text_Grunt1_Intro, AquasHideout_2F_Text_Grunt1_Defeat)
+    msgbox(AquasHideout_2F_Text_Grunt1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script AquasHideout_2F_EventScript_Grunt2 {
+    trainerbattle_single(TRAINER_AQUA_GRUNT_AQUAHQ_2F_2, AquasHideout_2F_Text_Grunt2_Intro, AquasHideout_2F_Text_Grunt2_Defeat)
+    msgbox(AquasHideout_2F_Text_Grunt2_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script AquasHideout_2F_EventScript_Grunt3 {
+    trainerbattle_single(TRAINER_AQUA_GRUNT_AQUAHQ_2F_3, AquasHideout_2F_Text_Grunt3_Intro, AquasHideout_2F_Text_Grunt3_Defeat)
+    msgbox(AquasHideout_2F_Text_Grunt3_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script AquasHideout_2F_EventScript_Grunt4 {
+    trainerbattle_single(TRAINER_AQUA_GRUNT_AQUAHQ_2F_4, AquasHideout_2F_Text_Grunt4_Intro, AquasHideout_2F_Text_Grunt4_Defeat)
+    msgbox(AquasHideout_2F_Text_Grunt4_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text AquasHideout_2F_Text_Grunt1_Intro {
+    format("Intro")
+}
+
+text AquasHideout_2F_Text_Grunt1_Defeat {
+    format("Defeat")
+}
+
+text AquasHideout_2F_Text_Grunt1_PostBattle {
+    format("Post")
+}
+
+text AquasHideout_2F_Text_Grunt2_Intro {
+    format("Intro")
+}
+
+text AquasHideout_2F_Text_Grunt2_Defeat {
+    format("Defeat")
+}
+
+text AquasHideout_2F_Text_Grunt2_PostBattle {
+    format("Post")
+}
+
+text AquasHideout_2F_Text_Grunt3_Intro {
+    format("Intro")
+}
+
+text AquasHideout_2F_Text_Grunt3_Defeat {
+    format("Defeat")
+}
+
+text AquasHideout_2F_Text_Grunt3_PostBattle {
+    format("Post")
+}
+text AquasHideout_2F_Text_Grunt4_Intro {
+    format("Intro")
+}
+
+text AquasHideout_2F_Text_Grunt4_Defeat {
+    format("Defeat")
+}
+
+text AquasHideout_2F_Text_Grunt4_PostBattle {
+    format("Post")
+}
+
 text AquasHideout_2F_Text_DiveMachine {
     format("Obtained DIVE MACHINE!")
 }
