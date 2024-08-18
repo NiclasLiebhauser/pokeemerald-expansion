@@ -1,5 +1,9 @@
 Add trainers
+Add missing dialogue
 
 More points of orienation on open maps
 
 Add NPCs to help the player
+
+Fix intro
+Add final battle

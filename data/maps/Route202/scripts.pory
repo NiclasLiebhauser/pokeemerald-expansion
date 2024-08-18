@@ -7,3 +7,37 @@ script Route202_EventScript_BlackBelt {
     release
     end
 }
+
+script Route202_EventScript_Swimmer1 {
+    trainerbattle_single(TRAINER_SWIMMER_ROUTE_202_1, Route202_Text_Swimmer1_Intro, Route202_Text_Swimmer1_Defeat)
+    msgbox(Route202_Text_Swimmer1_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route202_EventScript_Swimmer2 {
+    trainerbattle_single(TRAINER_SWIMMER_ROUTE_202_2, Route202_Text_Swimmer2_Intro, Route202_Text_Swimmer2_Defeat)
+    msgbox(Route202_Text_Swimmer2_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text Route202_Text_Swimmer1_Intro {
+    format("Intro")
+}
+
+text Route202_Text_Swimmer1_Defeat {
+    format("Defeat")
+}
+
+text Route202_Text_Swimmer1_PostBattle {
+    format("Post")
+}
+
+text Route202_Text_Swimmer2_Intro {
+    format("Intro")
+}
+
+text Route202_Text_Swimmer2_Defeat {
+    format("Defeat")
+}
+
+text Route202_Text_Swimmer2_PostBattle {
+    format("Post")
+}
