@@ -1265,3 +1265,6 @@ $(MID_SUBDIR)/se_dex_search.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_spear_pillar.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V090
+
+$(MID_SUBDIR)/mus_azure_flute.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G165 -V090 -P5
