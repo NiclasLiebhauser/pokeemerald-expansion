@@ -301,6 +301,9 @@ const u32 gTrainerPalette_Rocketgruntf[] = INCBIN_U32("graphics/trainers/palette
 const u32 gTrainerFrontPic_Rocketgruntm[] = INCBIN_U32("graphics/trainers/front_pics/rocket_m.4bpp.lz");
 const u32 gTrainerPalette_Rocketgruntm[] = INCBIN_U32("graphics/trainers/palettes/rocket_m.gbapal.lz");
 
+const u32 gTrainerFrontPic_Arceus[] = INCBIN_U32("graphics/pokemon/arceus/anim_front.4bpp.lz");
+const u32 gTrainerPalette_Arceus[] = INCBIN_U32("graphics/pokemon/arceus/normal.gbapal.lz");
+
 // The first two parameters invoke a front pic and palette by
 // calling a "TRAINER_PIC" constant (e.g. TRAINER_PIC_HIKER), and
 // gTrainerFrontPic/gTrainerPalette pointers, (e.g "gTrainerFrontPic_Hiker" and "gTrainerPalette_Hiker").
@@ -413,6 +416,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(ROCKET_LEADER_GIOVANNI, RocketLeaderGiovanni),
     TRAINER_SPRITE(ROCKET_GRUNT_F, Rocketgruntf),
     TRAINER_SPRITE(ROCKET_GRUNT_M, Rocketgruntm),
+    TRAINER_SPRITE(ARCEUS, Arceus),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =

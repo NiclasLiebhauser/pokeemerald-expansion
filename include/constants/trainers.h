@@ -111,7 +111,8 @@
 #define TRAINER_PIC_ROCKET_LEADER_GIOVANNI 93
 #define TRAINER_PIC_ROCKET_GRUNT_F        94
 #define TRAINER_PIC_ROCKET_GRUNT_M        95
-#define TRAINER_PIC_COUNT                 96
+#define TRAINER_PIC_ARCEUS                96
+#define TRAINER_PIC_COUNT                 97
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
@@ -356,7 +357,8 @@
 #define TRAINER_CLASS_RS_PROTAG      0x41
 #define TRAINER_CLASS_TEAM_ROCKET    0x42
 #define TRAINER_CLASS_ROCKET_LEADER  0x43
-#define TRAINER_CLASS_COUNT          0x44
+#define TRAINER_CLASS_ARCEUS         0x44
+#define TRAINER_CLASS_COUNT          0x45
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music
