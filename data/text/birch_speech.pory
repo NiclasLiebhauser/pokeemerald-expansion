@@ -1,5 +1,5 @@
 text gText_Birch_Welcome {
-    format("Ah finally awake, eh?\nWelcome to the world of POKéMON!\pMy name is does not matter.\nBut everyone calls me God.\pTen years ago a time anomaly\naltered the order of events.\pSomehow Archie had come to learn that the BLUE ORB was used to control KYOGRE.\pWith that knowledge he created his ideal world full of life.\pBut as you can imagine. It has been a disaster.\pIt will be on you to fix the flow of time. Good luck...\p")
+    format("Ah finally awake, eh?\nWelcome to the world of POKéMON!\pMy name? It doesn't really matter. But everyone calls me God.\pTen years ago a time anomaly\naltered the order of events.\pSomehow Archie had come to learn that the BLUE ORB was used to control KYOGRE.\pWith that knowledge he created his ideal world full of life.\pBut as you can imagine. It has been a disaster.\pIt will be on you to fix the flow of time. Good luck...\p")
 }
 
 raw `
