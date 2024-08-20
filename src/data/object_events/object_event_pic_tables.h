@@ -1349,6 +1349,18 @@ static const struct SpriteFrameImage sPicTable_Giratina_origin[] = {
     overworld_frame(gObjectEventPic_Giratina_origin, 8, 8, 5),
 };
 
+static const struct SpriteFrameImage sPicTable_Arceus[] = {
+    overworld_frame(gObjectEventPic_Arceus, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Arceus, 8, 8, 2),
+    overworld_frame(gObjectEventPic_Arceus, 8, 8, 4),
+    overworld_frame(gObjectEventPic_Arceus, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Arceus, 8, 8, 1),
+    overworld_frame(gObjectEventPic_Arceus, 8, 8, 2),
+    overworld_frame(gObjectEventPic_Arceus, 8, 8, 3),
+    overworld_frame(gObjectEventPic_Arceus, 8, 8, 4),
+    overworld_frame(gObjectEventPic_Arceus, 8, 8, 5),
+};
+
 static const struct SpriteFrameImage sPicTable_RubySapphireBrendan[] = {
     overworld_ascending_frames(gObjectEventPic_RubySapphireBrendanNormal, 2, 4),
 };

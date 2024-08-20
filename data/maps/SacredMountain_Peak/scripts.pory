@@ -5,6 +5,7 @@ const LOCALID_GIRATINA = 4
 const LOCALID_SPENSER = 5
 const LOCALID_GIRATINA_ORIGIN = 6
 const LOCALID_GIOVANNI_TRAINER = 7
+const LOCALID_ARCEUS = 8
 
 mapscripts SacredMountain_Peak_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: SacredMountain_EventScript_OnTransition
@@ -28,12 +29,14 @@ script SacredMountain_EventScript_OnTransition {
         setflag(FLAG_HIDE_GIRATINA)
         setflag(FLAG_HIDE_GIRATINA_ORIGIN)
         setflag(FLAG_HIDE_GIOVANNI_TRAINER)
+        setflag(FLAG_HIDE_ARCEUS)
         removeobject(LOCALID_DIALGA)
         removeobject(LOCALID_PALKIA)
         removeobject(LOCALID_GIRATINA)
         removeobject(LOCALID_GIRATINA_ORIGIN)
         removeobject(LOCALID_GIOVANNI_CUTSCENE)
         removeobject(LOCALID_GIOVANNI_TRAINER)
+        removeobject(LOCALID_ARCEUS)
     }
     elif(var(VAR_SACRED_MOUNTAIN_PEAK_STATE) == 1)
     {
@@ -45,6 +48,11 @@ script SacredMountain_EventScript_OnTransition {
         addobject(LOCALID_GIOVANNI_TRAINER)
         addobject(LOCALID_DIALGA)
         addobject(LOCALID_PALKIA)
+    }
+    elif(var(VAR_SACRED_MOUNTAIN_PEAK_STATE) == 2)
+    {
+        clearflag(FLAG_HIDE_ARCEUS)
+        addobject(LOCALID_ARCEUS)
     }
     end
 }
@@ -213,6 +221,7 @@ script SacredMountain_EventScript_DoGiratinaBattle {
     specialvar(VAR_RESULT, GetBattleOutcome)
     call_if_eq(VAR_RESULT, B_OUTCOME_WON, SacredMountain_EventScript_GiratinaBattleWon)
     call_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SacredMountain_EventScript_ThereIsNoEscape)
+    call_if_eq(VAR_RESULT, B_OUTCOME_RAN, SacredMountain_EventScript_ThereIsNoEscape)
 
     release
     end
@@ -283,7 +292,6 @@ script SacredMountain_EventScript_DoGiratinaOriginBattle {
     setvar(VAR_TEMP_0, 1)
     setvar(VAR_LAST_TALKED, LOCALID_GIRATINA_ORIGIN)
     setwildbattle(SPECIES_GIRATINA_ORIGIN, 70)
-    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
     setflag(FLAG_NO_CATCHING)
     special(BattleSetup_StartLegendaryBattle)
     waitstate
@@ -291,6 +299,7 @@ script SacredMountain_EventScript_DoGiratinaOriginBattle {
     specialvar(VAR_RESULT, GetBattleOutcome)
     call_if_eq(VAR_RESULT, B_OUTCOME_WON, SacredMountain_EventScript_GiratinaOriginBattleWon)
     call_if_eq(VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SacredMountain_EventScript_ThereIsNoEscape)
+    call_if_eq(VAR_RESULT, B_OUTCOME_RAN, SacredMountain_EventScript_ThereIsNoEscape)
 
     release
     end
@@ -298,7 +307,101 @@ script SacredMountain_EventScript_DoGiratinaOriginBattle {
 
 script SacredMountain_EventScript_GiratinaOriginBattleWon {
     setvar(VAR_SACRED_MOUNTAIN_PEAK_STATE, 2)
+    delay(15)
+  
+    msgbox(format("???: Be gone beast of darkness!"), MSGBOX_AUTOCLOSE)
+    waitmessage
+
+    fadescreen(FADE_TO_WHITE)
+    clearflag(FLAG_HIDE_ARCEUS)
+    setflag(FLAG_HIDE_GIRATINA_ORIGIN)
+    addobject(LOCALID_ARCEUS)
+    removeobject(LOCALID_GIRATINA_ORIGIN)
+
+    setobjectxy(LOCALID_ARCEUS, 18, 14)
+
+    playmoncry(SPECIES_ARCEUS, CRY_MODE_ENCOUNTER)
+    waitmoncry
+
+    playse(SE_M_EXPLOSION)
+    waitse
+
+    delay(10)
+
+    playmoncry(SPECIES_GIRATINA, CRY_MODE_FAINT)
+    waitmoncry
+
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+    waitmovement(0)
+
+    fadescreen(FADE_FROM_WHITE)
+
+    call(SacredMountain_EventScript_Arceus_Entrance)
+
     release
+    end
+}
+
+script SacredMountain_EventScript_Arceus_Entrance {
+
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanUp)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanUp)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanUp)
+    waitmovement(0)
+
+    applymovement(LOCALID_ARCEUS, Common_Movement_WalkDown3)
+    waitmovement(0)
+
+    message(SacredMountain_Text_Arceus_Opening)
+    waitmessage
+
+    checkitem(ITEM_AZURE_FLUTE)
+    if(var(VAR_RESULT) == TRUE)
+    {
+        call(SacredMountain_EventScript_AzureFlute)
+    }
+    else
+    {
+        call(SacredMountain_EventScript_Credits)
+    }
+
+    release
+    end
+}
+
+script SacredMountain_EventScript_AzureFlute {
+    msgbox(format("The AZURE FLUTE in your bag begins to shine.\pPlay the AZURE FLUTE?"), MSGBOX_YESNO)
+    waitmessage
+    closemessage
+
+    if(var(VAR_RESULT) == YES)
+    {
+        playfanfare(MUS_AZURE_FLUTE)
+        waitfanfare
+        setvar(VAR_SACRED_MOUNTAIN_PEAK_STATE, 3)
+
+        msgbox(SacredMountain_Text_Arceus_Challange, MSGBOX_AUTOCLOSE)
+        waitmessage
+
+        applymovement(OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanDown)
+        waitmovement(0)
+        special(RemoveCameraObject)
+    }
+    else
+    {
+        call(SacredMountain_EventScript_Credits)
+    }
+
+    release
+    end
+}
+
+script SacredMountain_EventScript_Credits {
+    fadescreen(FADE_TO_BLACK)
+    msgbox(format("You have reached the end of the journey."))
     end
 }
 
@@ -309,6 +412,16 @@ script SacredMountain_EventScript_WalkBack {
     waitmovement(0)
     release
     end
+}
+
+script SacredMountain_EventScript_Arceus {
+    lock
+    msgbox(format("..."), MSGBOX_AUTOCLOSE)
+    waitmessage
+    playmoncry(SPECIES_ARCEUS, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    trainerbattle_no_intro(TRAINER_ARCEUS, format("Well done. You have triumphed over a god."))
+    call(SacredMountain_EventScript_Credits)
 }
 
 //ToSolve
@@ -360,6 +473,17 @@ text SacredMountain_Text_Giovanni_PostBattleGiratina {
 text SacredMountain_Text_Giovanni_Giratina_Kills_Giovanni {
     format("Huh? GIRATINA?\pWhat are you doing?\pNo stop...")
 }
+
+//ToSolve
+text SacredMountain_Text_Arceus_Opening {
+    format("Hello... Blah blah blah\p")
+}
+
+//ToSolve
+text SacredMountain_Text_Arceus_Challange {
+    format("The flute grants thee the divine right to challange me. Be prepared and do not take me lightly.")
+}
+
 
 movement SacredMountain_Movement_Giovanni_WalkOn {
     walk_up*9
