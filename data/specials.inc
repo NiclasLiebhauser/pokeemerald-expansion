@@ -556,3 +556,4 @@ gSpecials::
 	def_special Script_GetChosenMonDefensiveIVs
 	def_special GetMonDexEntry
 	def_special UpdateMonDexEntry
+	def_special CalculateMagikarpReward

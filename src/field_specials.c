@@ -4317,3 +4317,8 @@ void UpdateMonDexEntry(void)
         GetSetPokedexFlag(SpeciesToNationalPokedexNum(VarGet(VAR_TEMP_1)), FLAG_SET_CAUGHT);
     }
 }
+
+void CalculateMagikarpReward(void)
+{
+    VarSet(VAR_TEMP_1, VarGet(VAR_MAGIKARPS_TRADED) % 5);
+}

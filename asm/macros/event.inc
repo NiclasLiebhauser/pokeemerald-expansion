@@ -2188,3 +2188,9 @@
 	setvar VAR_TEMP_2, \seen_caught
     special UpdateMonDexEntry
     .endm
+
+	@ Calculates the reward modulo 5 of VAR_MAGIKARPS_TRADED
+    @ The result is stored in VAR_TEMP_1
+    .macro calculateMagikarpReward 
+    special CalculateMagikarpReward
+    .endm

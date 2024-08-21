@@ -1,1 +1,85 @@
 mapscripts PacifidlogTown_House1_MapScripts {}
+
+script PacifidlogTown_House1_EventScript_Mom {
+    lock
+    faceplayer
+
+    msgbox(format("My son always had an unsual interest in MAGIKARPs. He would surely trade you one of his EEVEEs for one."), MSGBOX_NPC)
+
+    release
+    end    
+}
+
+script PacifidlogTown_House1_EventScript_Boy {
+    lock
+    faceplayer
+
+    if(var(VAR_MAGIKARPS_TRADED) > 0)
+    {
+        buffernumberstring(STR_VAR_1, VAR_MAGIKARPS_TRADED)
+        message(format("Thank you for always trading with me.\nMy collection has grown to {STR_VAR_1} thanks to you.\p"))
+        waitmessage
+    }
+
+    setvar(VAR_0x8008, INGAME_TRADE_EEVEE)
+    copyvar(VAR_0x8004, VAR_0x8008)
+    specialvar(VAR_0x8009, GetInGameTradeSpeciesInfo)
+
+    msgbox(format("Do you want to trade a {STR_VAR_1} for my {STR_VAR_2}?"), MSGBOX_YESNO)
+
+    if(var(VAR_RESULT) == YES)
+    {
+        special(ChoosePartyMon)
+        waitstate
+        
+        if(var(VAR_0x8004) != PARTY_NOTHING_CHOSEN)
+        {
+            copyvar(VAR_0x8005, VAR_0x8004)
+            specialvar(VAR_RESULT, GetTradeSpecies)
+
+            call_if_ne(VAR_RESULT, VAR_0x8009, PacifidlogTown_House1_EventScript_Boy_NotRequestedMon)
+
+            copyvar(VAR_0x8004, VAR_0x8008)
+            special(CreateInGameTradePokemon)
+            special(DoInGameTradeScene)
+            waitstate
+
+            addvar(VAR_MAGIKARPS_TRADED, 1)
+            call(PacifidlogTown_House1_EventScript_Boy_ThankYou)
+        }
+    }
+
+    msgbox(format("Come back once you are willing to trade."))
+
+    release 
+    end
+}
+
+script PacifidlogTown_House1_EventScript_Boy_ThankYou {
+    setvar(VAR_0x8008, INGAME_TRADE_EEVEE)
+    copyvar(VAR_0x8004, VAR_0x8008)
+    specialvar(VAR_0x8009, GetInGameTradeSpeciesInfo)
+    msgbox(format("Thank you for trading me a {STR_VAR_1}."))
+
+    calculateMagikarpReward
+    if(var(VAR_TEMP_1) == 0)
+    {
+        message(format("Oh you have traded a good haul of {STR_VAR_1}. Here take this.\p"))
+        waitmessage
+        playfanfare(MUS_OBTAIN_ITEM)
+        giveitem(ITEM_PEARL_STRING)
+        waitfanfare
+    }
+
+    release
+    end
+}
+
+script PacifidlogTown_House1_EventScript_Boy_NotRequestedMon {
+    setvar(VAR_0x8008, INGAME_TRADE_EEVEE)
+    copyvar(VAR_0x8004, VAR_0x8008)
+    specialvar(VAR_0x8009, GetInGameTradeSpeciesInfo)
+    msgbox(format("You know... That is not a {STR_VAR_1}.\pCome back once you are willing to trade for real."))
+    release
+    end
+}
