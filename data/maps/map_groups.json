@@ -671,7 +671,9 @@
   ],
   "gMapGroup_SacredCityIndoor": [
     "SacredCity_House1",
-    "SacredCity_House2"
+    "SacredCity_House2",
+    "SacredCity_PokemonCenter",
+    "SacredCity_PokemonMart"
   ],
   "gMapGroup_SacredMountainDungeon": [
     "SacredMountain_1F",

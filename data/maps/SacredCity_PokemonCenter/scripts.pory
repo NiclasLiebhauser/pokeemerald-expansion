@@ -1,0 +1,20 @@
+const LOCALID_NURSE = 1
+
+mapscripts SacredCity_PokemonCenter_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: PacifidlogTown_PokemonCenter_1F_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script SacredCity_PokemonCenter_1F_OnTransition {
+    setrespawn(HEAL_LOCATION_SACRED_CITY)
+    end
+}
+
+script SacredCity_PokemonCenter_1F_EventScript_Nurse {
+    setvar(VAR_0x800B, LOCALID_NURSE)
+    call(Common_EventScript_PkmnCenterNurse)
+    waitmessage
+	waitbuttonpress
+	release
+	end
+}

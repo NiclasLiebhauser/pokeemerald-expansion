@@ -4880,6 +4880,26 @@
       "secondary_tileset": "gTileset_Sootopolis",
       "border_filepath": "data/layouts/SacredMountain_3F_Outside/border.bin",
       "blockdata_filepath": "data/layouts/SacredMountain_3F_Outside/map.bin"
+    },
+    {
+      "id": "LAYOUT_SACRED_CITY_POKEMON_CENTER",
+      "name": "SacredCity_PokemonCenter_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/SacredCity_PokemonCenter/border.bin",
+      "blockdata_filepath": "data/layouts/SacredCity_PokemonCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_SACRED_CITY_POKEMON_MART",
+      "name": "SacredCity_PokemonMart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/SacredCity_PokemonMart/border.bin",
+      "blockdata_filepath": "data/layouts/SacredCity_PokemonMart/map.bin"
     }
   ]
 }

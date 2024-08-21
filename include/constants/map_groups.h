@@ -630,8 +630,10 @@
 #define MAP_AQUAS_HIDEOUT_SUBMARINE     (3 | (37 << 8))
 
 // gMapGroup_SacredCityIndoor
-#define MAP_SACRED_CITY_HOUSE1 (0 | (38 << 8))
-#define MAP_SACRED_CITY_HOUSE2 (1 | (38 << 8))
+#define MAP_SACRED_CITY_HOUSE1         (0 | (38 << 8))
+#define MAP_SACRED_CITY_HOUSE2         (1 | (38 << 8))
+#define MAP_SACRED_CITY_POKEMON_CENTER (2 | (38 << 8))
+#define MAP_SACRED_CITY_POKEMON_MART   (3 | (38 << 8))
 
 // gMapGroup_SacredMountainDungeon
 #define MAP_SACRED_MOUNTAIN_1F         (0 | (39 << 8))

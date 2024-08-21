@@ -1210,3 +1210,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/MagmaIsland_House2/scripts.inc"
 
 	.include "data/maps/SacredMountain_3F_Outside/scripts.inc"
+
+	.include "data/maps/SacredCity_PokemonCenter/scripts.inc"
+
+	.include "data/maps/SacredCity_PokemonMart/scripts.inc"
