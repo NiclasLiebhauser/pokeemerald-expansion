@@ -11877,3 +11877,607 @@ static const struct TrainerMon sParty_Maxie_Magma_HQ[] = {
     .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
+
+//ToSolve
+static const struct TrainerMon sParty_Giovanni[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Magma_Grunt_HQ_Strength[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Swimmer_Route202_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Swimmer_Route202_2[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Tuber_Route203_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Expert_Route203_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_HexManiac_Route203_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_BlackBelt_Route203_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Hiker_Route203_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Swimmer_Route203_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Swimmer_Route203_2[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Swimmer_Route203_3[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Swimmer_Route204_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Fisherman_MagmaIsland_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Tuber_MagmaIsland_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Tuber_MagmaIsland_2[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_BugCatcher_MagmaIsland_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Hiker_MagmaIsland_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Lass_MagmaIsland_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Swimmer_MagmaIsland_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_MagmaGrunt_MagmaHQ_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_MagmaGrunt_MagmaHQ_2[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_MagmaGrunt_MagmaHQ_3[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_MagmaGrunt_MagmaHQ_4[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_1F_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_1F_2[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_1F_3[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_1F_4[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_1F_5[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_2F_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_2F_2[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_2F_3[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_AquaGrunt_AquaHQ_1F_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_AquaGrunt_AquaHQ_1F_2[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_AquaGrunt_AquaHQ_1F_3[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_AquaGrunt_AquaHQ_1F_4[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_AquaGrunt_AquaHQ_2F_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_AquaGrunt_AquaHQ_2F_2[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_AquaGrunt_AquaHQ_2F_3[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_AquaGrunt_AquaHQ_2F_4[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_RichBoy_SacredIsland_North_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Maniac_SacredIsland_North_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Camper_SacredIsland_North_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Hiker_SacredIsland_North_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_BattleGirl_SacredIsland_East_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Fisherman_SacredIsland_East_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Picnicker_SacredIsland_East_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_BirdKeeper_SacredIsland_East_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Lady_SacredIsland_East_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_HexManiac_Sacred_City_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Psychic_Sacred_City_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Psychic_Sacred_City_2[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Anabel_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Anabel_2[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_1F_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_1F_2[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_1F_3[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_1F_4[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_2F_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_2F_2[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_2F_3[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_2F_4[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+
+//ToSolve
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_3F_1[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_3F_2[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_3F_3[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_3F_4[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_Arceus[] = {
+    {
+    .lvl = 12,
+    .species = SPECIES_POOCHYENA,
+    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};

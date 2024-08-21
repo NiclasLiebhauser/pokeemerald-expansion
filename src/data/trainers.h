@@ -10373,7 +10373,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Archie_Aqua_HQ),
+        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
     },
         [TRAINER_GIOVANNI_SACRED_MOUNTAIN] =
     {
@@ -10386,7 +10386,7 @@ const struct Trainer gTrainers[] = {
         .mugshotEnabled = TRUE,
         .mugshotColor = MUGSHOT_COLOR_PURPLE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Giovanni),
     },
         [TRAINER_MAGMA_GRUNT_HQ_1] =
     {
@@ -10397,7 +10397,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Magma_Grunt_HQ_Strength),
     },
         [TRAINER_SWIMMER_ROUTE_202_1] =
     {
@@ -10408,7 +10408,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Swimmer_Route202_1),
     },
         [TRAINER_SWIMMER_ROUTE_202_2] =
     {
@@ -10419,7 +10419,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Swimmer_Route202_2),
     },
         [TRAINER_TUBER_ROUTE_203_1] =
     {
@@ -10430,7 +10430,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Tuber_Route203_1),
     },
         [TRAINER_EXPERT_ROUTE_203_1] =
     {
@@ -10441,7 +10441,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Expert_Route203_1),
     },
         [TRAINER_HEX_MANIAC_ROUTE_203_1] =
     {
@@ -10452,7 +10452,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_HexManiac_Route203_1),
     },
         [TRAINER_BLACK_BELT_ROUTE_203_1] =
     {
@@ -10463,7 +10463,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_BlackBelt_Route203_1),
     },
         [TRAINER_HIKER_ROUTE_203_1] =
     {
@@ -10474,7 +10474,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Hiker_Route203_1),
     },
         [TRAINER_SWIMMER_ROUTE_203_1] =
     {
@@ -10485,7 +10485,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Swimmer_Route203_1),
     },
         [TRAINER_SWIMMER_ROUTE_203_2] =
     {
@@ -10496,7 +10496,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Swimmer_Route203_2),
     },
         [TRAINER_SWIMMER_ROUTE_203_3] =
     {
@@ -10507,7 +10507,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Swimmer_Route203_3),
     },
         [TRAINER_SWIMMER_ROUTE_204_1] =
     {
@@ -10518,7 +10518,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Swimmer_Route204_1),
     },
         [TRAINER_FISHERMAN_MAGMAISLAND_1] =
     {
@@ -10529,7 +10529,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Fisherman_MagmaIsland_1),
     },
         [TRAINER_TUBER_MAGMAISLAND_1] =
     {
@@ -10540,7 +10540,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Tuber_MagmaIsland_1),
     },
         [TRAINER_TUBER_MAGMAISLAND_2] =
     {
@@ -10551,7 +10551,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Tuber_MagmaIsland_2),
     },
         [TRAINER_BUG_CATCHER_MAGMAISLAND_1] =
     {
@@ -10562,7 +10562,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_BugCatcher_MagmaIsland_1),
     },
         [TRAINER_HIKER_MAGMAISLAND_1] =
     {
@@ -10573,7 +10573,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Hiker_MagmaIsland_1),
     },
         [TRAINER_LASS_MAGMAISLAND_1] =
     {
@@ -10584,7 +10584,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Lass_MagmaIsland_1),
     },
         [TRAINER_SWIMMER_MAGMAISLAND_1] =
     {
@@ -10595,7 +10595,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Swimmer_MagmaIsland_1),
     },
         [TRAINER_MAGMA_GRUNT_MAGMAHQ_1] =
     {
@@ -10606,7 +10606,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_MagmaGrunt_MagmaHQ_1),
     },
         [TRAINER_MAGMA_GRUNT_MAGMAHQ_2] =
     {
@@ -10617,7 +10617,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_MagmaGrunt_MagmaHQ_2),
     },
         [TRAINER_MAGMA_GRUNT_MAGMAHQ_3] =
     {
@@ -10628,7 +10628,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_MagmaGrunt_MagmaHQ_3),
     },
         [TRAINER_MAGMA_GRUNT_MAGMAHQ_4] =
     {
@@ -10639,7 +10639,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_MagmaGrunt_MagmaHQ_4),
     },
         [TRAINER_MAGMA_GRUNT_MAGMACAVE_1F_1] =
     {
@@ -10650,7 +10650,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_MagmaGrunt_MagmaCave_1F_1),
     },
         [TRAINER_MAGMA_GRUNT_MAGMACAVE_1F_2] =
     {
@@ -10661,7 +10661,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_MagmaGrunt_MagmaCave_1F_2),
     },
         [TRAINER_MAGMA_GRUNT_MAGMACAVE_1F_3] =
     {
@@ -10672,7 +10672,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_MagmaGrunt_MagmaCave_1F_3),
     },
         [TRAINER_MAGMA_GRUNT_MAGMACAVE_1F_4] =
     {
@@ -10683,7 +10683,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_MagmaGrunt_MagmaCave_1F_4),
     },
         [TRAINER_MAGMA_GRUNT_MAGMACAVE_1F_5] =
     {
@@ -10694,7 +10694,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_MagmaGrunt_MagmaCave_1F_5),
     },
         [TRAINER_MAGMA_GRUNT_MAGMACAVE_2F_1] =
     {
@@ -10705,7 +10705,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_MagmaGrunt_MagmaCave_2F_1),
     },
         [TRAINER_MAGMA_GRUNT_MAGMACAVE_2F_2] =
     {
@@ -10716,7 +10716,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_MagmaGrunt_MagmaCave_2F_2),
     },
         [TRAINER_MAGMA_GRUNT_MAGMACAVE_2F_3] =
     {
@@ -10727,7 +10727,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_MagmaGrunt_MagmaCave_2F_3),
     },
         [TRAINER_AQUA_GRUNT_AQUAHQ_1F_1] =
     {
@@ -10738,7 +10738,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_AquaGrunt_AquaHQ_1F_1),
     },
         [TRAINER_AQUA_GRUNT_AQUAHQ_1F_2] =
     {
@@ -10749,7 +10749,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_AquaGrunt_AquaHQ_1F_2),
     },
         [TRAINER_AQUA_GRUNT_AQUAHQ_1F_3] =
     {
@@ -10760,7 +10760,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_AquaGrunt_AquaHQ_1F_3),
     },
         [TRAINER_AQUA_GRUNT_AQUAHQ_1F_4] =
     {
@@ -10771,7 +10771,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_AquaGrunt_AquaHQ_1F_4),
     },
         [TRAINER_AQUA_GRUNT_AQUAHQ_2F_1] =
     {
@@ -10782,7 +10782,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_AquaGrunt_AquaHQ_2F_1),
     },
         [TRAINER_AQUA_GRUNT_AQUAHQ_2F_2] =
     {
@@ -10793,7 +10793,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_AquaGrunt_AquaHQ_2F_2),
     },
         [TRAINER_AQUA_GRUNT_AQUAHQ_2F_3] =
     {
@@ -10804,7 +10804,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_AquaGrunt_AquaHQ_2F_3),
     },
         [TRAINER_AQUA_GRUNT_AQUAHQ_2F_4] =
     {
@@ -10815,7 +10815,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_AquaGrunt_AquaHQ_2F_4),
     },
         [TRAINER_RICH_BOY_SI_NORTH_1] =
     {
@@ -10826,7 +10826,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_RichBoy_SacredIsland_North_1),
     },
         [TRAINER_MANIAC_SI_NORTH_1] =
     {
@@ -10837,7 +10837,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Maniac_SacredIsland_North_1),
     },
         [TRAINER_CAMPER_SI_NORTH_1] =
     {
@@ -10848,7 +10848,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Camper_SacredIsland_North_1),
     },
         [TRAINER_HIKER_SI_NORTH_1] =
     {
@@ -10859,7 +10859,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Hiker_SacredIsland_North_1),
     },
         [TRAINER_BATTLE_GIRL_SI_EAST_1] =
     {
@@ -10870,7 +10870,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_BattleGirl_SacredIsland_East_1),
     },
         [TRAINER_FISHERMAN_SI_EAST_1] =
     {
@@ -10881,7 +10881,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Fisherman_SacredIsland_East_1),
     },
         [TRAINER_PICNICKER_SI_EAST_1] =
     {
@@ -10892,7 +10892,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Picnicker_SacredIsland_East_1),
     },
         [TRAINER_BIRD_KEEPER_SI_EAST_1] =
     {
@@ -10903,7 +10903,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_BirdKeeper_SacredIsland_East_1),
     },
         [TRAINER_LADY_SI_EAST_1] =
     {
@@ -10914,7 +10914,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Lady_SacredIsland_East_1),
     },
         [TRAINER_HEX_MANIAC_SACRED_CITY_1] =
     {
@@ -10925,7 +10925,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_HexManiac_Sacred_City_1),
     },
         [TRAINER_PSYCHIC_SACRED_CITY_1] =
     {
@@ -10936,7 +10936,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Psychic_Sacred_City_1),
     },
         [TRAINER_PSYCHIC_SACRED_CITY_2] =
     {
@@ -10947,7 +10947,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Psychic_Sacred_City_2),
     },
         [TRAINER_ANABEL_1] =
     {
@@ -10960,7 +10960,7 @@ const struct Trainer gTrainers[] = {
         .mugshotEnabled = TRUE,
         .mugshotColor = MUGSHOT_COLOR_PURPLE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Anabel_1),
     },
         [TRAINER_ANABEL_2] =
     {
@@ -10973,7 +10973,7 @@ const struct Trainer gTrainers[] = {
         .mugshotEnabled = TRUE,
         .mugshotColor = MUGSHOT_COLOR_PURPLE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Anabel_2),
     },
         [TRAINER_ROCKET_GRUNT_SM_1F_1] =
     {
@@ -10984,7 +10984,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_RocketGrunt_SacredMountain_1F_1),
     },
         [TRAINER_ROCKET_GRUNT_SM_1F_2] =
     {
@@ -10995,7 +10995,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_RocketGrunt_SacredMountain_1F_2),
     },
         [TRAINER_ROCKET_GRUNT_SM_1F_3] =
     {
@@ -11006,7 +11006,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_RocketGrunt_SacredMountain_1F_3),
     },
         [TRAINER_ROCKET_GRUNT_SM_1F_4] =
     {
@@ -11017,7 +11017,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_RocketGrunt_SacredMountain_1F_4),
     },
         [TRAINER_ROCKET_GRUNT_SM_2F_1] =
     {
@@ -11028,7 +11028,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_RocketGrunt_SacredMountain_2F_1),
     },
         [TRAINER_ROCKET_GRUNT_SM_2F_2] =
     {
@@ -11039,7 +11039,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_RocketGrunt_SacredMountain_2F_2),
     },
         [TRAINER_ROCKET_GRUNT_SM_2F_3] =
     {
@@ -11050,7 +11050,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_RocketGrunt_SacredMountain_2F_3),
     },
         [TRAINER_ROCKET_GRUNT_SM_2F_4] =
     {
@@ -11061,7 +11061,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_RocketGrunt_SacredMountain_2F_4),
     },
         [TRAINER_ROCKET_GRUNT_SM_3F_1] =
     {
@@ -11072,7 +11072,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_RocketGrunt_SacredMountain_3F_1),
     },
         [TRAINER_ROCKET_GRUNT_SM_3F_2] =
     {
@@ -11083,7 +11083,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_RocketGrunt_SacredMountain_3F_2),
     },
         [TRAINER_ROCKET_GRUNT_SM_3F_3] =
     {
@@ -11094,7 +11094,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_RocketGrunt_SacredMountain_3F_3),
     },
         [TRAINER_ROCKET_GRUNT_SM_3F_4] =
     {
@@ -11105,7 +11105,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_RocketGrunt_SacredMountain_3F_4),
     },
         [TRAINER_ARCEUS] =
     {
@@ -11116,6 +11116,6 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_Maxie_Magma_HQ),
+        .party = TRAINER_PARTY(sParty_Arceus),
     },
 };
