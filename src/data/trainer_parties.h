@@ -11805,60 +11805,101 @@ static const struct TrainerMon sParty_MayLinkPlaceholder[] = {
     }
 };
 
-//ToSolve
 static const struct TrainerMon sParty_AquaGrunt_Route203Cave1[] = {
     {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 23,
+    .species = SPECIES_CARVANHA,
+    },
+    {
+    .lvl = 23,
+    .species = SPECIES_NOSEPASS,
     }
 };
 
-//ToSolve
 static const struct TrainerMon sParty_AquaGrunt_Route203Cave2[] = {
     {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 23,
+    .species = SPECIES_GEODUDE,
+    },
+    {
+    .lvl = 23,
+    .species = SPECIES_MEOWTH_ALOLAN,
     }
 };
 
-//ToSolve
 static const struct TrainerMon sParty_AquaGrunt_Route203Cave3[] = {
     {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 23,
+    .species = SPECIES_MIGHTYENA,
+    },
+    {
+    .lvl = 23,
+    .species = SPECIES_SHELLDER,
+    },
+    {
+    .lvl = 25,
+    .species = SPECIES_DUSKULL,
     }
 };
 
-//ToSolve
 static const struct TrainerMon sParty_AquaGrunt_Route203Cave4[] = {
     {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 24,
+    .species = SPECIES_BEEDRILL,
+    },
+    {
+    .lvl = 24,
+    .species = SPECIES_PIDGEOTTO,
     }
 };
 
-//ToSolve
 static const struct TrainerMon sParty_AquaGrunt_Route203Cave5[] = {
     {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 24,
+    .species = SPECIES_KABUTO,
+    },
+    {
+    .lvl = 24,
+    .species = SPECIES_FINNEON,
     }
 };
 
-//ToSolve
 static const struct TrainerMon sParty_AquaGrunt_Route203Cave6[] = {
     {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 24,
+    .species = SPECIES_DIGLETT,
+    },
+    {
+    .lvl = 24,
+    .species = SPECIES_ABSOL,
     }
 };
 
-//ToSolve
 static const struct TrainerMon sParty_AquaAdmin_Route203Cave[] = {
     {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    }
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 26,
+    .species = SPECIES_HOUNDOOM,
+    .ability = ABILITY_FLASH_FIRE,
+    .heldItem = ITEM_CHARCOAL,
+    .moves = { MOVE_FIRE_FANG, MOVE_BITE, MOVE_BODY_SLAM, MOVE_SHADOW_BALL }
+    },
+    {
+    .iv = TRAINER_PARTY_IVS(31, 31, 30, 30, 31, 30),
+    .lvl = 27,
+    .species = SPECIES_ESPEON,
+    .ability = ABILITY_MAGIC_BOUNCE,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = { MOVE_CONFUSION, MOVE_QUICK_ATTACK, MOVE_HIDDEN_POWER, MOVE_MAGICAL_LEAF },
+    },
+    {
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 28,
+    .species = SPECIES_SNOVER,
+    .ability = ABILITY_SNOW_WARNING,
+    .heldItem = ITEM_ICY_ROCK,
+    .moves = { MOVE_MEGA_DRAIN, MOVE_PROTECT, MOVE_ICE_SHARD, MOVE_LEECH_SEED }
+    },
 };
 
 //ToSolve
@@ -11897,456 +11938,6 @@ static const struct TrainerMon sParty_Magma_Grunt_HQ_Strength[] = {
 };
 
 //ToSolve
-static const struct TrainerMon sParty_Swimmer_Route202_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Swimmer_Route202_2[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Tuber_Route203_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Expert_Route203_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_HexManiac_Route203_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_BlackBelt_Route203_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Hiker_Route203_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Swimmer_Route203_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Swimmer_Route203_2[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Swimmer_Route203_3[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Swimmer_Route204_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Fisherman_MagmaIsland_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Tuber_MagmaIsland_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Tuber_MagmaIsland_2[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_BugCatcher_MagmaIsland_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Hiker_MagmaIsland_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Lass_MagmaIsland_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Swimmer_MagmaIsland_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_MagmaGrunt_MagmaHQ_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_MagmaGrunt_MagmaHQ_2[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_MagmaGrunt_MagmaHQ_3[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_MagmaGrunt_MagmaHQ_4[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_1F_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_1F_2[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_1F_3[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_1F_4[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_1F_5[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_2F_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_2F_2[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_2F_3[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_AquaGrunt_AquaHQ_1F_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_AquaGrunt_AquaHQ_1F_2[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_AquaGrunt_AquaHQ_1F_3[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_AquaGrunt_AquaHQ_1F_4[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_AquaGrunt_AquaHQ_2F_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_AquaGrunt_AquaHQ_2F_2[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_AquaGrunt_AquaHQ_2F_3[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_AquaGrunt_AquaHQ_2F_4[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_RichBoy_SacredIsland_North_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Maniac_SacredIsland_North_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Camper_SacredIsland_North_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Hiker_SacredIsland_North_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_BattleGirl_SacredIsland_East_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Fisherman_SacredIsland_East_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Picnicker_SacredIsland_East_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_BirdKeeper_SacredIsland_East_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Lady_SacredIsland_East_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_HexManiac_Sacred_City_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Psychic_Sacred_City_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_Psychic_Sacred_City_2[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
 static const struct TrainerMon sParty_Anabel_1[] = {
     {
     .lvl = 12,
@@ -12365,119 +11956,1044 @@ static const struct TrainerMon sParty_Anabel_2[] = {
 };
 
 //ToSolve
-static const struct TrainerMon sParty_RocketGrunt_SacredMountain_1F_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_RocketGrunt_SacredMountain_1F_2[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_RocketGrunt_SacredMountain_1F_3[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_RocketGrunt_SacredMountain_1F_4[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_RocketGrunt_SacredMountain_2F_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_RocketGrunt_SacredMountain_2F_2[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_RocketGrunt_SacredMountain_2F_3[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_RocketGrunt_SacredMountain_2F_4[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-
-//ToSolve
-static const struct TrainerMon sParty_RocketGrunt_SacredMountain_3F_1[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_RocketGrunt_SacredMountain_3F_2[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_RocketGrunt_SacredMountain_3F_3[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
-static const struct TrainerMon sParty_RocketGrunt_SacredMountain_3F_4[] = {
-    {
-    .lvl = 12,
-    .species = SPECIES_POOCHYENA,
-    .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
-    }
-};
-
-//ToSolve
 static const struct TrainerMon sParty_Arceus[] = {
     {
     .lvl = 12,
     .species = SPECIES_POOCHYENA,
     .moves = { MOVE_BITE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    }
+};
+
+static const struct TrainerMon sParty_Swimmer_Route202_1[] = {
+    {
+    .lvl = 21,
+    .species = SPECIES_GULPIN,
+    },
+    {
+    .lvl = 22,
+    .species = SPECIES_LARVITAR,
+    }
+};
+
+static const struct TrainerMon sParty_Swimmer_Route202_2[] = {
+    {
+    .lvl = 21,
+    .species = SPECIES_TREECKO,
+    },
+    {
+    .lvl = 22,
+    .species = SPECIES_RALTS,
+    }
+};
+
+static const struct TrainerMon sParty_Tuber_Route203_1[] = {
+    {
+    .lvl = 22,
+    .species = SPECIES_MANTYKE,
+    },
+    {
+    .lvl = 23,
+    .species = SPECIES_GLACEON,
+    },
+    {
+    .lvl = 23,
+    .species = SPECIES_RIOLU,
+    }
+};
+
+static const struct TrainerMon sParty_Expert_Route203_1[] = {
+    {
+    .lvl = 22,
+    .species = SPECIES_MISDREAVUS,
+    },
+    {
+    .lvl = 23,
+    .species = SPECIES_COMBUSKEN,
+    },
+    {
+    .lvl = 23,
+    .species = SPECIES_SCYTHER,
+    }
+};
+
+static const struct TrainerMon sParty_HexManiac_Route203_1[] = {
+    {
+    .lvl = 24,
+    .species = SPECIES_GASTLY,
+    },
+    {
+    .lvl = 23,
+    .species = SPECIES_TAUROS,
+    },
+    {
+    .lvl = 23,
+    .species = SPECIES_NATU,
+    }
+};
+
+static const struct TrainerMon sParty_BlackBelt_Route203_1[] = {
+    {
+    .lvl = 23,
+    .species = SPECIES_HITMONCHAN,
+    },
+    {
+    .lvl = 23,
+    .species = SPECIES_HITMONLEE,
+    },
+    {
+    .lvl = 25,
+    .species = SPECIES_HITMONTOP,
+    }
+};
+
+static const struct TrainerMon sParty_Hiker_Route203_1[] = {
+    {
+    .lvl = 23,
+    .species = SPECIES_ONIX,
+    },
+    {
+    .lvl = 23,
+    .species = SPECIES_AERODACTYL,
+    },
+    {
+    .lvl = 25,
+    .species = SPECIES_DUSTOX,
+    }
+};
+
+static const struct TrainerMon sParty_Swimmer_Route203_1[] = {
+    {
+    .lvl = 23,
+    .species = SPECIES_PIKACHU,
+    },
+    {
+    .lvl = 23,
+    .species = SPECIES_SQUIRTLE,
+    },
+    {
+    .lvl = 25,
+    .species = SPECIES_GOLBAT,
+    }
+};
+
+static const struct TrainerMon sParty_Swimmer_Route203_2[] = {
+    {
+    .lvl = 23,
+    .species = SPECIES_MAGNEMITE,
+    },
+    {
+    .lvl = 23,
+    .species = SPECIES_DODUO,
+    },
+    {
+    .lvl = 23,
+    .species = SPECIES_SEEL,
+    },
+    {
+    .lvl = 23,
+    .species = SPECIES_MUDKIP,
+    }
+};
+
+static const struct TrainerMon sParty_Swimmer_Route203_3[] = {
+    {
+    .lvl = 23,
+    .species = SPECIES_MAGNEMITE,
+    },
+    {
+    .lvl = 23,
+    .species = SPECIES_DODUO,
+    },
+    {
+    .lvl = 23,
+    .species = SPECIES_SEEL,
+    },
+    {
+    .lvl = 23,
+    .species = SPECIES_MUDKIP,
+    }
+};
+
+static const struct TrainerMon sParty_Swimmer_Route204_1[] = {
+    {
+    .lvl = 24,
+    .species = SPECIES_POOCHYENA,
+    },
+    {
+    .lvl = 25,
+    .species = SPECIES_SWELLOW,
+    }
+};
+
+static const struct TrainerMon sParty_Fisherman_MagmaIsland_1[] = {
+    {
+    .lvl = 23,
+    .species = SPECIES_MAGIKARP,
+    },
+    {
+    .lvl = 24,
+    .species = SPECIES_MAGIKARP,
+    },
+    {
+    .lvl = 25,
+    .species = SPECIES_GYARADOS,
+    }
+};
+
+static const struct TrainerMon sParty_Tuber_MagmaIsland_1[] = {
+    {
+    .lvl = 26,
+    .species = SPECIES_MISMAGIUS,
+    },
+    {
+    .lvl = 26,
+    .species = SPECIES_KIRLIA,
+    },
+};
+
+static const struct TrainerMon sParty_Tuber_MagmaIsland_2[] = {
+    {
+    .lvl = 26,
+    .species = SPECIES_AXEW,
+    },
+    {
+    .lvl = 26,
+    .species = SPECIES_HONEDGE,
+    }
+};
+
+static const struct TrainerMon sParty_BugCatcher_MagmaIsland_1[] = {
+    {
+    .lvl = 23,
+    .species = SPECIES_MAGIKARP,
+    },
+    {
+    .lvl = 24,
+    .species = SPECIES_MAGIKARP,
+    },
+    {
+    .lvl = 25,
+    .species = SPECIES_GYARADOS,
+    }
+};
+
+static const struct TrainerMon sParty_Hiker_MagmaIsland_1[] = {
+    {
+    .lvl = 26,
+    .species = SPECIES_WEEPINBELL,
+    },
+    {
+    .lvl = 26,
+    .species = SPECIES_TENTACOOL,
+    },
+    {
+    .lvl = 27,
+    .species = SPECIES_BAGON,
+    }
+};
+
+static const struct TrainerMon sParty_Lass_MagmaIsland_1[] = {
+    {
+    .lvl = 26,
+    .species = SPECIES_PARASECT,
+    },
+    {
+    .lvl = 26,
+    .species = SPECIES_GOLDEEN,
+    },
+    {
+    .lvl = 27,
+    .species = SPECIES_DRIFLOON,
+    }
+};
+
+static const struct TrainerMon sParty_Swimmer_MagmaIsland_1[] = {
+    {
+    .lvl = 27,
+    .species = SPECIES_PARASECT,
+    },
+    {
+    .lvl = 27,
+    .species = SPECIES_GOLDEEN,
+    },
+    {
+    .lvl = 28,
+    .species = SPECIES_DRIFLOON,
+    }
+};
+
+static const struct TrainerMon sParty_MagmaGrunt_MagmaHQ_1[] = {
+    {
+    .lvl = 30,
+    .species = SPECIES_GROTLE,
+    },
+    {
+    .lvl = 30,
+    .species = SPECIES_VIGOROTH,
+    },
+    {
+    .lvl = 31,
+    .species = SPECIES_AMPHAROS,
+    }
+};
+
+static const struct TrainerMon sParty_MagmaGrunt_MagmaHQ_2[] = {
+    {
+    .lvl = 30,
+    .species = SPECIES_GROTLE,
+    },
+    {
+    .lvl = 30,
+    .species = SPECIES_VIGOROTH,
+    },
+    {
+    .lvl = 31,
+    .species = SPECIES_AMPHAROS,
+    }
+};
+
+static const struct TrainerMon sParty_MagmaGrunt_MagmaHQ_3[] = {
+    {
+    .lvl = 30,
+    .species = SPECIES_HUNTAIL,
+    },
+    {
+    .lvl = 30,
+    .species = SPECIES_LUXRAY,
+    },
+    {
+    .lvl = 32,
+    .species = SPECIES_SNORLAX,
+    }
+};
+
+static const struct TrainerMon sParty_MagmaGrunt_MagmaHQ_4[] = {
+    {
+    .lvl = 30,
+    .species = SPECIES_CROAGUNK,
+    },
+    {
+    .lvl = 30,
+    .species = SPECIES_LUCARIO,
+    },
+    {
+    .lvl = 33,
+    .species = SPECIES_BLISSEY,
+    }
+};
+
+static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_1F_1[] = {
+    {
+    .lvl = 32,
+    .species = SPECIES_ARBOK,
+    },
+    {
+    .lvl = 32,
+    .species = SPECIES_LUCARIO,
+    },
+    {
+    .lvl = 34,
+    .species = SPECIES_CHARMELEON,
+    }
+};
+
+static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_1F_2[] = {
+    {
+    .lvl = 32,
+    .species = SPECIES_ARBOK,
+    },
+    {
+    .lvl = 32,
+    .species = SPECIES_LUCARIO,
+    },
+    {
+    .lvl = 34,
+    .species = SPECIES_CHARMELEON,
+    }
+};
+
+static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_1F_3[] = {
+    {
+    .lvl = 32,
+    .species = SPECIES_SEALEO,
+    },
+    {
+    .lvl = 32,
+    .species = SPECIES_GRIMER,
+    },
+    {
+    .lvl = 34,
+    .species = SPECIES_VESPIQUEN,
+    .gender = TRAINER_MON_FEMALE
+    }
+};
+
+static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_1F_4[] = {
+    {
+    .lvl = 32,
+    .species = SPECIES_SEALEO,
+    },
+    {
+    .lvl = 32,
+    .species = SPECIES_GRIMER,
+    },
+    {
+    .lvl = 34,
+    .species = SPECIES_VESPIQUEN,
+    .gender = TRAINER_MON_FEMALE
+    }
+};
+
+static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_1F_5[] = {
+    {
+    .lvl = 32,
+    .species = SPECIES_MILTANK,
+    },
+    {
+    .lvl = 32,
+    .species = SPECIES_OCTILLERY,
+    },
+    {
+    .lvl = 34,
+    .species = SPECIES_SKARMORY,
+    }
+};
+
+static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_2F_1[] = {
+    {
+    .lvl = 34,
+    .species = SPECIES_DELCATTY,
+    },
+    {
+    .lvl = 34,
+    .species = SPECIES_LAIRON,
+    },
+    {
+    .lvl = 36,
+    .species = SPECIES_SWAMPERT,
+    }
+};
+
+static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_2F_2[] = {
+    {
+    .lvl = 34,
+    .species = SPECIES_KOFFING,
+    },
+    {
+    .lvl = 34,
+    .species = SPECIES_TORKOAL,
+    },
+    {
+    .lvl = 37,
+    .species = SPECIES_MEDICHAM,
+    }
+};
+
+static const struct TrainerMon sParty_MagmaGrunt_MagmaCave_2F_3[] = {
+    {
+    .lvl = 34,
+    .species = SPECIES_MAROWAK_ALOLAN,
+    },
+    {
+    .lvl = 34,
+    .species = SPECIES_LICKITUNG,
+    },
+    {
+    .lvl = 36,
+    .species = SPECIES_VIBRAVA,
+    }
+};
+
+static const struct TrainerMon sParty_AquaGrunt_AquaHQ_1F_1[] = {
+    {
+    .lvl = 40,
+    .species = SPECIES_VAPOREON,
+    },
+    {
+    .lvl = 40,
+    .species = SPECIES_GRANBULL,
+    },
+    {
+    .lvl = 41,
+    .species = SPECIES_FURRET,
+    },
+    {
+    .lvl = 42,
+    .species = SPECIES_FORRETRESS,
+    }
+};
+
+static const struct TrainerMon sParty_AquaGrunt_AquaHQ_1F_2[] = {
+    {
+    .lvl = 40,
+    .species = SPECIES_WEAVILE,
+    },
+    {
+    .lvl = 40,
+    .species = SPECIES_URSARING,
+    },
+    {
+    .lvl = 41,
+    .species = SPECIES_GOLEM,
+    },
+    {
+    .lvl = 42,
+    .species = SPECIES_RAPIDASH_GALARIAN,
+    }
+};
+
+static const struct TrainerMon sParty_AquaGrunt_AquaHQ_1F_3[] = {
+    {
+    .lvl = 40,
+    .species = SPECIES_SLOWPOKE,
+    },
+    {
+    .lvl = 40,
+    .species = SPECIES_BASTIODON,
+    },
+    {
+    .lvl = 41,
+    .species = SPECIES_SKUNTANK,
+    },
+    {
+    .lvl = 42,
+    .species = SPECIES_BUTTERFREE,
+    }
+};
+
+static const struct TrainerMon sParty_AquaGrunt_AquaHQ_1F_4[] = {
+    {
+    .lvl = 40,
+    .species = SPECIES_BLASTOISE,
+    },
+    {
+    .lvl = 40,
+    .species = SPECIES_BIBAREL,
+    },
+    {
+    .lvl = 41,
+    .species = SPECIES_NIDOQUEEN,
+    },
+    {
+    .lvl = 42,
+    .species = SPECIES_DITTO,
+    }
+};
+
+static const struct TrainerMon sParty_AquaGrunt_AquaHQ_2F_1[] = {
+    {
+    .lvl = 42,
+    .species = SPECIES_BLASTOISE,
+    },
+    {
+    .lvl = 42,
+    .species = SPECIES_BIBAREL,
+    },
+    {
+    .lvl = 43,
+    .species = SPECIES_NIDOQUEEN,
+    },
+    {
+    .lvl = 44,
+    .species = SPECIES_DITTO,
+    }
+};
+
+static const struct TrainerMon sParty_AquaGrunt_AquaHQ_2F_2[] = {
+    {
+    .lvl = 42,
+    .species = SPECIES_PORYGON,
+    },
+    {
+    .lvl = 42,
+    .species = SPECIES_ARIADOS,
+    },
+    {
+    .lvl = 43,
+    .species = SPECIES_SHIFTRY,
+    },
+    {
+    .lvl = 44,
+    .species = SPECIES_PELIPPER,
+    }
+};
+
+static const struct TrainerMon sParty_AquaGrunt_AquaHQ_2F_3[] = {
+    {
+    .lvl = 42,
+    .species = SPECIES_GLALIE,
+    },
+    {
+    .lvl = 42,
+    .species = SPECIES_STARAPTOR,
+    },
+    {
+    .lvl = 43,
+    .species = SPECIES_ALTARIA,
+    },
+    {
+    .lvl = 44,
+    .species = SPECIES_SLAKING,
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_AquaGrunt_AquaHQ_2F_4[] = {
+    {
+    .lvl = 42,
+    .species = SPECIES_GLALIE,
+    },
+    {
+    .lvl = 42,
+    .species = SPECIES_STARAPTOR,
+    },
+    {
+    .lvl = 43,
+    .species = SPECIES_ALTARIA,
+    },
+    {
+    .lvl = 44,
+    .species = SPECIES_SLAKING,
+    }
+};
+
+static const struct TrainerMon sParty_RichBoy_SacredIsland_North_1[] = {
+    {
+    .lvl = 50,
+    .species = SPECIES_MEGANIUM,
+    },
+    {
+    .lvl = 50,
+    .species = SPECIES_PIDGEOT,
+    },
+    {
+    .lvl = 51,
+    .species = SPECIES_DRAPION,
+    },
+    {
+    .lvl = 52,
+    .species = SPECIES_LUMINEON,
+    }
+};
+
+static const struct TrainerMon sParty_Maniac_SacredIsland_North_1[] = {
+    {
+    .lvl = 50,
+    .species = SPECIES_JOLTEON,
+    },
+    {
+    .lvl = 50,
+    .species = SPECIES_OMASTAR,
+    },
+    {
+    .lvl = 51,
+    .species = SPECIES_GIRAFARIG,
+    },
+    {
+    .lvl = 52,
+    .species = SPECIES_SCIZOR,
+    }
+};
+
+static const struct TrainerMon sParty_Camper_SacredIsland_North_1[] = {
+    {
+    .lvl = 50,
+    .species = SPECIES_MAGCARGO,
+    },
+    {
+    .lvl = 50,
+    .species = SPECIES_AMBIPOM,
+    },
+    {
+    .lvl = 51,
+    .species = SPECIES_HONCHKROW,
+    },
+    {
+    .lvl = 52,
+    .species = SPECIES_HERACROSS,
+    }
+};
+
+static const struct TrainerMon sParty_Hiker_SacredIsland_North_1[] = {
+    {
+    .lvl = 50,
+    .species = SPECIES_STEELIX,
+    },
+    {
+    .lvl = 50,
+    .species = SPECIES_TYPHLOSION,
+    },
+    {
+    .lvl = 51,
+    .species = SPECIES_TYRANITAR,
+    },
+    {
+    .lvl = 52,
+    .species = SPECIES_SHUCKLE,
+    }
+};
+
+static const struct TrainerMon sParty_BattleGirl_SacredIsland_East_1[] = {
+    {
+    .lvl = 52,
+    .species = SPECIES_HARIYAMA,
+    },
+    {
+    .lvl = 52,
+    .species = SPECIES_VILEPLUME,
+    },
+    {
+    .lvl = 53,
+    .species = SPECIES_DUGTRIO_ALOLAN,
+    },
+    {
+    .lvl = 54,
+    .species = SPECIES_ARCANINE,
+    }
+};
+
+static const struct TrainerMon sParty_Fisherman_SacredIsland_East_1[] = {
+    {
+    .lvl = 52,
+    .species = SPECIES_LUDICOLO,
+    },
+    {
+    .lvl = 52,
+    .species = SPECIES_HIPPOWDON,
+    },
+    {
+    .lvl = 53,
+    .species = SPECIES_SNORLAX,
+    },
+    {
+    .lvl = 54,
+    .species = SPECIES_GARDEVOIR,
+    }
+};
+
+static const struct TrainerMon sParty_Picnicker_SacredIsland_East_1[] = {
+    {
+    .lvl = 52,
+    .species = SPECIES_ABOMASNOW,
+    },
+    {
+    .lvl = 52,
+    .species = SPECIES_LEAFEON,
+    },
+    {
+    .lvl = 53,
+    .species = SPECIES_ARMALDO,
+    },
+    {
+    .lvl = 54,
+    .species = SPECIES_WAILORD,
+    }
+};
+
+static const struct TrainerMon sParty_BirdKeeper_SacredIsland_East_1[] = {
+    {
+    .lvl = 52,
+    .species = SPECIES_ABOMASNOW,
+    },
+    {
+    .lvl = 52,
+    .species = SPECIES_LEAFEON,
+    },
+    {
+    .lvl = 53,
+    .species = SPECIES_ARMALDO,
+    },
+    {
+    .lvl = 54,
+    .species = SPECIES_WAILORD,
+    }
+};
+
+static const struct TrainerMon sParty_Lady_SacredIsland_East_1[] = {
+    {
+    .lvl = 52,
+    .species = SPECIES_FLYGON,
+    },
+    {
+    .lvl = 52,
+    .species = SPECIES_ROSERADE,
+    },
+    {
+    .lvl = 53,
+    .species = SPECIES_INFERNAPE,
+    },
+    {
+    .lvl = 54,
+    .species = SPECIES_CACTURNE,
+    }
+};
+
+//ToSolve
+static const struct TrainerMon sParty_HexManiac_Sacred_City_1[] = {
+    {
+    .lvl = 52,
+    .species = SPECIES_DUSCLOPS,
+    },
+    {
+    .lvl = 52,
+    .species = SPECIES_MANECTRIC,
+    },
+    {
+    .lvl = 53,
+    .species = SPECIES_AGGRON,
+    },
+    {
+    .lvl = 54,
+    .species = SPECIES_GENGAR,
+    }
+};
+
+static const struct TrainerMon sParty_Psychic_Sacred_City_1[] = {
+    {
+    .lvl = 52,
+    .species = SPECIES_SABLEYE,
+    },
+    {
+    .lvl = 52,
+    .species = SPECIES_SCEPTILE,
+    },
+    {
+    .lvl = 53,
+    .species = SPECIES_PILOSWINE,
+    },
+    {
+    .lvl = 54,
+    .species = SPECIES_GALLADE,
+    }
+};
+
+static const struct TrainerMon sParty_Psychic_Sacred_City_2[] = {
+    {
+    .lvl = 52,
+    .species = SPECIES_XATU,
+    },
+    {
+    .lvl = 52,
+    .species = SPECIES_TOGEKISS,
+    },
+    {
+    .lvl = 53,
+    .species = SPECIES_KABUTOPS,
+    },
+    {
+    .lvl = 54,
+    .species = SPECIES_PORYGON2,
+    }
+};
+
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_1F_1[] = {
+    {
+    .lvl = 60,
+    .species = SPECIES_DUSKNOIR,
+    },
+    {
+    .lvl = 60,
+    .species = SPECIES_GLISCOR,
+    },
+    {
+    .lvl = 63,
+    .species = SPECIES_JOLTEON,
+    },
+    {
+    .lvl = 65,
+    .species = SPECIES_EXEGGUTOR_ALOLAN,
+    }
+};
+
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_1F_2[] = {
+    {
+    .lvl = 60,
+    .species = SPECIES_RAPIDASH,
+    },
+    {
+    .lvl = 60,
+    .species = SPECIES_MAGNETON,
+    },
+    {
+    .lvl = 63,
+    .species = SPECIES_VENUSAUR,
+    },
+    {
+    .lvl = 65,
+    .species = SPECIES_MACHAMP,
+    }
+};
+
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_1F_3[] = {
+    {
+    .lvl = 60,
+    .species = SPECIES_EXPLOUD,
+    },
+    {
+    .lvl = 60,
+    .species = SPECIES_MAWILE,
+    },
+    {
+    .lvl = 63,
+    .species = SPECIES_SOLROCK,
+    },
+    {
+    .lvl = 65,
+    .species = SPECIES_WALREIN,
+    }
+};
+
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_1F_4[] = {
+    {
+    .lvl = 60,
+    .species = SPECIES_TORTERRA,
+    },
+    {
+    .lvl = 60,
+    .species = SPECIES_DRIFBLIM,
+    },
+    {
+    .lvl = 63,
+    .species = SPECIES_GARCHOMP,
+    },
+    {
+    .lvl = 65,
+    .species = SPECIES_YANMEGA,
+    }
+};
+
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_2F_1[] = {
+    {
+    .lvl = 62,
+    .species = SPECIES_ELECTIVIRE,
+    },
+    {
+    .lvl = 62,
+    .species = SPECIES_CROBAT,
+    },
+    {
+    .lvl = 65,
+    .species = SPECIES_FLAREON,
+    },
+    {
+    .lvl = 66,
+    .species = SPECIES_BRELOOM,
+    }
+};
+
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_2F_2[] = {
+    {
+    .lvl = 62,
+    .species = SPECIES_SOLROCK,
+    },
+    {
+    .lvl = 65,
+    .species = SPECIES_GARDEVOIR,
+    },
+    {
+    .lvl = 66,
+    .species = SPECIES_SALAMENCE,
+    }
+};
+
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_2F_3[] = {
+    {
+    .lvl = 62,
+    .species = SPECIES_LUNATONE,
+    },
+    {
+    .lvl = 65,
+    .species = SPECIES_GALLADE,
+    },
+    {
+    .lvl = 66,
+    .species = SPECIES_DRAGONITE,
+    }
+};
+
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_2F_4[] = {
+    {
+    .lvl = 62,
+    .species = SPECIES_RAICHU,
+    },
+    {
+    .lvl = 62,
+    .species = SPECIES_GOLEM,
+    },
+    {
+    .lvl = 65,
+    .species = SPECIES_KANGASKHAN,
+    },
+    {
+    .lvl = 66,
+    .species = SPECIES_SLOWKING,
+    }
+};
+
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_3F_1[] = {
+    {
+    .lvl = 64,
+    .species = SPECIES_STARMIE,
+    },
+    {
+    .lvl = 64,
+    .species = SPECIES_RHYPERIOR,
+    },
+    {
+    .lvl = 67,
+    .species = SPECIES_TAUROS_PALDEAN_COMBAT_BREED,
+    },
+    {
+    .lvl = 68,
+    .species = SPECIES_CRADILY,
+    }
+};
+
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_3F_2[] = {
+    {
+    .lvl = 64,
+    .species = SPECIES_ABOMASNOW,
+    },
+    {
+    .lvl = 67,
+    .species = SPECIES_MILOTIC,
+    },
+    {
+    .lvl = 68,
+    .species = SPECIES_GASTRODON_EAST_SEA,
+    }
+};
+
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_3F_3[] = {
+    {
+    .lvl = 64,
+    .species = SPECIES_FROSLASS,
+    },
+    {
+    .lvl = 67,
+    .species = SPECIES_BRONZONG,
+    },
+    {
+    .lvl = 68,
+    .species = SPECIES_MAGMORTAR,
+    }
+};
+
+static const struct TrainerMon sParty_RocketGrunt_SacredMountain_3F_4[] = {
+    {
+    .lvl = 64,
+    .species = SPECIES_MAMOSWINE,
+    },
+    {
+    .lvl = 64,
+    .species = SPECIES_LICKILICKY,
+    },
+    {
+    .lvl = 67,
+    .species = SPECIES_UMBREON,
+    },
+    {
+    .lvl = 68,
+    .species = SPECIES_PROBOPASS,
     }
 };
