@@ -875,6 +875,11 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_SWAP_SNACK] = {gItemIcon_SwapSnack, gItemIconPalette_SwapSnack},
     [ITEM_TWICE_SPICED_RADISH] = {gItemIcon_TwiceSpicedRadish, gItemIconPalette_TwiceSpicedRadish},
     [ITEM_POKESHI_DOLL] = {gItemIcon_PokeshiDoll, gItemIconPalette_PokeshiDoll},
+    [ITEM_ANCIENT_PLATE_1] = {gItemIcon_ToxicPlate, gItemIconPalette_ToxicPlate},
+    [ITEM_ANCIENT_PLATE_2] = {gItemIcon_IronPlate, gItemIconPalette_IronPlate},
+    [ITEM_ANCIENT_PLATE_3] = {gItemIcon_FlamePlate, gItemIconPalette_FlamePlate},
+    [ITEM_ANCIENT_PLATE_4] = {gItemIcon_SplashPlate, gItemIconPalette_SplashPlate},
+    [ITEM_ANCIENT_PLATE_5] = {gItemIcon_DracoPlate, gItemIconPalette_DracoPlate},
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
     [ITEM_INFINITE_REPEL] = {gItemIcon_Repel, gItemIconPalette_InfiniteRepel},

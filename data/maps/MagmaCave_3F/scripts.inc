@@ -116,48 +116,50 @@ MagmaCave_3F_MaxieDefeated::
 	call MagmaCave_3F_RemoveMagma
 # 76 "data/maps/MagmaCave_3F/scripts.pory"
 	setvar VAR_LEVEL_CAP, 50
-# 78 "data/maps/MagmaCave_3F/scripts.pory"
+# 77 "data/maps/MagmaCave_3F/scripts.pory"
+	call EventScript_Increase_LevelCap
+# 79 "data/maps/MagmaCave_3F/scripts.pory"
 	release
 	end
 
 
 MagmaCave_3F_RemoveMagma::
-# 83 "data/maps/MagmaCave_3F/scripts.pory"
-	fadescreen FADE_TO_BLACK
 # 84 "data/maps/MagmaCave_3F/scripts.pory"
-	playse SE_EXIT
+	fadescreen FADE_TO_BLACK
 # 85 "data/maps/MagmaCave_3F/scripts.pory"
+	playse SE_EXIT
+# 86 "data/maps/MagmaCave_3F/scripts.pory"
 	waitse
-# 87 "data/maps/MagmaCave_3F/scripts.pory"
-	removeobject 1
 # 88 "data/maps/MagmaCave_3F/scripts.pory"
+	removeobject 1
+# 89 "data/maps/MagmaCave_3F/scripts.pory"
 	removeobject 2
-# 90 "data/maps/MagmaCave_3F/scripts.pory"
+# 91 "data/maps/MagmaCave_3F/scripts.pory"
 	fadescreen FADE_FROM_BLACK
 	return
 
 
-# 111 "data/maps/MagmaCave_3F/scripts.pory"
+# 112 "data/maps/MagmaCave_3F/scripts.pory"
 MagmaCave_3F_Movement_MaxieApproach:
-# 112 "data/maps/MagmaCave_3F/scripts.pory"
-	walk_down
-# 112 "data/maps/MagmaCave_3F/scripts.pory"
-	walk_down
-# 112 "data/maps/MagmaCave_3F/scripts.pory"
+# 113 "data/maps/MagmaCave_3F/scripts.pory"
 	walk_down
 # 113 "data/maps/MagmaCave_3F/scripts.pory"
+	walk_down
+# 113 "data/maps/MagmaCave_3F/scripts.pory"
+	walk_down
+# 114 "data/maps/MagmaCave_3F/scripts.pory"
 	walk_left
-# 114 "data/maps/MagmaCave_3F/scripts.pory"
-	walk_down
-# 114 "data/maps/MagmaCave_3F/scripts.pory"
-	walk_down
-# 114 "data/maps/MagmaCave_3F/scripts.pory"
-	walk_down
-# 114 "data/maps/MagmaCave_3F/scripts.pory"
+# 115 "data/maps/MagmaCave_3F/scripts.pory"
 	walk_down
 # 115 "data/maps/MagmaCave_3F/scripts.pory"
-	walk_left
+	walk_down
+# 115 "data/maps/MagmaCave_3F/scripts.pory"
+	walk_down
+# 115 "data/maps/MagmaCave_3F/scripts.pory"
+	walk_down
 # 116 "data/maps/MagmaCave_3F/scripts.pory"
+	walk_left
+# 117 "data/maps/MagmaCave_3F/scripts.pory"
 	face_player
 	step_end
 
@@ -166,19 +168,19 @@ MagmaCave_3F_Evenscript_Maxie_Text_0:
 	.string "I am studying the magma. Go away.$"
 
 MagmaCave_3F_Text_RedOrb::
-# 94 "data/maps/MagmaCave_3F/scripts.pory"
+# 95 "data/maps/MagmaCave_3F/scripts.pory"
 	.string "You see a Red Orb inside this machine.\n"
 	.string "Do you want to take it?$"
 
 MagmaCave_3F_Text_MaxieCaught::
-# 98 "data/maps/MagmaCave_3F/scripts.pory"
+# 99 "data/maps/MagmaCave_3F/scripts.pory"
 	.string "Hey! I saw that. Give me back my Red Orb.$"
 
 MagmaCave_3F_Text_MaxieDefeated::
-# 102 "data/maps/MagmaCave_3F/scripts.pory"
+# 103 "data/maps/MagmaCave_3F/scripts.pory"
 	.string "Defeated by a kid again...\n"
 	.string "What shall now become of my ambitions.$"
 
 MagmaCave_3F_Text_MaxiePostBattle::
-# 107 "data/maps/MagmaCave_3F/scripts.pory"
+# 108 "data/maps/MagmaCave_3F/scripts.pory"
 	.string "Post$"

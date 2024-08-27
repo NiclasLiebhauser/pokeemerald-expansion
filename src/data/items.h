@@ -11718,6 +11718,76 @@ const struct Item gItemsInfo[] =
         .flingPower = 30,
     },
 
+    [ITEM_ANCIENT_PLATE_1] =
+    {
+        .name = _("Ancient Plate"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "An ancient plate\n"
+            "which seems to have\n"
+            "a mysterious power."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_AncientPlate,
+    },
+
+    [ITEM_ANCIENT_PLATE_2] =
+    {
+        .name = _("Ancient Plate"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "An ancient plate\n"
+            "which seems to have\n"
+            "a mysterious power."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_AncientPlate,
+    },
+
+    [ITEM_ANCIENT_PLATE_3] =
+    {
+        .name = _("Ancient Plate"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "An ancient plate\n"
+            "which seems to have\n"
+            "a mysterious power."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_AncientPlate,
+    },
+
+    [ITEM_ANCIENT_PLATE_4] =
+    {
+        .name = _("Ancient Plate"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "An ancient plate\n"
+            "which seems to have\n"
+            "a mysterious power."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_AncientPlate,
+    },
+
+    [ITEM_ANCIENT_PLATE_5] =
+    {
+        .name = _("Ancient Plate"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "An ancient plate\n"
+            "which seems to have\n"
+            "a mysterious power."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_AncientPlate,
+    },
+
 // GEN 9 ITEMS
 
     [ITEM_CLEAR_AMULET] =

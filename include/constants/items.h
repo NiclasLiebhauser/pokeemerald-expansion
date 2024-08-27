@@ -1007,7 +1007,14 @@
 #define ITEM_RED_ORB_OFF 830
 #define ITEM_BLUE_ORB_OFF 831
 
-#define ITEMS_COUNT 832
+
+#define ITEM_ANCIENT_PLATE_1 832   // Level Cap 30
+#define ITEM_ANCIENT_PLATE_2 833   // Level Cap 40
+#define ITEM_ANCIENT_PLATE_3 834   // Level Cap 50
+#define ITEM_ANCIENT_PLATE_4 835   // Level Cap 60
+#define ITEM_ANCIENT_PLATE_5 836   // Level Cap 80
+
+#define ITEMS_COUNT 837
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

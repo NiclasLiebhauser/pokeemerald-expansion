@@ -29,7 +29,7 @@ script MagmasHideout_EventScript_StrengthGrunt{
     playbgm(MUS_ENCOUNTER_MAGMA, FALSE)
     faceplayer
 
-    message(format("You can't have my STRENGTH MACHINE. You can't have it...\pIt's mine.\pAnd I wont give it to you.\pYou don't want it?\nLies! I say lies.\pYou can't trick me. Prepare yourself, you'll have pry that MACHINE from my cold dead hands.\p"))
+    message(format("You can't have my STRENGTH MACHINE. You can't have it...\pIt's mine.\pAnd I wont give it to you.\pYou don't want it?\nLies! I say lies.\pYou can't trick me. Prepare yourself, you'll have to pry that MACHINE from my cold dead hands.\p"))
     waitmessage
     closemessage
 

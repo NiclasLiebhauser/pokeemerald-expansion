@@ -102,6 +102,7 @@ script CaveOfCreation_Eventscript_PathOpen {
     closemessage
     setflag(FLAG_MOUNTAIN_PATH_FREE)
     setvar(VAR_LEVEL_CAP, 80)
+    call(EventScript_Increase_LevelCap)
     release
     end
 }

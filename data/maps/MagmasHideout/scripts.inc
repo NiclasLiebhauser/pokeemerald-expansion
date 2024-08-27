@@ -120,7 +120,7 @@ MagmasHideout_EventScript_StrengthGrunt_Text_0:
 	.string "You don't want it?\n"
 	.string "Lies! I say lies.\p"
 	.string "You can't trick me. Prepare yourself,\n"
-	.string "you'll have pry that MACHINE from my\l"
+	.string "you'll have to pry that MACHINE from my\l"
 	.string "cold dead hands.\p"
 	.string "$"
 

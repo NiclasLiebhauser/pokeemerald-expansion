@@ -2,7 +2,7 @@
   "id": "MAP_SACRED_ISLAND_SOUTH",
   "name": "SacredIslandSouth",
   "layout": "LAYOUT_SACRED_ISLAND_SOUTH",
-  "music": "MUS_ROUTE101",
+  "music": "MUS_RG_VIRIDIAN_FOREST",
   "region_map_section": "MAPSEC_SACRED_ISLAND_SOUTH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -71,12 +71,21 @@ script Route203_Cave_EventScript_AdminFight {
     setflag(FLAG_AQUA_LEFT_ROUTE_203_CAVE)
     setvar(VAR_ROUTE203_CAVE_STATE, 1)
     setvar(VAR_LEVEL_CAP, 40)
+    call(EventScript_Increase_LevelCap)
     clearflag(FLAG_HIDE_ROCK_SMASH_MACHINE)
     addobject(LOCAL_ROCK_SMASH_MACHINE)
     fadescreen(FADE_FROM_BLACK)
     
     release
     end
+}
+
+script EventScript_Increase_LevelCap {
+    playfanfare(MUS_OBTAIN_BADGE)
+    message(format("Your ANCIENT PLATE shines with new power!\p"))
+    waitmessage
+    waitfanfare
+    return
 }
 
 script Route203_Cave_EventScript_RockSmashMachine {

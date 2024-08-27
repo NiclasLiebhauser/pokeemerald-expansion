@@ -51,14 +51,18 @@ script MysteryCave_EventScript_StartAdventure {
     call(ReceiveExpShare)
     call(ReceiveInfiniteRepel)
     call(ReceiveEscapeRope)
+    call(ReceiveAncientPlate)
     call(ReceiveBalls)
     call(GiveFirstMon)
     call(GiveSecondMon)
+    call(GiveThirdMon)
     setvar(VAR_START_ADVENTURE_STATE, 1)
     setvar(VAR_LEVEL_CAP, 30)
+    waitmessage
+    
+    message(format("Your ANCIENT PLATE shines with power!\p"))
 
     waitmessage
-    waitbuttonpress
     message(MysteryCave_Text_ArceusServant_Goodbye)
     waitmessage
     closemessage
@@ -132,6 +136,13 @@ script ReceiveEscapeRope {
     return
 }
 
+script ReceiveAncientPlate {
+    playfanfare(MUS_OBTAIN_ITEM)
+    giveitem(ITEM_ANCIENT_PLATE_1)
+    waitfanfare
+    return
+}
+
 script GiveFirstMon {
     if(var(VAR_START_QUESTION_1) == 0)
     {
@@ -165,6 +176,30 @@ script GiveSecondMon {
     elif(var(VAR_START_QUESTION_1) == 2)
     {
         call(GiveSecondMonHoenn)
+    }
+
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(ReceivedMonText, MSGBOX_DEFAULT)
+    waitfanfare
+    call(GiveMonNick)
+    return
+}
+
+script GiveThirdMon {
+    if(var(VAR_START_QUESTION_1) == 0)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_BELLSPROUT)
+        givemon(SPECIES_BELLSPROUT, LOCAL_LEVEL)
+    }
+    elif(var(VAR_START_QUESTION_1) == 1)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_HOPPIP)
+        givemon(SPECIES_HOPPIP, LOCAL_LEVEL)
+    }
+    elif(var(VAR_START_QUESTION_1) == 2)
+    {
+        bufferspeciesname(STR_VAR_1, SPECIES_SHROOMISH)
+        givemon(SPECIES_SHROOMISH, LOCAL_LEVEL)
     }
 
     playfanfare(MUS_OBTAIN_ITEM)

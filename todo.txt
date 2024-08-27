@@ -1,6 +1,10 @@
-Add trainers
 Add missing dialogue
 
 More points of orienation on open maps
 
 Add NPCs to help the player
+Add Credits
+Alter Title Screen
+
+Add UseFunction for Red and Blue orb
+Add FortuneTeller

@@ -623,8 +623,7 @@ void BattleSetup_StartLegendaryBattle(void)
         break;
     case SPECIES_GIRATINA:
     case SPECIES_GIRATINA_ORIGIN:
-        //ToSolve: Add music
-        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_VS_REGI);
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_VS_KYOGRE_GROUDON);
         break;
     }
 

@@ -200,48 +200,50 @@ CaveOfCreation_Eventscript_PathOpen::
 # 104 "data/maps/CaveOfCreation/scripts.pory"
 	setvar VAR_LEVEL_CAP, 80
 # 105 "data/maps/CaveOfCreation/scripts.pory"
+	call EventScript_Increase_LevelCap
+# 106 "data/maps/CaveOfCreation/scripts.pory"
 	release
 	end
 
 
 CaveOfCreation_Sign_RedOrb::
-# 110 "data/maps/CaveOfCreation/scripts.pory"
+# 111 "data/maps/CaveOfCreation/scripts.pory"
 	msgbox CaveOfCreation_Text_RedOrb, MSGBOX_SIGN
 	return
 
 
 CaveOfCreation_Sign_BlueOrb::
-# 114 "data/maps/CaveOfCreation/scripts.pory"
+# 115 "data/maps/CaveOfCreation/scripts.pory"
 	msgbox CaveOfCreation_Text_BlueOrb, MSGBOX_SIGN
 	return
 
 
 CaveOfCreation_Text_RedOrb::
-# 117 "data/maps/CaveOfCreation/scripts.pory"
+# 118 "data/maps/CaveOfCreation/scripts.pory"
 	.string "Hold the RED ORB high above your head.\n"
 	.string "As proof that you have gained\l"
 	.string "dominance over the element of fire.$"
 
 CaveOfCreation_Text_BlueOrb::
-# 121 "data/maps/CaveOfCreation/scripts.pory"
+# 122 "data/maps/CaveOfCreation/scripts.pory"
 	.string "Hold the BLUE ORB high above your head.\n"
 	.string "As proof that you have gained\l"
 	.string "dominance over the element of water.$"
 
 CaveOfCreation_Text_ShowRedOrb::
-# 125 "data/maps/CaveOfCreation/scripts.pory"
+# 126 "data/maps/CaveOfCreation/scripts.pory"
 	.string "You hold the RED ORB high above your\n"
 	.string "head.\p"
 	.string "It shimmers with a beatiful ruby light.$"
 
 CaveOfCreation_Text_ShowBlueOrb::
-# 129 "data/maps/CaveOfCreation/scripts.pory"
+# 130 "data/maps/CaveOfCreation/scripts.pory"
 	.string "You hold the BLUE ORB high above your\n"
 	.string "head.\p"
 	.string "It shimmers with a beatiful sapphire\n"
 	.string "light.$"
 
 CaveOfCreation_Text_PathOpen::
-# 133 "data/maps/CaveOfCreation/scripts.pory"
+# 134 "data/maps/CaveOfCreation/scripts.pory"
 	.string "A path to the mountain has been\n"
 	.string "revealed.$"

@@ -184,79 +184,81 @@ AquasHideout_2F_EventScript_Archie::
 # 125 "data/maps/AquasHideout_2F/scripts.pory"
 	setvar VAR_LEVEL_CAP, 60
 # 126 "data/maps/AquasHideout_2F/scripts.pory"
+	call EventScript_Increase_LevelCap
+# 127 "data/maps/AquasHideout_2F/scripts.pory"
 	releaseall
 	end
 
 
 AquasHideout_2F_RemoveAqua::
-# 131 "data/maps/AquasHideout_2F/scripts.pory"
-	fadescreen FADE_TO_BLACK
 # 132 "data/maps/AquasHideout_2F/scripts.pory"
-	playse SE_EXIT
+	fadescreen FADE_TO_BLACK
 # 133 "data/maps/AquasHideout_2F/scripts.pory"
+	playse SE_EXIT
+# 134 "data/maps/AquasHideout_2F/scripts.pory"
 	waitse
-# 135 "data/maps/AquasHideout_2F/scripts.pory"
+# 136 "data/maps/AquasHideout_2F/scripts.pory"
 	removeobject 2
-# 137 "data/maps/AquasHideout_2F/scripts.pory"
+# 138 "data/maps/AquasHideout_2F/scripts.pory"
 	fadescreen FADE_FROM_BLACK
 	return
 
 
 AquasHideout_2F_EventScript_Grunt1::
-# 142 "data/maps/AquasHideout_2F/scripts.pory"
-	trainerbattle_single TRAINER_AQUA_GRUNT_AQUAHQ_2F_1, AquasHideout_2F_Text_Grunt1_Intro, AquasHideout_2F_Text_Grunt1_Defeat
 # 143 "data/maps/AquasHideout_2F/scripts.pory"
+	trainerbattle_single TRAINER_AQUA_GRUNT_AQUAHQ_2F_1, AquasHideout_2F_Text_Grunt1_Intro, AquasHideout_2F_Text_Grunt1_Defeat
+# 144 "data/maps/AquasHideout_2F/scripts.pory"
 	msgbox AquasHideout_2F_Text_Grunt1_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 AquasHideout_2F_EventScript_Grunt2::
-# 147 "data/maps/AquasHideout_2F/scripts.pory"
-	trainerbattle_single TRAINER_AQUA_GRUNT_AQUAHQ_2F_2, AquasHideout_2F_Text_Grunt2_Intro, AquasHideout_2F_Text_Grunt2_Defeat
 # 148 "data/maps/AquasHideout_2F/scripts.pory"
+	trainerbattle_single TRAINER_AQUA_GRUNT_AQUAHQ_2F_2, AquasHideout_2F_Text_Grunt2_Intro, AquasHideout_2F_Text_Grunt2_Defeat
+# 149 "data/maps/AquasHideout_2F/scripts.pory"
 	msgbox AquasHideout_2F_Text_Grunt2_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 AquasHideout_2F_EventScript_Grunt3::
-# 152 "data/maps/AquasHideout_2F/scripts.pory"
-	trainerbattle_single TRAINER_AQUA_GRUNT_AQUAHQ_2F_3, AquasHideout_2F_Text_Grunt3_Intro, AquasHideout_2F_Text_Grunt3_Defeat
 # 153 "data/maps/AquasHideout_2F/scripts.pory"
+	trainerbattle_single TRAINER_AQUA_GRUNT_AQUAHQ_2F_3, AquasHideout_2F_Text_Grunt3_Intro, AquasHideout_2F_Text_Grunt3_Defeat
+# 154 "data/maps/AquasHideout_2F/scripts.pory"
 	msgbox AquasHideout_2F_Text_Grunt3_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 AquasHideout_2F_EventScript_Grunt4::
-# 157 "data/maps/AquasHideout_2F/scripts.pory"
-	trainerbattle_single TRAINER_AQUA_GRUNT_AQUAHQ_2F_4, AquasHideout_2F_Text_Grunt4_Intro, AquasHideout_2F_Text_Grunt4_Defeat
 # 158 "data/maps/AquasHideout_2F/scripts.pory"
+	trainerbattle_single TRAINER_AQUA_GRUNT_AQUAHQ_2F_4, AquasHideout_2F_Text_Grunt4_Intro, AquasHideout_2F_Text_Grunt4_Defeat
+# 159 "data/maps/AquasHideout_2F/scripts.pory"
 	msgbox AquasHideout_2F_Text_Grunt4_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
-# 227 "data/maps/AquasHideout_2F/scripts.pory"
+# 228 "data/maps/AquasHideout_2F/scripts.pory"
 AquasHideout_2F_Movement_DiveGrunt_WalkOn:
-# 228 "data/maps/AquasHideout_2F/scripts.pory"
-	walk_down
-# 228 "data/maps/AquasHideout_2F/scripts.pory"
-	walk_down
-# 228 "data/maps/AquasHideout_2F/scripts.pory"
+# 229 "data/maps/AquasHideout_2F/scripts.pory"
 	walk_down
 # 229 "data/maps/AquasHideout_2F/scripts.pory"
+	walk_down
+# 229 "data/maps/AquasHideout_2F/scripts.pory"
+	walk_down
+# 230 "data/maps/AquasHideout_2F/scripts.pory"
 	walk_left
-# 229 "data/maps/AquasHideout_2F/scripts.pory"
+# 230 "data/maps/AquasHideout_2F/scripts.pory"
 	walk_left
 	step_end
 
-# 232 "data/maps/AquasHideout_2F/scripts.pory"
+# 233 "data/maps/AquasHideout_2F/scripts.pory"
 AquasHideout_2F_Movement_DiveGrunt_WalkItem:
-# 233 "data/maps/AquasHideout_2F/scripts.pory"
-	walk_up
-# 233 "data/maps/AquasHideout_2F/scripts.pory"
-	walk_up
-# 233 "data/maps/AquasHideout_2F/scripts.pory"
+# 234 "data/maps/AquasHideout_2F/scripts.pory"
 	walk_up
 # 234 "data/maps/AquasHideout_2F/scripts.pory"
+	walk_up
+# 234 "data/maps/AquasHideout_2F/scripts.pory"
+	walk_up
+# 235 "data/maps/AquasHideout_2F/scripts.pory"
 	face_left
 	step_end
 
@@ -282,73 +284,73 @@ AquasHideout_2F_DiveGrunt_Cutscene_Text_3:
 	.string "$"
 
 AquasHideout_2F_Text_Grunt1_Intro::
-# 161 "data/maps/AquasHideout_2F/scripts.pory"
+# 162 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Intro$"
 
 AquasHideout_2F_Text_Grunt1_Defeat::
-# 165 "data/maps/AquasHideout_2F/scripts.pory"
+# 166 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Defeat$"
 
 AquasHideout_2F_Text_Grunt1_PostBattle::
-# 169 "data/maps/AquasHideout_2F/scripts.pory"
+# 170 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Post$"
 
 AquasHideout_2F_Text_Grunt2_Intro::
-# 173 "data/maps/AquasHideout_2F/scripts.pory"
+# 174 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Intro$"
 
 AquasHideout_2F_Text_Grunt2_Defeat::
-# 177 "data/maps/AquasHideout_2F/scripts.pory"
+# 178 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Defeat$"
 
 AquasHideout_2F_Text_Grunt2_PostBattle::
-# 181 "data/maps/AquasHideout_2F/scripts.pory"
+# 182 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Post$"
 
 AquasHideout_2F_Text_Grunt3_Intro::
-# 185 "data/maps/AquasHideout_2F/scripts.pory"
+# 186 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Intro$"
 
 AquasHideout_2F_Text_Grunt3_Defeat::
-# 189 "data/maps/AquasHideout_2F/scripts.pory"
+# 190 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Defeat$"
 
 AquasHideout_2F_Text_Grunt3_PostBattle::
-# 193 "data/maps/AquasHideout_2F/scripts.pory"
+# 194 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Post$"
 
 AquasHideout_2F_Text_Grunt4_Intro::
-# 196 "data/maps/AquasHideout_2F/scripts.pory"
+# 197 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Intro$"
 
 AquasHideout_2F_Text_Grunt4_Defeat::
-# 200 "data/maps/AquasHideout_2F/scripts.pory"
+# 201 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Defeat$"
 
 AquasHideout_2F_Text_Grunt4_PostBattle::
-# 204 "data/maps/AquasHideout_2F/scripts.pory"
+# 205 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Post$"
 
 AquasHideout_2F_Text_DiveMachine::
-# 208 "data/maps/AquasHideout_2F/scripts.pory"
+# 209 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Obtained DIVE MACHINE!$"
 
 AquasHideout_2F_Text_Archie_PreBattel::
-# 213 "data/maps/AquasHideout_2F/scripts.pory"
+# 214 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Lorem ipsum dolor sit amet, consectetur\n"
 	.string "adipiscing elit, sed do eiusmod tempor\l"
 	.string "incididunt ut labore et dolore magna\l"
 	.string "aliqua.$"
 
 AquasHideout_2F_Text_Archie_PostBattel::
-# 218 "data/maps/AquasHideout_2F/scripts.pory"
+# 219 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Lorem ipsum dolor sit amet, consectetur\n"
 	.string "adipiscing elit, sed do eiusmod tempor\l"
 	.string "incididunt ut labore et dolore magna\l"
 	.string "aliqua.$"
 
 AquasHideout_2F_Text_Archie_Defeat::
-# 223 "data/maps/AquasHideout_2F/scripts.pory"
+# 224 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Lorem ipsum dolor sit amet, consectetur\n"
 	.string "adipiscing elit, sed do eiusmod tempor\l"
 	.string "incididunt ut labore et dolore magna\l"

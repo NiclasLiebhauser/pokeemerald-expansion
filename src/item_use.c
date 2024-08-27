@@ -38,6 +38,7 @@
 #include "string_util.h"
 #include "task.h"
 #include "text.h"
+#include "tv.h"
 #include "vs_seeker.h"
 #include "constants/event_bg.h"
 #include "constants/event_objects.h"
@@ -228,6 +229,17 @@ void ItemUseOutOfBattle_ExpShare(u8 taskId)
 #else
     DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
 #endif
+}
+
+void ItemUseOutOfBattle_AncientPlate(u8 taskId)
+{
+    u16 num = VarGet(VAR_LEVEL_CAP);
+    u8 numDigits = CountDigits(num);
+    ConvertIntToDecimalStringN(gStringVar1, num, STR_CONV_MODE_LEFT_ALIGN, numDigits);
+    if (!gTasks[taskId].data[2]) // to account for pressing select in the overworld
+        DisplayItemMessageOnField(taskId, gText_AncientPlate, Task_CloseCantUseKeyItemMessage);
+    else
+        DisplayItemMessage(taskId, FONT_NORMAL, gText_AncientPlate, CloseItemMessage);
 }
 
 void ItemUseOutOfBattle_Bike(u8 taskId)

@@ -74,6 +74,7 @@ script MagmaCave_3F_MaxieDefeated {
     setflag(FLAG_MAGMA_LEFT_HIDEOUT)
     call(MagmaCave_3F_RemoveMagma)
     setvar(VAR_LEVEL_CAP, 50)
+    call(EventScript_Increase_LevelCap)
 
     release
     end

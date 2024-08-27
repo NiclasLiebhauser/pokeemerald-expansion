@@ -123,6 +123,7 @@ script AquasHideout_2F_EventScript_Archie {
     setflag(FLAG_AQUA_LEFT_HIDEOUT)
     call(AquasHideout_2F_RemoveAqua)
     setvar(VAR_LEVEL_CAP, 60)
+    call(EventScript_Increase_LevelCap)
     releaseall
     end
 }
