@@ -374,6 +374,12 @@ static u16 GetCurrentMapWildMonHeaderId(void)
 
                 i += alteringCaveId;
             }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(SACRED_ISLAND_SOUTH) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(SACRED_ISLAND_SOUTH))
+            {
+                if(gSaveBlock1Ptr->pos.x <= 11 && gSaveBlock1Ptr->pos.y <= 15)
+                    i += 1;
+            }
 
             return i;
         }

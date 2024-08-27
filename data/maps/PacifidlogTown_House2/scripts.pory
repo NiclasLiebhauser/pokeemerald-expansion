@@ -1,1 +1,177 @@
 mapscripts PacifidlogTown_House2_MapScripts {}
+
+script EventScript_Fortune_Teller {
+    lock
+    faceplayer
+
+    showmoneybox(0, 0)
+    msgbox(format("I am the local fortune teller. Should I tell your fortune for ¥50?"), MSGBOX_YESNO)
+    waitmessage
+    hidemoneybox
+
+    if(var(VAR_RESULT) == YES)
+    {
+        //Todo add money check
+        call(EventScript_Tell_Fortune) 
+    }
+    else
+    {
+        msgbox(format("Oh well... Come back any time you want your fortune told."))
+    }
+    release
+    end
+}
+
+script EventScript_Tell_Fortune {
+    message(format("What do you want to know from the spirits?"))
+
+    if(flag(FLAG_ANABEL_HIDE_AND_SEEK) && (!flag(FLAG_MOLTRES_FOUND) || !flag(FLAG_ARTICUNO_FOUND) || !flag(FLAG_ZAPDOS_FOUND)))
+    {
+        dynmultichoice(18, 6, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE, "Where to go", "Money", "Evolution", "Training", "Hide and seek")
+    }
+    else
+    {
+        dynmultichoice(19, 6, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE, "Where to go", "Money", "Evolution", "Training")   
+    }
+
+    switch(var(VAR_RESULT))
+    {
+        case 0:
+            call(EventScript_Tell_Fortune_WhereToGo)
+        case 1: 
+            call(EventScript_Tell_Fortune_Money)
+        case 2: 
+            call(EventScript_Tell_Fortune_Evolution)
+        case 3: 
+            call(EventScript_Tell_Fortune_Training)
+        case 4: 
+            call(EventScript_Tell_Fortune_HideAndSeek)
+    }
+
+    release
+    end
+}
+
+script EventScript_Tell_Fortune_WhereToGo {
+    if(flag(FLAG_MOUNTAIN_PATH_FREE))
+    {
+        //Path to final dungeon is unlocked
+        message(format("The spirits want you to climb to the peak of the SACRED MOUNTAIN. You can find the entrance in the heart of SACRED CITY.\pYou will find your destiny at the top.\p"))
+    }
+    elif(flag(FLAG_VISITED_SACRED_CITY))
+    {
+        //Player has reached Sacred City
+        message(format("Find the old guardian of SACRED MOUNTAIN in SACRED CITY the spirits know that he knows the way.\p"))
+        if(flag(FLAG_AQUA_LEFT_HIDEOUT) && !flag(FLAG_DEFEATED_KYOGRE))
+        {
+            //Player has received the blue orb but not yet defeated kyogre
+            waitmessage
+            message(format("The spirits are interested in something in your bag...\pYou are carrying a BLUE ORB but it lacks power.\pThe spirits whisper to me that you should seek ROUTE 206 to restore that orb to its former glory.\p"))
+        }
+        elif(flag(FLAG_MAGMA_LEFT_HIDEOUT) && !flag(FLAG_DEFEATED_GROUDON))
+        {
+            //Player has received the red orb but not yet defeated groudon
+            waitmessage
+            message(format("The spirits are interested in something in your bag...\pYou are carrying a RED ORB but it lacks power.\pThe spirits whisper to me that you should seek the northern part of SACRED ISLAND to restore that orb to its former glory.\p"))
+        }
+        elif(flag(FLAG_DEFEATED_KYOGRE) && flag(FLAG_DEFEATED_GROUDON))
+        {
+            //Player has defeated both groudon and kyogre
+            waitmessage
+            message(format("The spirits are interested in something in your bag...\pYou are carrying a RED ORB but it lacks power.\pThe spirits whisper to me that you should seek the northern part of SACRED ISLAND to restore that orb to its former glory.\p"))
+        
+        }
+    }
+    elif(flag(FLAG_AQUA_LEFT_HIDEOUT) && flag(FLAG_MAGMA_LEFT_HIDEOUT))
+    {
+        //Player has received both orbs but not yet reached sacred city
+        message(format("You have driven some evil from these lands...Yet more remains to the east.\pTake the rapids of ROUTE 206 to get to SACRED ISLAND.\p"))
+    }
+    elif(!flag(FLAG_AQUA_LEFT_ROUTE_203_CAVE))
+    {
+        //Player has yet to defeat aqua admin
+        message(format("The spirits are elated to see you for some reason...\pSeek a way eastward towards ROUTE 203 there you will find a cave. Free it from the grip of malicious people.\p"))
+    }
+    elif(!flag(FLAG_MAGMA_LEFT_HIDEOUT))
+    {
+        //Player has yet to defeat team magma
+        message(format("These lands need to be cleansed of evil doers. Find Team Magmas base of operation east of ROUTE 203 and take down their leader. That is what the spirits want.\p"))
+    }
+    elif(!flag(FLAG_AQUA_LEFT_HIDEOUT))
+    {
+        //Player has yet to defeat team aqua
+        message(format("These lands need to be cleansed of evil doers. Find Team Aquas base of operation north of ROUTE 205 and take down their leader. That is what the spirits want.\p"))
+    }
+    else
+    {
+        //This should not happen...
+    }
+
+    waitmessage
+    return
+}
+
+script EventScript_Tell_Fortune_Money {
+    getmondexentry(SPECIES_MAGIKARP, GET_SEEN)
+    if(!flag(FLAG_RECEIVED_OLD_ROD))
+    {
+        message(format("There is a fisherman in PACIFIDLOG TOWN the spirits want you to help him. For he will also help you.\p"))
+    }
+    elif(var(VAR_RESULT) == TRUE)
+    {
+        message(format("There is a common type of water POKéMON which the someone seeks. Learn of that species whereabouts."))
+    }
+    else
+    {
+        message(format("There is a certain boy in a floating town. The spirits adore him and want you to make a trade with him.\p"))
+    }
+
+    waitmessage
+    return
+}
+
+script EventScript_Tell_Fortune_Evolution {
+    if(!flag(FLAG_MAGMA_LEFT_HIDEOUT))
+    {
+        message(format("The spirits whisper of a certain volcanic cave which contains untold treasure. But evil men control that place and want that treasure for themself.\p"))
+    }
+    else
+    {
+        message(format("Seek out an indivual by the name of VARION inside the volcanic cave. He can help you.\p"))
+    }
+
+    waitmessage
+    return
+}
+
+script EventScript_Tell_Fortune_Training {
+    if(flag(FLAG_PLAYER_CAN_USE_CUT))
+    {
+        message(format("Seek out the north-western corner of the forest on SACRED ISLAND it will be the ideal spot for training.\p"))
+    }
+    else
+    {
+        message(format("The spirits tell me that you should not burden your POKéMON with too much training. Check your ANCIENT PLATE if you are wondering why the growth of your friends has been stagnating.\p"))
+    }
+
+    waitmessage
+    return
+}
+
+script EventScript_Tell_Fortune_HideAndSeek {
+    if(!flag(FLAG_MOLTRES_FOUND))
+    {
+        message(format("The legendary bird of lava and fire is waiting for you - perched atop a volcano.\p"))
+    }
+    elif(!flag(FLAG_ARTICUNO_FOUND))
+    {
+        message(format("The legendary bird of ice and snow is wating for you atop the tallest mountain.\p"))
+    }
+    elif(!flag(FLAG_ZAPDOS_FOUND))
+    {
+        message(format("The legendary bird of lightning and thunder is waiting for you at your journey's beginning.\p"))
+    }
+
+    waitmessage
+    return
+}

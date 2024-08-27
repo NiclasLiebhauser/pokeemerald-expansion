@@ -7,4 +7,3 @@ Add Credits
 Alter Title Screen
 
 Add UseFunction for Red and Blue orb
-Add FortuneTeller

@@ -2173,7 +2173,7 @@
 	.2byte \slot
 	.endm
 
-    @ Checks the state of the Pokédex Seen or Caught flag of the specified Pokemon
+    @ Checks the state of the Pokédex Seen or Caught flag of the specified Pokemon (GET_SEEN/CAUGHT)
     @ The result is stored in VAR_RESULT
     .macro getmondexentry species:req, seen_caught:req 
     setvar VAR_TEMP_1, \species
