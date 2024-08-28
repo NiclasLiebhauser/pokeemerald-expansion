@@ -31,6 +31,7 @@ mart PacifidlogTown_Mart1 {
     ITEM_BURN_HEAL
     ITEM_PARALYZE_HEAL
     ITEM_REVIVE
+    ITEM_TENT
     ITEM_RARE_CANDY
 }
 
@@ -41,6 +42,7 @@ mart PacifidlogTown_Mart2 {
     ITEM_SUPER_POTION
     ITEM_HYPER_POTION
     ITEM_REVIVE
+    ITEM_TENT
     ITEM_RARE_CANDY
 }
 
@@ -54,5 +56,6 @@ mart PacifidlogTown_Mart3 {
     ITEM_MAX_POTION
     ITEM_FULL_RESTORE
     ITEM_REVIVE
+    ITEM_TENT
     ITEM_RARE_CANDY
 }

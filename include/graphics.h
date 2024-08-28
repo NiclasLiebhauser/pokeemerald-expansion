@@ -459,6 +459,8 @@ extern const u32 gItemIcon_SweetHeart[];
 extern const u32 gItemIconPalette_SweetHeart[];
 extern const u32 gItemIcon_MaxHoney[];
 extern const u32 gItemIconPalette_MaxHoney[];
+extern const u32 gItemIcon_Tent[];
+extern const u32 gItemIconPalette_Tent[];
 // Regional Specialties
 extern const u32 gItemIcon_PewterCrunchies[];
 extern const u32 gItemIconPalette_PewterCrunchies[];

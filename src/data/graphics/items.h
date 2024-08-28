@@ -163,6 +163,8 @@ const u32 gItemIconPalette_SweetHeart[] = INCBIN_U32("graphics/items/icon_palett
 const u32 gItemIcon_MaxHoney[] = INCBIN_U32("graphics/items/icons/max_honey.4bpp.lz");
 const u32 gItemIconPalette_MaxHoney[] = INCBIN_U32("graphics/items/icon_palettes/max_honey.gbapal.lz");
 
+const u32 gItemIcon_Tent[] = INCBIN_U32("graphics/decorations/red_tent.4bpp.lz");
+const u32 gItemIconPalette_Tent[] = INCBIN_U32("graphics/decorations/red_tent.gbapal.lz");
 // Regional Specialties
 
 const u32 gItemIcon_PewterCrunchies[] = INCBIN_U32("graphics/items/icons/pewter_crunchies.4bpp.lz");

@@ -59,6 +59,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_SACRED_ASH] = {gItemIcon_SacredAsh, gItemIconPalette_SacredAsh},
     [ITEM_SWEET_HEART] = {gItemIcon_SweetHeart, gItemIconPalette_SweetHeart},
     [ITEM_MAX_HONEY] = {gItemIcon_MaxHoney, gItemIconPalette_MaxHoney},
+    [ITEM_TENT] = {gItemIcon_Tent, gItemIconPalette_Tent},
     // Regional Specialties
     [ITEM_PEWTER_CRUNCHIES] = {gItemIcon_PewterCrunchies, gItemIconPalette_PewterCrunchies},
     [ITEM_RAGE_CANDY_BAR] = {gItemIcon_RageCandyBar, gItemIconPalette_RageCandyBar},

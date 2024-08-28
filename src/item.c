@@ -384,6 +384,29 @@ bool8 RemoveBagItem(u16 itemId, u16 count)
     }
 }
 
+u16 GetBagItemQuantityById(u16 itemId)
+{
+    u8 i;
+    u16 totalQuantity = 0;
+
+    if (ItemId_GetPocket(itemId) == POCKET_NONE || itemId == ITEM_NONE)
+        return 0;
+
+    u8 pocket;
+    struct BagPocket *itemPocket;
+
+    pocket = ItemId_GetPocket(itemId) - 1;
+    itemPocket = &gBagPockets[pocket];
+
+    for (i = 0; i < itemPocket->capacity; i++)
+    {
+        if (itemPocket->itemSlots[i].itemId == itemId)
+            totalQuantity += GetBagItemQuantity(&itemPocket->itemSlots[i].quantity);
+    }
+
+    return totalQuantity;
+}
+
 u8 GetPocketByItemId(u16 itemId)
 {
     return ItemId_GetPocket(itemId);

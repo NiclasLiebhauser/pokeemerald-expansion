@@ -79,6 +79,7 @@ static void Task_CloseCantUseKeyItemMessage(u8);
 static void SetDistanceOfClosestHiddenItem(u8, s16, s16);
 static void CB2_OpenPokeblockFromBag(void);
 static void ItemUseOnFieldCB_Honey(u8 taskId);
+static void HealPlayerParty(void);
 static bool32 IsValidLocationForVsSeeker(void);
 
 // EWRAM variables
@@ -280,6 +281,36 @@ void ItemUseOutOfBattle_BlueOrb(u8 taskId)
     }
     
     DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+}
+
+void ItemUseOutOfBattle_Tent(u8 taskId)
+{
+    u16 mapType = gMapHeader.mapType;
+    if(!IsMapTypeOutdoors(mapType))
+    {
+        if (!gTasks[taskId].data[2]) // to account for pressing select in the overworld
+            DisplayItemMessageOnField(taskId, gText_CantUseTentIndoor, Task_CloseCantUseKeyItemMessage);
+        else
+            DisplayItemMessage(taskId, FONT_NORMAL, gText_CantUseTentIndoor, CloseItemMessage);
+
+        return;
+    }
+
+    PlaySE(SE_USE_ITEM);
+    HealPlayerParty();
+    RemoveBagItem(gSpecialVar_ItemId, 1);
+    
+    if (!gTasks[taskId].data[2]) // to account for pressing select in the overworld
+        DisplayItemMessageOnField(taskId, gText_UsedTent, Task_CloseCantUseKeyItemMessage);
+    else
+        DisplayItemMessage(taskId, FONT_NORMAL, gText_UsedTent, CloseItemMessage);
+}
+
+static void HealPlayerParty(void)
+{
+    u32 i;
+    for (i = 0; i < gPlayerPartyCount; i++)
+        HealPokemon(&gPlayerParty[i]);
 }
 
 void ItemUseOutOfBattle_Bike(u8 taskId)

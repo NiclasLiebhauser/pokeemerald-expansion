@@ -55,49 +55,55 @@ PacifidlogTown_Mart1:
 # 33 "data/maps/PacifidlogTown_Mart/scripts.pory"
 	.2byte ITEM_REVIVE
 # 34 "data/maps/PacifidlogTown_Mart/scripts.pory"
+	.2byte ITEM_TENT
+# 35 "data/maps/PacifidlogTown_Mart/scripts.pory"
 	.2byte ITEM_RARE_CANDY
 	.2byte ITEM_NONE
 
 	.align 2
-# 37 "data/maps/PacifidlogTown_Mart/scripts.pory"
-PacifidlogTown_Mart2:
 # 38 "data/maps/PacifidlogTown_Mart/scripts.pory"
-	.2byte ITEM_GREAT_BALL
+PacifidlogTown_Mart2:
 # 39 "data/maps/PacifidlogTown_Mart/scripts.pory"
-	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_GREAT_BALL
 # 40 "data/maps/PacifidlogTown_Mart/scripts.pory"
-	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_ULTRA_BALL
 # 41 "data/maps/PacifidlogTown_Mart/scripts.pory"
-	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_FULL_HEAL
 # 42 "data/maps/PacifidlogTown_Mart/scripts.pory"
-	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_SUPER_POTION
 # 43 "data/maps/PacifidlogTown_Mart/scripts.pory"
-	.2byte ITEM_REVIVE
+	.2byte ITEM_HYPER_POTION
 # 44 "data/maps/PacifidlogTown_Mart/scripts.pory"
+	.2byte ITEM_REVIVE
+# 45 "data/maps/PacifidlogTown_Mart/scripts.pory"
+	.2byte ITEM_TENT
+# 46 "data/maps/PacifidlogTown_Mart/scripts.pory"
 	.2byte ITEM_RARE_CANDY
 	.2byte ITEM_NONE
 
 	.align 2
-# 47 "data/maps/PacifidlogTown_Mart/scripts.pory"
-PacifidlogTown_Mart3:
-# 48 "data/maps/PacifidlogTown_Mart/scripts.pory"
-	.2byte ITEM_ULTRA_BALL
 # 49 "data/maps/PacifidlogTown_Mart/scripts.pory"
-	.2byte ITEM_LURE_BALL
+PacifidlogTown_Mart3:
 # 50 "data/maps/PacifidlogTown_Mart/scripts.pory"
-	.2byte ITEM_NET_BALL
+	.2byte ITEM_ULTRA_BALL
 # 51 "data/maps/PacifidlogTown_Mart/scripts.pory"
-	.2byte ITEM_DUSK_BALL
+	.2byte ITEM_LURE_BALL
 # 52 "data/maps/PacifidlogTown_Mart/scripts.pory"
-	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_NET_BALL
 # 53 "data/maps/PacifidlogTown_Mart/scripts.pory"
-	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_DUSK_BALL
 # 54 "data/maps/PacifidlogTown_Mart/scripts.pory"
-	.2byte ITEM_MAX_POTION
+	.2byte ITEM_FULL_HEAL
 # 55 "data/maps/PacifidlogTown_Mart/scripts.pory"
-	.2byte ITEM_FULL_RESTORE
+	.2byte ITEM_HYPER_POTION
 # 56 "data/maps/PacifidlogTown_Mart/scripts.pory"
-	.2byte ITEM_REVIVE
+	.2byte ITEM_MAX_POTION
 # 57 "data/maps/PacifidlogTown_Mart/scripts.pory"
+	.2byte ITEM_FULL_RESTORE
+# 58 "data/maps/PacifidlogTown_Mart/scripts.pory"
+	.2byte ITEM_REVIVE
+# 59 "data/maps/PacifidlogTown_Mart/scripts.pory"
+	.2byte ITEM_TENT
+# 60 "data/maps/PacifidlogTown_Mart/scripts.pory"
 	.2byte ITEM_RARE_CANDY
 	.2byte ITEM_NONE
