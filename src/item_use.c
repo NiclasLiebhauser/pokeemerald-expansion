@@ -242,6 +242,46 @@ void ItemUseOutOfBattle_AncientPlate(u8 taskId)
         DisplayItemMessage(taskId, FONT_NORMAL, gText_AncientPlate, CloseItemMessage);
 }
 
+void ItemUseOutOfBattle_RedOrb(u8 taskId)
+{
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(CAVE_OF_CREATION)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(CAVE_OF_CREATION)
+     && gSaveBlock1Ptr->pos.x == 9
+     && gSaveBlock1Ptr->pos.y == 11
+     && !FlagGet(FLAG_RED_ORB_USED))
+    {
+        if (!gTasks[taskId].data[2]) // to account for pressing select in the overworld
+            DisplayItemMessageOnField(taskId, gText_RedOrb, Task_CloseCantUseKeyItemMessage);
+        else
+            DisplayItemMessage(taskId, FONT_NORMAL, gText_RedOrb, CloseItemMessage);
+
+        VarSet(VAR_TEMP_A, 1);
+        return;
+    }
+    
+    DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+}
+
+void ItemUseOutOfBattle_BlueOrb(u8 taskId)
+{
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(CAVE_OF_CREATION)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(CAVE_OF_CREATION)
+     && gSaveBlock1Ptr->pos.x == 20
+     && gSaveBlock1Ptr->pos.y == 11
+     && !FlagGet(FLAG_BLUE_ORB_USED))
+    {
+        if (!gTasks[taskId].data[2]) // to account for pressing select in the overworld
+            DisplayItemMessageOnField(taskId, gText_BlueOrb, Task_CloseCantUseKeyItemMessage);
+        else
+            DisplayItemMessage(taskId, FONT_NORMAL, gText_BlueOrb, CloseItemMessage);
+
+        VarSet(VAR_TEMP_A, 2);
+        return;
+    }
+    
+    DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+}
+
 void ItemUseOutOfBattle_Bike(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;

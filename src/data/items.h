@@ -4635,7 +4635,7 @@ const struct Item gItemsInfo[] =
             "ancient power."),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_RedOrb,
     },
 
     [ITEM_BLUE_ORB] =
@@ -4648,7 +4648,7 @@ const struct Item gItemsInfo[] =
             "ancient power."),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_BlueOrb,
     },
 
     [ITEM_RED_ORB_OFF] =

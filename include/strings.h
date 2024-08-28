@@ -932,6 +932,8 @@ extern const u8 gText_Anna[];
 
 extern const u8 gText_DadsAdvice[];
 extern const u8 gText_AncientPlate[];
+extern const u8 gText_RedOrb[];
+extern const u8 gText_BlueOrb[];
 extern const u8 gText_CantDismountBike[];
 extern const u8 gText_ItemFinderNothing[];
 extern const u8 gText_ItemFinderNearby[];

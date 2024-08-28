@@ -135,9 +135,9 @@ EventScript_Increase_LevelCap::
 # 85 "data/maps/Route203_Cave/scripts.pory"
 	message EventScript_Increase_LevelCap_Text_0
 # 86 "data/maps/Route203_Cave/scripts.pory"
-	waitmessage
-# 87 "data/maps/Route203_Cave/scripts.pory"
 	waitfanfare
+# 87 "data/maps/Route203_Cave/scripts.pory"
+	closemessage
 	return
 
 
@@ -228,8 +228,7 @@ Route203_Cave_Movement_AquaAdmin:
 EventScript_Increase_LevelCap_Text_0:
 # 85 "data/maps/Route203_Cave/scripts.pory"
 	.string "Your ANCIENT PLATE shines with new\n"
-	.string "power!\p"
-	.string "$"
+	.string "power!$"
 
 Route203_Cave_Text_AquaGrunt1_Intro::
 # 137 "data/maps/Route203_Cave/scripts.pory"

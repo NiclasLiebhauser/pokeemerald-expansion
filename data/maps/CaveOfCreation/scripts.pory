@@ -4,6 +4,10 @@ const LOCALID_NINJA_BLUE_ORB = 2
 mapscripts CaveOfCreation_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: CaveOfCreation_OnTransition
     MAP_SCRIPT_ON_RESUME: CaveOfCreation_OnResume
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_A, 1: CaveOfCreation_Eventscript_RedOrb_CutScene
+        VAR_TEMP_A, 2: CaveOfCreation_Eventscript_BlueOrb_CutScene
+    ]
 }
 
 script CaveOfCreation_OnResume {
@@ -31,10 +35,27 @@ script CaveOfCreation_OnTransition {
 }
 
 script CaveOfCreation_Eventscript_ShowRedOrb {
+    checkitem(ITEM_BLUE_ORB)
+    if(flag(FLAG_DEFEATED_KYOGRE) && var(VAR_RESULT) == TRUE && !flag(FLAG_BLUE_ORB_USED))
+    {
+        setvar(VAR_TEMP_A, 1)
+    }
+}
+
+script CaveOfCreation_Eventscript_ShowBlueOrb {
+    checkitem(ITEM_BLUE_ORB)
+    if(flag(FLAG_DEFEATED_KYOGRE) && var(VAR_RESULT) == TRUE && !flag(FLAG_BLUE_ORB_USED))
+    {
+        setvar(VAR_TEMP_A, 2)
+    }
+}
+
+script CaveOfCreation_Eventscript_RedOrb_CutScene {
     lock
     checkitem(ITEM_RED_ORB)
     if(flag(FLAG_DEFEATED_GROUDON) && var(VAR_RESULT) == TRUE && !flag(FLAG_RED_ORB_USED))
     {
+        setvar(VAR_TEMP_A, 0)
         msgbox(CaveOfCreation_Text_ShowRedOrb)
         waitmessage
         closemessage
@@ -57,28 +78,25 @@ script CaveOfCreation_Eventscript_ShowRedOrb {
     end
 }
 
-script CaveOfCreation_Eventscript_ShowBlueOrb {
+script CaveOfCreation_Eventscript_BlueOrb_CutScene {
     lock
-    checkitem(ITEM_BLUE_ORB)
-    if(flag(FLAG_DEFEATED_KYOGRE) && var(VAR_RESULT) == TRUE && !flag(FLAG_BLUE_ORB_USED))
-    {
-        msgbox(CaveOfCreation_Text_ShowBlueOrb)
-        waitmessage
-        closemessage
-        setvar(VAR_RESULT, 3)
-        special(DoOrbEffect)
-        playse(SE_ORB)
-        waitse
-        delay(150)
-        special(FadeOutOrbEffect)
-        waitstate
-        setflag(FLAG_BLUE_ORB_USED)
-        removeobject(LOCALID_NINJA_BLUE_ORB)
+    setvar(VAR_TEMP_A, 0)
+    msgbox(CaveOfCreation_Text_ShowBlueOrb)
+    waitmessage
+    closemessage
+    setvar(VAR_RESULT, 3)
+    special(DoOrbEffect)
+    playse(SE_ORB)
+    waitse
+    delay(150)
+    special(FadeOutOrbEffect)
+    waitstate
+    setflag(FLAG_BLUE_ORB_USED)
+    removeobject(LOCALID_NINJA_BLUE_ORB)
 
-        if(flag(FLAG_RED_ORB_USED))
-        {
-            call(CaveOfCreation_Eventscript_PathOpen)
-        }
+    if(flag(FLAG_RED_ORB_USED))
+    {
+        call(CaveOfCreation_Eventscript_PathOpen)
     }
     release
     end

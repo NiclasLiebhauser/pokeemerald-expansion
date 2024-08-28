@@ -82,9 +82,9 @@ script Route203_Cave_EventScript_AdminFight {
 
 script EventScript_Increase_LevelCap {
     playfanfare(MUS_OBTAIN_BADGE)
-    message(format("Your ANCIENT PLATE shines with new power!\p"))
-    waitmessage
+    message(format("Your ANCIENT PLATE shines with new power!"))
     waitfanfare
+    closemessage
     return
 }
 
