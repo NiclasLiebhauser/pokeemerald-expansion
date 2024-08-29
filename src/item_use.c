@@ -504,6 +504,26 @@ static bool8 ItemfinderCheckForHiddenItems(const struct MapEvents *events, u8 ta
                 SetDistanceOfClosestHiddenItem(taskId, distanceX, distanceY);
         }
     }
+    for (i = 0; i < events->objectEventCount; i++)
+    {
+        //DebugPrintfLevel(MGBA_LOG_DEBUG, "Event (%d/%d) Kind: %d | Movementtype: %d | Sprite: %d | Flag: %d | IsFlagSet: %d", events->objectEvents[i].x, events->objectEvents[i].y, events->objectEvents[i].kind, events->objectEvents[i].movementType, events->objectEvents[i].graphicsId, events->objectEvents[i].flagId, FlagGet(events->objectEvents[i].flagId));
+        // Check if there are any hidden items on the current map that haven't been picked up
+        if(events->objectEvents[i].kind == 0 
+            && events->objectEvents[i].movementType == MOVEMENT_TYPE_INVISIBLE 
+            && events->objectEvents[i].graphicsId == OBJ_EVENT_GFX_ITEM_BALL
+            && !FlagGet(events->objectEvents[i].flagId))
+        {
+            itemX = (u16)events->objectEvents[i].x + MAP_OFFSET;
+            distanceX = itemX - playerX;
+            itemY = (u16)events->objectEvents[i].y + MAP_OFFSET;
+            distanceY = itemY - playerY;
+
+            // Player can see 7 metatiles on either side horizontally
+            // and 5 metatiles on either side vertically
+            if (distanceX >= -7 && distanceX <= 7 && distanceY >= -5 && distanceY <= 5)
+                SetDistanceOfClosestHiddenItem(taskId, distanceX, distanceY);
+        }
+    }
 
     CheckForHiddenItemsInMapConnection(taskId);
     if (gTasks[taskId].tItemFound == TRUE)
@@ -515,7 +535,9 @@ static bool8 ItemfinderCheckForHiddenItems(const struct MapEvents *events, u8 ta
 static bool8 IsHiddenItemPresentAtCoords(const struct MapEvents *events, s16 x, s16 y)
 {
     u8 bgEventCount = events->bgEventCount;
+    u8 objEventCount = events->objectEventCount;
     const struct BgEvent *bgEvent = events->bgEvents;
+    const struct ObjectEventTemplate *objectEventTemplate = events->objectEvents;
     int i;
 
     for (i = 0; i < bgEventCount; i++)
@@ -527,7 +549,22 @@ static bool8 IsHiddenItemPresentAtCoords(const struct MapEvents *events, s16 x, 
             else
                 return FALSE;
         }
+        
     }
+    for (i = 0; i < objEventCount; i++)
+    {
+        if (objectEventTemplate[i].kind == 0 && x == (u16)objectEventTemplate[i].x && y == (u16)objectEventTemplate[i].y) // hidden item and coordinates matches x and y passed?
+        {
+            if (!FlagGet(objectEventTemplate[i].flagId)
+                && events->objectEvents[i].movementType == MOVEMENT_TYPE_INVISIBLE 
+                && events->objectEvents[i].graphicsId == OBJ_EVENT_GFX_ITEM_BALL)
+                return TRUE;
+            else
+                return FALSE;
+        }
+        
+    }
+
     return FALSE;
 }
 

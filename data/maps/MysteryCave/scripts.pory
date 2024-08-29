@@ -52,6 +52,7 @@ script MysteryCave_EventScript_StartAdventure {
     call(ReceiveInfiniteRepel)
     call(ReceiveEscapeRope)
     call(ReceiveAncientPlate)
+    call(ReceiveItemFinder)
     call(ReceiveBalls)
     call(GiveFirstMon)
     call(GiveSecondMon)
@@ -139,6 +140,13 @@ script ReceiveEscapeRope {
 script ReceiveAncientPlate {
     playfanfare(MUS_OBTAIN_ITEM)
     giveitem(ITEM_ANCIENT_PLATE_1)
+    waitfanfare
+    return
+}
+
+script ReceiveItemFinder {
+    playfanfare(MUS_OBTAIN_ITEM)
+    giveitem(ITEM_DOWSING_MACHINE)
     waitfanfare
     return
 }
