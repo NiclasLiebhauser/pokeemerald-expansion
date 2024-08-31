@@ -152,7 +152,7 @@ script EventScript_Tell_Fortune_Evolution {
     }
     else
     {
-        message(format("Seek out an indivual by the name of VARION inside the volcanic cave. He can help you.\p"))
+        message(format("Seek out an indivual by the name of CROW inside the volcanic cave. He can help you.\p"))
     }
 
     waitmessage

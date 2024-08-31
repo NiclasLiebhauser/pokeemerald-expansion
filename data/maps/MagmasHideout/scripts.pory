@@ -59,6 +59,17 @@ script MagmasHideout_EventScript_StrengthGrunt{
     end
 }
 
+script MagmasHideout_EventScript_Crow {
+    lock
+    faceplayer
+    message(format("Hey, they call me Crow because I like shiny stuff. Wanna buy something?"))
+    waitmessage
+    pokemart(MagmasHideout_Crow)
+    msgbox(format("Come by from time to time."))
+    release
+    end
+}
+
 script MagmasHideout_EventScript_Grunt1 {
     trainerbattle_single(TRAINER_MAGMA_GRUNT_MAGMAHQ_1, MagmasHideout_Text_Grunt1_Intro, MagmasHideout_Text_Grunt1_Defeat)
     msgbox(MagmasHideout_Text_Grunt1_PostBattle, MSGBOX_AUTOCLOSE)
@@ -125,4 +136,35 @@ text MagmasHideout_Text_Grunt4_Defeat {
 
 text MagmasHideout_Text_Grunt4_PostBattle {
     format("Post")
+}
+
+mart MagmasHideout_Crow {
+    ITEM_FIRE_STONE
+    ITEM_LEAF_STONE
+    ITEM_ICE_STONE
+    ITEM_WATER_STONE
+    ITEM_THUNDER_STONE
+    ITEM_SUN_STONE
+    ITEM_DAWN_STONE
+    ITEM_DUSK_STONE
+    ITEM_SHINY_STONE
+    ITEM_DEEP_SEA_SCALE
+    ITEM_DEEP_SEA_TOOTH
+    ITEM_GALARICA_CUFF
+    ITEM_GALARICA_WREATH
+    ITEM_ELECTIRIZER
+    ITEM_KINGS_ROCK
+    ITEM_LINKING_CORD
+    ITEM_MAGMARIZER
+    ITEM_METAL_COAT
+    ITEM_PROTECTOR
+    ITEM_RAZOR_CLAW
+    ITEM_RAZOR_FANG
+    ITEM_REAPER_CLOTH
+    ITEM_UPGRADE
+    ITEM_PRISM_SCALE
+    ITEM_PEAT_BLOCK
+    ITEM_DRAGON_SCALE
+    ITEM_BLACK_AUGURITE
+    ITEM_DUBIOUS_DISC
 }

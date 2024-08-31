@@ -1194,7 +1194,7 @@
               {
                 "min_level": 52,
                 "max_level": 59,
-                "species": "SPECIES_DRAPION"
+                "species": "SPECIES_SLOWPOKE_GALARIAN"
               },
               {
                 "min_level": 50,
@@ -1454,7 +1454,7 @@
               {
                 "min_level": 50,
                 "max_level": 59,
-                "species": "SPECIES_SPINARAK"
+                "species": "SPECIES_TEDDIURSA"
               },
               {
                 "min_level": 50,

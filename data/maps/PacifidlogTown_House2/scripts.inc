@@ -456,7 +456,7 @@ EventScript_Tell_Fortune_Evolution_Text_0:
 EventScript_Tell_Fortune_Evolution_Text_1:
 # 155 "data/maps/PacifidlogTown_House2/scripts.pory"
 	.string "Seek out an indivual by the name of\n"
-	.string "VARION inside the volcanic cave. He can\l"
+	.string "CROW inside the volcanic cave. He can\l"
 	.string "help you.\p"
 	.string "$"
 
