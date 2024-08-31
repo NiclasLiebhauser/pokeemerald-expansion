@@ -11,8 +11,23 @@ script EventScript_Fortune_Teller {
 
     if(var(VAR_RESULT) == YES)
     {
-        //Todo add money check
-        call(EventScript_Tell_Fortune) 
+        checkmoney(50)
+        if(var(VAR_RESULT) == TRUE)
+        {
+            removemoney(50)
+            updatemoneybox
+            playse(SE_SHOP)
+            waitse
+            hidemoneybox
+            call(EventScript_Tell_Fortune) 
+        }
+        else
+        {
+            hidemoneybox
+            message(format("You don't even have ¥50? Come back once you can afford your fortune to be foretold.\p"))
+            waitmessage
+            closemessage
+        }
     }
     else
     {
