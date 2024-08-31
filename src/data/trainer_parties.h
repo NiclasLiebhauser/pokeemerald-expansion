@@ -12202,113 +12202,113 @@ static const struct TrainerMon sParty_Arceus[] = {
 
 static const struct TrainerMon sParty_Swimmer_Route202_1[] = {
     {
-    .lvl = 21,
+    .lvl = 17,
     .species = SPECIES_GULPIN,
     },
     {
-    .lvl = 22,
+    .lvl = 18,
     .species = SPECIES_LARVITAR,
     }
 };
 
 static const struct TrainerMon sParty_Swimmer_Route202_2[] = {
     {
-    .lvl = 21,
+    .lvl = 18,
     .species = SPECIES_TREECKO,
     },
     {
-    .lvl = 22,
+    .lvl = 19,
     .species = SPECIES_RALTS,
     }
 };
 
 static const struct TrainerMon sParty_Tuber_Route203_1[] = {
     {
-    .lvl = 22,
+    .lvl = 19,
     .species = SPECIES_MANTYKE,
     },
     {
-    .lvl = 23,
+    .lvl = 20,
     .species = SPECIES_GLACEON,
     },
     {
-    .lvl = 23,
+    .lvl = 20,
     .species = SPECIES_RIOLU,
     }
 };
 
 static const struct TrainerMon sParty_Expert_Route203_1[] = {
     {
-    .lvl = 22,
+    .lvl = 19,
     .species = SPECIES_MISDREAVUS,
     },
     {
-    .lvl = 23,
+    .lvl = 20,
     .species = SPECIES_COMBUSKEN,
     },
     {
-    .lvl = 23,
+    .lvl = 20,
     .species = SPECIES_SCYTHER,
     }
 };
 
 static const struct TrainerMon sParty_HexManiac_Route203_1[] = {
     {
-    .lvl = 24,
+    .lvl = 19,
     .species = SPECIES_GASTLY,
     },
     {
-    .lvl = 23,
+    .lvl = 20,
     .species = SPECIES_TAUROS,
     },
     {
-    .lvl = 23,
+    .lvl = 20,
     .species = SPECIES_NATU,
     }
 };
 
 static const struct TrainerMon sParty_BlackBelt_Route203_1[] = {
     {
-    .lvl = 23,
+    .lvl = 20,
     .species = SPECIES_HITMONCHAN,
     },
     {
-    .lvl = 23,
+    .lvl = 20,
     .species = SPECIES_HITMONLEE,
     },
     {
-    .lvl = 25,
+    .lvl = 20,
     .species = SPECIES_HITMONTOP,
     }
 };
 
 static const struct TrainerMon sParty_Hiker_Route203_1[] = {
     {
-    .lvl = 23,
+    .lvl = 20,
     .species = SPECIES_ONIX,
     },
     {
-    .lvl = 23,
+    .lvl = 20,
     .species = SPECIES_AERODACTYL,
     },
     {
-    .lvl = 25,
+    .lvl = 20,
     .species = SPECIES_DUSTOX,
     }
 };
 
 static const struct TrainerMon sParty_Swimmer_Route203_1[] = {
     {
-    .lvl = 23,
+    .lvl = 20,
     .species = SPECIES_PIKACHU,
     },
     {
-    .lvl = 23,
+    .lvl = 20,
     .species = SPECIES_SQUIRTLE,
     },
     {
-    .lvl = 25,
-    .species = SPECIES_GOLBAT,
+    .lvl = 20,
+    .species = SPECIES_ZUBAT,
     }
 };
 
