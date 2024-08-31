@@ -143,85 +143,89 @@ EventScript_Increase_LevelCap::
 
 Route203_Cave_EventScript_RockSmashMachine::
 # 92 "data/maps/Route203_Cave/scripts.pory"
-	removeobject 20
+	lock
 # 93 "data/maps/Route203_Cave/scripts.pory"
-	setflag FLAG_ITEM_ROCK_SMASH_MACHINE
+	removeobject 20
 # 94 "data/maps/Route203_Cave/scripts.pory"
-	setflag FLAG_PLAYER_CAN_USE_ROCK_SMASH
+	setflag FLAG_ITEM_ROCK_SMASH_MACHINE
 # 95 "data/maps/Route203_Cave/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	setflag FLAG_PLAYER_CAN_USE_ROCK_SMASH
 # 96 "data/maps/Route203_Cave/scripts.pory"
-	msgbox Route203_Cave_Text_RockSmashMachine
+	playfanfare MUS_OBTAIN_ITEM
 # 97 "data/maps/Route203_Cave/scripts.pory"
-	waitfanfare
+	giveitem ITEM_MACHINE_ROCK_SMASH
 # 98 "data/maps/Route203_Cave/scripts.pory"
-	waitbuttonpress
+	waitfanfare
 # 99 "data/maps/Route203_Cave/scripts.pory"
+	waitmessage
+# 100 "data/maps/Route203_Cave/scripts.pory"
 	closemessage
-	return
+# 101 "data/maps/Route203_Cave/scripts.pory"
+	release
+	end
 
 
 Route203_Cave_EventScript_AquaGrunt_Working::
-# 103 "data/maps/Route203_Cave/scripts.pory"
+# 106 "data/maps/Route203_Cave/scripts.pory"
 	msgbox Route203_Cave_Text_AquaGrunt_Working, MSGBOX_SIGN
 	return
 
 
 Route203_Cave_EventScript_AquaGrunt_1::
-# 107 "data/maps/Route203_Cave/scripts.pory"
+# 110 "data/maps/Route203_Cave/scripts.pory"
 	trainerbattle_single TRAINER_AQUA_GRUNT_ROUTE203_CAVE_1, Route203_Cave_Text_AquaGrunt1_Intro, Route203_Cave_Text_AquaGrunt1_Defeat
-# 108 "data/maps/Route203_Cave/scripts.pory"
+# 111 "data/maps/Route203_Cave/scripts.pory"
 	msgbox Route203_Cave_Text_AquaGrunt1_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 Route203_Cave_EventScript_AquaGrunt_2::
-# 112 "data/maps/Route203_Cave/scripts.pory"
+# 115 "data/maps/Route203_Cave/scripts.pory"
 	trainerbattle_single TRAINER_AQUA_GRUNT_ROUTE203_CAVE_2, Route203_Cave_Text_AquaGrunt2_Intro, Route203_Cave_Text_AquaGrunt2_Defeat
-# 113 "data/maps/Route203_Cave/scripts.pory"
+# 116 "data/maps/Route203_Cave/scripts.pory"
 	msgbox Route203_Cave_Text_AquaGrunt2_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 Route203_Cave_EventScript_AquaGrunt_3::
-# 117 "data/maps/Route203_Cave/scripts.pory"
+# 120 "data/maps/Route203_Cave/scripts.pory"
 	trainerbattle_single TRAINER_AQUA_GRUNT_ROUTE203_CAVE_3, Route203_Cave_Text_AquaGrunt3_Intro, Route203_Cave_Text_AquaGrunt3_Defeat
-# 118 "data/maps/Route203_Cave/scripts.pory"
+# 121 "data/maps/Route203_Cave/scripts.pory"
 	msgbox Route203_Cave_Text_AquaGrunt3_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 Route203_Cave_EventScript_AquaGrunt_4::
-# 122 "data/maps/Route203_Cave/scripts.pory"
+# 125 "data/maps/Route203_Cave/scripts.pory"
 	trainerbattle_single TRAINER_AQUA_GRUNT_ROUTE203_CAVE_4, Route203_Cave_Text_AquaGrunt4_Intro, Route203_Cave_Text_AquaGrunt4_Defeat
-# 123 "data/maps/Route203_Cave/scripts.pory"
+# 126 "data/maps/Route203_Cave/scripts.pory"
 	msgbox Route203_Cave_Text_AquaGrunt4_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 Route203_Cave_EventScript_AquaGrunt_5::
-# 127 "data/maps/Route203_Cave/scripts.pory"
+# 130 "data/maps/Route203_Cave/scripts.pory"
 	trainerbattle_single TRAINER_AQUA_GRUNT_ROUTE203_CAVE_5, Route203_Cave_Text_AquaGrunt5_Intro, Route203_Cave_Text_AquaGrunt5_Defeat
-# 128 "data/maps/Route203_Cave/scripts.pory"
+# 131 "data/maps/Route203_Cave/scripts.pory"
 	msgbox Route203_Cave_Text_AquaGrunt5_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 Route203_Cave_EventScript_AquaGrunt_6::
-# 132 "data/maps/Route203_Cave/scripts.pory"
+# 135 "data/maps/Route203_Cave/scripts.pory"
 	trainerbattle_single TRAINER_AQUA_GRUNT_ROUTE203_CAVE_6, Route203_Cave_Text_AquaGrunt6_Intro, Route203_Cave_Text_AquaGrunt6_Defeat
-# 133 "data/maps/Route203_Cave/scripts.pory"
+# 136 "data/maps/Route203_Cave/scripts.pory"
 	msgbox Route203_Cave_Text_AquaGrunt6_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
-# 249 "data/maps/Route203_Cave/scripts.pory"
+# 252 "data/maps/Route203_Cave/scripts.pory"
 Route203_Cave_Movement_AquaAdmin:
-# 250 "data/maps/Route203_Cave/scripts.pory"
+# 253 "data/maps/Route203_Cave/scripts.pory"
 	walk_right
-# 251 "data/maps/Route203_Cave/scripts.pory"
+# 254 "data/maps/Route203_Cave/scripts.pory"
 	walk_up
-# 251 "data/maps/Route203_Cave/scripts.pory"
+# 254 "data/maps/Route203_Cave/scripts.pory"
 	walk_up
 	step_end
 
@@ -231,93 +235,93 @@ EventScript_Increase_LevelCap_Text_0:
 	.string "power!$"
 
 Route203_Cave_Text_AquaGrunt1_Intro::
-# 137 "data/maps/Route203_Cave/scripts.pory"
+# 140 "data/maps/Route203_Cave/scripts.pory"
 	.string "Intro$"
 
 Route203_Cave_Text_AquaGrunt1_Defeat::
-# 142 "data/maps/Route203_Cave/scripts.pory"
+# 145 "data/maps/Route203_Cave/scripts.pory"
 	.string "Defeat$"
 
 Route203_Cave_Text_AquaGrunt1_PostBattle::
-# 147 "data/maps/Route203_Cave/scripts.pory"
+# 150 "data/maps/Route203_Cave/scripts.pory"
 	.string "Post$"
 
 Route203_Cave_Text_AquaGrunt2_Intro::
-# 152 "data/maps/Route203_Cave/scripts.pory"
+# 155 "data/maps/Route203_Cave/scripts.pory"
 	.string "Intro$"
 
 Route203_Cave_Text_AquaGrunt2_Defeat::
-# 157 "data/maps/Route203_Cave/scripts.pory"
+# 160 "data/maps/Route203_Cave/scripts.pory"
 	.string "Defeat$"
 
 Route203_Cave_Text_AquaGrunt2_PostBattle::
-# 162 "data/maps/Route203_Cave/scripts.pory"
+# 165 "data/maps/Route203_Cave/scripts.pory"
 	.string "Post$"
 
 Route203_Cave_Text_AquaGrunt3_Intro::
-# 167 "data/maps/Route203_Cave/scripts.pory"
+# 170 "data/maps/Route203_Cave/scripts.pory"
 	.string "Intro$"
 
 Route203_Cave_Text_AquaGrunt3_Defeat::
-# 172 "data/maps/Route203_Cave/scripts.pory"
+# 175 "data/maps/Route203_Cave/scripts.pory"
 	.string "Defeat$"
 
 Route203_Cave_Text_AquaGrunt3_PostBattle::
-# 177 "data/maps/Route203_Cave/scripts.pory"
+# 180 "data/maps/Route203_Cave/scripts.pory"
 	.string "Post$"
 
 Route203_Cave_Text_AquaGrunt4_Intro::
-# 182 "data/maps/Route203_Cave/scripts.pory"
+# 185 "data/maps/Route203_Cave/scripts.pory"
 	.string "Intro$"
 
 Route203_Cave_Text_AquaGrunt4_Defeat::
-# 187 "data/maps/Route203_Cave/scripts.pory"
+# 190 "data/maps/Route203_Cave/scripts.pory"
 	.string "Defeat$"
 
 Route203_Cave_Text_AquaGrunt4_PostBattle::
-# 192 "data/maps/Route203_Cave/scripts.pory"
+# 195 "data/maps/Route203_Cave/scripts.pory"
 	.string "Post$"
 
 Route203_Cave_Text_AquaGrunt5_Intro::
-# 197 "data/maps/Route203_Cave/scripts.pory"
+# 200 "data/maps/Route203_Cave/scripts.pory"
 	.string "Intro$"
 
 Route203_Cave_Text_AquaGrunt5_Defeat::
-# 202 "data/maps/Route203_Cave/scripts.pory"
+# 205 "data/maps/Route203_Cave/scripts.pory"
 	.string "Defeat$"
 
 Route203_Cave_Text_AquaGrunt5_PostBattle::
-# 207 "data/maps/Route203_Cave/scripts.pory"
+# 210 "data/maps/Route203_Cave/scripts.pory"
 	.string "Post$"
 
 Route203_Cave_Text_AquaGrunt6_Intro::
-# 212 "data/maps/Route203_Cave/scripts.pory"
+# 215 "data/maps/Route203_Cave/scripts.pory"
 	.string "Intro$"
 
 Route203_Cave_Text_AquaGrunt6_Defeat::
-# 217 "data/maps/Route203_Cave/scripts.pory"
+# 220 "data/maps/Route203_Cave/scripts.pory"
 	.string "Defeat$"
 
 Route203_Cave_Text_AquaGrunt6_PostBattle::
-# 222 "data/maps/Route203_Cave/scripts.pory"
+# 225 "data/maps/Route203_Cave/scripts.pory"
 	.string "Post$"
 
 Route203_Cave_Text_AquaGrunt_Working::
-# 226 "data/maps/Route203_Cave/scripts.pory"
+# 229 "data/maps/Route203_Cave/scripts.pory"
 	.string "Can't you see that I'm working.$"
 
 Route203_Cave_Text_AquaAdmin_PreBattle::
-# 231 "data/maps/Route203_Cave/scripts.pory"
+# 234 "data/maps/Route203_Cave/scripts.pory"
 	.string "Admin...$"
 
 Route203_Cave_Text_AquaAdmin_Defeat::
-# 236 "data/maps/Route203_Cave/scripts.pory"
+# 239 "data/maps/Route203_Cave/scripts.pory"
 	.string "Defeat$"
 
 Route203_Cave_Text_AquaAdmin_PostBattle::
-# 241 "data/maps/Route203_Cave/scripts.pory"
+# 244 "data/maps/Route203_Cave/scripts.pory"
 	.string "Post$"
 
 Route203_Cave_Text_RockSmashMachine::
-# 245 "data/maps/Route203_Cave/scripts.pory"
+# 248 "data/maps/Route203_Cave/scripts.pory"
 	.string "Obtained ROCK SMASH MACHINE!$"

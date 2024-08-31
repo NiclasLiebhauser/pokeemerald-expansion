@@ -145,17 +145,17 @@ AnabelsHouse_EventScript_CutMachine::
 # 95 "data/maps/AnabelsHouse/scripts.pory"
 	removeobject 2
 # 96 "data/maps/AnabelsHouse/scripts.pory"
-	setflag FLAG_ITEM_CUT_MACHINE
-# 97 "data/maps/AnabelsHouse/scripts.pory"
-	setflag FLAG_PLAYER_CAN_USE_CUT
-# 98 "data/maps/AnabelsHouse/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
+# 97 "data/maps/AnabelsHouse/scripts.pory"
+	setflag FLAG_ITEM_CUT_MACHINE
+# 98 "data/maps/AnabelsHouse/scripts.pory"
+	setflag FLAG_PLAYER_CAN_USE_CUT
 # 99 "data/maps/AnabelsHouse/scripts.pory"
-	msgbox AnabelsHouse_Text_CutMachine
+	giveitem ITEM_MACHINE_CUT
 # 100 "data/maps/AnabelsHouse/scripts.pory"
 	waitfanfare
 # 101 "data/maps/AnabelsHouse/scripts.pory"
-	waitbuttonpress
+	waitmessage
 # 102 "data/maps/AnabelsHouse/scripts.pory"
 	closemessage
 	return

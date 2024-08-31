@@ -11281,6 +11281,118 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
+    [ITEM_MACHINE_DIVE] =
+    {
+        .name = _("Dive Machine"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A machine that\n"
+            "allows you to always\n"
+            "DIVE."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_MACHINE_SURF] =
+    {
+        .name = _("Surf Machine"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A machine that \n"
+            "allows you to always\n"
+            "SURF."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_MACHINE_FLY] =
+    {
+        .name = _("Fly Machine"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A machine that\n"
+            "allows you to always\n"
+            "FLY."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_MACHINE_ROCK_SMASH] =
+    {
+        .name = _("Rock Smash M."),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A machine that\n"
+            "allows you to always\n"
+            "SMASH ROCKs."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_MACHINE_STRENGTH] =
+    {
+        .name = _("Strength M."),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A machine that \n"
+            "allows you to always\n"
+            "push BOULDERS."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_MACHINE_WATERFALL] =
+    {
+        .name = _("Waterfall M."),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A machine that \n"
+            "allows you to SURF\n"
+            "up WATERFALLs."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_MACHINE_CUT] =
+    {
+        .name = _("Cut Machine"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A machine that \n"
+            "allows you to always\n"
+            "CUT down plants."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_MACHINE_FLASH] =
+    {
+        .name = _("Flash Machine"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A machine that \n"
+            "allows you to always\n"
+            "LIGHT up caves."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
 // Story Key Items
 
     [ITEM_SS_TICKET] =

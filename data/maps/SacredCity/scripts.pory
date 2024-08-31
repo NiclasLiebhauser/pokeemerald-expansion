@@ -27,17 +27,6 @@ script SacredCity_Hide_Cave_Entrance {
     end
 }
 
-script SacredCity_EventScript_FlyMachine {
-    removeobject(LOCAL_FLYING_MACHINE)
-    setflag(FLAG_ITEM_FLYING_MACHINE)
-    setflag(FLAG_PLAYER_CAN_USE_FLY)
-    playfanfare(MUS_OBTAIN_ITEM)
-    msgbox(SacredCity_Text_FlyMachine)
-    waitfanfare
-    waitbuttonpress
-    closemessage
-}
-
 script SacredCity_EventScript_Artist {
     lock
     faceplayer

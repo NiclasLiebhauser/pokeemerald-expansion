@@ -34,136 +34,116 @@ SacredCity_Hide_Cave_Entrance::
 	end
 
 
-SacredCity_EventScript_FlyMachine::
-# 31 "data/maps/SacredCity/scripts.pory"
-	removeobject 1
-# 32 "data/maps/SacredCity/scripts.pory"
-	setflag FLAG_ITEM_FLYING_MACHINE
-# 33 "data/maps/SacredCity/scripts.pory"
-	setflag FLAG_PLAYER_CAN_USE_FLY
-# 34 "data/maps/SacredCity/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 35 "data/maps/SacredCity/scripts.pory"
-	msgbox SacredCity_Text_FlyMachine
-# 36 "data/maps/SacredCity/scripts.pory"
-	waitfanfare
-# 37 "data/maps/SacredCity/scripts.pory"
-	waitbuttonpress
-# 38 "data/maps/SacredCity/scripts.pory"
-	closemessage
-	return
-
-
 SacredCity_EventScript_Artist::
-# 42 "data/maps/SacredCity/scripts.pory"
+# 31 "data/maps/SacredCity/scripts.pory"
 	lock
-# 43 "data/maps/SacredCity/scripts.pory"
+# 32 "data/maps/SacredCity/scripts.pory"
 	faceplayer
-# 44 "data/maps/SacredCity/scripts.pory"
+# 33 "data/maps/SacredCity/scripts.pory"
 	goto_if_unset FLAG_DEFEATED_GROUDON, SacredCity_EventScript_Artist_2
-# 50 "data/maps/SacredCity/scripts.pory"
+# 39 "data/maps/SacredCity/scripts.pory"
 	msgbox SacredCity_EventScript_Artist_Text_1
 SacredCity_EventScript_Artist_1:
-# 53 "data/maps/SacredCity/scripts.pory"
+# 42 "data/maps/SacredCity/scripts.pory"
 	release
 	end
 
 SacredCity_EventScript_Artist_2:
-# 46 "data/maps/SacredCity/scripts.pory"
+# 35 "data/maps/SacredCity/scripts.pory"
 	msgbox SacredCity_EventScript_Artist_Text_0, MSGBOX_NPC
 	goto SacredCity_EventScript_Artist_1
 
 
 SacredCity_EventScript_MountainGuardian::
-# 58 "data/maps/SacredCity/scripts.pory"
+# 47 "data/maps/SacredCity/scripts.pory"
 	lock
-# 59 "data/maps/SacredCity/scripts.pory"
+# 48 "data/maps/SacredCity/scripts.pory"
 	faceplayer
-# 60 "data/maps/SacredCity/scripts.pory"
+# 49 "data/maps/SacredCity/scripts.pory"
 	message SacredCity_EventScript_MountainGuardian_Text_0
-# 61 "data/maps/SacredCity/scripts.pory"
+# 50 "data/maps/SacredCity/scripts.pory"
 	waitmessage
-# 63 "data/maps/SacredCity/scripts.pory"
+# 52 "data/maps/SacredCity/scripts.pory"
 	checkitem ITEM_RED_ORB
-# 64 "data/maps/SacredCity/scripts.pory"
+# 53 "data/maps/SacredCity/scripts.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq SacredCity_EventScript_MountainGuardian_3
 SacredCity_EventScript_MountainGuardian_1:
-# 73 "data/maps/SacredCity/scripts.pory"
+# 62 "data/maps/SacredCity/scripts.pory"
 	checkitem ITEM_BLUE_ORB
-# 74 "data/maps/SacredCity/scripts.pory"
+# 63 "data/maps/SacredCity/scripts.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq SacredCity_EventScript_MountainGuardian_8
 SacredCity_EventScript_MountainGuardian_6:
-# 83 "data/maps/SacredCity/scripts.pory"
+# 72 "data/maps/SacredCity/scripts.pory"
 	message SacredCity_EventScript_MountainGuardian_Text_3
-# 84 "data/maps/SacredCity/scripts.pory"
+# 73 "data/maps/SacredCity/scripts.pory"
 	waitmessage
-# 85 "data/maps/SacredCity/scripts.pory"
+# 74 "data/maps/SacredCity/scripts.pory"
 	closemessage
-# 86 "data/maps/SacredCity/scripts.pory"
+# 75 "data/maps/SacredCity/scripts.pory"
 	release
 	end
 
 SacredCity_EventScript_MountainGuardian_2:
-# 66 "data/maps/SacredCity/scripts.pory"
+# 55 "data/maps/SacredCity/scripts.pory"
 	message SacredCity_EventScript_MountainGuardian_Text_1
-# 67 "data/maps/SacredCity/scripts.pory"
+# 56 "data/maps/SacredCity/scripts.pory"
 	waitmessage
-# 68 "data/maps/SacredCity/scripts.pory"
+# 57 "data/maps/SacredCity/scripts.pory"
 	closemessage
-# 69 "data/maps/SacredCity/scripts.pory"
+# 58 "data/maps/SacredCity/scripts.pory"
 	release
 	end
 
 SacredCity_EventScript_MountainGuardian_3:
-# 64 "data/maps/SacredCity/scripts.pory"
+# 53 "data/maps/SacredCity/scripts.pory"
 	goto_if_unset FLAG_RED_ORB_USED, SacredCity_EventScript_MountainGuardian_2
 	goto SacredCity_EventScript_MountainGuardian_1
 
 SacredCity_EventScript_MountainGuardian_7:
-# 76 "data/maps/SacredCity/scripts.pory"
+# 65 "data/maps/SacredCity/scripts.pory"
 	message SacredCity_EventScript_MountainGuardian_Text_2
-# 77 "data/maps/SacredCity/scripts.pory"
+# 66 "data/maps/SacredCity/scripts.pory"
 	waitmessage
-# 78 "data/maps/SacredCity/scripts.pory"
+# 67 "data/maps/SacredCity/scripts.pory"
 	closemessage
-# 79 "data/maps/SacredCity/scripts.pory"
+# 68 "data/maps/SacredCity/scripts.pory"
 	release
 	end
 
 SacredCity_EventScript_MountainGuardian_8:
-# 74 "data/maps/SacredCity/scripts.pory"
+# 63 "data/maps/SacredCity/scripts.pory"
 	goto_if_unset FLAG_BLUE_ORB_USED, SacredCity_EventScript_MountainGuardian_7
 	goto SacredCity_EventScript_MountainGuardian_6
 
 
 SacredCity_EventScript_HexManiac1::
-# 91 "data/maps/SacredCity/scripts.pory"
+# 80 "data/maps/SacredCity/scripts.pory"
 	trainerbattle_single TRAINER_HEX_MANIAC_SACRED_CITY_1, SacredCity_Text_HexManiac1_Intro, SacredCity_Text_HexManiac1_Defeat
-# 92 "data/maps/SacredCity/scripts.pory"
+# 81 "data/maps/SacredCity/scripts.pory"
 	msgbox SacredCity_Text_HexManiac1_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 SacredCity_EventScript_Psychic1::
-# 96 "data/maps/SacredCity/scripts.pory"
+# 85 "data/maps/SacredCity/scripts.pory"
 	trainerbattle_single TRAINER_PSYCHIC_SACRED_CITY_1, SacredCity_Text_Psychic1_Intro, SacredCity_Text_Psychic1_Defeat
-# 97 "data/maps/SacredCity/scripts.pory"
+# 86 "data/maps/SacredCity/scripts.pory"
 	msgbox SacredCity_Text_Psychic1_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 SacredCity_EventScript_Psychic2::
-# 101 "data/maps/SacredCity/scripts.pory"
+# 90 "data/maps/SacredCity/scripts.pory"
 	trainerbattle_single TRAINER_PSYCHIC_SACRED_CITY_2, SacredCity_Text_Psychic2_Intro, SacredCity_Text_Psychic2_Defeat
-# 102 "data/maps/SacredCity/scripts.pory"
+# 91 "data/maps/SacredCity/scripts.pory"
 	msgbox SacredCity_Text_Psychic2_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 SacredCity_EventScript_Artist_Text_0:
-# 46 "data/maps/SacredCity/scripts.pory"
+# 35 "data/maps/SacredCity/scripts.pory"
 	.string "Rumors say, that the deadly drought on\n"
 	.string "northern part of the island is because\l"
 	.string "of a powerful Pokémon hybernating\l"
@@ -172,20 +152,20 @@ SacredCity_EventScript_Artist_Text_0:
 	.string "be?$"
 
 SacredCity_EventScript_Artist_Text_1:
-# 50 "data/maps/SacredCity/scripts.pory"
+# 39 "data/maps/SacredCity/scripts.pory"
 	.string "They say the mysterious weather on on\n"
 	.string "northern part of the island has\l"
 	.string "stopped as suddenly as it had begun.$"
 
 SacredCity_EventScript_MountainGuardian_Text_0:
-# 60 "data/maps/SacredCity/scripts.pory"
+# 49 "data/maps/SacredCity/scripts.pory"
 	.string "There used to be a path here which led\n"
 	.string "up the mountain. But it has vanished\l"
 	.string "since KYOGRE raised the water level.\p"
 	.string "$"
 
 SacredCity_EventScript_MountainGuardian_Text_1:
-# 66 "data/maps/SacredCity/scripts.pory"
+# 55 "data/maps/SacredCity/scripts.pory"
 	.string "I see you are carrying the sacred RED\n"
 	.string "ORB. But it seems to have lost its\l"
 	.string "luster.\p"
@@ -194,7 +174,7 @@ SacredCity_EventScript_MountainGuardian_Text_1:
 	.string "$"
 
 SacredCity_EventScript_MountainGuardian_Text_2:
-# 76 "data/maps/SacredCity/scripts.pory"
+# 65 "data/maps/SacredCity/scripts.pory"
 	.string "I see you are carrying the sacred BLUE\n"
 	.string "ORB. But it seems to have lost its\l"
 	.string "luster.\p"
@@ -203,7 +183,7 @@ SacredCity_EventScript_MountainGuardian_Text_2:
 	.string "$"
 
 SacredCity_EventScript_MountainGuardian_Text_3:
-# 83 "data/maps/SacredCity/scripts.pory"
+# 72 "data/maps/SacredCity/scripts.pory"
 	.string "My grand father had once told me about\n"
 	.string "a temple which could open the path to\l"
 	.string "the mountain.\p"
@@ -213,41 +193,41 @@ SacredCity_EventScript_MountainGuardian_Text_3:
 	.string "$"
 
 SacredCity_Text_HexManiac1_Intro::
-# 105 "data/maps/SacredCity/scripts.pory"
+# 94 "data/maps/SacredCity/scripts.pory"
 	.string "Intro$"
 
 SacredCity_Text_HexManiac1_Defeat::
-# 109 "data/maps/SacredCity/scripts.pory"
+# 98 "data/maps/SacredCity/scripts.pory"
 	.string "Defeat$"
 
 SacredCity_Text_HexManiac1_PostBattle::
-# 113 "data/maps/SacredCity/scripts.pory"
+# 102 "data/maps/SacredCity/scripts.pory"
 	.string "Post$"
 
 SacredCity_Text_Psychic1_Intro::
-# 117 "data/maps/SacredCity/scripts.pory"
+# 106 "data/maps/SacredCity/scripts.pory"
 	.string "Intro$"
 
 SacredCity_Text_Psychic1_Defeat::
-# 121 "data/maps/SacredCity/scripts.pory"
+# 110 "data/maps/SacredCity/scripts.pory"
 	.string "Defeat$"
 
 SacredCity_Text_Psychic1_PostBattle::
-# 125 "data/maps/SacredCity/scripts.pory"
+# 114 "data/maps/SacredCity/scripts.pory"
 	.string "Post$"
 
 SacredCity_Text_Psychic2_Intro::
-# 129 "data/maps/SacredCity/scripts.pory"
+# 118 "data/maps/SacredCity/scripts.pory"
 	.string "Intro$"
 
 SacredCity_Text_Psychic2_Defeat::
-# 133 "data/maps/SacredCity/scripts.pory"
+# 122 "data/maps/SacredCity/scripts.pory"
 	.string "Defeat$"
 
 SacredCity_Text_Psychic2_PostBattle::
-# 137 "data/maps/SacredCity/scripts.pory"
+# 126 "data/maps/SacredCity/scripts.pory"
 	.string "Post$"
 
 SacredCity_Text_FlyMachine::
-# 141 "data/maps/SacredCity/scripts.pory"
+# 130 "data/maps/SacredCity/scripts.pory"
 	.string "Obtained FLY MACHINE!$"

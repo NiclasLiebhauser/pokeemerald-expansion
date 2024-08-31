@@ -27,11 +27,9 @@ script FishermanGiveSharpedoMachine {
     msgbox(FishermanText, MSGBOX_DEFAULT)
 
     playfanfare(MUS_OBTAIN_ITEM)
-    msgbox(SharpedoMachineObtained, MSGBOX_DEFAULT)
-    waitfanfare
-
     setflag(FLAG_PLAYER_CAN_USE_SURF)
-
+    giveitem(ITEM_MACHINE_SURF)
+    waitfanfare
     applymovement(FISHERMAN_ID, FishermanFaceWaterMovement)
     waitmovement(0)
     
@@ -66,7 +64,7 @@ script Route201_EventScript_Zapdos {
 }
 
 text FishermanText {
-    format("You want to surf on your what?!\nThat is cruelty!\lHow barbaric.\pThese days we use MACHINES.\lHere you can have my SHARPEDO MACHINE.")
+    format("You want to surf on your what?!\nThat is cruelty!\lHow barbaric.\pThese days we use MACHINES.\lHere you can have my SURF MACHINE.")
 }
 
 text SharpedoMachineObtained {
@@ -74,7 +72,7 @@ text SharpedoMachineObtained {
 }
 
 text FishermanGenericText {
-    format("I am all out of SHARPEDO MACHINES.\nHow am I gonna get home?")
+    format("I am all out of SURF MACHINES.\nHow am I gonna get home?")
 }
 
 movement FishermanFacePlayerMovement {

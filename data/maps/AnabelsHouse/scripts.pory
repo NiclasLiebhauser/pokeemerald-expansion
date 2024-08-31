@@ -93,12 +93,12 @@ script AnabelsHouse_EventScript_Anabel_StartHideAndSeek {
 
 script AnabelsHouse_EventScript_CutMachine {
     removeobject(LOCAL_CUT_MACHINE)
+    playfanfare(MUS_OBTAIN_ITEM)
     setflag(FLAG_ITEM_CUT_MACHINE)
     setflag(FLAG_PLAYER_CAN_USE_CUT)
-    playfanfare(MUS_OBTAIN_ITEM)
-    msgbox(AnabelsHouse_Text_CutMachine)
+    giveitem(ITEM_MACHINE_CUT)
     waitfanfare
-    waitbuttonpress
+    waitmessage
     closemessage
 }
 

@@ -4,14 +4,17 @@ const LOCAL_STRENGTH_GRUNT = 7
 mapscripts MagmasHideout_MapScripts {}
 
 script MagmasHideout_EventScript_StrengthMachine {
+    lock
     removeobject(LOCAL_STRENGTH_MACHINE)
     setflag(FLAG_ITEM_STRENGTH_MACHINE)
     setflag(FLAG_PLAYER_CAN_USE_STRENGTH)
     playfanfare(MUS_OBTAIN_ITEM)
-    msgbox(MagmasHideout_Text_StrengthMachine)
+    giveitem(ITEM_MACHINE_STRENGTH)
     waitfanfare
-    waitbuttonpress
+    waitmessage
     closemessage
+    release
+    end
 }
 
 text MagmasHideout_Text_StrengthMachine {

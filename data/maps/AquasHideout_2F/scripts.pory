@@ -19,10 +19,12 @@ script AquasHideout_2F_EventScript_OnLoad {
 
 script AquasHideout_2F_EventScript_DiveMachine {
     setflag(FLAG_ITEM_DIVE_MACHINE)
-    setflag(FLAG_PLAYER_CAN_USE_DIVE)
     playfanfare(MUS_OBTAIN_ITEM)
-    msgbox(AquasHideout_2F_Text_DiveMachine, MSGBOX_AUTOCLOSE)
+    setflag(FLAG_PLAYER_CAN_USE_DIVE)
+    giveitem(ITEM_MACHINE_DIVE)
     waitfanfare
+    waitmessage
+    closemessage
     return
 }
 

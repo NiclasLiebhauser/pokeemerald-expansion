@@ -1014,9 +1014,18 @@
 #define ITEM_ANCIENT_PLATE_4 835   // Level Cap 60
 #define ITEM_ANCIENT_PLATE_5 836   // Level Cap 80
 
-#define ITEM_TENT 837
+#define ITEM_MACHINE_DIVE       837
+#define ITEM_MACHINE_SURF       838
+#define ITEM_MACHINE_FLY        839
+#define ITEM_MACHINE_ROCK_SMASH 840
+#define ITEM_MACHINE_STRENGTH   841
+#define ITEM_MACHINE_WATERFALL  842
+#define ITEM_MACHINE_CUT        843
+#define ITEM_MACHINE_FLASH      844
 
-#define ITEMS_COUNT 838
+#define ITEM_TENT 845
+
+#define ITEMS_COUNT 846
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

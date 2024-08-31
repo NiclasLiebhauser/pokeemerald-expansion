@@ -4,115 +4,119 @@ MagmasHideout_MapScripts::
 
 MagmasHideout_EventScript_StrengthMachine::
 # 7 "data/maps/MagmasHideout/scripts.pory"
-	removeobject 1
+	lock
 # 8 "data/maps/MagmasHideout/scripts.pory"
-	setflag FLAG_ITEM_STRENGTH_MACHINE
+	removeobject 1
 # 9 "data/maps/MagmasHideout/scripts.pory"
-	setflag FLAG_PLAYER_CAN_USE_STRENGTH
+	setflag FLAG_ITEM_STRENGTH_MACHINE
 # 10 "data/maps/MagmasHideout/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	setflag FLAG_PLAYER_CAN_USE_STRENGTH
 # 11 "data/maps/MagmasHideout/scripts.pory"
-	msgbox MagmasHideout_Text_StrengthMachine
+	playfanfare MUS_OBTAIN_ITEM
 # 12 "data/maps/MagmasHideout/scripts.pory"
-	waitfanfare
+	giveitem ITEM_MACHINE_STRENGTH
 # 13 "data/maps/MagmasHideout/scripts.pory"
-	waitbuttonpress
+	waitfanfare
 # 14 "data/maps/MagmasHideout/scripts.pory"
+	waitmessage
+# 15 "data/maps/MagmasHideout/scripts.pory"
 	closemessage
-	return
+# 16 "data/maps/MagmasHideout/scripts.pory"
+	release
+	end
 
 
 MagmasHideout_EventScript_StrengthGrunt::
-# 22 "data/maps/MagmasHideout/scripts.pory"
-	lockall
-# 23 "data/maps/MagmasHideout/scripts.pory"
-	playse SE_PIN
-# 24 "data/maps/MagmasHideout/scripts.pory"
-	applymovement 7, Common_Movement_ExclamationMark
 # 25 "data/maps/MagmasHideout/scripts.pory"
-	waitmovement 0
+	lockall
 # 26 "data/maps/MagmasHideout/scripts.pory"
-	delay 48
+	playse SE_PIN
 # 27 "data/maps/MagmasHideout/scripts.pory"
-	waitse
+	applymovement 7, Common_Movement_ExclamationMark
+# 28 "data/maps/MagmasHideout/scripts.pory"
+	waitmovement 0
 # 29 "data/maps/MagmasHideout/scripts.pory"
-	playbgm MUS_ENCOUNTER_MAGMA, FALSE
+	delay 48
 # 30 "data/maps/MagmasHideout/scripts.pory"
-	faceplayer
+	waitse
 # 32 "data/maps/MagmasHideout/scripts.pory"
-	message MagmasHideout_EventScript_StrengthGrunt_Text_0
+	playbgm MUS_ENCOUNTER_MAGMA, FALSE
 # 33 "data/maps/MagmasHideout/scripts.pory"
-	waitmessage
-# 34 "data/maps/MagmasHideout/scripts.pory"
-	closemessage
+	faceplayer
+# 35 "data/maps/MagmasHideout/scripts.pory"
+	message MagmasHideout_EventScript_StrengthGrunt_Text_0
 # 36 "data/maps/MagmasHideout/scripts.pory"
-	trainerbattle_no_intro TRAINER_MAGMA_GRUNT_HQ_1, MagmasHideout_EventScript_StrengthGrunt_Text_1
+	waitmessage
 # 37 "data/maps/MagmasHideout/scripts.pory"
-	special GetBattleOutcome
+	closemessage
 # 39 "data/maps/MagmasHideout/scripts.pory"
+	trainerbattle_no_intro TRAINER_MAGMA_GRUNT_HQ_1, MagmasHideout_EventScript_StrengthGrunt_Text_1
+# 40 "data/maps/MagmasHideout/scripts.pory"
+	special GetBattleOutcome
+# 42 "data/maps/MagmasHideout/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq MagmasHideout_EventScript_StrengthGrunt_2
 MagmasHideout_EventScript_StrengthGrunt_1:
-# 55 "data/maps/MagmasHideout/scripts.pory"
+# 58 "data/maps/MagmasHideout/scripts.pory"
 	releaseall
 	end
 
 MagmasHideout_EventScript_StrengthGrunt_2:
-# 41 "data/maps/MagmasHideout/scripts.pory"
+# 44 "data/maps/MagmasHideout/scripts.pory"
 	message MagmasHideout_EventScript_StrengthGrunt_Text_2
-# 42 "data/maps/MagmasHideout/scripts.pory"
-	waitmessage
-# 43 "data/maps/MagmasHideout/scripts.pory"
-	closemessage
 # 45 "data/maps/MagmasHideout/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	waitmessage
 # 46 "data/maps/MagmasHideout/scripts.pory"
-	playse SE_EXIT
-# 47 "data/maps/MagmasHideout/scripts.pory"
-	waitse
+	closemessage
+# 48 "data/maps/MagmasHideout/scripts.pory"
+	fadescreen FADE_TO_BLACK
 # 49 "data/maps/MagmasHideout/scripts.pory"
-	setflag FLAG_HIDE_STRENGTH_GRUNT
+	playse SE_EXIT
 # 50 "data/maps/MagmasHideout/scripts.pory"
-	removeobject 7
+	waitse
 # 52 "data/maps/MagmasHideout/scripts.pory"
+	setflag FLAG_HIDE_STRENGTH_GRUNT
+# 53 "data/maps/MagmasHideout/scripts.pory"
+	removeobject 7
+# 55 "data/maps/MagmasHideout/scripts.pory"
 	fadescreen FADE_FROM_BLACK
 	goto MagmasHideout_EventScript_StrengthGrunt_1
 
 
 MagmasHideout_EventScript_Grunt1::
-# 60 "data/maps/MagmasHideout/scripts.pory"
+# 63 "data/maps/MagmasHideout/scripts.pory"
 	trainerbattle_single TRAINER_MAGMA_GRUNT_MAGMAHQ_1, MagmasHideout_Text_Grunt1_Intro, MagmasHideout_Text_Grunt1_Defeat
-# 61 "data/maps/MagmasHideout/scripts.pory"
+# 64 "data/maps/MagmasHideout/scripts.pory"
 	msgbox MagmasHideout_Text_Grunt1_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 MagmasHideout_EventScript_Grunt2::
-# 65 "data/maps/MagmasHideout/scripts.pory"
+# 68 "data/maps/MagmasHideout/scripts.pory"
 	trainerbattle_single TRAINER_MAGMA_GRUNT_MAGMAHQ_2, MagmasHideout_Text_Grunt2_Intro, MagmasHideout_Text_Grunt2_Defeat
-# 66 "data/maps/MagmasHideout/scripts.pory"
+# 69 "data/maps/MagmasHideout/scripts.pory"
 	msgbox MagmasHideout_Text_Grunt2_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 MagmasHideout_EventScript_Grunt3::
-# 70 "data/maps/MagmasHideout/scripts.pory"
+# 73 "data/maps/MagmasHideout/scripts.pory"
 	trainerbattle_single TRAINER_MAGMA_GRUNT_MAGMAHQ_3, MagmasHideout_Text_Grunt3_Intro, MagmasHideout_Text_Grunt3_Defeat
-# 71 "data/maps/MagmasHideout/scripts.pory"
+# 74 "data/maps/MagmasHideout/scripts.pory"
 	msgbox MagmasHideout_Text_Grunt3_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 MagmasHideout_EventScript_Grunt4::
-# 75 "data/maps/MagmasHideout/scripts.pory"
+# 78 "data/maps/MagmasHideout/scripts.pory"
 	trainerbattle_single TRAINER_MAGMA_GRUNT_MAGMAHQ_4, MagmasHideout_Text_Grunt4_Intro, MagmasHideout_Text_Grunt4_Defeat
-# 76 "data/maps/MagmasHideout/scripts.pory"
+# 79 "data/maps/MagmasHideout/scripts.pory"
 	msgbox MagmasHideout_Text_Grunt4_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 MagmasHideout_EventScript_StrengthGrunt_Text_0:
-# 32 "data/maps/MagmasHideout/scripts.pory"
+# 35 "data/maps/MagmasHideout/scripts.pory"
 	.string "You can't have my STRENGTH MACHINE.\n"
 	.string "You can't have it...\p"
 	.string "It's mine.\p"
@@ -125,63 +129,63 @@ MagmasHideout_EventScript_StrengthGrunt_Text_0:
 	.string "$"
 
 MagmasHideout_EventScript_StrengthGrunt_Text_1:
-# 36 "data/maps/MagmasHideout/scripts.pory"
+# 39 "data/maps/MagmasHideout/scripts.pory"
 	.string "No! Noone can have my MACHINE!$"
 
 MagmasHideout_EventScript_StrengthGrunt_Text_2:
-# 41 "data/maps/MagmasHideout/scripts.pory"
+# 44 "data/maps/MagmasHideout/scripts.pory"
 	.string "You beat me...\n"
 	.string "Take it. I don't want it anymore.\p"
 	.string "$"
 
 MagmasHideout_Text_StrengthMachine::
-# 17 "data/maps/MagmasHideout/scripts.pory"
+# 20 "data/maps/MagmasHideout/scripts.pory"
 	.string "Obtained STRENGTH MACHINE!$"
 
 MagmasHideout_Text_Grunt1_Intro::
-# 79 "data/maps/MagmasHideout/scripts.pory"
+# 82 "data/maps/MagmasHideout/scripts.pory"
 	.string "Intro$"
 
 MagmasHideout_Text_Grunt1_Defeat::
-# 83 "data/maps/MagmasHideout/scripts.pory"
+# 86 "data/maps/MagmasHideout/scripts.pory"
 	.string "Defeat$"
 
 MagmasHideout_Text_Grunt1_PostBattle::
-# 87 "data/maps/MagmasHideout/scripts.pory"
+# 90 "data/maps/MagmasHideout/scripts.pory"
 	.string "Post$"
 
 MagmasHideout_Text_Grunt2_Intro::
-# 91 "data/maps/MagmasHideout/scripts.pory"
+# 94 "data/maps/MagmasHideout/scripts.pory"
 	.string "Intro$"
 
 MagmasHideout_Text_Grunt2_Defeat::
-# 95 "data/maps/MagmasHideout/scripts.pory"
+# 98 "data/maps/MagmasHideout/scripts.pory"
 	.string "Defeat$"
 
 MagmasHideout_Text_Grunt2_PostBattle::
-# 99 "data/maps/MagmasHideout/scripts.pory"
+# 102 "data/maps/MagmasHideout/scripts.pory"
 	.string "Post$"
 
 MagmasHideout_Text_Grunt3_Intro::
-# 103 "data/maps/MagmasHideout/scripts.pory"
+# 106 "data/maps/MagmasHideout/scripts.pory"
 	.string "Intro$"
 
 MagmasHideout_Text_Grunt3_Defeat::
-# 107 "data/maps/MagmasHideout/scripts.pory"
+# 110 "data/maps/MagmasHideout/scripts.pory"
 	.string "Defeat$"
 
 MagmasHideout_Text_Grunt3_PostBattle::
-# 111 "data/maps/MagmasHideout/scripts.pory"
+# 114 "data/maps/MagmasHideout/scripts.pory"
 	.string "Post$"
 
 MagmasHideout_Text_Grunt4_Intro::
-# 115 "data/maps/MagmasHideout/scripts.pory"
+# 118 "data/maps/MagmasHideout/scripts.pory"
 	.string "Intro$"
 
 MagmasHideout_Text_Grunt4_Defeat::
-# 119 "data/maps/MagmasHideout/scripts.pory"
+# 122 "data/maps/MagmasHideout/scripts.pory"
 	.string "Defeat$"
 
 MagmasHideout_Text_Grunt4_PostBattle::
-# 123 "data/maps/MagmasHideout/scripts.pory"
+# 126 "data/maps/MagmasHideout/scripts.pory"
 	.string "Post$"

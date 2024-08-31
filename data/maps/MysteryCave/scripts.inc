@@ -88,531 +88,545 @@ MysteryCave_EventScript_StartAdventure::
 # 54 "data/maps/MysteryCave/scripts.pory"
 	call ReceiveAncientPlate
 # 55 "data/maps/MysteryCave/scripts.pory"
-	call ReceiveItemFinder
+	call ReceiveFlyMachine
 # 56 "data/maps/MysteryCave/scripts.pory"
-	call ReceiveBalls
+	call ReceiveItemFinder
 # 57 "data/maps/MysteryCave/scripts.pory"
-	call GiveFirstMon
+	call ReceiveBalls
 # 58 "data/maps/MysteryCave/scripts.pory"
-	call GiveSecondMon
+	call GiveFirstMon
 # 59 "data/maps/MysteryCave/scripts.pory"
-	call GiveThirdMon
+	call GiveSecondMon
 # 60 "data/maps/MysteryCave/scripts.pory"
-	setvar VAR_START_ADVENTURE_STATE, 1
+	call GiveThirdMon
 # 61 "data/maps/MysteryCave/scripts.pory"
-	setvar VAR_LEVEL_CAP, 30
+	setvar VAR_START_ADVENTURE_STATE, 1
 # 62 "data/maps/MysteryCave/scripts.pory"
+	setvar VAR_LEVEL_CAP, 30
+# 63 "data/maps/MysteryCave/scripts.pory"
 	waitmessage
-# 64 "data/maps/MysteryCave/scripts.pory"
+# 65 "data/maps/MysteryCave/scripts.pory"
 	message MysteryCave_EventScript_StartAdventure_Text_0
-# 66 "data/maps/MysteryCave/scripts.pory"
-	waitmessage
 # 67 "data/maps/MysteryCave/scripts.pory"
-	message MysteryCave_Text_ArceusServant_Goodbye
-# 68 "data/maps/MysteryCave/scripts.pory"
 	waitmessage
+# 68 "data/maps/MysteryCave/scripts.pory"
+	message MysteryCave_Text_ArceusServant_Goodbye
 # 69 "data/maps/MysteryCave/scripts.pory"
+	waitmessage
+# 70 "data/maps/MysteryCave/scripts.pory"
 	closemessage
 	return
 
 
 ReceivePokedex::
-# 74 "data/maps/MysteryCave/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 75 "data/maps/MysteryCave/scripts.pory"
-	msgbox ReceivedPokedexText, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
 # 76 "data/maps/MysteryCave/scripts.pory"
-	waitfanfare
+	msgbox ReceivedPokedexText, MSGBOX_DEFAULT
 # 77 "data/maps/MysteryCave/scripts.pory"
-	setflag FLAG_SYS_POKEMON_GET
+	waitfanfare
 # 78 "data/maps/MysteryCave/scripts.pory"
-	setflag FLAG_ADVENTURE_STARTED
+	setflag FLAG_SYS_POKEMON_GET
 # 79 "data/maps/MysteryCave/scripts.pory"
-	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_ADVENTURE_STARTED
 # 80 "data/maps/MysteryCave/scripts.pory"
-	special SetUnlockedPokedexFlags
+	setflag FLAG_SYS_POKEDEX_GET
 # 81 "data/maps/MysteryCave/scripts.pory"
-	setflag FLAG_SYS_NATIONAL_DEX
+	special SetUnlockedPokedexFlags
 # 82 "data/maps/MysteryCave/scripts.pory"
+	setflag FLAG_SYS_NATIONAL_DEX
+# 83 "data/maps/MysteryCave/scripts.pory"
 	special EnableNationalPokedex
 	return
 
 
 ReceiveBike::
-# 87 "data/maps/MysteryCave/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 88 "data/maps/MysteryCave/scripts.pory"
-	giveitem ITEM_ACRO_BIKE
+	playfanfare MUS_OBTAIN_ITEM
 # 89 "data/maps/MysteryCave/scripts.pory"
+	giveitem ITEM_ACRO_BIKE
+# 90 "data/maps/MysteryCave/scripts.pory"
 	waitfanfare
 	return
 
 
 ReceiveRunningShoes::
-# 94 "data/maps/MysteryCave/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 95 "data/maps/MysteryCave/scripts.pory"
-	msgbox ReceivedRunningShoesText, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
 # 96 "data/maps/MysteryCave/scripts.pory"
-	waitfanfare
+	msgbox ReceivedRunningShoesText, MSGBOX_DEFAULT
 # 97 "data/maps/MysteryCave/scripts.pory"
+	waitfanfare
+# 98 "data/maps/MysteryCave/scripts.pory"
 	setflag FLAG_SYS_B_DASH
 	return
 
 
 ReceivePokenav::
-# 102 "data/maps/MysteryCave/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 103 "data/maps/MysteryCave/scripts.pory"
-	msgbox ReceivedPokenavText, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
 # 104 "data/maps/MysteryCave/scripts.pory"
-	waitfanfare
+	msgbox ReceivedPokenavText, MSGBOX_DEFAULT
 # 105 "data/maps/MysteryCave/scripts.pory"
+	waitfanfare
+# 106 "data/maps/MysteryCave/scripts.pory"
 	setflag FLAG_SYS_POKENAV_GET
 	return
 
 
 ReceiveExpShare::
-# 110 "data/maps/MysteryCave/scripts.pory"
-	setflag FLAG_EXP_SHARE
 # 111 "data/maps/MysteryCave/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	setflag FLAG_EXP_SHARE
 # 112 "data/maps/MysteryCave/scripts.pory"
-	giveitem ITEM_EXP_SHARE
+	playfanfare MUS_OBTAIN_ITEM
 # 113 "data/maps/MysteryCave/scripts.pory"
+	giveitem ITEM_EXP_SHARE
+# 114 "data/maps/MysteryCave/scripts.pory"
 	waitfanfare
 	return
 
 
 ReceiveInfiniteRepel::
-# 118 "data/maps/MysteryCave/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 119 "data/maps/MysteryCave/scripts.pory"
-	giveitem ITEM_INFINITE_REPEL
+	playfanfare MUS_OBTAIN_ITEM
 # 120 "data/maps/MysteryCave/scripts.pory"
+	giveitem ITEM_INFINITE_REPEL
+# 121 "data/maps/MysteryCave/scripts.pory"
 	waitfanfare
 	return
 
 
 ReceiveBalls::
-# 125 "data/maps/MysteryCave/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 126 "data/maps/MysteryCave/scripts.pory"
-	giveitem ITEM_POKE_BALL, 10
-# 127 "data/maps/MysteryCave/scripts.pory"
-	waitfanfare
-# 128 "data/maps/MysteryCave/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
+# 127 "data/maps/MysteryCave/scripts.pory"
+	giveitem ITEM_POKE_BALL, 10
+# 128 "data/maps/MysteryCave/scripts.pory"
+	waitfanfare
 # 129 "data/maps/MysteryCave/scripts.pory"
-	giveitem ITEM_GREAT_BALL, 5
+	playfanfare MUS_OBTAIN_ITEM
 # 130 "data/maps/MysteryCave/scripts.pory"
+	giveitem ITEM_GREAT_BALL, 5
+# 131 "data/maps/MysteryCave/scripts.pory"
 	waitfanfare
 	return
 
 
 ReceiveEscapeRope::
-# 134 "data/maps/MysteryCave/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 135 "data/maps/MysteryCave/scripts.pory"
-	giveitem ITEM_ESCAPE_ROPE
+	playfanfare MUS_OBTAIN_ITEM
 # 136 "data/maps/MysteryCave/scripts.pory"
+	giveitem ITEM_ESCAPE_ROPE
+# 137 "data/maps/MysteryCave/scripts.pory"
 	waitfanfare
 	return
 
 
 ReceiveAncientPlate::
-# 141 "data/maps/MysteryCave/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 142 "data/maps/MysteryCave/scripts.pory"
-	giveitem ITEM_ANCIENT_PLATE_1
+	playfanfare MUS_OBTAIN_ITEM
 # 143 "data/maps/MysteryCave/scripts.pory"
+	giveitem ITEM_ANCIENT_PLATE_1
+# 144 "data/maps/MysteryCave/scripts.pory"
 	waitfanfare
 	return
 
 
 ReceiveItemFinder::
-# 148 "data/maps/MysteryCave/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 149 "data/maps/MysteryCave/scripts.pory"
-	giveitem ITEM_DOWSING_MACHINE
+	playfanfare MUS_OBTAIN_ITEM
 # 150 "data/maps/MysteryCave/scripts.pory"
+	giveitem ITEM_DOWSING_MACHINE
+# 151 "data/maps/MysteryCave/scripts.pory"
+	waitfanfare
+	return
+
+
+ReceiveFlyMachine::
+# 156 "data/maps/MysteryCave/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 157 "data/maps/MysteryCave/scripts.pory"
+	setflag FLAG_PLAYER_CAN_USE_FLY
+# 158 "data/maps/MysteryCave/scripts.pory"
+	giveitem ITEM_MACHINE_FLY
+# 159 "data/maps/MysteryCave/scripts.pory"
 	waitfanfare
 	return
 
 
 GiveFirstMon::
-# 155 "data/maps/MysteryCave/scripts.pory"
+# 164 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_1, 0
 	goto_if_eq GiveFirstMon_2
-# 159 "data/maps/MysteryCave/scripts.pory"
+# 168 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_1, 1
 	goto_if_eq GiveFirstMon_3
-# 163 "data/maps/MysteryCave/scripts.pory"
+# 172 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_1, 2
 	goto_if_eq GiveFirstMon_4
 GiveFirstMon_1:
-# 168 "data/maps/MysteryCave/scripts.pory"
+# 177 "data/maps/MysteryCave/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 169 "data/maps/MysteryCave/scripts.pory"
+# 178 "data/maps/MysteryCave/scripts.pory"
 	msgbox ReceivedMonText, MSGBOX_DEFAULT
-# 170 "data/maps/MysteryCave/scripts.pory"
+# 179 "data/maps/MysteryCave/scripts.pory"
 	waitfanfare
-# 171 "data/maps/MysteryCave/scripts.pory"
+# 180 "data/maps/MysteryCave/scripts.pory"
 	call GiveMonNick
 	return
 
 GiveFirstMon_2:
-# 157 "data/maps/MysteryCave/scripts.pory"
+# 166 "data/maps/MysteryCave/scripts.pory"
 	call GiveFirstMonKanto
 	goto GiveFirstMon_1
 
 GiveFirstMon_3:
-# 161 "data/maps/MysteryCave/scripts.pory"
+# 170 "data/maps/MysteryCave/scripts.pory"
 	call GiveFirstMonJohto
 	goto GiveFirstMon_1
 
 GiveFirstMon_4:
-# 165 "data/maps/MysteryCave/scripts.pory"
+# 174 "data/maps/MysteryCave/scripts.pory"
 	call GiveFirstMonHoenn
 	goto GiveFirstMon_1
 
 
 GiveSecondMon::
-# 176 "data/maps/MysteryCave/scripts.pory"
+# 185 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_1, 0
 	goto_if_eq GiveSecondMon_2
-# 180 "data/maps/MysteryCave/scripts.pory"
+# 189 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_1, 1
 	goto_if_eq GiveSecondMon_3
-# 184 "data/maps/MysteryCave/scripts.pory"
+# 193 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_1, 2
 	goto_if_eq GiveSecondMon_4
 GiveSecondMon_1:
-# 189 "data/maps/MysteryCave/scripts.pory"
+# 198 "data/maps/MysteryCave/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 190 "data/maps/MysteryCave/scripts.pory"
+# 199 "data/maps/MysteryCave/scripts.pory"
 	msgbox ReceivedMonText, MSGBOX_DEFAULT
-# 191 "data/maps/MysteryCave/scripts.pory"
+# 200 "data/maps/MysteryCave/scripts.pory"
 	waitfanfare
-# 192 "data/maps/MysteryCave/scripts.pory"
+# 201 "data/maps/MysteryCave/scripts.pory"
 	call GiveMonNick
 	return
 
 GiveSecondMon_2:
-# 178 "data/maps/MysteryCave/scripts.pory"
+# 187 "data/maps/MysteryCave/scripts.pory"
 	call GiveSecondMonKanto
 	goto GiveSecondMon_1
 
 GiveSecondMon_3:
-# 182 "data/maps/MysteryCave/scripts.pory"
+# 191 "data/maps/MysteryCave/scripts.pory"
 	call GiveSecondMonJohto
 	goto GiveSecondMon_1
 
 GiveSecondMon_4:
-# 186 "data/maps/MysteryCave/scripts.pory"
+# 195 "data/maps/MysteryCave/scripts.pory"
 	call GiveSecondMonHoenn
 	goto GiveSecondMon_1
 
 
 GiveThirdMon::
-# 197 "data/maps/MysteryCave/scripts.pory"
+# 206 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_1, 0
 	goto_if_eq GiveThirdMon_2
-# 202 "data/maps/MysteryCave/scripts.pory"
+# 211 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_1, 1
 	goto_if_eq GiveThirdMon_3
-# 207 "data/maps/MysteryCave/scripts.pory"
+# 216 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_1, 2
 	goto_if_eq GiveThirdMon_4
 GiveThirdMon_1:
-# 213 "data/maps/MysteryCave/scripts.pory"
+# 222 "data/maps/MysteryCave/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 214 "data/maps/MysteryCave/scripts.pory"
+# 223 "data/maps/MysteryCave/scripts.pory"
 	msgbox ReceivedMonText, MSGBOX_DEFAULT
-# 215 "data/maps/MysteryCave/scripts.pory"
+# 224 "data/maps/MysteryCave/scripts.pory"
 	waitfanfare
-# 216 "data/maps/MysteryCave/scripts.pory"
+# 225 "data/maps/MysteryCave/scripts.pory"
 	call GiveMonNick
 	return
 
 GiveThirdMon_2:
-# 199 "data/maps/MysteryCave/scripts.pory"
+# 208 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_BELLSPROUT
-# 200 "data/maps/MysteryCave/scripts.pory"
+# 209 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_BELLSPROUT, 20
 	goto GiveThirdMon_1
 
 GiveThirdMon_3:
-# 204 "data/maps/MysteryCave/scripts.pory"
+# 213 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_HOPPIP
-# 205 "data/maps/MysteryCave/scripts.pory"
+# 214 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_HOPPIP, 20
 	goto GiveThirdMon_1
 
 GiveThirdMon_4:
-# 209 "data/maps/MysteryCave/scripts.pory"
+# 218 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_SHROOMISH
-# 210 "data/maps/MysteryCave/scripts.pory"
+# 219 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_SHROOMISH, 20
 	goto GiveThirdMon_1
 
 
 GiveFirstMonKanto::
-# 221 "data/maps/MysteryCave/scripts.pory"
+# 230 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_2, 0
 	goto_if_eq GiveFirstMonKanto_2
-# 226 "data/maps/MysteryCave/scripts.pory"
+# 235 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_2, 1
 	goto_if_eq GiveFirstMonKanto_3
-# 231 "data/maps/MysteryCave/scripts.pory"
+# 240 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_2, 2
 	goto_if_eq GiveFirstMonKanto_4
 GiveFirstMonKanto_1:
 	return
 
 GiveFirstMonKanto_2:
-# 223 "data/maps/MysteryCave/scripts.pory"
+# 232 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_POLIWAG
-# 224 "data/maps/MysteryCave/scripts.pory"
+# 233 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_POLIWAG, 20
 	goto GiveFirstMonKanto_1
 
 GiveFirstMonKanto_3:
-# 228 "data/maps/MysteryCave/scripts.pory"
+# 237 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_VULPIX
-# 229 "data/maps/MysteryCave/scripts.pory"
+# 238 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_VULPIX, 20
 	goto GiveFirstMonKanto_1
 
 GiveFirstMonKanto_4:
-# 233 "data/maps/MysteryCave/scripts.pory"
+# 242 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_ODDISH
-# 234 "data/maps/MysteryCave/scripts.pory"
+# 243 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_ODDISH, 20
 	goto GiveFirstMonKanto_1
 
 
 GiveFirstMonJohto::
-# 241 "data/maps/MysteryCave/scripts.pory"
+# 250 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_2, 0
 	goto_if_eq GiveFirstMonJohto_2
-# 246 "data/maps/MysteryCave/scripts.pory"
+# 255 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_2, 1
 	goto_if_eq GiveFirstMonJohto_3
-# 251 "data/maps/MysteryCave/scripts.pory"
+# 260 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_2, 2
 	goto_if_eq GiveFirstMonJohto_4
 GiveFirstMonJohto_1:
 	return
 
 GiveFirstMonJohto_2:
-# 243 "data/maps/MysteryCave/scripts.pory"
+# 252 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_REMORAID
-# 244 "data/maps/MysteryCave/scripts.pory"
+# 253 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_REMORAID, 20
 	goto GiveFirstMonJohto_1
 
 GiveFirstMonJohto_3:
-# 248 "data/maps/MysteryCave/scripts.pory"
+# 257 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_SLUGMA
-# 249 "data/maps/MysteryCave/scripts.pory"
+# 258 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_SLUGMA, 20
 	goto GiveFirstMonJohto_1
 
 GiveFirstMonJohto_4:
-# 253 "data/maps/MysteryCave/scripts.pory"
+# 262 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_SUNKERN
-# 254 "data/maps/MysteryCave/scripts.pory"
+# 263 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_SUNKERN, 20
 	goto GiveFirstMonJohto_1
 
 
 GiveFirstMonHoenn::
-# 261 "data/maps/MysteryCave/scripts.pory"
+# 270 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_2, 0
 	goto_if_eq GiveFirstMonHoenn_2
-# 266 "data/maps/MysteryCave/scripts.pory"
+# 275 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_2, 1
 	goto_if_eq GiveFirstMonHoenn_3
-# 271 "data/maps/MysteryCave/scripts.pory"
+# 280 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_2, 2
 	goto_if_eq GiveFirstMonHoenn_4
 GiveFirstMonHoenn_1:
-# 277 "data/maps/MysteryCave/scripts.pory"
+# 286 "data/maps/MysteryCave/scripts.pory"
 	call GiveMonNick
 	return
 
 GiveFirstMonHoenn_2:
-# 263 "data/maps/MysteryCave/scripts.pory"
+# 272 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_SPHEAL
-# 264 "data/maps/MysteryCave/scripts.pory"
+# 273 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_SPHEAL, 20
 	goto GiveFirstMonHoenn_1
 
 GiveFirstMonHoenn_3:
-# 268 "data/maps/MysteryCave/scripts.pory"
+# 277 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_NUMEL
-# 269 "data/maps/MysteryCave/scripts.pory"
+# 278 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_NUMEL, 20
 	goto GiveFirstMonHoenn_1
 
 GiveFirstMonHoenn_4:
-# 273 "data/maps/MysteryCave/scripts.pory"
+# 282 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_SEEDOT
-# 274 "data/maps/MysteryCave/scripts.pory"
+# 283 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_SEEDOT, 20
 	goto GiveFirstMonHoenn_1
 
 
 GiveSecondMonKanto::
-# 282 "data/maps/MysteryCave/scripts.pory"
+# 291 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_2, 0
 	goto_if_eq GiveSecondMonKanto_2
-# 287 "data/maps/MysteryCave/scripts.pory"
+# 296 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_2, 1
 	goto_if_eq GiveSecondMonKanto_3
-# 292 "data/maps/MysteryCave/scripts.pory"
+# 301 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_2, 2
 	goto_if_eq GiveSecondMonKanto_4
 GiveSecondMonKanto_1:
 	return
 
 GiveSecondMonKanto_2:
-# 284 "data/maps/MysteryCave/scripts.pory"
+# 293 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_GROWLITHE
-# 285 "data/maps/MysteryCave/scripts.pory"
+# 294 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_GROWLITHE, 20
 	goto GiveSecondMonKanto_1
 
 GiveSecondMonKanto_3:
-# 289 "data/maps/MysteryCave/scripts.pory"
+# 298 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_SANDSHREW_ALOLAN
-# 290 "data/maps/MysteryCave/scripts.pory"
+# 299 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_SANDSHREW_ALOLAN, 20
 	goto GiveSecondMonKanto_1
 
 GiveSecondMonKanto_4:
-# 294 "data/maps/MysteryCave/scripts.pory"
+# 303 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_JYNX
-# 295 "data/maps/MysteryCave/scripts.pory"
+# 304 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_JYNX, 20
 	goto GiveSecondMonKanto_1
 
 
 GiveSecondMonJohto::
-# 302 "data/maps/MysteryCave/scripts.pory"
+# 311 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_2, 0
 	goto_if_eq GiveSecondMonJohto_2
-# 307 "data/maps/MysteryCave/scripts.pory"
+# 316 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_2, 1
 	goto_if_eq GiveSecondMonJohto_3
-# 312 "data/maps/MysteryCave/scripts.pory"
+# 321 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_2, 2
 	goto_if_eq GiveSecondMonJohto_4
 GiveSecondMonJohto_1:
 	return
 
 GiveSecondMonJohto_2:
-# 304 "data/maps/MysteryCave/scripts.pory"
+# 313 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_LARVITAR
-# 305 "data/maps/MysteryCave/scripts.pory"
+# 314 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_LARVITAR, 20
 	goto GiveSecondMonJohto_1
 
 GiveSecondMonJohto_3:
-# 309 "data/maps/MysteryCave/scripts.pory"
+# 318 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_QWILFISH_HISUIAN
-# 310 "data/maps/MysteryCave/scripts.pory"
+# 319 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_QWILFISH_HISUIAN, 20
 	goto GiveSecondMonJohto_1
 
 GiveSecondMonJohto_4:
-# 314 "data/maps/MysteryCave/scripts.pory"
+# 323 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_SUDOWOODO
-# 315 "data/maps/MysteryCave/scripts.pory"
+# 324 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_SUDOWOODO, 20
 	goto GiveSecondMonJohto_1
 
 
 GiveSecondMonHoenn::
-# 322 "data/maps/MysteryCave/scripts.pory"
+# 331 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_2, 0
 	goto_if_eq GiveSecondMonHoenn_2
-# 327 "data/maps/MysteryCave/scripts.pory"
+# 336 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_2, 1
 	goto_if_eq GiveSecondMonHoenn_3
-# 332 "data/maps/MysteryCave/scripts.pory"
+# 341 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_START_QUESTION_2, 2
 	goto_if_eq GiveSecondMonHoenn_4
 GiveSecondMonHoenn_1:
 	return
 
 GiveSecondMonHoenn_2:
-# 324 "data/maps/MysteryCave/scripts.pory"
+# 333 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_BAGON
-# 325 "data/maps/MysteryCave/scripts.pory"
+# 334 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_BAGON, 20
 	goto GiveSecondMonHoenn_1
 
 GiveSecondMonHoenn_3:
-# 329 "data/maps/MysteryCave/scripts.pory"
+# 338 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_ZIGZAGOON_GALARIAN
-# 330 "data/maps/MysteryCave/scripts.pory"
+# 339 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_ZIGZAGOON_GALARIAN, 20
 	goto GiveSecondMonHoenn_1
 
 GiveSecondMonHoenn_4:
-# 334 "data/maps/MysteryCave/scripts.pory"
+# 343 "data/maps/MysteryCave/scripts.pory"
 	bufferspeciesname STR_VAR_1, SPECIES_SEVIPER
-# 335 "data/maps/MysteryCave/scripts.pory"
+# 344 "data/maps/MysteryCave/scripts.pory"
 	givemon SPECIES_SEVIPER, 20
 	goto GiveSecondMonHoenn_1
 
 
 GiveMonNick::
-# 342 "data/maps/MysteryCave/scripts.pory"
+# 351 "data/maps/MysteryCave/scripts.pory"
 	msgbox GiveMonNickText, MSGBOX_YESNO
-# 343 "data/maps/MysteryCave/scripts.pory"
+# 352 "data/maps/MysteryCave/scripts.pory"
 	hidemonpic
-# 344 "data/maps/MysteryCave/scripts.pory"
+# 353 "data/maps/MysteryCave/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq GiveMonNick_2
 GiveMonNick_1:
 	return
 
 GiveMonNick_2:
-# 346 "data/maps/MysteryCave/scripts.pory"
+# 355 "data/maps/MysteryCave/scripts.pory"
 	call Common_EventScript_GetGiftMonPartySlot
-# 347 "data/maps/MysteryCave/scripts.pory"
+# 356 "data/maps/MysteryCave/scripts.pory"
 	call Common_EventScript_NameReceivedPartyMon
 	goto GiveMonNick_1
 
 
-# 380 "data/maps/MysteryCave/scripts.pory"
+# 389 "data/maps/MysteryCave/scripts.pory"
 MysteryCave_Movement_SpenserWalkOff:
-# 381 "data/maps/MysteryCave/scripts.pory"
+# 390 "data/maps/MysteryCave/scripts.pory"
 	walk_right
-# 381 "data/maps/MysteryCave/scripts.pory"
+# 390 "data/maps/MysteryCave/scripts.pory"
 	walk_right
-# 381 "data/maps/MysteryCave/scripts.pory"
+# 390 "data/maps/MysteryCave/scripts.pory"
 	walk_right
-# 381 "data/maps/MysteryCave/scripts.pory"
+# 390 "data/maps/MysteryCave/scripts.pory"
 	walk_right
-# 381 "data/maps/MysteryCave/scripts.pory"
+# 390 "data/maps/MysteryCave/scripts.pory"
 	walk_right
-# 381 "data/maps/MysteryCave/scripts.pory"
+# 390 "data/maps/MysteryCave/scripts.pory"
 	walk_right
-# 381 "data/maps/MysteryCave/scripts.pory"
+# 390 "data/maps/MysteryCave/scripts.pory"
 	walk_right
 	step_end
 
 MysteryCave_EventScript_StartAdventure_Text_0:
-# 64 "data/maps/MysteryCave/scripts.pory"
+# 65 "data/maps/MysteryCave/scripts.pory"
 	.string "Your ANCIENT PLATE shines with power!\p"
 	.string "$"
 
 ArceusServantTextStart::
-# 352 "data/maps/MysteryCave/scripts.pory"
+# 361 "data/maps/MysteryCave/scripts.pory"
 	.string "???: Ah you must be {PLAYER}.\n"
 	.string "My master had foretold your arrival.\l"
 	.string "Let's see...\p"
@@ -620,28 +634,28 @@ ArceusServantTextStart::
 	.string "you.$"
 
 ReceivedPokedexText::
-# 356 "data/maps/MysteryCave/scripts.pory"
+# 365 "data/maps/MysteryCave/scripts.pory"
 	.string "{PLAYER} received the national\n"
 	.string "POKéDEX!$"
 
 ReceivedRunningShoesText::
-# 360 "data/maps/MysteryCave/scripts.pory"
+# 369 "data/maps/MysteryCave/scripts.pory"
 	.string "{PLAYER} received the RUNNING SHOES!$"
 
 ReceivedPokenavText::
-# 364 "data/maps/MysteryCave/scripts.pory"
+# 373 "data/maps/MysteryCave/scripts.pory"
 	.string "{PLAYER} received the POKéNAV!$"
 
 ReceivedMonText::
-# 368 "data/maps/MysteryCave/scripts.pory"
+# 377 "data/maps/MysteryCave/scripts.pory"
 	.string "{PLAYER} received {STR_VAR_1}!$"
 
 GiveMonNickText::
-# 372 "data/maps/MysteryCave/scripts.pory"
+# 381 "data/maps/MysteryCave/scripts.pory"
 	.string "Give {STR_VAR_1} a nickname?$"
 
 MysteryCave_Text_ArceusServant_Goodbye::
-# 376 "data/maps/MysteryCave/scripts.pory"
+# 385 "data/maps/MysteryCave/scripts.pory"
 	.string "Now then. Fare thee well until our next\n"
 	.string "meeting.\p"
 	.string "I will be waiting for you at the top of\n"

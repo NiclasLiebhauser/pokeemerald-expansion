@@ -89,14 +89,17 @@ script EventScript_Increase_LevelCap {
 }
 
 script Route203_Cave_EventScript_RockSmashMachine {
+    lock
     removeobject(LOCAL_ROCK_SMASH_MACHINE)
     setflag(FLAG_ITEM_ROCK_SMASH_MACHINE)
     setflag(FLAG_PLAYER_CAN_USE_ROCK_SMASH)
     playfanfare(MUS_OBTAIN_ITEM)
-    msgbox(Route203_Cave_Text_RockSmashMachine)
+    giveitem(ITEM_MACHINE_ROCK_SMASH)
     waitfanfare
-    waitbuttonpress
+    waitmessage
     closemessage
+    release
+    end
 }
 
 script Route203_Cave_EventScript_AquaGrunt_Working {
