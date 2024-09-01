@@ -4,4 +4,3 @@ More points of orienation on open maps
 
 Add NPCs to help the player
 Maybe autosave before credits
-Alter Title Screen
