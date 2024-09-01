@@ -155,44 +155,42 @@ MagmasHideout_Crow:
 # 150 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_SHINY_STONE
 # 151 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_OVAL_STONE
-# 152 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_DEEP_SEA_SCALE
-# 153 "data/maps/MagmasHideout/scripts.pory"
+# 152 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_DEEP_SEA_TOOTH
-# 154 "data/maps/MagmasHideout/scripts.pory"
+# 153 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_GALARICA_CUFF
-# 155 "data/maps/MagmasHideout/scripts.pory"
+# 154 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_GALARICA_WREATH
-# 156 "data/maps/MagmasHideout/scripts.pory"
+# 155 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_ELECTIRIZER
-# 157 "data/maps/MagmasHideout/scripts.pory"
+# 156 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_KINGS_ROCK
-# 158 "data/maps/MagmasHideout/scripts.pory"
+# 157 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_LINKING_CORD
-# 159 "data/maps/MagmasHideout/scripts.pory"
+# 158 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_MAGMARIZER
-# 160 "data/maps/MagmasHideout/scripts.pory"
+# 159 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_METAL_COAT
-# 161 "data/maps/MagmasHideout/scripts.pory"
+# 160 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_PROTECTOR
-# 162 "data/maps/MagmasHideout/scripts.pory"
+# 161 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_RAZOR_CLAW
-# 163 "data/maps/MagmasHideout/scripts.pory"
+# 162 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_RAZOR_FANG
-# 164 "data/maps/MagmasHideout/scripts.pory"
+# 163 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_REAPER_CLOTH
-# 165 "data/maps/MagmasHideout/scripts.pory"
+# 164 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_UPGRADE
-# 166 "data/maps/MagmasHideout/scripts.pory"
+# 165 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_PRISM_SCALE
-# 167 "data/maps/MagmasHideout/scripts.pory"
+# 166 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_PEAT_BLOCK
-# 168 "data/maps/MagmasHideout/scripts.pory"
+# 167 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_DRAGON_SCALE
-# 169 "data/maps/MagmasHideout/scripts.pory"
+# 168 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_BLACK_AUGURITE
-# 170 "data/maps/MagmasHideout/scripts.pory"
+# 169 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_DUBIOUS_DISC
 	.2byte ITEM_NONE
 
@@ -222,7 +220,7 @@ MagmasHideout_EventScript_StrengthGrunt_Text_2:
 MagmasHideout_EventScript_Crow_Text_0:
 # 65 "data/maps/MagmasHideout/scripts.pory"
 	.string "Hey, they call me Crow because I like\n"
-	.string "shiny stuff. Wann buy something?$"
+	.string "shiny stuff. Wanna buy something?$"
 
 MagmasHideout_EventScript_Crow_Text_1:
 # 68 "data/maps/MagmasHideout/scripts.pory"

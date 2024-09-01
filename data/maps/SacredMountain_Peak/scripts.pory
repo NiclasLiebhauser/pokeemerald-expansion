@@ -401,7 +401,11 @@ script SacredMountain_EventScript_AzureFlute {
 
 script SacredMountain_EventScript_Credits {
     fadescreen(FADE_TO_BLACK)
-    msgbox(format("You have reached the end of the journey."))
+    setrespawn(HEAL_LOCATION_MYSTERY_CAVE)
+    delay(120)
+    special(GameClear)
+    waitstate
+    releaseall
     end
 }
 

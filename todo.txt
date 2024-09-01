@@ -3,5 +3,5 @@ Add missing dialogue
 More points of orienation on open maps
 
 Add NPCs to help the player
-Add Credits
+Maybe autosave before credits
 Alter Title Screen

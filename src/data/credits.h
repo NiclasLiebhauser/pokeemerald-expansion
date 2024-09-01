@@ -1,5 +1,12 @@
 enum
 {
+    PAGE_TITLE_ROM_HACK,
+    PAGE_ROM_HACK_BY,
+    PAGE_PRET,
+    PAGE_RH,
+    PAGE_ADDITIONAL_ART,
+    PAGE_SPECIAL_THANKS_SOUND,
+    PAGE_SPECIAL_THANKS_VIDEO,
     PAGE_TITLE,
     PAGE_DIRECTOR,
     PAGE_ART_DIRECTOR,
@@ -221,6 +228,21 @@ static const u8 sCreditsText_MotoyasuTojima[]                 = _("Motoyasu Toji
 static const u8 sCreditsText_NicolaPrattBarlow[]              = _("Nicola Pratt-Barlow");
 static const u8 sCreditsText_ShellieDow[]                     = _("Shellie Dow");
 static const u8 sCreditsText_ErikJohnson[]                    = _("Erik Johnson");
+static const u8 sCreditsText_ARomHackBy[]                     = _("A ROM-HACK By");
+static const u8 sCreditsText_Hodron[]                         = _("Hodron");
+static const u8 sCreditsText_Decomp[]                         = _("Based on Pokemon Emerald Decomp");
+static const u8 sCreditsText_Pret[]                           = _("Pokémon Reverse-Engeneering Team");
+static const u8 sCreditsText_Expansion[]                      = _("For Pokemon Emerald Expansion");
+static const u8 sCreditsText_RHHideout[]                      = _("ROM Hacking Hideout");
+static const u8 sCreditsText_Bivurnum[]                       = _("Birvurnum: Overworld Expansion");
+static const u8 sCreditsText_Ipatix[]                         = _("Ipatix: High Quality Audio Mixer");
+static const u8 sCreditsText_RHHideout_Discord[]              = _("Team Aqua's Hideout Discord");
+static const u8 sCreditsText_RHHideout_Channel[]              = _("Team Aqua's Hideout Youttube Channel");
+static const u8 sCreditsText_AdditionalArt[]                  = _("Additional Art By");
+static const u8 sCreditsText_AssetRepo[]                      = _("Team Aqua's Hideout Asset Repo");
+static const u8 sCreditsText_PkmOverworldSprites[]            = _("Rahtak Pokémon Overworld Sprites");
+static const u8 sCreditsText_TrainerOverworldSprites[]        = _("Galaxeeh Trainer Overworld Sprites");
+static const u8 sCreditsText_PkmnAquaVersion[]                = _("POKéMON AQUA VERSION");
 static const struct CreditsEntry sCreditsEntry_EmptyString                      = { 0, FALSE, sCreditsText_EmptyString};
 static const struct CreditsEntry sCreditsEntry_PkmnEmeraldVersion               = { 7,  TRUE, sCreditsText_PkmnEmeraldVersion};
 static const struct CreditsEntry sCreditsEntry_Credits                          = {11,  TRUE, sCreditsText_Credits};
@@ -380,15 +402,72 @@ static const struct CreditsEntry sCreditsEntry_MotoyasuTojima                   
 static const struct CreditsEntry sCreditsEntry_NicolaPrattBarlow                = { 0, FALSE, sCreditsText_NicolaPrattBarlow};
 static const struct CreditsEntry sCreditsEntry_ShellieDow                       = { 0, FALSE, sCreditsText_ShellieDow};
 static const struct CreditsEntry sCreditsEntry_ErikJohnson                      = { 0, FALSE, sCreditsText_ErikJohnson};
+static const struct CreditsEntry sCreditsEntry_ARomHackBy                       = { 0, TRUE, sCreditsText_ARomHackBy};
+static const struct CreditsEntry sCreditsEntry_Hodron                           = { 0, FALSE, sCreditsText_Hodron};
+static const struct CreditsEntry sCreditsEntry_Decomp                           = { 0, TRUE, sCreditsText_Decomp};
+static const struct CreditsEntry sCreditsEntry_Expansion                        = { 0, FALSE, sCreditsText_Expansion};
+static const struct CreditsEntry sCreditsEntry_Pret                             = { 0, FALSE, sCreditsText_Pret};
+static const struct CreditsEntry sCreditsEntry_RHHHideout                       = { 0, FALSE, sCreditsText_RHHideout};
+static const struct CreditsEntry sCreditsEntry_Bivurnum                         = { 0, FALSE, sCreditsText_Bivurnum};
+static const struct CreditsEntry sCreditsEntry_Ipatix                           = { 0, FALSE, sCreditsText_Ipatix};
+static const struct CreditsEntry sCreditsEntry_RHHideout_Discord                = { 0, FALSE, sCreditsText_RHHideout_Discord};
+static const struct CreditsEntry sCreditsEntry_RHHideout_Channel                = { 0, FALSE, sCreditsText_RHHideout_Channel};
+static const struct CreditsEntry sCreditsEntry_AdditionalArt                    = { 0, TRUE, sCreditsText_AdditionalArt};
+static const struct CreditsEntry sCreditsEntry_AssetRepo                        = { 0, FALSE, sCreditsText_AssetRepo};
+static const struct CreditsEntry sCreditsEntry_PkmOverworldSprites              = { 0, FALSE, sCreditsText_PkmOverworldSprites};
+static const struct CreditsEntry sCreditsEntry_TrainerOverworldSprites          = { 0, FALSE, sCreditsText_TrainerOverworldSprites};
+static const struct CreditsEntry sCreditsEntry_PkmnAquaVersion                  = { 7,  TRUE, sCreditsText_PkmnAquaVersion};
 
 #define _ &sCreditsEntry_EmptyString
 static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][ENTRIES_PER_PAGE] =
 {
-    [PAGE_TITLE] = {
+    [PAGE_TITLE_ROM_HACK] = {
         _,
-        &sCreditsEntry_PkmnEmeraldVersion,
+        &sCreditsEntry_PkmnAquaVersion,
         &sCreditsEntry_Credits,
         _,
+        _
+    },
+    [PAGE_ROM_HACK_BY] = {
+        _,
+        &sCreditsEntry_ARomHackBy,
+        &sCreditsEntry_Hodron,
+        _,
+        _
+    },
+    [PAGE_PRET] = {
+        _,
+        &sCreditsEntry_Decomp,
+        &sCreditsEntry_Pret,
+        _,
+        _
+    },
+    [PAGE_RH] = {
+        _,
+        &sCreditsEntry_SpecialThanks,
+        &sCreditsEntry_RHHHideout,
+        &sCreditsEntry_Expansion,
+        _
+    },
+    [PAGE_ADDITIONAL_ART] = {
+        _,
+        &sCreditsEntry_AdditionalArt,
+        &sCreditsEntry_AssetRepo,
+        &sCreditsEntry_PkmOverworldSprites,
+        &sCreditsEntry_TrainerOverworldSprites
+    },
+    [PAGE_SPECIAL_THANKS_SOUND] = {
+        _,
+        &sCreditsEntry_SpecialThanks,
+        &sCreditsEntry_Ipatix,
+        &sCreditsEntry_Bivurnum,
+        _
+    },
+    [PAGE_SPECIAL_THANKS_VIDEO] = {
+        _,
+        &sCreditsEntry_SpecialThanks,
+        &sCreditsEntry_RHHideout_Channel,
+        &sCreditsEntry_RHHideout_Discord,
         _
     },
     [PAGE_DIRECTOR] = {
@@ -404,6 +483,13 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_KenSugimori,
         _,
         _,
+    },
+    [PAGE_TITLE] = {
+        _,
+        &sCreditsEntry_PkmnEmeraldVersion,
+        &sCreditsEntry_Credits,
+        _,
+        _
     },
     [PAGE_WORLD_DIRECTOR] = {
         _,
