@@ -12073,7 +12073,6 @@ static const struct TrainerMon sParty_Anabel_1[] = {
     }
 };
 
-//ToSolve
 static const struct TrainerMon sParty_Anabel_2[] = {
     {
         .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -12776,23 +12775,22 @@ static const struct TrainerMon sParty_AquaGrunt_AquaHQ_2F_3[] = {
     }
 };
 
-//ToSolve
 static const struct TrainerMon sParty_AquaGrunt_AquaHQ_2F_4[] = {
     {
     .lvl = 42,
-    .species = SPECIES_GLALIE,
+    .species = SPECIES_KADABRA,
     },
     {
     .lvl = 42,
-    .species = SPECIES_STARAPTOR,
+    .species = SPECIES_PELIPPER,
     },
     {
     .lvl = 43,
-    .species = SPECIES_ALTARIA,
+    .species = SPECIES_EEVEE,
     },
     {
     .lvl = 44,
-    .species = SPECIES_SLAKING,
+    .species = SPECIES_EXEGGUTOR_ALOLAN,
     }
 };
 
@@ -12967,7 +12965,6 @@ static const struct TrainerMon sParty_Lady_SacredIsland_East_1[] = {
     }
 };
 
-//ToSolve
 static const struct TrainerMon sParty_HexManiac_Sacred_City_1[] = {
     {
     .lvl = 52,

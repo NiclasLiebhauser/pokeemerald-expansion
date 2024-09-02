@@ -219,19 +219,16 @@ text AquasHideout_2F_Text_DiveMachine {
     format("Obtained DIVE MACHINE!")
 }
 
-//ToSolve: Writing
 text AquasHideout_2F_Text_Archie_PreBattel {
-    format("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+    format("It was all my fault. If he hadn't given me the BLUE ORB on that fate full day... then... maybe...\pBut what am I crying to you about that? I am Archie, the leader of the strongest team in all of Hoen. We achieved our goal of raising the sea level to improve life on Earth.\pExcept this whole situation makes me feel miserable.\pPlease end my pain.")
 }
 
-//ToSolve: Writing
 text AquasHideout_2F_Text_Archie_PostBattel {
-    format("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+    format("I think I will renounce my leadership. What good came of it?\pMaybe I will try and become a fisherman. I always loved the sea.")
 }
 
-//ToSolve: Writing
 text AquasHideout_2F_Text_Archie_Defeat {
-    format("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+    format("Serves me right...")
 }
 
 movement AquasHideout_2F_Movement_DiveGrunt_WalkOn {

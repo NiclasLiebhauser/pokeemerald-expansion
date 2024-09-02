@@ -248,29 +248,29 @@ AquasHideout_2F_EventScript_Grunt4::
 	return
 
 
-# 237 "data/maps/AquasHideout_2F/scripts.pory"
+# 234 "data/maps/AquasHideout_2F/scripts.pory"
 AquasHideout_2F_Movement_DiveGrunt_WalkOn:
-# 238 "data/maps/AquasHideout_2F/scripts.pory"
+# 235 "data/maps/AquasHideout_2F/scripts.pory"
 	walk_down
-# 238 "data/maps/AquasHideout_2F/scripts.pory"
+# 235 "data/maps/AquasHideout_2F/scripts.pory"
 	walk_down
-# 238 "data/maps/AquasHideout_2F/scripts.pory"
+# 235 "data/maps/AquasHideout_2F/scripts.pory"
 	walk_down
-# 239 "data/maps/AquasHideout_2F/scripts.pory"
+# 236 "data/maps/AquasHideout_2F/scripts.pory"
 	walk_left
-# 239 "data/maps/AquasHideout_2F/scripts.pory"
+# 236 "data/maps/AquasHideout_2F/scripts.pory"
 	walk_left
 	step_end
 
-# 242 "data/maps/AquasHideout_2F/scripts.pory"
+# 239 "data/maps/AquasHideout_2F/scripts.pory"
 AquasHideout_2F_Movement_DiveGrunt_WalkItem:
-# 243 "data/maps/AquasHideout_2F/scripts.pory"
+# 240 "data/maps/AquasHideout_2F/scripts.pory"
 	walk_up
-# 243 "data/maps/AquasHideout_2F/scripts.pory"
+# 240 "data/maps/AquasHideout_2F/scripts.pory"
 	walk_up
-# 243 "data/maps/AquasHideout_2F/scripts.pory"
+# 240 "data/maps/AquasHideout_2F/scripts.pory"
 	walk_up
-# 244 "data/maps/AquasHideout_2F/scripts.pory"
+# 241 "data/maps/AquasHideout_2F/scripts.pory"
 	face_left
 	step_end
 
@@ -348,22 +348,26 @@ AquasHideout_2F_Text_DiveMachine::
 	.string "Obtained DIVE MACHINE!$"
 
 AquasHideout_2F_Text_Archie_PreBattel::
-# 223 "data/maps/AquasHideout_2F/scripts.pory"
-	.string "Lorem ipsum dolor sit amet, consectetur\n"
-	.string "adipiscing elit, sed do eiusmod tempor\l"
-	.string "incididunt ut labore et dolore magna\l"
-	.string "aliqua.$"
+# 222 "data/maps/AquasHideout_2F/scripts.pory"
+	.string "It was all my fault. If he hadn't given\n"
+	.string "me the BLUE ORB on that fate full day...\l"
+	.string "then... maybe...\p"
+	.string "But what am I crying to you about that?\n"
+	.string "I am Archie, the leader of the\l"
+	.string "strongest team in all of Hoen. We\l"
+	.string "achieved our goal of raising the sea\l"
+	.string "level to improve life on Earth.\p"
+	.string "Except this whole situation makes me\n"
+	.string "feel miserable.\p"
+	.string "Please end my pain.$"
 
 AquasHideout_2F_Text_Archie_PostBattel::
-# 228 "data/maps/AquasHideout_2F/scripts.pory"
-	.string "Lorem ipsum dolor sit amet, consectetur\n"
-	.string "adipiscing elit, sed do eiusmod tempor\l"
-	.string "incididunt ut labore et dolore magna\l"
-	.string "aliqua.$"
+# 226 "data/maps/AquasHideout_2F/scripts.pory"
+	.string "I think I will renounce my leadership.\n"
+	.string "What good came of it?\p"
+	.string "Maybe I will try and become a fisherman.\n"
+	.string "I always loved the sea.$"
 
 AquasHideout_2F_Text_Archie_Defeat::
-# 233 "data/maps/AquasHideout_2F/scripts.pory"
-	.string "Lorem ipsum dolor sit amet, consectetur\n"
-	.string "adipiscing elit, sed do eiusmod tempor\l"
-	.string "incididunt ut labore et dolore magna\l"
-	.string "aliqua.$"
+# 230 "data/maps/AquasHideout_2F/scripts.pory"
+	.string "Serves me right...$"

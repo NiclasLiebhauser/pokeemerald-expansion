@@ -1,1 +1,45 @@
 mapscripts PacifidlogTown_House3_MapScripts {}
+
+script PacifidlogTown_House3_BerryShop {
+    lock
+    faceplayer
+    message(format("I have something fruity to offer.\nWanna buy something?"))
+    waitmessage
+    if(flag(FLAG_AQUA_LEFT_HIDEOUT))
+    {
+        pokemart(PacifidlogTown_House3_Mart_BerryShop2)
+    }
+    else
+    {
+        pokemart(PacifidlogTown_House3_Mart_BerryShop1)
+    }
+    msgbox(format("Come back any time."))
+    release
+    end
+}
+
+mart PacifidlogTown_House3_Mart_BerryShop1
+{
+    ITEM_CHERI_BERRY
+    ITEM_CHESTO_BERRY
+    ITEM_PECHA_BERRY
+    ITEM_RAWST_BERRY
+    ITEM_ASPEAR_BERRY
+    ITEM_LEPPA_BERRY
+    ITEM_ORAN_BERRY
+    ITEM_PERSIM_BERRY
+}
+
+mart PacifidlogTown_House3_Mart_BerryShop2
+{
+    ITEM_CHERI_BERRY
+    ITEM_CHESTO_BERRY
+    ITEM_PECHA_BERRY
+    ITEM_RAWST_BERRY
+    ITEM_ASPEAR_BERRY
+    ITEM_LEPPA_BERRY
+    ITEM_ORAN_BERRY
+    ITEM_PERSIM_BERRY
+    ITEM_LUM_BERRY
+    ITEM_SITRUS_BERRY
+}
