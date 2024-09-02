@@ -83,707 +83,762 @@ SacredMountain_EventScript_OnTransition_4:
 	goto SacredMountain_EventScript_OnTransition_1
 
 
-SacredMountain_EventScript_TryRemoveGiratinaOrigin::
+SacredMountain_EventScript_AskPlayerToSave::
 # 61 "data/maps/SacredMountain_Peak/scripts.pory"
+	goto_if_unset FLAG_ASK_PLAYER_SAVE, SacredMountain_EventScript_AskPlayerToSave_2
+SacredMountain_EventScript_AskPlayerToSave_1:
+	end
+
+SacredMountain_EventScript_AskPlayerToSave_2:
+# 63 "data/maps/SacredMountain_Peak/scripts.pory"
+	lock
+# 64 "data/maps/SacredMountain_Peak/scripts.pory"
+	msgbox SacredMountain_EventScript_AskPlayerToSave_Text_0, MSGBOX_YESNO
+# 65 "data/maps/SacredMountain_Peak/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq SacredMountain_EventScript_AskPlayerToSave_5
+SacredMountain_EventScript_AskPlayerToSave_4:
+# 70 "data/maps/SacredMountain_Peak/scripts.pory"
+	setflag FLAG_ASK_PLAYER_SAVE
+# 71 "data/maps/SacredMountain_Peak/scripts.pory"
+	setvar VAR_ASK_SAVE_STATE, 1
+# 72 "data/maps/SacredMountain_Peak/scripts.pory"
+	release
+	goto SacredMountain_EventScript_AskPlayerToSave_1
+
+SacredMountain_EventScript_AskPlayerToSave_5:
+# 67 "data/maps/SacredMountain_Peak/scripts.pory"
+	special SaveGame
+# 68 "data/maps/SacredMountain_Peak/scripts.pory"
+	waitstate
+	goto SacredMountain_EventScript_AskPlayerToSave_4
+
+
+SacredMountain_EventScript_TryRemoveGiratinaOrigin::
+# 79 "data/maps/SacredMountain_Peak/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 62 "data/maps/SacredMountain_Peak/scripts.pory"
+# 80 "data/maps/SacredMountain_Peak/scripts.pory"
 	call_if_eq VAR_RESULT, B_OUTCOME_WON, SacredMountain_EventScript_RemoveGiratinaOrigin
 	return
 
 
 SacredMountain_EventScript_RemoveGiratinaOrigin::
-# 67 "data/maps/SacredMountain_Peak/scripts.pory"
+# 85 "data/maps/SacredMountain_Peak/scripts.pory"
 	removeobject 6
 	return
 
 
 SacredMountain_EventScript_Cutscene_Trigger_Left::
-# 72 "data/maps/SacredMountain_Peak/scripts.pory"
+# 90 "data/maps/SacredMountain_Peak/scripts.pory"
 	lock
-# 73 "data/maps/SacredMountain_Peak/scripts.pory"
+# 91 "data/maps/SacredMountain_Peak/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
-# 74 "data/maps/SacredMountain_Peak/scripts.pory"
+# 92 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmovement 0
-# 75 "data/maps/SacredMountain_Peak/scripts.pory"
+# 93 "data/maps/SacredMountain_Peak/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
-# 76 "data/maps/SacredMountain_Peak/scripts.pory"
+# 94 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmovement 0
-# 77 "data/maps/SacredMountain_Peak/scripts.pory"
+# 95 "data/maps/SacredMountain_Peak/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-# 78 "data/maps/SacredMountain_Peak/scripts.pory"
+# 96 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmovement 0
-# 79 "data/maps/SacredMountain_Peak/scripts.pory"
+# 97 "data/maps/SacredMountain_Peak/scripts.pory"
 	call SacredMountain_EventScript_Cutscene_Main
-# 80 "data/maps/SacredMountain_Peak/scripts.pory"
+# 98 "data/maps/SacredMountain_Peak/scripts.pory"
 	release
 	end
 
 
 SacredMountain_EventScript_Cutscene_Trigger_Middle::
-# 85 "data/maps/SacredMountain_Peak/scripts.pory"
+# 103 "data/maps/SacredMountain_Peak/scripts.pory"
 	lock
-# 86 "data/maps/SacredMountain_Peak/scripts.pory"
+# 104 "data/maps/SacredMountain_Peak/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
-# 87 "data/maps/SacredMountain_Peak/scripts.pory"
+# 105 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmovement 0
-# 88 "data/maps/SacredMountain_Peak/scripts.pory"
+# 106 "data/maps/SacredMountain_Peak/scripts.pory"
 	call SacredMountain_EventScript_Cutscene_Main
-# 89 "data/maps/SacredMountain_Peak/scripts.pory"
+# 107 "data/maps/SacredMountain_Peak/scripts.pory"
 	release
 	end
 
 
 SacredMountain_EventScript_Cutscene_Trigger_Right::
-# 94 "data/maps/SacredMountain_Peak/scripts.pory"
+# 112 "data/maps/SacredMountain_Peak/scripts.pory"
 	lock
-# 95 "data/maps/SacredMountain_Peak/scripts.pory"
+# 113 "data/maps/SacredMountain_Peak/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
-# 96 "data/maps/SacredMountain_Peak/scripts.pory"
+# 114 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmovement 0
-# 97 "data/maps/SacredMountain_Peak/scripts.pory"
+# 115 "data/maps/SacredMountain_Peak/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
-# 98 "data/maps/SacredMountain_Peak/scripts.pory"
+# 116 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmovement 0
-# 99 "data/maps/SacredMountain_Peak/scripts.pory"
+# 117 "data/maps/SacredMountain_Peak/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-# 100 "data/maps/SacredMountain_Peak/scripts.pory"
+# 118 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmovement 0
-# 101 "data/maps/SacredMountain_Peak/scripts.pory"
+# 119 "data/maps/SacredMountain_Peak/scripts.pory"
 	call SacredMountain_EventScript_Cutscene_Main
-# 102 "data/maps/SacredMountain_Peak/scripts.pory"
+# 120 "data/maps/SacredMountain_Peak/scripts.pory"
 	release
 	end
 
 
 SacredMountain_EventScript_Cutscene_Main::
-# 107 "data/maps/SacredMountain_Peak/scripts.pory"
-	special SpawnCameraObject
-# 108 "data/maps/SacredMountain_Peak/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanUp
-# 109 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmovement 0
-# 110 "data/maps/SacredMountain_Peak/scripts.pory"
-	msgbox SacredMountain_Text_Spenser1, MSGBOX_AUTOCLOSE
-# 111 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmessage
-# 113 "data/maps/SacredMountain_Peak/scripts.pory"
-	applymovement 5, Common_Movement_FaceDown
-# 114 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmovement 0
-# 115 "data/maps/SacredMountain_Peak/scripts.pory"
-	delay 30
-# 117 "data/maps/SacredMountain_Peak/scripts.pory"
-	msgbox SacredMountain_Text_Spenser2, MSGBOX_NPC
-# 119 "data/maps/SacredMountain_Peak/scripts.pory"
-	msgbox SacredMountain_EventScript_Cutscene_Main_Text_0, MSGBOX_NPC
-# 121 "data/maps/SacredMountain_Peak/scripts.pory"
-	playse SE_PIN
-# 122 "data/maps/SacredMountain_Peak/scripts.pory"
-	applymovement 5, Common_Movement_ExclamationMark
-# 123 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmovement 0
-# 124 "data/maps/SacredMountain_Peak/scripts.pory"
-	applymovement 5, Common_Movement_Delay48
 # 125 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmovement 0
+	special SpawnCameraObject
+# 126 "data/maps/SacredMountain_Peak/scripts.pory"
+	applymovement OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanUp
 # 127 "data/maps/SacredMountain_Peak/scripts.pory"
-	playbgm MUS_RG_ENCOUNTER_ROCKET, FALSE
+	waitmovement 0
 # 128 "data/maps/SacredMountain_Peak/scripts.pory"
-	addobject 3
+	msgbox SacredMountain_Text_Spenser1, MSGBOX_AUTOCLOSE
 # 129 "data/maps/SacredMountain_Peak/scripts.pory"
-	applymovement 3, SacredMountain_Movement_Giovanni_WalkOn
-# 130 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmovement 0
+	waitmessage
 # 131 "data/maps/SacredMountain_Peak/scripts.pory"
-	playse SE_WALL_HIT
+	applymovement 5, Common_Movement_FaceDown
 # 132 "data/maps/SacredMountain_Peak/scripts.pory"
-	applymovement 5, SacredMountain_Movement_Spenser_PushedBack
+	waitmovement 0
 # 133 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmovement 0
+	delay 30
 # 135 "data/maps/SacredMountain_Peak/scripts.pory"
-	msgbox SacredMountain_Text_Giovanni1, MSGBOX_NPC
-# 136 "data/maps/SacredMountain_Peak/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanUp
+	msgbox SacredMountain_Text_Spenser2, MSGBOX_NPC
 # 137 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmovement 0
-# 138 "data/maps/SacredMountain_Peak/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanUp
+	msgbox SacredMountain_EventScript_Cutscene_Main_Text_0, MSGBOX_NPC
 # 139 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmovement 0
+	playse SE_PIN
+# 140 "data/maps/SacredMountain_Peak/scripts.pory"
+	applymovement 5, Common_Movement_ExclamationMark
 # 141 "data/maps/SacredMountain_Peak/scripts.pory"
-	playse SE_M_DETECT
+	waitmovement 0
 # 142 "data/maps/SacredMountain_Peak/scripts.pory"
-	dofieldeffectsparkle 18, 21, 0
+	applymovement 5, Common_Movement_Delay48
 # 143 "data/maps/SacredMountain_Peak/scripts.pory"
-	delay 30
-# 144 "data/maps/SacredMountain_Peak/scripts.pory"
-	playfanfare MUS_AWAKEN_LEGEND
+	waitmovement 0
+# 145 "data/maps/SacredMountain_Peak/scripts.pory"
+	playbgm MUS_RG_ENCOUNTER_ROCKET, FALSE
 # 146 "data/maps/SacredMountain_Peak/scripts.pory"
-	fadescreen FADE_TO_WHITE
+	addobject 3
 # 147 "data/maps/SacredMountain_Peak/scripts.pory"
-	delay 90
+	applymovement 3, SacredMountain_Movement_Giovanni_WalkOn
 # 148 "data/maps/SacredMountain_Peak/scripts.pory"
-	playmoncry SPECIES_DIALGA, CRY_MODE_ENCOUNTER
+	waitmovement 0
 # 149 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmoncry
-# 150 "data/maps/SacredMountain_Peak/scripts.pory"
-	playmoncry SPECIES_PALKIA, CRY_MODE_ENCOUNTER
-# 151 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmoncry
-# 152 "data/maps/SacredMountain_Peak/scripts.pory"
-	clearflag FLAG_HIDE_PALKIA
-# 153 "data/maps/SacredMountain_Peak/scripts.pory"
-	clearflag FLAG_HIDE_DIALGA
-# 154 "data/maps/SacredMountain_Peak/scripts.pory"
-	addobject 1
-# 155 "data/maps/SacredMountain_Peak/scripts.pory"
-	addobject 2
-# 156 "data/maps/SacredMountain_Peak/scripts.pory"
-	fadescreen FADE_FROM_WHITE
-# 158 "data/maps/SacredMountain_Peak/scripts.pory"
-	msgbox SacredMountain_Text_Giovanni2, MSGBOX_NPC
-# 159 "data/maps/SacredMountain_Peak/scripts.pory"
-	applymovement 3, SacredMountain_Movement_Giovanni_Push
-# 160 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmovement 0
-# 161 "data/maps/SacredMountain_Peak/scripts.pory"
 	playse SE_WALL_HIT
-# 162 "data/maps/SacredMountain_Peak/scripts.pory"
-	setmetatile 18, 17, METATILE_Cave_SacredMountain_Peak_MountainOverhang, FALSE
-# 163 "data/maps/SacredMountain_Peak/scripts.pory"
-	applymovement 5, SacredMountain_Movement_Spenser_PushedOff
-# 164 "data/maps/SacredMountain_Peak/scripts.pory"
-	delay 10
-# 165 "data/maps/SacredMountain_Peak/scripts.pory"
-	playse SE_FALL
-# 166 "data/maps/SacredMountain_Peak/scripts.pory"
+# 150 "data/maps/SacredMountain_Peak/scripts.pory"
+	applymovement 5, SacredMountain_Movement_Spenser_PushedBack
+# 151 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmovement 0
-# 167 "data/maps/SacredMountain_Peak/scripts.pory"
-	setmetatile 18, 17, METATILE_Cave_SacredMountain_Peak_MountainOverhang, TRUE
-# 168 "data/maps/SacredMountain_Peak/scripts.pory"
-	removeobject 5
-# 170 "data/maps/SacredMountain_Peak/scripts.pory"
+# 153 "data/maps/SacredMountain_Peak/scripts.pory"
+	msgbox SacredMountain_Text_Giovanni1, MSGBOX_NPC
+# 154 "data/maps/SacredMountain_Peak/scripts.pory"
+	applymovement OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanUp
+# 155 "data/maps/SacredMountain_Peak/scripts.pory"
+	waitmovement 0
+# 156 "data/maps/SacredMountain_Peak/scripts.pory"
+	applymovement OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanUp
+# 157 "data/maps/SacredMountain_Peak/scripts.pory"
+	waitmovement 0
+# 159 "data/maps/SacredMountain_Peak/scripts.pory"
+	playse SE_M_DETECT
+# 160 "data/maps/SacredMountain_Peak/scripts.pory"
+	dofieldeffectsparkle 18, 21, 0
+# 161 "data/maps/SacredMountain_Peak/scripts.pory"
 	delay 30
+# 162 "data/maps/SacredMountain_Peak/scripts.pory"
+	playfanfare MUS_AWAKEN_LEGEND
+# 164 "data/maps/SacredMountain_Peak/scripts.pory"
+	fadescreen FADE_TO_WHITE
+# 165 "data/maps/SacredMountain_Peak/scripts.pory"
+	delay 90
+# 166 "data/maps/SacredMountain_Peak/scripts.pory"
+	playmoncry SPECIES_DIALGA, CRY_MODE_ENCOUNTER
+# 167 "data/maps/SacredMountain_Peak/scripts.pory"
+	waitmoncry
+# 168 "data/maps/SacredMountain_Peak/scripts.pory"
+	playmoncry SPECIES_PALKIA, CRY_MODE_ENCOUNTER
+# 169 "data/maps/SacredMountain_Peak/scripts.pory"
+	waitmoncry
+# 170 "data/maps/SacredMountain_Peak/scripts.pory"
+	clearflag FLAG_HIDE_PALKIA
 # 171 "data/maps/SacredMountain_Peak/scripts.pory"
-	applymovement 3, Common_Movement_FaceDown
+	clearflag FLAG_HIDE_DIALGA
 # 172 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmovement 0
+	addobject 1
+# 173 "data/maps/SacredMountain_Peak/scripts.pory"
+	addobject 2
 # 174 "data/maps/SacredMountain_Peak/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanDown
-# 175 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmovement 0
+	fadescreen FADE_FROM_WHITE
 # 176 "data/maps/SacredMountain_Peak/scripts.pory"
-	special RemoveCameraObject
+	msgbox SacredMountain_Text_Giovanni2, MSGBOX_NPC
+# 177 "data/maps/SacredMountain_Peak/scripts.pory"
+	applymovement 3, SacredMountain_Movement_Giovanni_Push
 # 178 "data/maps/SacredMountain_Peak/scripts.pory"
-	clearflag FLAG_HIDE_GIOVANNI_TRAINER
+	waitmovement 0
 # 179 "data/maps/SacredMountain_Peak/scripts.pory"
-	removeobject 3
+	playse SE_WALL_HIT
 # 180 "data/maps/SacredMountain_Peak/scripts.pory"
-	addobject 7
+	setmetatile 18, 17, METATILE_Cave_SacredMountain_Peak_MountainOverhang, FALSE
 # 181 "data/maps/SacredMountain_Peak/scripts.pory"
-	fadedefaultbgm
+	applymovement 5, SacredMountain_Movement_Spenser_PushedOff
+# 182 "data/maps/SacredMountain_Peak/scripts.pory"
+	delay 10
 # 183 "data/maps/SacredMountain_Peak/scripts.pory"
-	setvar VAR_SACRED_MOUNTAIN_PEAK_STATE, 1
+	playse SE_FALL
 # 184 "data/maps/SacredMountain_Peak/scripts.pory"
+	waitmovement 0
+# 185 "data/maps/SacredMountain_Peak/scripts.pory"
+	setmetatile 18, 17, METATILE_Cave_SacredMountain_Peak_MountainOverhang, TRUE
+# 186 "data/maps/SacredMountain_Peak/scripts.pory"
+	removeobject 5
+# 188 "data/maps/SacredMountain_Peak/scripts.pory"
+	delay 30
+# 189 "data/maps/SacredMountain_Peak/scripts.pory"
+	applymovement 3, Common_Movement_FaceDown
+# 190 "data/maps/SacredMountain_Peak/scripts.pory"
+	waitmovement 0
+# 192 "data/maps/SacredMountain_Peak/scripts.pory"
+	applymovement OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanDown
+# 193 "data/maps/SacredMountain_Peak/scripts.pory"
+	waitmovement 0
+# 194 "data/maps/SacredMountain_Peak/scripts.pory"
+	special RemoveCameraObject
+# 196 "data/maps/SacredMountain_Peak/scripts.pory"
+	clearflag FLAG_HIDE_GIOVANNI_TRAINER
+# 197 "data/maps/SacredMountain_Peak/scripts.pory"
+	removeobject 3
+# 198 "data/maps/SacredMountain_Peak/scripts.pory"
+	addobject 7
+# 199 "data/maps/SacredMountain_Peak/scripts.pory"
+	fadedefaultbgm
+# 201 "data/maps/SacredMountain_Peak/scripts.pory"
+	setvar VAR_SACRED_MOUNTAIN_PEAK_STATE, 1
+# 202 "data/maps/SacredMountain_Peak/scripts.pory"
 	release
 	end
 
 
 SacredMountain_EventScript_Giovanni::
-# 189 "data/maps/SacredMountain_Peak/scripts.pory"
+# 207 "data/maps/SacredMountain_Peak/scripts.pory"
 	lock
-# 190 "data/maps/SacredMountain_Peak/scripts.pory"
-	applymovement 7, Common_Movement_FacePlayer
-# 191 "data/maps/SacredMountain_Peak/scripts.pory"
-	msgbox SacredMountain_Text_Giovanni_PreBattle, MSGBOX_NPC
-# 192 "data/maps/SacredMountain_Peak/scripts.pory"
-	trainerbattle_no_intro TRAINER_GIOVANNI_SACRED_MOUNTAIN, SacredMountain_Text_Giovanni_Deafeat
-# 193 "data/maps/SacredMountain_Peak/scripts.pory"
-	msgbox SacredMountain_Text_Giovanni_PostBattle, MSGBOX_NPC
-# 195 "data/maps/SacredMountain_Peak/scripts.pory"
-	playse SE_M_DETECT
-# 196 "data/maps/SacredMountain_Peak/scripts.pory"
-	dofieldeffectsparkle 18, 20, 0
-# 197 "data/maps/SacredMountain_Peak/scripts.pory"
-	delay 30
-# 199 "data/maps/SacredMountain_Peak/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 200 "data/maps/SacredMountain_Peak/scripts.pory"
-	delay 90
-# 201 "data/maps/SacredMountain_Peak/scripts.pory"
-	msgbox SacredMountain_Text_Giovanni_CallForGiratina, MSGBOX_NPC
-# 202 "data/maps/SacredMountain_Peak/scripts.pory"
-	playmoncry SPECIES_GIRATINA, CRY_MODE_ENCOUNTER
-# 203 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmoncry
-# 204 "data/maps/SacredMountain_Peak/scripts.pory"
-	clearflag FLAG_HIDE_GIRATINA
-# 205 "data/maps/SacredMountain_Peak/scripts.pory"
-	addobject 4
-# 206 "data/maps/SacredMountain_Peak/scripts.pory"
-	fadescreen FADE_FROM_BLACK
 # 208 "data/maps/SacredMountain_Peak/scripts.pory"
-	call SacredMountain_EventScript_DoGiratinaBattle
+	applymovement 7, Common_Movement_FacePlayer
+# 209 "data/maps/SacredMountain_Peak/scripts.pory"
+	msgbox SacredMountain_Text_Giovanni_PreBattle, MSGBOX_NPC
 # 210 "data/maps/SacredMountain_Peak/scripts.pory"
+	trainerbattle_no_intro TRAINER_GIOVANNI_SACRED_MOUNTAIN, SacredMountain_Text_Giovanni_Deafeat
+# 211 "data/maps/SacredMountain_Peak/scripts.pory"
+	msgbox SacredMountain_Text_Giovanni_PostBattle, MSGBOX_NPC
+# 213 "data/maps/SacredMountain_Peak/scripts.pory"
+	playse SE_M_DETECT
+# 214 "data/maps/SacredMountain_Peak/scripts.pory"
+	dofieldeffectsparkle 18, 20, 0
+# 215 "data/maps/SacredMountain_Peak/scripts.pory"
+	delay 30
+# 217 "data/maps/SacredMountain_Peak/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 218 "data/maps/SacredMountain_Peak/scripts.pory"
+	delay 90
+# 219 "data/maps/SacredMountain_Peak/scripts.pory"
+	msgbox SacredMountain_Text_Giovanni_CallForGiratina, MSGBOX_NPC
+# 220 "data/maps/SacredMountain_Peak/scripts.pory"
+	playmoncry SPECIES_GIRATINA, CRY_MODE_ENCOUNTER
+# 221 "data/maps/SacredMountain_Peak/scripts.pory"
+	waitmoncry
+# 222 "data/maps/SacredMountain_Peak/scripts.pory"
+	clearflag FLAG_HIDE_GIRATINA
+# 223 "data/maps/SacredMountain_Peak/scripts.pory"
+	addobject 4
+# 224 "data/maps/SacredMountain_Peak/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 226 "data/maps/SacredMountain_Peak/scripts.pory"
+	call SacredMountain_EventScript_DoGiratinaBattle
+# 228 "data/maps/SacredMountain_Peak/scripts.pory"
 	release
 	end
 
 
 SacredMountain_EventScript_DoGiratinaBattle::
-# 215 "data/maps/SacredMountain_Peak/scripts.pory"
+# 233 "data/maps/SacredMountain_Peak/scripts.pory"
 	setvar VAR_TEMP_0, 0
-# 216 "data/maps/SacredMountain_Peak/scripts.pory"
+# 234 "data/maps/SacredMountain_Peak/scripts.pory"
 	setwildbattle SPECIES_GIRATINA, 70
-# 217 "data/maps/SacredMountain_Peak/scripts.pory"
+# 235 "data/maps/SacredMountain_Peak/scripts.pory"
 	setflag FLAG_NO_CATCHING
-# 218 "data/maps/SacredMountain_Peak/scripts.pory"
+# 236 "data/maps/SacredMountain_Peak/scripts.pory"
 	special BattleSetup_StartLegendaryBattle
-# 219 "data/maps/SacredMountain_Peak/scripts.pory"
+# 237 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitstate
-# 220 "data/maps/SacredMountain_Peak/scripts.pory"
+# 238 "data/maps/SacredMountain_Peak/scripts.pory"
 	clearflag FLAG_NO_CATCHING
-# 221 "data/maps/SacredMountain_Peak/scripts.pory"
+# 239 "data/maps/SacredMountain_Peak/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 222 "data/maps/SacredMountain_Peak/scripts.pory"
+# 240 "data/maps/SacredMountain_Peak/scripts.pory"
 	call_if_eq VAR_RESULT, B_OUTCOME_WON, SacredMountain_EventScript_GiratinaBattleWon
-# 223 "data/maps/SacredMountain_Peak/scripts.pory"
+# 241 "data/maps/SacredMountain_Peak/scripts.pory"
 	call_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SacredMountain_EventScript_ThereIsNoEscape
-# 224 "data/maps/SacredMountain_Peak/scripts.pory"
+# 242 "data/maps/SacredMountain_Peak/scripts.pory"
 	call_if_eq VAR_RESULT, B_OUTCOME_RAN, SacredMountain_EventScript_ThereIsNoEscape
-# 226 "data/maps/SacredMountain_Peak/scripts.pory"
+# 244 "data/maps/SacredMountain_Peak/scripts.pory"
 	release
 	end
 
 
 SacredMountain_EventScript_GiratinaBattleWon::
-# 231 "data/maps/SacredMountain_Peak/scripts.pory"
-	delay 30
-# 232 "data/maps/SacredMountain_Peak/scripts.pory"
-	playmoncry SPECIES_GIRATINA, CRY_MODE_FAINT
-# 233 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmoncry
-# 235 "data/maps/SacredMountain_Peak/scripts.pory"
-	msgbox SacredMountain_Text_Giovanni_PostBattleGiratina, MSGBOX_NPC
-# 236 "data/maps/SacredMountain_Peak/scripts.pory"
-	applymovement 7, Common_Movement_FaceUp
-# 237 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmovement 0
-# 239 "data/maps/SacredMountain_Peak/scripts.pory"
-	playse SE_M_DETECT
-# 240 "data/maps/SacredMountain_Peak/scripts.pory"
-	dofieldeffectsparkle 18, 20, 0
-# 241 "data/maps/SacredMountain_Peak/scripts.pory"
-	delay 30
-# 243 "data/maps/SacredMountain_Peak/scripts.pory"
-	playse SE_M_DETECT
-# 244 "data/maps/SacredMountain_Peak/scripts.pory"
-	dofieldeffectsparkle 18, 19, 0
-# 245 "data/maps/SacredMountain_Peak/scripts.pory"
-	dofieldeffectsparkle 18, 18, 0
-# 246 "data/maps/SacredMountain_Peak/scripts.pory"
-	delay 30
-# 248 "data/maps/SacredMountain_Peak/scripts.pory"
-	playmoncry SPECIES_GIRATINA, CRY_MODE_ENCOUNTER
 # 249 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmoncry
+	delay 30
+# 250 "data/maps/SacredMountain_Peak/scripts.pory"
+	playmoncry SPECIES_GIRATINA, CRY_MODE_FAINT
 # 251 "data/maps/SacredMountain_Peak/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 252 "data/maps/SacredMountain_Peak/scripts.pory"
-	delay 90
-# 253 "data/maps/SacredMountain_Peak/scripts.pory"
-	msgbox SacredMountain_Text_Giovanni_Giratina_Kills_Giovanni, MSGBOX_NPC
-# 254 "data/maps/SacredMountain_Peak/scripts.pory"
-	playse SE_M_DRAGON_RAGE
-# 255 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitse
-# 256 "data/maps/SacredMountain_Peak/scripts.pory"
-	playmoncry SPECIES_GIRATINA_ORIGIN, CRY_MODE_ENCOUNTER
-# 257 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmoncry
-# 258 "data/maps/SacredMountain_Peak/scripts.pory"
-	setflag FLAG_HIDE_GIRATINA
-# 259 "data/maps/SacredMountain_Peak/scripts.pory"
-	setflag FLAG_HIDE_GIOVANNI_TRAINER
-# 260 "data/maps/SacredMountain_Peak/scripts.pory"
-	removeobject 4
-# 261 "data/maps/SacredMountain_Peak/scripts.pory"
-	removeobject 7
-# 262 "data/maps/SacredMountain_Peak/scripts.pory"
-	clearflag FLAG_HIDE_GIRATINA_ORIGIN
-# 263 "data/maps/SacredMountain_Peak/scripts.pory"
-	addobject 6
-# 264 "data/maps/SacredMountain_Peak/scripts.pory"
-	fadescreen FADE_FROM_BLACK
-# 266 "data/maps/SacredMountain_Peak/scripts.pory"
-	applymovement 6, Common_Movement_WalkDown
-# 267 "data/maps/SacredMountain_Peak/scripts.pory"
+# 253 "data/maps/SacredMountain_Peak/scripts.pory"
+	msgbox SacredMountain_Text_Giovanni_PostBattleGiratina, MSGBOX_NPC
+# 254 "data/maps/SacredMountain_Peak/scripts.pory"
+	applymovement 7, Common_Movement_FaceUp
+# 255 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmovement 0
+# 257 "data/maps/SacredMountain_Peak/scripts.pory"
+	playse SE_M_DETECT
+# 258 "data/maps/SacredMountain_Peak/scripts.pory"
+	dofieldeffectsparkle 18, 20, 0
+# 259 "data/maps/SacredMountain_Peak/scripts.pory"
+	delay 30
+# 261 "data/maps/SacredMountain_Peak/scripts.pory"
+	playse SE_M_DETECT
+# 262 "data/maps/SacredMountain_Peak/scripts.pory"
+	dofieldeffectsparkle 18, 19, 0
+# 263 "data/maps/SacredMountain_Peak/scripts.pory"
+	dofieldeffectsparkle 18, 18, 0
+# 264 "data/maps/SacredMountain_Peak/scripts.pory"
+	delay 30
+# 266 "data/maps/SacredMountain_Peak/scripts.pory"
+	playmoncry SPECIES_GIRATINA, CRY_MODE_ENCOUNTER
+# 267 "data/maps/SacredMountain_Peak/scripts.pory"
+	waitmoncry
 # 269 "data/maps/SacredMountain_Peak/scripts.pory"
-	call SacredMountain_EventScript_DoGiratinaOriginBattle
+	fadescreen FADE_TO_BLACK
+# 270 "data/maps/SacredMountain_Peak/scripts.pory"
+	delay 90
 # 271 "data/maps/SacredMountain_Peak/scripts.pory"
+	msgbox SacredMountain_Text_Giovanni_Giratina_Kills_Giovanni, MSGBOX_NPC
+# 272 "data/maps/SacredMountain_Peak/scripts.pory"
+	playse SE_M_DRAGON_RAGE
+# 273 "data/maps/SacredMountain_Peak/scripts.pory"
+	waitse
+# 274 "data/maps/SacredMountain_Peak/scripts.pory"
+	playmoncry SPECIES_GIRATINA_ORIGIN, CRY_MODE_ENCOUNTER
+# 275 "data/maps/SacredMountain_Peak/scripts.pory"
+	waitmoncry
+# 276 "data/maps/SacredMountain_Peak/scripts.pory"
+	setflag FLAG_HIDE_GIRATINA
+# 277 "data/maps/SacredMountain_Peak/scripts.pory"
+	setflag FLAG_HIDE_GIOVANNI_TRAINER
+# 278 "data/maps/SacredMountain_Peak/scripts.pory"
+	removeobject 4
+# 279 "data/maps/SacredMountain_Peak/scripts.pory"
+	removeobject 7
+# 280 "data/maps/SacredMountain_Peak/scripts.pory"
+	clearflag FLAG_HIDE_GIRATINA_ORIGIN
+# 281 "data/maps/SacredMountain_Peak/scripts.pory"
+	addobject 6
+# 282 "data/maps/SacredMountain_Peak/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 284 "data/maps/SacredMountain_Peak/scripts.pory"
+	applymovement 6, Common_Movement_WalkDown
+# 285 "data/maps/SacredMountain_Peak/scripts.pory"
+	waitmovement 0
+# 287 "data/maps/SacredMountain_Peak/scripts.pory"
+	call SacredMountain_EventScript_DoGiratinaOriginBattle
+# 289 "data/maps/SacredMountain_Peak/scripts.pory"
 	release
 	end
 
 
 SacredMountain_EventScript_ThereIsNoEscape::
-# 276 "data/maps/SacredMountain_Peak/scripts.pory"
+# 294 "data/maps/SacredMountain_Peak/scripts.pory"
 	compare VAR_TEMP_0, 0
 	goto_if_eq SacredMountain_EventScript_ThereIsNoEscape_2
 SacredMountain_EventScript_ThereIsNoEscape_1:
-# 281 "data/maps/SacredMountain_Peak/scripts.pory"
+# 299 "data/maps/SacredMountain_Peak/scripts.pory"
 	compare VAR_TEMP_0, 1
 	goto_if_eq SacredMountain_EventScript_ThereIsNoEscape_5
 SacredMountain_EventScript_ThereIsNoEscape_4:
-# 287 "data/maps/SacredMountain_Peak/scripts.pory"
+# 305 "data/maps/SacredMountain_Peak/scripts.pory"
 	release
 	end
 
 SacredMountain_EventScript_ThereIsNoEscape_2:
-# 279 "data/maps/SacredMountain_Peak/scripts.pory"
+# 297 "data/maps/SacredMountain_Peak/scripts.pory"
 	call SacredMountain_EventScript_DoGiratinaBattle
 	goto SacredMountain_EventScript_ThereIsNoEscape_1
 
 SacredMountain_EventScript_ThereIsNoEscape_5:
-# 284 "data/maps/SacredMountain_Peak/scripts.pory"
+# 302 "data/maps/SacredMountain_Peak/scripts.pory"
 	call SacredMountain_EventScript_DoGiratinaOriginBattle
 	goto SacredMountain_EventScript_ThereIsNoEscape_4
 
 
 SacredMountain_EventScript_DoGiratinaOriginBattle::
-# 292 "data/maps/SacredMountain_Peak/scripts.pory"
+# 310 "data/maps/SacredMountain_Peak/scripts.pory"
 	setvar VAR_TEMP_0, 1
-# 293 "data/maps/SacredMountain_Peak/scripts.pory"
+# 311 "data/maps/SacredMountain_Peak/scripts.pory"
 	setvar VAR_LAST_TALKED, 6
-# 294 "data/maps/SacredMountain_Peak/scripts.pory"
+# 312 "data/maps/SacredMountain_Peak/scripts.pory"
 	setwildbattle SPECIES_GIRATINA_ORIGIN, 70
-# 295 "data/maps/SacredMountain_Peak/scripts.pory"
+# 313 "data/maps/SacredMountain_Peak/scripts.pory"
 	setflag FLAG_NO_CATCHING
-# 296 "data/maps/SacredMountain_Peak/scripts.pory"
+# 314 "data/maps/SacredMountain_Peak/scripts.pory"
 	special BattleSetup_StartLegendaryBattle
-# 297 "data/maps/SacredMountain_Peak/scripts.pory"
+# 315 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitstate
-# 298 "data/maps/SacredMountain_Peak/scripts.pory"
+# 316 "data/maps/SacredMountain_Peak/scripts.pory"
 	clearflag FLAG_NO_CATCHING
-# 299 "data/maps/SacredMountain_Peak/scripts.pory"
+# 317 "data/maps/SacredMountain_Peak/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 300 "data/maps/SacredMountain_Peak/scripts.pory"
+# 318 "data/maps/SacredMountain_Peak/scripts.pory"
 	call_if_eq VAR_RESULT, B_OUTCOME_WON, SacredMountain_EventScript_GiratinaOriginBattleWon
-# 301 "data/maps/SacredMountain_Peak/scripts.pory"
+# 319 "data/maps/SacredMountain_Peak/scripts.pory"
 	call_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SacredMountain_EventScript_ThereIsNoEscape
-# 302 "data/maps/SacredMountain_Peak/scripts.pory"
+# 320 "data/maps/SacredMountain_Peak/scripts.pory"
 	call_if_eq VAR_RESULT, B_OUTCOME_RAN, SacredMountain_EventScript_ThereIsNoEscape
-# 304 "data/maps/SacredMountain_Peak/scripts.pory"
+# 322 "data/maps/SacredMountain_Peak/scripts.pory"
 	release
 	end
 
 
 SacredMountain_EventScript_GiratinaOriginBattleWon::
-# 309 "data/maps/SacredMountain_Peak/scripts.pory"
-	setvar VAR_SACRED_MOUNTAIN_PEAK_STATE, 2
-# 310 "data/maps/SacredMountain_Peak/scripts.pory"
-	delay 15
-# 312 "data/maps/SacredMountain_Peak/scripts.pory"
-	msgbox SacredMountain_EventScript_GiratinaOriginBattleWon_Text_0, MSGBOX_AUTOCLOSE
-# 313 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmessage
-# 315 "data/maps/SacredMountain_Peak/scripts.pory"
-	fadescreen FADE_TO_WHITE
-# 316 "data/maps/SacredMountain_Peak/scripts.pory"
-	clearflag FLAG_HIDE_ARCEUS
-# 317 "data/maps/SacredMountain_Peak/scripts.pory"
-	setflag FLAG_HIDE_GIRATINA_ORIGIN
-# 318 "data/maps/SacredMountain_Peak/scripts.pory"
-	addobject 8
-# 319 "data/maps/SacredMountain_Peak/scripts.pory"
-	removeobject 6
-# 321 "data/maps/SacredMountain_Peak/scripts.pory"
-	setobjectxy 8, 18, 14
-# 323 "data/maps/SacredMountain_Peak/scripts.pory"
-	playmoncry SPECIES_ARCEUS, CRY_MODE_ENCOUNTER
-# 324 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmoncry
-# 326 "data/maps/SacredMountain_Peak/scripts.pory"
-	playse SE_M_EXPLOSION
 # 327 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitse
-# 329 "data/maps/SacredMountain_Peak/scripts.pory"
-	delay 10
+	setvar VAR_SACRED_MOUNTAIN_PEAK_STATE, 2
+# 328 "data/maps/SacredMountain_Peak/scripts.pory"
+	delay 15
+# 330 "data/maps/SacredMountain_Peak/scripts.pory"
+	msgbox SacredMountain_EventScript_GiratinaOriginBattleWon_Text_0, MSGBOX_AUTOCLOSE
 # 331 "data/maps/SacredMountain_Peak/scripts.pory"
-	playmoncry SPECIES_GIRATINA, CRY_MODE_FAINT
-# 332 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmoncry
+	waitmessage
+# 333 "data/maps/SacredMountain_Peak/scripts.pory"
+	fadescreen FADE_TO_WHITE
 # 334 "data/maps/SacredMountain_Peak/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	clearflag FLAG_HIDE_ARCEUS
 # 335 "data/maps/SacredMountain_Peak/scripts.pory"
-	waitmovement 0
+	setflag FLAG_HIDE_GIRATINA_ORIGIN
+# 336 "data/maps/SacredMountain_Peak/scripts.pory"
+	addobject 8
 # 337 "data/maps/SacredMountain_Peak/scripts.pory"
-	fadescreen FADE_FROM_WHITE
+	removeobject 6
 # 339 "data/maps/SacredMountain_Peak/scripts.pory"
-	call SacredMountain_EventScript_Arceus_Entrance
+	setobjectxy 8, 18, 14
 # 341 "data/maps/SacredMountain_Peak/scripts.pory"
+	playmoncry SPECIES_ARCEUS, CRY_MODE_ENCOUNTER
+# 342 "data/maps/SacredMountain_Peak/scripts.pory"
+	waitmoncry
+# 344 "data/maps/SacredMountain_Peak/scripts.pory"
+	playse SE_M_EXPLOSION
+# 345 "data/maps/SacredMountain_Peak/scripts.pory"
+	waitse
+# 347 "data/maps/SacredMountain_Peak/scripts.pory"
+	delay 10
+# 349 "data/maps/SacredMountain_Peak/scripts.pory"
+	playmoncry SPECIES_GIRATINA, CRY_MODE_FAINT
+# 350 "data/maps/SacredMountain_Peak/scripts.pory"
+	waitmoncry
+# 352 "data/maps/SacredMountain_Peak/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+# 353 "data/maps/SacredMountain_Peak/scripts.pory"
+	waitmovement 0
+# 355 "data/maps/SacredMountain_Peak/scripts.pory"
+	fadescreen FADE_FROM_WHITE
+# 357 "data/maps/SacredMountain_Peak/scripts.pory"
+	call SacredMountain_EventScript_Arceus_Entrance
+# 359 "data/maps/SacredMountain_Peak/scripts.pory"
 	release
 	end
 
 
 SacredMountain_EventScript_Arceus_Entrance::
-# 347 "data/maps/SacredMountain_Peak/scripts.pory"
+# 365 "data/maps/SacredMountain_Peak/scripts.pory"
 	special SpawnCameraObject
-# 348 "data/maps/SacredMountain_Peak/scripts.pory"
+# 366 "data/maps/SacredMountain_Peak/scripts.pory"
 	applymovement OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanUp
-# 349 "data/maps/SacredMountain_Peak/scripts.pory"
+# 367 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmovement 0
-# 350 "data/maps/SacredMountain_Peak/scripts.pory"
+# 368 "data/maps/SacredMountain_Peak/scripts.pory"
 	applymovement OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanUp
-# 351 "data/maps/SacredMountain_Peak/scripts.pory"
+# 369 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmovement 0
-# 352 "data/maps/SacredMountain_Peak/scripts.pory"
+# 370 "data/maps/SacredMountain_Peak/scripts.pory"
 	applymovement OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanUp
-# 353 "data/maps/SacredMountain_Peak/scripts.pory"
+# 371 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmovement 0
-# 355 "data/maps/SacredMountain_Peak/scripts.pory"
+# 373 "data/maps/SacredMountain_Peak/scripts.pory"
 	applymovement 8, Common_Movement_WalkDown3
-# 356 "data/maps/SacredMountain_Peak/scripts.pory"
+# 374 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmovement 0
-# 358 "data/maps/SacredMountain_Peak/scripts.pory"
+# 376 "data/maps/SacredMountain_Peak/scripts.pory"
 	message SacredMountain_Text_Arceus_Opening
-# 359 "data/maps/SacredMountain_Peak/scripts.pory"
+# 377 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmessage
-# 361 "data/maps/SacredMountain_Peak/scripts.pory"
+# 379 "data/maps/SacredMountain_Peak/scripts.pory"
 	checkitem ITEM_AZURE_FLUTE
-# 362 "data/maps/SacredMountain_Peak/scripts.pory"
+# 380 "data/maps/SacredMountain_Peak/scripts.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq SacredMountain_EventScript_Arceus_Entrance_2
-# 368 "data/maps/SacredMountain_Peak/scripts.pory"
+# 386 "data/maps/SacredMountain_Peak/scripts.pory"
 	call SacredMountain_EventScript_Credits
 SacredMountain_EventScript_Arceus_Entrance_1:
-# 371 "data/maps/SacredMountain_Peak/scripts.pory"
+# 389 "data/maps/SacredMountain_Peak/scripts.pory"
 	release
 	end
 
 SacredMountain_EventScript_Arceus_Entrance_2:
-# 364 "data/maps/SacredMountain_Peak/scripts.pory"
+# 382 "data/maps/SacredMountain_Peak/scripts.pory"
 	call SacredMountain_EventScript_AzureFlute
 	goto SacredMountain_EventScript_Arceus_Entrance_1
 
 
 SacredMountain_EventScript_AzureFlute::
-# 376 "data/maps/SacredMountain_Peak/scripts.pory"
+# 394 "data/maps/SacredMountain_Peak/scripts.pory"
 	msgbox SacredMountain_EventScript_AzureFlute_Text_0, MSGBOX_YESNO
-# 377 "data/maps/SacredMountain_Peak/scripts.pory"
+# 395 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmessage
-# 378 "data/maps/SacredMountain_Peak/scripts.pory"
+# 396 "data/maps/SacredMountain_Peak/scripts.pory"
 	closemessage
-# 380 "data/maps/SacredMountain_Peak/scripts.pory"
+# 398 "data/maps/SacredMountain_Peak/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq SacredMountain_EventScript_AzureFlute_2
-# 395 "data/maps/SacredMountain_Peak/scripts.pory"
+# 413 "data/maps/SacredMountain_Peak/scripts.pory"
 	call SacredMountain_EventScript_Credits
 SacredMountain_EventScript_AzureFlute_1:
-# 398 "data/maps/SacredMountain_Peak/scripts.pory"
+# 416 "data/maps/SacredMountain_Peak/scripts.pory"
 	release
 	end
 
 SacredMountain_EventScript_AzureFlute_2:
-# 382 "data/maps/SacredMountain_Peak/scripts.pory"
+# 400 "data/maps/SacredMountain_Peak/scripts.pory"
 	playfanfare MUS_AZURE_FLUTE
-# 383 "data/maps/SacredMountain_Peak/scripts.pory"
+# 401 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitfanfare
-# 384 "data/maps/SacredMountain_Peak/scripts.pory"
+# 402 "data/maps/SacredMountain_Peak/scripts.pory"
 	setvar VAR_SACRED_MOUNTAIN_PEAK_STATE, 3
-# 386 "data/maps/SacredMountain_Peak/scripts.pory"
+# 404 "data/maps/SacredMountain_Peak/scripts.pory"
 	msgbox SacredMountain_Text_Arceus_Challange, MSGBOX_AUTOCLOSE
-# 387 "data/maps/SacredMountain_Peak/scripts.pory"
+# 405 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmessage
-# 389 "data/maps/SacredMountain_Peak/scripts.pory"
+# 407 "data/maps/SacredMountain_Peak/scripts.pory"
 	applymovement OBJ_EVENT_ID_CAMERA, SacredMountain_Movement_Camera_PanDown
-# 390 "data/maps/SacredMountain_Peak/scripts.pory"
+# 408 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmovement 0
-# 391 "data/maps/SacredMountain_Peak/scripts.pory"
+# 409 "data/maps/SacredMountain_Peak/scripts.pory"
 	special RemoveCameraObject
 	goto SacredMountain_EventScript_AzureFlute_1
 
 
 SacredMountain_EventScript_Credits::
-# 403 "data/maps/SacredMountain_Peak/scripts.pory"
+# 421 "data/maps/SacredMountain_Peak/scripts.pory"
+	playmoncry SPECIES_ARCEUS, CRY_MODE_ENCOUNTER
+# 422 "data/maps/SacredMountain_Peak/scripts.pory"
 	fadescreen FADE_TO_BLACK
-# 404 "data/maps/SacredMountain_Peak/scripts.pory"
+# 423 "data/maps/SacredMountain_Peak/scripts.pory"
 	setrespawn HEAL_LOCATION_MYSTERY_CAVE
-# 405 "data/maps/SacredMountain_Peak/scripts.pory"
+# 424 "data/maps/SacredMountain_Peak/scripts.pory"
 	delay 120
-# 406 "data/maps/SacredMountain_Peak/scripts.pory"
+# 425 "data/maps/SacredMountain_Peak/scripts.pory"
 	special GameClear
-# 407 "data/maps/SacredMountain_Peak/scripts.pory"
+# 426 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitstate
-# 408 "data/maps/SacredMountain_Peak/scripts.pory"
+# 427 "data/maps/SacredMountain_Peak/scripts.pory"
 	releaseall
 	end
 
 
 SacredMountain_EventScript_WalkBack::
-# 413 "data/maps/SacredMountain_Peak/scripts.pory"
+# 432 "data/maps/SacredMountain_Peak/scripts.pory"
 	lock
-# 414 "data/maps/SacredMountain_Peak/scripts.pory"
+# 433 "data/maps/SacredMountain_Peak/scripts.pory"
 	msgbox SacredMountain_EventScript_WalkBack_Text_0
-# 415 "data/maps/SacredMountain_Peak/scripts.pory"
+# 434 "data/maps/SacredMountain_Peak/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-# 416 "data/maps/SacredMountain_Peak/scripts.pory"
+# 435 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmovement 0
-# 417 "data/maps/SacredMountain_Peak/scripts.pory"
+# 436 "data/maps/SacredMountain_Peak/scripts.pory"
 	release
 	end
 
 
 SacredMountain_EventScript_Arceus::
-# 422 "data/maps/SacredMountain_Peak/scripts.pory"
+# 441 "data/maps/SacredMountain_Peak/scripts.pory"
 	lock
-# 423 "data/maps/SacredMountain_Peak/scripts.pory"
+# 442 "data/maps/SacredMountain_Peak/scripts.pory"
 	msgbox SacredMountain_EventScript_Arceus_Text_0, MSGBOX_AUTOCLOSE
-# 424 "data/maps/SacredMountain_Peak/scripts.pory"
+# 443 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmessage
-# 425 "data/maps/SacredMountain_Peak/scripts.pory"
+# 444 "data/maps/SacredMountain_Peak/scripts.pory"
 	playmoncry SPECIES_ARCEUS, CRY_MODE_ENCOUNTER
-# 426 "data/maps/SacredMountain_Peak/scripts.pory"
+# 445 "data/maps/SacredMountain_Peak/scripts.pory"
 	waitmoncry
-# 427 "data/maps/SacredMountain_Peak/scripts.pory"
+# 446 "data/maps/SacredMountain_Peak/scripts.pory"
 	trainerbattle_no_intro TRAINER_ARCEUS, SacredMountain_EventScript_Arceus_Text_1
-# 428 "data/maps/SacredMountain_Peak/scripts.pory"
+# 447 "data/maps/SacredMountain_Peak/scripts.pory"
 	call SacredMountain_EventScript_Credits
 	return
 
 
-# 492 "data/maps/SacredMountain_Peak/scripts.pory"
+# 499 "data/maps/SacredMountain_Peak/scripts.pory"
 SacredMountain_Movement_Giovanni_WalkOn:
-# 493 "data/maps/SacredMountain_Peak/scripts.pory"
+# 500 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_up
-# 493 "data/maps/SacredMountain_Peak/scripts.pory"
+# 500 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_up
-# 493 "data/maps/SacredMountain_Peak/scripts.pory"
+# 500 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_up
-# 493 "data/maps/SacredMountain_Peak/scripts.pory"
+# 500 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_up
-# 493 "data/maps/SacredMountain_Peak/scripts.pory"
+# 500 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_up
-# 493 "data/maps/SacredMountain_Peak/scripts.pory"
+# 500 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_up
-# 493 "data/maps/SacredMountain_Peak/scripts.pory"
+# 500 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_up
-# 493 "data/maps/SacredMountain_Peak/scripts.pory"
+# 500 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_up
-# 493 "data/maps/SacredMountain_Peak/scripts.pory"
+# 500 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_up
-# 494 "data/maps/SacredMountain_Peak/scripts.pory"
+# 501 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_right
-# 495 "data/maps/SacredMountain_Peak/scripts.pory"
+# 502 "data/maps/SacredMountain_Peak/scripts.pory"
 	face_up
 	step_end
 
-# 498 "data/maps/SacredMountain_Peak/scripts.pory"
+# 505 "data/maps/SacredMountain_Peak/scripts.pory"
 SacredMountain_Movement_Giovanni_Push:
-# 499 "data/maps/SacredMountain_Peak/scripts.pory"
+# 506 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_fast_up
 	step_end
 
-# 502 "data/maps/SacredMountain_Peak/scripts.pory"
+# 509 "data/maps/SacredMountain_Peak/scripts.pory"
 SacredMountain_Movement_Spenser_PushedBack:
-# 503 "data/maps/SacredMountain_Peak/scripts.pory"
+# 510 "data/maps/SacredMountain_Peak/scripts.pory"
 	jump_up
-# 504 "data/maps/SacredMountain_Peak/scripts.pory"
+# 511 "data/maps/SacredMountain_Peak/scripts.pory"
 	face_down
 	step_end
 
-# 507 "data/maps/SacredMountain_Peak/scripts.pory"
+# 514 "data/maps/SacredMountain_Peak/scripts.pory"
 SacredMountain_Movement_Spenser_PushedOff:
-# 508 "data/maps/SacredMountain_Peak/scripts.pory"
+# 515 "data/maps/SacredMountain_Peak/scripts.pory"
 	jump_2_up
-# 508 "data/maps/SacredMountain_Peak/scripts.pory"
+# 515 "data/maps/SacredMountain_Peak/scripts.pory"
 	jump_2_up
 	step_end
 
-# 511 "data/maps/SacredMountain_Peak/scripts.pory"
+# 518 "data/maps/SacredMountain_Peak/scripts.pory"
 SacredMountain_Movement_Camera_PanUp:
-# 512 "data/maps/SacredMountain_Peak/scripts.pory"
+# 519 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_slow_up
 	step_end
 
-# 515 "data/maps/SacredMountain_Peak/scripts.pory"
+# 522 "data/maps/SacredMountain_Peak/scripts.pory"
 SacredMountain_Movement_Camera_PanDown:
-# 516 "data/maps/SacredMountain_Peak/scripts.pory"
+# 523 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_slow_down
-# 516 "data/maps/SacredMountain_Peak/scripts.pory"
+# 523 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_slow_down
-# 516 "data/maps/SacredMountain_Peak/scripts.pory"
+# 523 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_slow_down
 	step_end
 
+SacredMountain_EventScript_AskPlayerToSave_Text_0:
+# 64 "data/maps/SacredMountain_Peak/scripts.pory"
+	.string "The end is near. Save game?$"
+
 SacredMountain_EventScript_Cutscene_Main_Text_0:
-# 119 "data/maps/SacredMountain_Peak/scripts.pory"
-	.string "???: Halt!$"
+# 137 "data/maps/SacredMountain_Peak/scripts.pory"
+	.string "???: No need for such hasty actions!$"
 
 SacredMountain_EventScript_GiratinaOriginBattleWon_Text_0:
-# 312 "data/maps/SacredMountain_Peak/scripts.pory"
+# 330 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "???: Be gone beast of darkness!$"
 
 SacredMountain_EventScript_AzureFlute_Text_0:
-# 376 "data/maps/SacredMountain_Peak/scripts.pory"
+# 394 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "The AZURE FLUTE in your bag begins to\n"
 	.string "shine.\p"
 	.string "Play the AZURE FLUTE?$"
 
 SacredMountain_EventScript_WalkBack_Text_0:
-# 414 "data/maps/SacredMountain_Peak/scripts.pory"
+# 433 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "GIOVANNI: And where do you think you\n"
 	.string "are going?$"
 
 SacredMountain_EventScript_Arceus_Text_0:
-# 423 "data/maps/SacredMountain_Peak/scripts.pory"
+# 442 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "...$"
 
 SacredMountain_EventScript_Arceus_Text_1:
-# 427 "data/maps/SacredMountain_Peak/scripts.pory"
+# 446 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "Well done. You have triumphed over a\n"
 	.string "god.$"
 
 SacredMountain_Text_Spenser1::
-# 432 "data/maps/SacredMountain_Peak/scripts.pory"
-	.string "SPENSER: Lorem Ipsum!\n"
-	.string "Lorem Lorem\p"
-	.string "Ipsum$"
+# 450 "data/maps/SacredMountain_Peak/scripts.pory"
+	.string "SPENSER: Finally, you made it. Reaching\n"
+	.string "this point in space and time means you\l"
+	.string "must have beaten Archie and Maxie, yet\l"
+	.string "the time paradox that destroyed this\l"
+	.string "timeline still exists...$"
 
 SacredMountain_Text_Spenser2::
-# 437 "data/maps/SacredMountain_Peak/scripts.pory"
-	.string "Lorem Ipsum!$"
+# 454 "data/maps/SacredMountain_Peak/scripts.pory"
+	.string "We shall use the power of the orbs you\n"
+	.string "have collected to restore this region\l"
+	.string "to its original state. Maybe then we will\l"
+	.string "finally discern who was behind all this.$"
 
 SacredMountain_Text_Giovanni1::
-# 442 "data/maps/SacredMountain_Peak/scripts.pory"
-	.string "GIOVANNI: Lorem Ipsum!$"
+# 458 "data/maps/SacredMountain_Peak/scripts.pory"
+	.string "GIOVANNI: I have to thank you for\n"
+	.string "powering up the orbs again. After I\l"
+	.string "gave Archie the blue orb to destroy\l"
+	.string "Hoen, it lost all of its power. Yet here\l"
+	.string "we are. I will take those thank you and\l"
+	.string "become the de facto ruler of this\l"
+	.string "dimension.$"
 
 SacredMountain_Text_Giovanni2::
-# 447 "data/maps/SacredMountain_Peak/scripts.pory"
-	.string "GIOVANNI: Lorem Ipsum!$"
+# 462 "data/maps/SacredMountain_Peak/scripts.pory"
+	.string "GIOVANNI: Yes! With the power of my red\n"
+	.string "chain and the energy of the orbs at the\l"
+	.string "peak. I succeeded at last in summoning\l"
+	.string "the mighty rulers of space and time.\l"
+	.string "Welcome Dialga and Palkia.\p"
+	.string "My, new slaves. You will do my bidding.\p"
+	.string "Incidentally old man. I don't think that\n"
+	.string "I have any use for you anymore.$"
 
 SacredMountain_Text_Giovanni_PreBattle::
-# 452 "data/maps/SacredMountain_Peak/scripts.pory"
+# 466 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "GIOVANNI: So you want to stop me?\n"
 	.string "Come an try.$"
 
 SacredMountain_Text_Giovanni_Deafeat::
-# 457 "data/maps/SacredMountain_Peak/scripts.pory"
+# 470 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "Lost to a mere child...$"
 
 SacredMountain_Text_Giovanni_PostBattle::
-# 462 "data/maps/SacredMountain_Peak/scripts.pory"
+# 474 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "No! This is inconceivable.\n"
 	.string "How... how did I lose.\p"
 	.string "You leave me no choice. I would not\n"
 	.string "wish this upon my worst enemy...$"
 
 SacredMountain_Text_Giovanni_CallForGiratina::
-# 467 "data/maps/SacredMountain_Peak/scripts.pory"
+# 478 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "Let the rule of darkness be eternal.\p"
 	.string "Come forth GIRATINA!$"
 
 SacredMountain_Text_Giovanni_PostBattleGiratina::
-# 472 "data/maps/SacredMountain_Peak/scripts.pory"
+# 482 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "Impossible! How could GIRATINA lose?\n"
 	.string "It is the strongest POKéMON known to\l"
 	.string "man.\p"
@@ -793,18 +848,24 @@ SacredMountain_Text_Giovanni_PostBattleGiratina::
 	.string "battle!$"
 
 SacredMountain_Text_Giovanni_Giratina_Kills_Giovanni::
-# 477 "data/maps/SacredMountain_Peak/scripts.pory"
+# 486 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "Huh? GIRATINA?\p"
 	.string "What are you doing?\p"
-	.string "No stop...$"
+	.string "No! Stop...!$"
 
 SacredMountain_Text_Arceus_Opening::
-# 482 "data/maps/SacredMountain_Peak/scripts.pory"
-	.string "Hello... Blah blah blah\p"
+# 490 "data/maps/SacredMountain_Peak/scripts.pory"
+	.string "The offender has been caught, thanks\n"
+	.string "to thee. Thy purpose is finished, thus\l"
+	.string "thine life will be forfeit to return back\l"
+	.string "to the endless void of space and time.\p"
+	.string "Prepare yourself, servant, for thine\n"
+	.string "existence will cease to exist in mere\l"
+	.string "moments.\p"
 	.string "$"
 
 SacredMountain_Text_Arceus_Challange::
-# 487 "data/maps/SacredMountain_Peak/scripts.pory"
+# 494 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "The flute grants thee the divine right\n"
-	.string "to challange me. Be prepared and do not\l"
-	.string "take me lightly.$"
+	.string "to challange me. But be prepared and do\l"
+	.string "not take me lightly.$"

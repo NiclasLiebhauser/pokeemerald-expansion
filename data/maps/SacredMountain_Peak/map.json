@@ -173,6 +173,33 @@
       "var": "VAR_SACRED_MOUNTAIN_PEAK_STATE",
       "var_value": "1",
       "script": "SacredMountain_EventScript_WalkBack"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 48,
+      "elevation": 0,
+      "var": "VAR_ASK_SAVE_STATE",
+      "var_value": "0",
+      "script": "SacredMountain_EventScript_AskPlayerToSave"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 48,
+      "elevation": 0,
+      "var": "VAR_ASK_SAVE_STATE",
+      "var_value": "0",
+      "script": "SacredMountain_EventScript_AskPlayerToSave"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 48,
+      "elevation": 0,
+      "var": "VAR_ASK_SAVE_STATE",
+      "var_value": "0",
+      "script": "SacredMountain_EventScript_AskPlayerToSave"
     }
   ],
   "bg_events": [

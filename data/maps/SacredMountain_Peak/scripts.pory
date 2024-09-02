@@ -57,6 +57,24 @@ script SacredMountain_EventScript_OnTransition {
     end
 }
 
+script SacredMountain_EventScript_AskPlayerToSave {
+    if(!flag(FLAG_ASK_PLAYER_SAVE))
+    {
+        lock
+        msgbox(format("The end is near. Save game?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES)
+        {
+            special(SaveGame)
+            waitstate
+        }
+        setflag(FLAG_ASK_PLAYER_SAVE)
+        setvar(VAR_ASK_SAVE_STATE, 1)
+        release    
+    }
+    
+    end
+}
+
 script SacredMountain_EventScript_TryRemoveGiratinaOrigin {
     specialvar(VAR_RESULT, GetBattleOutcome)
     call_if_eq(VAR_RESULT, B_OUTCOME_WON, SacredMountain_EventScript_RemoveGiratinaOrigin)
@@ -116,7 +134,7 @@ script SacredMountain_EventScript_Cutscene_Main {
 
     msgbox(SacredMountain_Text_Spenser2, MSGBOX_NPC)
 
-    msgbox("???: Halt!", MSGBOX_NPC)
+    msgbox("???: No need for such hasty actions!", MSGBOX_NPC)
 
     playse(SE_PIN)
     applymovement(LOCALID_SPENSER, Common_Movement_ExclamationMark)
@@ -400,6 +418,7 @@ script SacredMountain_EventScript_AzureFlute {
 }
 
 script SacredMountain_EventScript_Credits {
+    playmoncry(SPECIES_ARCEUS, CRY_MODE_ENCOUNTER)
     fadescreen(FADE_TO_BLACK)
     setrespawn(HEAL_LOCATION_MYSTERY_CAVE)
     delay(120)
@@ -428,64 +447,52 @@ script SacredMountain_EventScript_Arceus {
     call(SacredMountain_EventScript_Credits)
 }
 
-//ToSolve
 text SacredMountain_Text_Spenser1 {
-    format("SPENSER: Lorem Ipsum!\nLorem Lorem\pIpsum")
+    format("SPENSER: Finally, you made it. Reaching this point in space and time means you must have beaten Archie and Maxie, yet the time paradox that destroyed this timeline still exists...")
 }
 
-//ToSolve
 text SacredMountain_Text_Spenser2 {
-    format("Lorem Ipsum!")
+    format("We shall use the power of the orbs you have collected to restore this region to its original state. Maybe then we will finally discern who was behind all this.")
 }
 
-//ToSolve
 text SacredMountain_Text_Giovanni1 {
-    format("GIOVANNI: Lorem Ipsum!")
+    format("GIOVANNI: I have to thank you for powering up the orbs again. After I gave Archie the blue orb to destroy Hoen, it lost all of its power. Yet here we are. I will take those thank you and become the de facto ruler of this dimension.")
 }
 
-//ToSolve
 text SacredMountain_Text_Giovanni2 {
-    format("GIOVANNI: Lorem Ipsum!")
+    format("GIOVANNI: Yes! With the power of my red chain and the energy of the orbs at the peak. I succeeded at last in summoning the mighty rulers of space and time. Welcome Dialga and Palkia.\pMy, new slaves. You will do my bidding.\pIncidentally old man. I don't think that I have any use for you anymore.")
 }
 
-//ToSolve
 text SacredMountain_Text_Giovanni_PreBattle {
     format("GIOVANNI: So you want to stop me?\nCome an try.")
 }
 
-//ToSolve
 text SacredMountain_Text_Giovanni_Deafeat {
     format("Lost to a mere child...")
 }
 
-//ToSolve
 text SacredMountain_Text_Giovanni_PostBattle {
     format("No! This is inconceivable.\nHow... how did I lose.\pYou leave me no choice. I would not\n wish this upon my worst enemy...")
 }
 
-//ToSolve
 text SacredMountain_Text_Giovanni_CallForGiratina {
     format("Let the rule of darkness be eternal.\pCome forth GIRATINA!")
 }
 
-//ToSolve
 text SacredMountain_Text_Giovanni_PostBattleGiratina {
     format("Impossible! How could GIRATINA lose?\nIt is the strongest POKéMON known to man.\pNo...\pI can not accept this. RED NECLACE, give GIRATINA the power to continue battle!")
 }
 
-//ToSolve
 text SacredMountain_Text_Giovanni_Giratina_Kills_Giovanni {
-    format("Huh? GIRATINA?\pWhat are you doing?\pNo stop...")
+    format("Huh? GIRATINA?\pWhat are you doing?\pNo! Stop...!")
 }
 
-//ToSolve
 text SacredMountain_Text_Arceus_Opening {
-    format("Hello... Blah blah blah\p")
+    format("The offender has been caught, thanks to thee. Thy purpose is finished, thus thine life will be forfeit to return back to the endless void of space and time.\pPrepare yourself, servant, for thine existence will cease to exist in mere moments.\p")
 }
 
-//ToSolve
 text SacredMountain_Text_Arceus_Challange {
-    format("The flute grants thee the divine right to challange me. Be prepared and do not take me lightly.")
+    format("The flute grants thee the divine right to challange me. But be prepared and do not take me lightly.")
 }
 
 

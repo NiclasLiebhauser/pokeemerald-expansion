@@ -275,7 +275,7 @@
 #define VAR_HIDE_AND_SEEK                                0x40FF
 #define VAR_STEP_COUNTER                                 0x4100
 #define VAR_MAGIKARPS_TRADED                             0x4101
-#define VAR_UNUSED_0x4102                                0x4102 // Unused Var
+#define VAR_ASK_SAVE_STATE                               0x4102
 #define VAR_UNUSED_0x4103                                0x4103 // Unused Var
 #define VAR_UNUSED_0x4104                                0x4104 // Unused Var
 #define VAR_UNUSED_0x4105                                0x4105 // Unused Var
