@@ -92,39 +92,39 @@ script SacredCity_EventScript_Psychic2 {
 }
 
 text SacredCity_Text_HexManiac1_Intro {
-    format("Intro")
+    format("You can’t escape the shadows that surround this place. My Pokémon and I thrive in them!")
 }
 
 text SacredCity_Text_HexManiac1_Defeat {
-    format("Defeat")
+    format("The darkness... it’s fading...")
 }
 
 text SacredCity_Text_HexManiac1_PostBattle {
-    format("Post")
+    format("Even in defeat, the shadows linger. I’ll return, and next time, you’ll feel their true power.")
 }
 
 text SacredCity_Text_Psychic1_Intro {
-    format("Intro")
+    format("I can sense your aura... and it’s trembling before my power. Prepare yourself!")
 }
 
 text SacredCity_Text_Psychic1_Defeat {
-    format("Defeat")
+    format("My visions... they were wrong?")
 }
 
 text SacredCity_Text_Psychic1_PostBattle {
-    format("Post")
+    format("You’ve disrupted the flow, but next time, I will foresee your every move.")
 }
 
 text SacredCity_Text_Psychic2_Intro {
-    format("Intro")
+    format("Your thoughts are an open book to me. Let’s see if your actions can match your intentions!")
 }
 
 text SacredCity_Text_Psychic2_Defeat {
-    format("Defeat")
+    format("I... didn’t see that coming...")
 }
 
 text SacredCity_Text_Psychic2_PostBattle {
-    format("Post")
+    format("I underestimated you this time, but the mind is ever evolving. Next time, you won’t be so fortunate!")
 }
 
 text SacredCity_Text_FlyMachine {

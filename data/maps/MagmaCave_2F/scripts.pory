@@ -16,37 +16,37 @@ script MagmaCave_2F_EventScript_Grunt3 {
 }
 
 text MagmaCave_2F_Text_Grunt1_Intro {
-    format("Intro")
+    format("You’re deep in our territory now! There’s no turning back!")
 }
 
 text MagmaCave_2F_Text_Grunt1_Defeat {
-    format("Defeat")
+    format("No... I was supposed to stop you...")
 }
 
 text MagmaCave_2F_Text_Grunt1_PostBattle {
-    format("Post")
+    format("You may have beaten me, but the rest of Team Magma won’t be so easy!")
 }
 
 text MagmaCave_2F_Text_Grunt2_Intro {
-    format("Intro")
+    format("The deeper you go, the hotter it gets! Let’s see if you can take the heat!")
 }
 
 text MagmaCave_2F_Text_Grunt2_Defeat {
-    format("Defeat")
+    format("Burned out... just like that...")
 }
 
 text MagmaCave_2F_Text_Grunt2_PostBattle {
-    format("Post")
+    format("Next time, the flames of Team Magma will scorch you for sure!")
 }
 
 text MagmaCave_2F_Text_Grunt3_Intro {
-    format("Intro")
+    format("You won’t make it past me! I’ll turn up the heat and take you down!")
 }
 
 text MagmaCave_2F_Text_Grunt3_Defeat {
-    format("Defeat")
+    format("I can’t believe I’m melting down...")
 }
 
 text MagmaCave_2F_Text_Grunt3_PostBattle {
-    format("Post")
+    format("This is just a setback. Team Magma’s fire will burn brighter next time!")
 }

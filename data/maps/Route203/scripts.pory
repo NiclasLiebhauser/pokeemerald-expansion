@@ -49,97 +49,97 @@ script Route203_EventScript_Swimmer3 {
 }
 
 text Route203_Text_Tuber1_Intro {
-    format("Intro")
+    format("I'm just a kid, but my Pokémon are super tough! You better watch out!")
 }
 
 text Route203_Text_Tuber1_Defeat {
-    format("Defeat")
+    format("Aww, I lost...")
 }
 
 text Route203_Text_Tuber1_PostBattle {
-    format("Post")
+    format("I’ll get stronger, just you wait! Next time, I won’t lose!")
 }
 
 text Route203_Text_Expert1_Intro {
-    format("Intro")
+    format("I've spent a lifetime studying Pokémon. Let me show you what true experience looks like!")
 }
 
 text Route203_Text_Expert1_Defeat {
-    format("Defeat")
+    format("Hmph, even experts can fall...")
 }
 
 text Route203_Text_Expert1_PostBattle {
-    format("Post")
+    format("You’ve got talent, youngster. But remember, wisdom comes with age. I'll be ready for our next encounter.")
 }
 
 text Route203_Text_HexManiac1_Intro {
-    format("Intro")
+    format("You can’t escape the darkness that surrounds me. My Pokémon and I thrive in it!")
 }
 
 text Route203_Text_HexManiac1_Defeat {
-    format("Defeat")
+    format("The shadows... betrayed me...")
 }
 
 text Route203_Text_HexManiac1_PostBattle {
-    format("Post")
+    format("Even in defeat, the darkness whispers to me. I'll return, and next time, you'll feel its full power.")
 }
 
 text Route203_Text_BlackBelt1_Intro {
-    format("Intro")
+    format("My fists are as strong as my Pokémon! Let's see if you can handle our combined strength!")
 }
 
 text Route203_Text_BlackBelt1_Defeat {
-    format("Defeat")
+    format("My focus... broken.")
 }
 
 text Route203_Text_BlackBelt1_PostBattle {
-    format("Post")
+    format("Strength isn’t just about winning. I'll train harder, and next time, my fists will find their mark.")
 }
 
 text Route203_Text_Hiker1_Intro {
-    format("Intro")
+    format("The mountains have made me strong, and so have my Pokémon! Can you match our endurance?")
 }
 
 text Route203_Text_Hiker1_Defeat {
-    format("Defeat")
+    format("I’ve been toppled like a boulder...")
 }
 
 text Route203_Text_Hiker1_PostBattle {
-    format("Post")
+    format("Even the strongest peaks can crumble. I’ll return, tougher and more resilient.")
 }
 
 text Route203_Text_Swimmer1_Intro {
-    format("Intro")
+    format("The water is my home turf, and in it, I'm unbeatable! Let's see if you can keep up!")
 }
 
 text Route203_Text_Swimmer1_Defeat {
-    format("Defeat")
+    format("I can't swim my way out of this one...")
 }
 
 text Route203_Text_Swimmer1_PostBattle {
-    format("Post")
+    format("I guess I was all washed up this time. I'll dive back in stronger next time!")
 }
 
 text Route203_Text_Swimmer2_Intro {
-    format("Intro")
+    format("I've trained with the tides, mastering every current. You'll be no match for me!")
 }
 
 text Route203_Text_Swimmer2_Defeat {
-    format("Defeat")
+    format("Swept away... just like that.")
 }
 
 text Route203_Text_Swimmer2_PostBattle {
-    format("Post")
+    format("The ocean may be vast, but so is my determination. I'll make waves next time!")
 }
 
 text Route203_Text_Swimmer3_Intro {
-    format("Intro")
+    format("My Pokémon and I are as free as the open sea! Let's see if you can keep up with our rhythm!")
 }
 
 text Route203_Text_Swimmer3_Defeat {
-    format("Defeat")
+    format("Looks like we got outpaced...")
 }
 
 text Route203_Text_Swimmer3_PostBattle {
-    format("Post")
+    format("The sea always calls me back. I'll be ready to ride the waves again soon, stronger than ever.")
 }

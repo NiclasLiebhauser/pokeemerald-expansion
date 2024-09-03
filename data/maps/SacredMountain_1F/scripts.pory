@@ -21,49 +21,49 @@ script SacredMountain_1F_EventScript_Grunt4 {
 }
 
 text SacredMountain_1F_Text_Grunt1_Intro {
-    format("Intro")
+    format("You’ve got guts challenging Team Rocket at Sacred Mountain! But guts alone won’t save you!")
 }
 
 text SacredMountain_1F_Text_Grunt1_Defeat {
-    format("Defeat")
+    format("No way... how could I lose to a kid?")
 }
 
 text SacredMountain_1F_Text_Grunt1_PostBattle {
-    format("Post")
+    format("You may have won this time, but Team Rocket always comes back stronger!")
 }
 
 text SacredMountain_1F_Text_Grunt2_Intro {
-    format("Intro")
+    format("Team Rocket runs this mountain! Prepare to get crushed!")
 }
 
 text SacredMountain_1F_Text_Grunt2_Defeat {
-    format("Defeat")
+    format("What... defeated by a mere trainer?")
 }
 
 text SacredMountain_1F_Text_Grunt2_PostBattle {
-    format("Post")
+    format("Don’t think you’ve won. We’ll be back, and you won’t be so lucky!")
 }
 
 text SacredMountain_1F_Text_Grunt3_Intro {
-    format("Intro")
+    format("You’ve made it this far, but your journey ends here! Team Rocket rules all!")
 }
 
 text SacredMountain_1F_Text_Grunt3_Defeat {
-    format("Defeat")
+    format("This can’t be happening... I was supposed to stop you!")
 }
 
 text SacredMountain_1F_Text_Grunt3_PostBattle {
-    format("Post")
+    format("You may have slipped by this time, but you’ll never escape Team Rocket’s grasp!")
 }
 
 text SacredMountain_1F_Text_Grunt4_Intro {
-    format("Intro")
+    format("You’re facing the might of Team Rocket now! Get ready to lose!")
 }
 
 text SacredMountain_1F_Text_Grunt4_Defeat {
-    format("Defeat")
+    format("How could a grunt like me lose?")
 }
 
 text SacredMountain_1F_Text_Grunt4_PostBattle {
-    format("Post")
+    format("You won this battle, but Team Rocket is far from done with you!")
 }

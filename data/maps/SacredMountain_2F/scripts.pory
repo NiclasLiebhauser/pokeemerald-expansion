@@ -21,49 +21,49 @@ script SacredMountain_2F_EventScript_Grunt4 {
 }
 
 text SacredMountain_2F_Text_Grunt1_Intro {
-    format("Intro")
+    format("You’ve made a big mistake coming up here! Team Rocket controls everything on this mountain!")
 }
 
 text SacredMountain_2F_Text_Grunt1_Defeat {
-    format("Defeat")
+    format("No... this wasn’t supposed to happen!")
 }
 
 text SacredMountain_2F_Text_Grunt1_PostBattle {
-    format("Post")
+    format("You may have beaten me, but Team Rocket’s plans won’t be stopped!")
 }
 
 text SacredMountain_2F_Text_Grunt2_Intro {
-    format("Intro")
+    format("Think you can take on Team Rocket? I’ll show you the true power of the boss’s plans!")
 }
 
 text SacredMountain_2F_Text_Grunt2_Defeat {
-    format("Defeat")
+    format("I... I can’t believe it!")
 }
 
 text SacredMountain_2F_Text_Grunt2_PostBattle {
-    format("Post")
+    format("You got lucky this time, but don’t get too comfortable. We’re always watching!")
 }
 
 text SacredMountain_2F_Text_Grunt3_Intro {
-    format("Intro")
+    format("You’ve come far, but this is where your journey ends! Team Rocket doesn’t forgive or forget!")
 }
 
 text SacredMountain_2F_Text_Grunt3_Defeat {
-    format("Defeat")
+    format("Beaten by some meddling trainer? Impossible!")
 }
 
 text SacredMountain_2F_Text_Grunt3_PostBattle {
-    format("Post")
+    format("You won this battle, but the war is far from over. Team Rocket will rise again!")
 }
 
 text SacredMountain_2F_Text_Grunt4_Intro {
-    format("Intro")
+    format("You’re facing the elite of Team Rocket now! There’s no way you’ll make it past me!")
 }
 
 text SacredMountain_2F_Text_Grunt4_Defeat {
-    format("Defeat")
+    format("I’ve failed... but Team Rocket will never fall!")
 }
 
 text SacredMountain_2F_Text_Grunt4_PostBattle {
-    format("Post")
+    format("You got the best of me, but Team Rocket is unstoppable. We’ll meet again!")
 }

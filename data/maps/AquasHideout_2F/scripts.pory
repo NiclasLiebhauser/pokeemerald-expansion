@@ -169,50 +169,51 @@ script AquasHideout_2F_EventScript_Grunt4 {
 }
 
 text AquasHideout_2F_Text_Grunt1_Intro {
-    format("Intro")
+    format("You made it this far, but your journey ends here!")
 }
 
 text AquasHideout_2F_Text_Grunt1_Defeat {
-    format("Defeat")
+    format("I can't believe I lost...")
 }
 
 text AquasHideout_2F_Text_Grunt1_PostBattle {
-    format("Post")
+    format("You got lucky this time, but don’t think it’ll happen again!")
 }
 
 text AquasHideout_2F_Text_Grunt2_Intro {
-    format("Intro")
+    format("We’re not going to let you mess with our plans! Get ready!")
 }
 
 text AquasHideout_2F_Text_Grunt2_Defeat {
-    format("Defeat")
+    format("No way... I was sure I had you.")
 }
 
 text AquasHideout_2F_Text_Grunt2_PostBattle {
-    format("Post")
+    format("You won this round, but we’ll be back stronger!")
 }
 
 text AquasHideout_2F_Text_Grunt3_Intro {
-    format("Intro")
+    format("You think you can take us down? I’ll stop you right here!")
 }
 
 text AquasHideout_2F_Text_Grunt3_Defeat {
-    format("Defeat")
+    format("This can’t be happening...")
 }
 
 text AquasHideout_2F_Text_Grunt3_PostBattle {
-    format("Post")
+    format("I won’t forget this! Next time, you’re going down!")
 }
+
 text AquasHideout_2F_Text_Grunt4_Intro {
-    format("Intro")
+    format("You’re not leaving this floor without a fight! Let’s see what you’ve got!")
 }
 
 text AquasHideout_2F_Text_Grunt4_Defeat {
-    format("Defeat")
+    format("Defeated... just like that?")
 }
 
 text AquasHideout_2F_Text_Grunt4_PostBattle {
-    format("Post")
+    format("Don’t get too cocky. We’ll be ready for you next time!")
 }
 
 text AquasHideout_2F_Text_DiveMachine {

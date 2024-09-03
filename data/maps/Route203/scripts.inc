@@ -88,96 +88,124 @@ Route203_EventScript_Fisherman_Text_0:
 
 Route203_Text_Tuber1_Intro::
 # 51 "data/maps/Route203/scripts.pory"
-	.string "Intro$"
+	.string "I'm just a kid, but my Pokémon are super\n"
+	.string "tough! You better watch out!$"
 
 Route203_Text_Tuber1_Defeat::
 # 55 "data/maps/Route203/scripts.pory"
-	.string "Defeat$"
+	.string "Aww, I lost...$"
 
 Route203_Text_Tuber1_PostBattle::
 # 59 "data/maps/Route203/scripts.pory"
-	.string "Post$"
+	.string "I’ll get stronger, just you wait! Next\n"
+	.string "time, I won’t lose!$"
 
 Route203_Text_Expert1_Intro::
 # 63 "data/maps/Route203/scripts.pory"
-	.string "Intro$"
+	.string "I've spent a lifetime studying Pokémon.\n"
+	.string "Let me show you what true experience\l"
+	.string "looks like!$"
 
 Route203_Text_Expert1_Defeat::
 # 67 "data/maps/Route203/scripts.pory"
-	.string "Defeat$"
+	.string "Hmph, even experts can fall...$"
 
 Route203_Text_Expert1_PostBattle::
 # 71 "data/maps/Route203/scripts.pory"
-	.string "Post$"
+	.string "You’ve got talent, youngster. But\n"
+	.string "remember, wisdom comes with age. I'll be\l"
+	.string "ready for our next encounter.$"
 
 Route203_Text_HexManiac1_Intro::
 # 75 "data/maps/Route203/scripts.pory"
-	.string "Intro$"
+	.string "You can’t escape the darkness that\n"
+	.string "surrounds me. My Pokémon and I thrive\l"
+	.string "in it!$"
 
 Route203_Text_HexManiac1_Defeat::
 # 79 "data/maps/Route203/scripts.pory"
-	.string "Defeat$"
+	.string "The shadows... betrayed me...$"
 
 Route203_Text_HexManiac1_PostBattle::
 # 83 "data/maps/Route203/scripts.pory"
-	.string "Post$"
+	.string "Even in defeat, the darkness whispers\n"
+	.string "to me. I'll return, and next time, you'll\l"
+	.string "feel its full power.$"
 
 Route203_Text_BlackBelt1_Intro::
 # 87 "data/maps/Route203/scripts.pory"
-	.string "Intro$"
+	.string "My fists are as strong as my Pokémon!\n"
+	.string "Let's see if you can handle our\l"
+	.string "combined strength!$"
 
 Route203_Text_BlackBelt1_Defeat::
 # 91 "data/maps/Route203/scripts.pory"
-	.string "Defeat$"
+	.string "My focus... broken.$"
 
 Route203_Text_BlackBelt1_PostBattle::
 # 95 "data/maps/Route203/scripts.pory"
-	.string "Post$"
+	.string "Strength isn’t just about winning. I'll\n"
+	.string "train harder, and next time, my fists\l"
+	.string "will find their mark.$"
 
 Route203_Text_Hiker1_Intro::
 # 99 "data/maps/Route203/scripts.pory"
-	.string "Intro$"
+	.string "The mountains have made me strong, and\n"
+	.string "so have my Pokémon! Can you match our\l"
+	.string "endurance?$"
 
 Route203_Text_Hiker1_Defeat::
 # 103 "data/maps/Route203/scripts.pory"
-	.string "Defeat$"
+	.string "I’ve been toppled like a boulder...$"
 
 Route203_Text_Hiker1_PostBattle::
 # 107 "data/maps/Route203/scripts.pory"
-	.string "Post$"
+	.string "Even the strongest peaks can crumble.\n"
+	.string "I’ll return, tougher and more resilient.$"
 
 Route203_Text_Swimmer1_Intro::
 # 111 "data/maps/Route203/scripts.pory"
-	.string "Intro$"
+	.string "The water is my home turf, and in it, I'm\n"
+	.string "unbeatable! Let's see if you can keep\l"
+	.string "up!$"
 
 Route203_Text_Swimmer1_Defeat::
 # 115 "data/maps/Route203/scripts.pory"
-	.string "Defeat$"
+	.string "I can't swim my way out of this one...$"
 
 Route203_Text_Swimmer1_PostBattle::
 # 119 "data/maps/Route203/scripts.pory"
-	.string "Post$"
+	.string "I guess I was all washed up this time.\n"
+	.string "I'll dive back in stronger next time!$"
 
 Route203_Text_Swimmer2_Intro::
 # 123 "data/maps/Route203/scripts.pory"
-	.string "Intro$"
+	.string "I've trained with the tides, mastering\n"
+	.string "every current. You'll be no match for\l"
+	.string "me!$"
 
 Route203_Text_Swimmer2_Defeat::
 # 127 "data/maps/Route203/scripts.pory"
-	.string "Defeat$"
+	.string "Swept away... just like that.$"
 
 Route203_Text_Swimmer2_PostBattle::
 # 131 "data/maps/Route203/scripts.pory"
-	.string "Post$"
+	.string "The ocean may be vast, but so is my\n"
+	.string "determination. I'll make waves next\l"
+	.string "time!$"
 
 Route203_Text_Swimmer3_Intro::
 # 135 "data/maps/Route203/scripts.pory"
-	.string "Intro$"
+	.string "My Pokémon and I are as free as the\n"
+	.string "open sea! Let's see if you can keep up\l"
+	.string "with our rhythm!$"
 
 Route203_Text_Swimmer3_Defeat::
 # 139 "data/maps/Route203/scripts.pory"
-	.string "Defeat$"
+	.string "Looks like we got outpaced...$"
 
 Route203_Text_Swimmer3_PostBattle::
 # 143 "data/maps/Route203/scripts.pory"
-	.string "Post$"
+	.string "The sea always calls me back. I'll be\n"
+	.string "ready to ride the waves again soon,\l"
+	.string "stronger than ever.$"

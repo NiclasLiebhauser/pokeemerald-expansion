@@ -194,39 +194,50 @@ SacredCity_EventScript_MountainGuardian_Text_3:
 
 SacredCity_Text_HexManiac1_Intro::
 # 94 "data/maps/SacredCity/scripts.pory"
-	.string "Intro$"
+	.string "You can’t escape the shadows that\n"
+	.string "surround this place. My Pokémon and I\l"
+	.string "thrive in them!$"
 
 SacredCity_Text_HexManiac1_Defeat::
 # 98 "data/maps/SacredCity/scripts.pory"
-	.string "Defeat$"
+	.string "The darkness... it’s fading...$"
 
 SacredCity_Text_HexManiac1_PostBattle::
 # 102 "data/maps/SacredCity/scripts.pory"
-	.string "Post$"
+	.string "Even in defeat, the shadows linger. I’ll\n"
+	.string "return, and next time, you’ll feel their\l"
+	.string "true power.$"
 
 SacredCity_Text_Psychic1_Intro::
 # 106 "data/maps/SacredCity/scripts.pory"
-	.string "Intro$"
+	.string "I can sense your aura... and it’s\n"
+	.string "trembling before my power. Prepare\l"
+	.string "yourself!$"
 
 SacredCity_Text_Psychic1_Defeat::
 # 110 "data/maps/SacredCity/scripts.pory"
-	.string "Defeat$"
+	.string "My visions... they were wrong?$"
 
 SacredCity_Text_Psychic1_PostBattle::
 # 114 "data/maps/SacredCity/scripts.pory"
-	.string "Post$"
+	.string "You’ve disrupted the flow, but next\n"
+	.string "time, I will foresee your every move.$"
 
 SacredCity_Text_Psychic2_Intro::
 # 118 "data/maps/SacredCity/scripts.pory"
-	.string "Intro$"
+	.string "Your thoughts are an open book to me.\n"
+	.string "Let’s see if your actions can match your\l"
+	.string "intentions!$"
 
 SacredCity_Text_Psychic2_Defeat::
 # 122 "data/maps/SacredCity/scripts.pory"
-	.string "Defeat$"
+	.string "I... didn’t see that coming...$"
 
 SacredCity_Text_Psychic2_PostBattle::
 # 126 "data/maps/SacredCity/scripts.pory"
-	.string "Post$"
+	.string "I underestimated you this time, but the\n"
+	.string "mind is ever evolving. Next time, you\l"
+	.string "won’t be so fortunate!$"
 
 SacredCity_Text_FlyMachine::
 # 130 "data/maps/SacredCity/scripts.pory"

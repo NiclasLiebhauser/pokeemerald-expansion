@@ -22,13 +22,13 @@ script Route204_EventScript_Swimmer1 {
 }
 
 text Route204_Text_Swimmer1_Intro {
-    format("Intro")
+    format("The waves are perfect for a battle! Let’s see if you can keep up with me in the water!")
 }
 
 text Route204_Text_Swimmer1_Defeat {
-    format("Defeat")
+    format("No way... I got swept away!")
 }
 
 text Route204_Text_Swimmer1_PostBattle {
-    format("Post")
+    format("Looks like I need to train harder. Next time, I’ll ride the waves to victory!")
 }

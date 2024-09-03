@@ -69,85 +69,85 @@ script MagmaIsland_EventScript_Swimmer1 {
 }
 
 text MagmaIsland_Text_Fisherman1_Intro {
-    format("Intro")
+    format("The fish around here are tough, and so am I! Let’s see if you can handle my catch!")
 }
 
 text MagmaIsland_Text_Fisherman1_Defeat {
-    format("Defeat")
+    format("My line snapped... just like that...")
 }
 
 text MagmaIsland_Text_Fisherman1_PostBattle {
-    format("Post")
+    format("I need to reel in some new strategies. Next time, I won’t be so easy to beat!")
 }
 
 text MagmaIsland_Text_Tuber1_Intro {
-    format("Intro")
+    format("Hi, I'm Fern! The waves won’t stop me, and neither will you!")
 }
 
 text MagmaIsland_Text_Tuber1_Defeat {
-    format("Defeat")
+    format("Oh no, I lost... just like that.")
 }
 
 text MagmaIsland_Text_Tuber1_PostBattle {
-    format("Post")
+    format("I’ll keep training and riding the waves. Next time, I’ll be stronger!")
 }
 
 text MagmaIsland_Text_Tuber2_Intro {
-    format("Intro")
+    format("I'm Stark! Don’t underestimate me just because I’m a kid. Let’s battle!")
 }
 
 text MagmaIsland_Text_Tuber2_Defeat {
-    format("Defeat")
+    format("I can’t believe I lost...")
 }
 
 text MagmaIsland_Text_Tuber2_PostBattle {
-    format("Post")
+    format("I’m not giving up! I’ll keep getting stronger, you’ll see!")
 }
 
 text MagmaIsland_Text_BugCatcher1_Intro {
-    format("Intro")
+    format("Even here on the island, my bug Pokémon are ready for anything! Let’s battle!")
 }
 
 text MagmaIsland_Text_BugCatcher1_Defeat {
-    format("Defeat")
+    format("My bugs... they weren’t strong enough...")
 }
 
 text MagmaIsland_Text_BugCatcher1_PostBattle {
-    format("Post")
+    format("I’ll train my bugs even harder! Next time, we’ll win for sure!")
 }
 
 text MagmaIsland_Text_Hiker1_Intro {
-    format("Intro")
+    format("The rugged terrain of this island is nothing compared to my sturdy Pokémon! Can you handle the challenge?")
 }
 
 text MagmaIsland_Text_Hiker1_Defeat {
-    format("Defeat")
+    format("Toppled... just like that...")
 }
 
 text MagmaIsland_Text_Hiker1_PostBattle {
-    format("Post")
+    format("Even mountains can crumble, but I’ll come back stronger and tougher!")
 }
 
 text MagmaIsland_Text_Lass1_Intro {
-    format("Intro")
+    format("This island is so cool! Let’s see if you can keep up with my Pokémon!")
 }
 
 text MagmaIsland_Text_Lass1_Defeat {
-    format("Defeat")
+    format("Oh no, I lost...")
 }
 
 text MagmaIsland_Text_Lass1_PostBattle {
-    format("Post")
+    format("This was just for fun, but next time, I’ll make sure I win!")
 }
 
 text MagmaIsland_Text_Swimmer1_Intro {
-    format("Intro")
+    format("The water’s great here! Let’s see if you can keep up with me!")
 }
 
 text MagmaIsland_Text_Swimmer1_Defeat {
-    format("Defeat")
+    format("No way... I got swept away...")
 }
 
 text MagmaIsland_Text_Swimmer1_PostBattle {
-    format("Post")
+    format("I’ll train harder in the water and come back stronger next time!")
 }

@@ -248,29 +248,29 @@ AquasHideout_2F_EventScript_Grunt4::
 	return
 
 
-# 234 "data/maps/AquasHideout_2F/scripts.pory"
+# 235 "data/maps/AquasHideout_2F/scripts.pory"
 AquasHideout_2F_Movement_DiveGrunt_WalkOn:
-# 235 "data/maps/AquasHideout_2F/scripts.pory"
-	walk_down
-# 235 "data/maps/AquasHideout_2F/scripts.pory"
-	walk_down
-# 235 "data/maps/AquasHideout_2F/scripts.pory"
+# 236 "data/maps/AquasHideout_2F/scripts.pory"
 	walk_down
 # 236 "data/maps/AquasHideout_2F/scripts.pory"
+	walk_down
+# 236 "data/maps/AquasHideout_2F/scripts.pory"
+	walk_down
+# 237 "data/maps/AquasHideout_2F/scripts.pory"
 	walk_left
-# 236 "data/maps/AquasHideout_2F/scripts.pory"
+# 237 "data/maps/AquasHideout_2F/scripts.pory"
 	walk_left
 	step_end
 
-# 239 "data/maps/AquasHideout_2F/scripts.pory"
+# 240 "data/maps/AquasHideout_2F/scripts.pory"
 AquasHideout_2F_Movement_DiveGrunt_WalkItem:
-# 240 "data/maps/AquasHideout_2F/scripts.pory"
-	walk_up
-# 240 "data/maps/AquasHideout_2F/scripts.pory"
-	walk_up
-# 240 "data/maps/AquasHideout_2F/scripts.pory"
+# 241 "data/maps/AquasHideout_2F/scripts.pory"
 	walk_up
 # 241 "data/maps/AquasHideout_2F/scripts.pory"
+	walk_up
+# 241 "data/maps/AquasHideout_2F/scripts.pory"
+	walk_up
+# 242 "data/maps/AquasHideout_2F/scripts.pory"
 	face_left
 	step_end
 
@@ -297,58 +297,66 @@ AquasHideout_2F_DiveGrunt_Cutscene_Text_3:
 
 AquasHideout_2F_Text_Grunt1_Intro::
 # 171 "data/maps/AquasHideout_2F/scripts.pory"
-	.string "Intro$"
+	.string "You made it this far, but your journey\n"
+	.string "ends here!$"
 
 AquasHideout_2F_Text_Grunt1_Defeat::
 # 175 "data/maps/AquasHideout_2F/scripts.pory"
-	.string "Defeat$"
+	.string "I can't believe I lost...$"
 
 AquasHideout_2F_Text_Grunt1_PostBattle::
 # 179 "data/maps/AquasHideout_2F/scripts.pory"
-	.string "Post$"
+	.string "You got lucky this time, but don’t think\n"
+	.string "it’ll happen again!$"
 
 AquasHideout_2F_Text_Grunt2_Intro::
 # 183 "data/maps/AquasHideout_2F/scripts.pory"
-	.string "Intro$"
+	.string "We’re not going to let you mess with our\n"
+	.string "plans! Get ready!$"
 
 AquasHideout_2F_Text_Grunt2_Defeat::
 # 187 "data/maps/AquasHideout_2F/scripts.pory"
-	.string "Defeat$"
+	.string "No way... I was sure I had you.$"
 
 AquasHideout_2F_Text_Grunt2_PostBattle::
 # 191 "data/maps/AquasHideout_2F/scripts.pory"
-	.string "Post$"
+	.string "You won this round, but we’ll be back\n"
+	.string "stronger!$"
 
 AquasHideout_2F_Text_Grunt3_Intro::
 # 195 "data/maps/AquasHideout_2F/scripts.pory"
-	.string "Intro$"
+	.string "You think you can take us down? I’ll\n"
+	.string "stop you right here!$"
 
 AquasHideout_2F_Text_Grunt3_Defeat::
 # 199 "data/maps/AquasHideout_2F/scripts.pory"
-	.string "Defeat$"
+	.string "This can’t be happening...$"
 
 AquasHideout_2F_Text_Grunt3_PostBattle::
 # 203 "data/maps/AquasHideout_2F/scripts.pory"
-	.string "Post$"
+	.string "I won’t forget this! Next time, you’re\n"
+	.string "going down!$"
 
 AquasHideout_2F_Text_Grunt4_Intro::
-# 206 "data/maps/AquasHideout_2F/scripts.pory"
-	.string "Intro$"
+# 207 "data/maps/AquasHideout_2F/scripts.pory"
+	.string "You’re not leaving this floor without a\n"
+	.string "fight! Let’s see what you’ve got!$"
 
 AquasHideout_2F_Text_Grunt4_Defeat::
-# 210 "data/maps/AquasHideout_2F/scripts.pory"
-	.string "Defeat$"
+# 211 "data/maps/AquasHideout_2F/scripts.pory"
+	.string "Defeated... just like that?$"
 
 AquasHideout_2F_Text_Grunt4_PostBattle::
-# 214 "data/maps/AquasHideout_2F/scripts.pory"
-	.string "Post$"
+# 215 "data/maps/AquasHideout_2F/scripts.pory"
+	.string "Don’t get too cocky. We’ll be ready for\n"
+	.string "you next time!$"
 
 AquasHideout_2F_Text_DiveMachine::
-# 218 "data/maps/AquasHideout_2F/scripts.pory"
+# 219 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Obtained DIVE MACHINE!$"
 
 AquasHideout_2F_Text_Archie_PreBattel::
-# 222 "data/maps/AquasHideout_2F/scripts.pory"
+# 223 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "It was all my fault. If he hadn't given\n"
 	.string "me the BLUE ORB on that fate full day...\l"
 	.string "then... maybe...\p"
@@ -362,12 +370,12 @@ AquasHideout_2F_Text_Archie_PreBattel::
 	.string "Please end my pain.$"
 
 AquasHideout_2F_Text_Archie_PostBattel::
-# 226 "data/maps/AquasHideout_2F/scripts.pory"
+# 227 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "I think I will renounce my leadership.\n"
 	.string "What good came of it?\p"
 	.string "Maybe I will try and become a fisherman.\n"
 	.string "I always loved the sea.$"
 
 AquasHideout_2F_Text_Archie_Defeat::
-# 230 "data/maps/AquasHideout_2F/scripts.pory"
+# 231 "data/maps/AquasHideout_2F/scripts.pory"
 	.string "Serves me right...$"

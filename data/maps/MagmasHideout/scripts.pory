@@ -91,51 +91,51 @@ script MagmasHideout_EventScript_Grunt4 {
 }
 
 text MagmasHideout_Text_Grunt1_Intro {
-    format("Intro")
+    format("You’ve got a lot of nerve coming into our hideout! Let’s see how far that gets you!")
 }
 
 text MagmasHideout_Text_Grunt1_Defeat {
-    format("Defeat")
+    format("Impossible... how could I lose in our own base?")
 }
 
 text MagmasHideout_Text_Grunt1_PostBattle {
-    format("Post")
+    format("Don’t get too comfortable. Team Magma will rise again!")
 }
 
 text MagmasHideout_Text_Grunt2_Intro {
-    format("Intro")
+    format("Intruders aren’t welcome here! Prepare to be scorched!")
 }
 
 text MagmasHideout_Text_Grunt2_Defeat {
-    format("Defeat")
+    format("No way... I’m burning out...")
 }
 
 text MagmasHideout_Text_Grunt2_PostBattle {
-    format("Post")
+    format("I won’t let this defeat stand! Next time, you’ll feel the full heat!")
 }
 
 text MagmasHideout_Text_Grunt3_Intro {
-    format("Intro")
+    format("You’re not going any further! I’ll make sure of it!")
 }
 
 text MagmasHideout_Text_Grunt3_Defeat {
-    format("Defeat")
+    format("Beaten... in our own stronghold?")
 }
 
 text MagmasHideout_Text_Grunt3_PostBattle {
-    format("Post")
+    format("This isn’t over! Team Magma’s power will engulf you next time!")
 }
 
 text MagmasHideout_Text_Grunt4_Intro {
-    format("Intro")
+    format("You’re deep in our territory now! You won’t make it out unscathed!")
 }
 
 text MagmasHideout_Text_Grunt4_Defeat {
-    format("Defeat")
+    format("How... how could this happen?")
 }
 
 text MagmasHideout_Text_Grunt4_PostBattle {
-    format("Post")
+    format("We may have lost this battle, but the fire of Team Magma never dies!")
 }
 
 mart MagmasHideout_Crow {

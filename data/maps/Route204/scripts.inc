@@ -47,12 +47,15 @@ Route204_EventScript_Expert_Text_1:
 
 Route204_Text_Swimmer1_Intro::
 # 24 "data/maps/Route204/scripts.pory"
-	.string "Intro$"
+	.string "The waves are perfect for a battle!\n"
+	.string "Let’s see if you can keep up with me in\l"
+	.string "the water!$"
 
 Route204_Text_Swimmer1_Defeat::
 # 28 "data/maps/Route204/scripts.pory"
-	.string "Defeat$"
+	.string "No way... I got swept away!$"
 
 Route204_Text_Swimmer1_PostBattle::
 # 32 "data/maps/Route204/scripts.pory"
-	.string "Post$"
+	.string "Looks like I need to train harder. Next\n"
+	.string "time, I’ll ride the waves to victory!$"

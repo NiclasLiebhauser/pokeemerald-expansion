@@ -108,84 +108,100 @@ MagmaIsland_EventScript_Swimmer1::
 
 MagmaIsland_Text_Fisherman1_Intro::
 # 71 "data/maps/MagmaIsland/scripts.pory"
-	.string "Intro$"
+	.string "The fish around here are tough, and so\n"
+	.string "am I! Let’s see if you can handle my\l"
+	.string "catch!$"
 
 MagmaIsland_Text_Fisherman1_Defeat::
 # 75 "data/maps/MagmaIsland/scripts.pory"
-	.string "Defeat$"
+	.string "My line snapped... just like that...$"
 
 MagmaIsland_Text_Fisherman1_PostBattle::
 # 79 "data/maps/MagmaIsland/scripts.pory"
-	.string "Post$"
+	.string "I need to reel in some new strategies.\n"
+	.string "Next time, I won’t be so easy to beat!$"
 
 MagmaIsland_Text_Tuber1_Intro::
 # 83 "data/maps/MagmaIsland/scripts.pory"
-	.string "Intro$"
+	.string "Hi, I'm Fern! The waves won’t stop me, and\n"
+	.string "neither will you!$"
 
 MagmaIsland_Text_Tuber1_Defeat::
 # 87 "data/maps/MagmaIsland/scripts.pory"
-	.string "Defeat$"
+	.string "Oh no, I lost... just like that.$"
 
 MagmaIsland_Text_Tuber1_PostBattle::
 # 91 "data/maps/MagmaIsland/scripts.pory"
-	.string "Post$"
+	.string "I’ll keep training and riding the waves.\n"
+	.string "Next time, I’ll be stronger!$"
 
 MagmaIsland_Text_Tuber2_Intro::
 # 95 "data/maps/MagmaIsland/scripts.pory"
-	.string "Intro$"
+	.string "I'm Stark! Don’t underestimate me just\n"
+	.string "because I’m a kid. Let’s battle!$"
 
 MagmaIsland_Text_Tuber2_Defeat::
 # 99 "data/maps/MagmaIsland/scripts.pory"
-	.string "Defeat$"
+	.string "I can’t believe I lost...$"
 
 MagmaIsland_Text_Tuber2_PostBattle::
 # 103 "data/maps/MagmaIsland/scripts.pory"
-	.string "Post$"
+	.string "I’m not giving up! I’ll keep getting\n"
+	.string "stronger, you’ll see!$"
 
 MagmaIsland_Text_BugCatcher1_Intro::
 # 107 "data/maps/MagmaIsland/scripts.pory"
-	.string "Intro$"
+	.string "Even here on the island, my bug Pokémon\n"
+	.string "are ready for anything! Let’s battle!$"
 
 MagmaIsland_Text_BugCatcher1_Defeat::
 # 111 "data/maps/MagmaIsland/scripts.pory"
-	.string "Defeat$"
+	.string "My bugs... they weren’t strong enough...$"
 
 MagmaIsland_Text_BugCatcher1_PostBattle::
 # 115 "data/maps/MagmaIsland/scripts.pory"
-	.string "Post$"
+	.string "I’ll train my bugs even harder! Next\n"
+	.string "time, we’ll win for sure!$"
 
 MagmaIsland_Text_Hiker1_Intro::
 # 119 "data/maps/MagmaIsland/scripts.pory"
-	.string "Intro$"
+	.string "The rugged terrain of this island is\n"
+	.string "nothing compared to my sturdy Pokémon!\l"
+	.string "Can you handle the challenge?$"
 
 MagmaIsland_Text_Hiker1_Defeat::
 # 123 "data/maps/MagmaIsland/scripts.pory"
-	.string "Defeat$"
+	.string "Toppled... just like that...$"
 
 MagmaIsland_Text_Hiker1_PostBattle::
 # 127 "data/maps/MagmaIsland/scripts.pory"
-	.string "Post$"
+	.string "Even mountains can crumble, but I’ll\n"
+	.string "come back stronger and tougher!$"
 
 MagmaIsland_Text_Lass1_Intro::
 # 131 "data/maps/MagmaIsland/scripts.pory"
-	.string "Intro$"
+	.string "This island is so cool! Let’s see if you\n"
+	.string "can keep up with my Pokémon!$"
 
 MagmaIsland_Text_Lass1_Defeat::
 # 135 "data/maps/MagmaIsland/scripts.pory"
-	.string "Defeat$"
+	.string "Oh no, I lost...$"
 
 MagmaIsland_Text_Lass1_PostBattle::
 # 139 "data/maps/MagmaIsland/scripts.pory"
-	.string "Post$"
+	.string "This was just for fun, but next time, I’ll\n"
+	.string "make sure I win!$"
 
 MagmaIsland_Text_Swimmer1_Intro::
 # 143 "data/maps/MagmaIsland/scripts.pory"
-	.string "Intro$"
+	.string "The water’s great here! Let’s see if you\n"
+	.string "can keep up with me!$"
 
 MagmaIsland_Text_Swimmer1_Defeat::
 # 147 "data/maps/MagmaIsland/scripts.pory"
-	.string "Defeat$"
+	.string "No way... I got swept away...$"
 
 MagmaIsland_Text_Swimmer1_PostBattle::
 # 151 "data/maps/MagmaIsland/scripts.pory"
-	.string "Post$"
+	.string "I’ll train harder in the water and come\n"
+	.string "back stronger next time!$"

@@ -41,50 +41,51 @@ script AquasHideout_1F_EventScript_Grunt4 {
 }
 
 text AquasHideout_1F_Text_Grunt1_Intro {
-    format("Intro")
+    format("You think you can just waltz into our hideout? Think again!")
 }
 
 text AquasHideout_1F_Text_Grunt1_Defeat {
-    format("Defeat")
+    format("No way... how could I lose?")
 }
 
 text AquasHideout_1F_Text_Grunt1_PostBattle {
-    format("Post")
+    format("The boss isn't going to like this... but I'll get stronger and make up for it!")
 }
 
 text AquasHideout_1F_Text_Grunt2_Intro {
-    format("Intro")
+    format("You're not getting past me! My Pokémon will sink you!")
 }
 
 text AquasHideout_1F_Text_Grunt2_Defeat {
-    format("Defeat")
+    format("Ugh, how did you beat me?")
 }
 
 text AquasHideout_1F_Text_Grunt2_PostBattle {
-    format("Post")
+    format("I'll train harder! Next time, you won't be so lucky!")
 }
 
 text AquasHideout_1F_Text_Grunt3_Intro {
-    format("Intro")
+    format("Intruders aren't welcome here! Prepare to be crushed!")
 }
 
 text AquasHideout_1F_Text_Grunt3_Defeat {
-    format("Defeat")
+    format("I can't believe I lost...")
 }
 
 text AquasHideout_1F_Text_Grunt3_PostBattle {
-    format("Post")
+    format("This isn't the end! I'll come back stronger, just wait!")
 }
+
 text AquasHideout_1F_Text_Grunt4_Intro {
-    format("Intro")
+    format("You're in way over your head! I'll show you what Team Aqua is made of!")
 }
 
 text AquasHideout_1F_Text_Grunt4_Defeat {
-    format("Defeat")
+    format("Defeated... just like that?")
 }
 
 text AquasHideout_1F_Text_Grunt4_PostBattle {
-    format("Post")
+    format("You got lucky this time, but the tide will turn. I'll be ready!")
 }
 
 mart AquasHideout_1F_Mart {

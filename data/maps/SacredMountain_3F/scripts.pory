@@ -21,49 +21,49 @@ script SacredMountain_3F_EventScript_Grunt4 {
 }
 
 text SacredMountain_3F_Text_Grunt1_Intro {
-    format("Intro")
+    format("You’ve got some nerve making it this far! But this is where it ends, for Team Rocket’s sake!")
 }
 
 text SacredMountain_3F_Text_Grunt1_Defeat {
-    format("Defeat")
+    format("How could this happen...?")
 }
 
 text SacredMountain_3F_Text_Grunt1_PostBattle {
-    format("Post")
+    format("You may have won, but Team Rocket’s ambitions won’t be stopped by the likes of you!")
 }
 
 text SacredMountain_3F_Text_Grunt2_Intro {
-    format("Intro")
+    format("You’re on the wrong side of Team Rocket! Prepare to face the consequences!")
 }
 
 text SacredMountain_3F_Text_Grunt2_Defeat {
-    format("Defeat")
+    format("No... I was supposed to stop you!")
 }
 
 text SacredMountain_3F_Text_Grunt2_PostBattle {
-    format("Post")
+    format("You might have gotten past me, but the boss won’t be so easy!")
 }
 
 text SacredMountain_3F_Text_Grunt3_Intro {
-    format("Intro")
+    format("There’s no escaping Team Rocket! I’ll make sure you regret challenging us!")
 }
 
 text SacredMountain_3F_Text_Grunt3_Defeat {
-    format("Defeat")
+    format("I can’t believe I lost...")
 }
 
 text SacredMountain_3F_Text_Grunt3_PostBattle {
-    format("Post")
+    format("Enjoy this victory while it lasts. Team Rocket will have the last laugh!")
 }
 
 text SacredMountain_3F_Text_Grunt4_Intro {
-    format("Intro")
+    format("You’re almost at the top, but this is as far as you’ll go! Team Rocket will crush you!")
 }
 
 text SacredMountain_3F_Text_Grunt4_Defeat {
-    format("Defeat")
+    format("Defeated... how could this be?")
 }
 
 text SacredMountain_3F_Text_Grunt4_PostBattle {
-    format("Post")
+    format("You might have won this battle, but you’ll never defeat Team Rocket!")
 }

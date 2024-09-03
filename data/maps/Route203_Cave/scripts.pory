@@ -136,111 +136,89 @@ script Route203_Cave_EventScript_AquaGrunt_6 {
     msgbox(Route203_Cave_Text_AquaGrunt6_PostBattle, MSGBOX_AUTOCLOSE)
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaGrunt1_Intro {
-    format("Intro")
+    format("You’re not getting past us! Team Aqua rules this cave, and we’ll show you why!")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaGrunt1_Defeat {
-    format("Defeat")
+    format("No... how could I lose in our own hideout?")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaGrunt1_PostBattle {
-    format("Post")
+    format("You got lucky this time, but Team Aqua won’t let this slide!")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaGrunt2_Intro {
-    format("Intro")
+    format("Intruders aren’t welcome here! Prepare to face the wrath of Team Aqua!")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaGrunt2_Defeat {
-    format("Defeat")
+    format("I can’t believe I was defeated...")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaGrunt2_PostBattle {
-    format("Post")
+    format("We’ll regroup and come back stronger. You won’t stand a chance next time!")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaGrunt3_Intro {
-    format("Intro")
+    format("You’ve made it this far, but you won’t get any further! Team Aqua will see to that!")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaGrunt3_Defeat {
-    format("Defeat")
+    format("Defeated... how could this happen?")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaGrunt3_PostBattle {
-    format("Post")
+    format("You may have won this battle, but Team Aqua’s mission isn’t over yet!")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaGrunt4_Intro {
-    format("Intro")
+    format("You’re up against the best of Team Aqua! Let’s see if you can handle it!")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaGrunt4_Defeat {
-    format("Defeat")
+    format("No way... I was supposed to stop you!")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaGrunt4_PostBattle {
-    format("Post")
+    format("Don’t get too comfortable. Team Aqua will strike back with even more force!")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaGrunt5_Intro {
-    format("Intro")
+    format("You’ve come far, but this is where your journey ends! Team Aqua will crush you!")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaGrunt5_Defeat {
-    format("Defeat")
+    format("I can’t believe it... defeated in our own cave...")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaGrunt5_PostBattle {
-    format("Post")
+    format("This isn’t over! We’ll return with a vengeance!")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaGrunt6_Intro {
-    format("Intro")
+    format("You’re no match for the power of Team Aqua! Prepare to be washed away!")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaGrunt6_Defeat {
-    format("Defeat")
+    format("Swept away... by a mere trainer...")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaGrunt6_PostBattle {
-    format("Post")
+    format("You got the better of me this time, but Team Aqua won’t be so easily defeated again!")
 }
 
 text Route203_Cave_Text_AquaGrunt_Working {
     format("Can't you see that I'm working.")
 }
-
-//ToSolve
 text Route203_Cave_Text_AquaAdmin_PreBattle {
-    format("Admin...")
+    format("How has an intruder gotten this far? What are these useless grunts doing?\p It doesn't matter. I'll stop you personally.")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaAdmin_Defeat {
-    format("Defeat")
+    format("How could this happen... I was supposed to be second to none other than the boss.")
 }
 
-//ToSolve
 text Route203_Cave_Text_AquaAdmin_PostBattle {
     format("Post")
 }

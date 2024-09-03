@@ -19,25 +19,25 @@ script Route202_EventScript_Swimmer2 {
 }
 
 text Route202_Text_Swimmer1_Intro {
-    format("Intro")
+    format("The water is my home turf, and in it, I'm unbeatable! Let's see if you can keep up!")
 }
 
 text Route202_Text_Swimmer1_Defeat {
-    format("Defeat")
+    format("I can't swim my way out of this one...")
 }
 
 text Route202_Text_Swimmer1_PostBattle {
-    format("Post")
+    format("I guess I was all washed up this time. I'll dive back in stronger next time!")
 }
 
 text Route202_Text_Swimmer2_Intro {
-    format("Intro")
+    format("I've trained with the tides, mastering every current. You'll be no match for me!")
 }
 
 text Route202_Text_Swimmer2_Defeat {
-    format("Defeat")
+    format("Swept away... just like that.")
 }
 
 text Route202_Text_Swimmer2_PostBattle {
-    format("Post")
+    format("The ocean may be vast, but so is my determination. I'll make waves next time!")
 }

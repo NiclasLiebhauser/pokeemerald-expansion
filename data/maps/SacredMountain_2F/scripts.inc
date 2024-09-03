@@ -36,48 +36,62 @@ SacredMountain_2F_EventScript_Grunt4::
 
 SacredMountain_2F_Text_Grunt1_Intro::
 # 23 "data/maps/SacredMountain_2F/scripts.pory"
-	.string "Intro$"
+	.string "You’ve made a big mistake coming up\n"
+	.string "here! Team Rocket controls everything\l"
+	.string "on this mountain!$"
 
 SacredMountain_2F_Text_Grunt1_Defeat::
 # 27 "data/maps/SacredMountain_2F/scripts.pory"
-	.string "Defeat$"
+	.string "No... this wasn’t supposed to happen!$"
 
 SacredMountain_2F_Text_Grunt1_PostBattle::
 # 31 "data/maps/SacredMountain_2F/scripts.pory"
-	.string "Post$"
+	.string "You may have beaten me, but Team\n"
+	.string "Rocket’s plans won’t be stopped!$"
 
 SacredMountain_2F_Text_Grunt2_Intro::
 # 35 "data/maps/SacredMountain_2F/scripts.pory"
-	.string "Intro$"
+	.string "Think you can take on Team Rocket? I’ll\n"
+	.string "show you the true power of the boss’s\l"
+	.string "plans!$"
 
 SacredMountain_2F_Text_Grunt2_Defeat::
 # 39 "data/maps/SacredMountain_2F/scripts.pory"
-	.string "Defeat$"
+	.string "I... I can’t believe it!$"
 
 SacredMountain_2F_Text_Grunt2_PostBattle::
 # 43 "data/maps/SacredMountain_2F/scripts.pory"
-	.string "Post$"
+	.string "You got lucky this time, but don’t get\n"
+	.string "too comfortable. We’re always watching!$"
 
 SacredMountain_2F_Text_Grunt3_Intro::
 # 47 "data/maps/SacredMountain_2F/scripts.pory"
-	.string "Intro$"
+	.string "You’ve come far, but this is where your\n"
+	.string "journey ends! Team Rocket doesn’t\l"
+	.string "forgive or forget!$"
 
 SacredMountain_2F_Text_Grunt3_Defeat::
 # 51 "data/maps/SacredMountain_2F/scripts.pory"
-	.string "Defeat$"
+	.string "Beaten by some meddling trainer?\n"
+	.string "Impossible!$"
 
 SacredMountain_2F_Text_Grunt3_PostBattle::
 # 55 "data/maps/SacredMountain_2F/scripts.pory"
-	.string "Post$"
+	.string "You won this battle, but the war is far\n"
+	.string "from over. Team Rocket will rise again!$"
 
 SacredMountain_2F_Text_Grunt4_Intro::
 # 59 "data/maps/SacredMountain_2F/scripts.pory"
-	.string "Intro$"
+	.string "You’re facing the elite of Team Rocket\n"
+	.string "now! There’s no way you’ll make it past\l"
+	.string "me!$"
 
 SacredMountain_2F_Text_Grunt4_Defeat::
 # 63 "data/maps/SacredMountain_2F/scripts.pory"
-	.string "Defeat$"
+	.string "I’ve failed... but Team Rocket will never\n"
+	.string "fall!$"
 
 SacredMountain_2F_Text_Grunt4_PostBattle::
 # 67 "data/maps/SacredMountain_2F/scripts.pory"
-	.string "Post$"
+	.string "You got the best of me, but Team Rocket\n"
+	.string "is unstoppable. We’ll meet again!$"

@@ -26,61 +26,61 @@ script MagmaCave_1F_EventScript_Grunt5 {
 }
 
 text MagmaCave_1F_Text_Grunt1_Intro {
-    format("Intro")
+    format("You’ve got guts coming this far, but this is where it ends!")
 }
 
 text MagmaCave_1F_Text_Grunt1_Defeat {
-    format("Defeat")
+    format("I can't believe I lost...")
 }
 
 text MagmaCave_1F_Text_Grunt1_PostBattle {
-    format("Post")
+    format("Enjoy your victory while it lasts. We’re just getting started!")
 }
 
 text MagmaCave_1F_Text_Grunt2_Intro {
-    format("Intro")
+    format("The heat in here is nothing compared to the fire of my Pokémon!")
 }
 
 text MagmaCave_1F_Text_Grunt2_Defeat {
-    format("Defeat")
+    format("No... extinguished...")
 }
 
 text MagmaCave_1F_Text_Grunt2_PostBattle {
-    format("Post")
+    format("Next time, I’ll make sure you feel the full burn of our power!")
 }
 
 text MagmaCave_1F_Text_Grunt3_Intro {
-    format("Intro")
+    format("You think you can handle the heat? Let’s find out!")
 }
 
 text MagmaCave_1F_Text_Grunt3_Defeat {
-    format("Defeat")
+    format("Overpowered... in my own element...")
 }
 
 text MagmaCave_1F_Text_Grunt3_PostBattle {
-    format("Post")
+    format("I won’t go down so easily next time. The magma will rise again!")
 }
 
 text MagmaCave_1F_Text_Grunt4_Intro {
-    format("Intro")
+    format("Only the strong survive in this cave. Let’s see if you’ve got what it takes!")
 }
 
 text MagmaCave_1F_Text_Grunt4_Defeat {
-    format("Defeat")
+    format("Defeated... in the heart of the volcano?")
 }
 
 text MagmaCave_1F_Text_Grunt4_PostBattle {
-    format("Post")
+    format("You may have won today, but the fire of Team Magma won’t be extinguished!")
 }
 
 text MagmaCave_1F_Text_Grunt5_Intro {
-    format("Intro")
+    format("We’re here to harness the power of the volcano! You won’t stop us!")
 }
 
 text MagmaCave_1F_Text_Grunt5_Defeat {
-    format("Defeat")
+    format("How... how could I lose?")
 }
 
 text MagmaCave_1F_Text_Grunt5_PostBattle {
-    format("Post")
+    format("This isn’t the end! Team Magma will rise from the ashes!")
 }

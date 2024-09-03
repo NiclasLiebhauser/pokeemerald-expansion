@@ -61,15 +61,15 @@ AquasHideout_1F_EventScript_Grunt4::
 
 
 	.align 2
-# 90 "data/maps/AquasHideout_1F/scripts.pory"
-AquasHideout_1F_Mart:
 # 91 "data/maps/AquasHideout_1F/scripts.pory"
-	.2byte ITEM_MOOMOO_MILK
+AquasHideout_1F_Mart:
 # 92 "data/maps/AquasHideout_1F/scripts.pory"
-	.2byte ITEM_SODA_POP
+	.2byte ITEM_MOOMOO_MILK
 # 93 "data/maps/AquasHideout_1F/scripts.pory"
-	.2byte ITEM_LEMONADE
+	.2byte ITEM_SODA_POP
 # 94 "data/maps/AquasHideout_1F/scripts.pory"
+	.2byte ITEM_LEMONADE
+# 95 "data/maps/AquasHideout_1F/scripts.pory"
 	.2byte ITEM_LAVA_COOKIE
 	.2byte ITEM_NONE
 
@@ -84,48 +84,56 @@ AquasHideout_1F_EventScript_Mart_Text_1:
 
 AquasHideout_1F_Text_Grunt1_Intro::
 # 43 "data/maps/AquasHideout_1F/scripts.pory"
-	.string "Intro$"
+	.string "You think you can just waltz into our\n"
+	.string "hideout? Think again!$"
 
 AquasHideout_1F_Text_Grunt1_Defeat::
 # 47 "data/maps/AquasHideout_1F/scripts.pory"
-	.string "Defeat$"
+	.string "No way... how could I lose?$"
 
 AquasHideout_1F_Text_Grunt1_PostBattle::
 # 51 "data/maps/AquasHideout_1F/scripts.pory"
-	.string "Post$"
+	.string "The boss isn't going to like this... but\n"
+	.string "I'll get stronger and make up for it!$"
 
 AquasHideout_1F_Text_Grunt2_Intro::
 # 55 "data/maps/AquasHideout_1F/scripts.pory"
-	.string "Intro$"
+	.string "You're not getting past me! My Pokémon\n"
+	.string "will sink you!$"
 
 AquasHideout_1F_Text_Grunt2_Defeat::
 # 59 "data/maps/AquasHideout_1F/scripts.pory"
-	.string "Defeat$"
+	.string "Ugh, how did you beat me?$"
 
 AquasHideout_1F_Text_Grunt2_PostBattle::
 # 63 "data/maps/AquasHideout_1F/scripts.pory"
-	.string "Post$"
+	.string "I'll train harder! Next time, you won't\n"
+	.string "be so lucky!$"
 
 AquasHideout_1F_Text_Grunt3_Intro::
 # 67 "data/maps/AquasHideout_1F/scripts.pory"
-	.string "Intro$"
+	.string "Intruders aren't welcome here! Prepare\n"
+	.string "to be crushed!$"
 
 AquasHideout_1F_Text_Grunt3_Defeat::
 # 71 "data/maps/AquasHideout_1F/scripts.pory"
-	.string "Defeat$"
+	.string "I can't believe I lost...$"
 
 AquasHideout_1F_Text_Grunt3_PostBattle::
 # 75 "data/maps/AquasHideout_1F/scripts.pory"
-	.string "Post$"
+	.string "This isn't the end! I'll come back\n"
+	.string "stronger, just wait!$"
 
 AquasHideout_1F_Text_Grunt4_Intro::
-# 78 "data/maps/AquasHideout_1F/scripts.pory"
-	.string "Intro$"
+# 79 "data/maps/AquasHideout_1F/scripts.pory"
+	.string "You're in way over your head! I'll show\n"
+	.string "you what Team Aqua is made of!$"
 
 AquasHideout_1F_Text_Grunt4_Defeat::
-# 82 "data/maps/AquasHideout_1F/scripts.pory"
-	.string "Defeat$"
+# 83 "data/maps/AquasHideout_1F/scripts.pory"
+	.string "Defeated... just like that?$"
 
 AquasHideout_1F_Text_Grunt4_PostBattle::
-# 86 "data/maps/AquasHideout_1F/scripts.pory"
-	.string "Post$"
+# 87 "data/maps/AquasHideout_1F/scripts.pory"
+	.string "You got lucky this time, but the tide\n"
+	.string "will turn. I'll be ready!$"

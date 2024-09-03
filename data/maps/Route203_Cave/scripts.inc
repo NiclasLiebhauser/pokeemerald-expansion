@@ -219,13 +219,13 @@ Route203_Cave_EventScript_AquaGrunt_6::
 	return
 
 
-# 252 "data/maps/Route203_Cave/scripts.pory"
+# 230 "data/maps/Route203_Cave/scripts.pory"
 Route203_Cave_Movement_AquaAdmin:
-# 253 "data/maps/Route203_Cave/scripts.pory"
+# 231 "data/maps/Route203_Cave/scripts.pory"
 	walk_right
-# 254 "data/maps/Route203_Cave/scripts.pory"
+# 232 "data/maps/Route203_Cave/scripts.pory"
 	walk_up
-# 254 "data/maps/Route203_Cave/scripts.pory"
+# 232 "data/maps/Route203_Cave/scripts.pory"
 	walk_up
 	step_end
 
@@ -235,93 +235,113 @@ EventScript_Increase_LevelCap_Text_0:
 	.string "power!$"
 
 Route203_Cave_Text_AquaGrunt1_Intro::
-# 140 "data/maps/Route203_Cave/scripts.pory"
-	.string "Intro$"
+# 139 "data/maps/Route203_Cave/scripts.pory"
+	.string "You’re not getting past us! Team Aqua\n"
+	.string "rules this cave, and we’ll show you why!$"
 
 Route203_Cave_Text_AquaGrunt1_Defeat::
-# 145 "data/maps/Route203_Cave/scripts.pory"
-	.string "Defeat$"
+# 143 "data/maps/Route203_Cave/scripts.pory"
+	.string "No... how could I lose in our own\n"
+	.string "hideout?$"
 
 Route203_Cave_Text_AquaGrunt1_PostBattle::
-# 150 "data/maps/Route203_Cave/scripts.pory"
-	.string "Post$"
+# 147 "data/maps/Route203_Cave/scripts.pory"
+	.string "You got lucky this time, but Team Aqua\n"
+	.string "won’t let this slide!$"
 
 Route203_Cave_Text_AquaGrunt2_Intro::
-# 155 "data/maps/Route203_Cave/scripts.pory"
-	.string "Intro$"
+# 151 "data/maps/Route203_Cave/scripts.pory"
+	.string "Intruders aren’t welcome here! Prepare\n"
+	.string "to face the wrath of Team Aqua!$"
 
 Route203_Cave_Text_AquaGrunt2_Defeat::
-# 160 "data/maps/Route203_Cave/scripts.pory"
-	.string "Defeat$"
+# 155 "data/maps/Route203_Cave/scripts.pory"
+	.string "I can’t believe I was defeated...$"
 
 Route203_Cave_Text_AquaGrunt2_PostBattle::
-# 165 "data/maps/Route203_Cave/scripts.pory"
-	.string "Post$"
+# 159 "data/maps/Route203_Cave/scripts.pory"
+	.string "We’ll regroup and come back stronger.\n"
+	.string "You won’t stand a chance next time!$"
 
 Route203_Cave_Text_AquaGrunt3_Intro::
-# 170 "data/maps/Route203_Cave/scripts.pory"
-	.string "Intro$"
+# 163 "data/maps/Route203_Cave/scripts.pory"
+	.string "You’ve made it this far, but you won’t get\n"
+	.string "any further! Team Aqua will see to that!$"
 
 Route203_Cave_Text_AquaGrunt3_Defeat::
-# 175 "data/maps/Route203_Cave/scripts.pory"
-	.string "Defeat$"
+# 167 "data/maps/Route203_Cave/scripts.pory"
+	.string "Defeated... how could this happen?$"
 
 Route203_Cave_Text_AquaGrunt3_PostBattle::
-# 180 "data/maps/Route203_Cave/scripts.pory"
-	.string "Post$"
+# 171 "data/maps/Route203_Cave/scripts.pory"
+	.string "You may have won this battle, but Team\n"
+	.string "Aqua’s mission isn’t over yet!$"
 
 Route203_Cave_Text_AquaGrunt4_Intro::
-# 185 "data/maps/Route203_Cave/scripts.pory"
-	.string "Intro$"
+# 175 "data/maps/Route203_Cave/scripts.pory"
+	.string "You’re up against the best of Team Aqua!\n"
+	.string "Let’s see if you can handle it!$"
 
 Route203_Cave_Text_AquaGrunt4_Defeat::
-# 190 "data/maps/Route203_Cave/scripts.pory"
-	.string "Defeat$"
+# 179 "data/maps/Route203_Cave/scripts.pory"
+	.string "No way... I was supposed to stop you!$"
 
 Route203_Cave_Text_AquaGrunt4_PostBattle::
-# 195 "data/maps/Route203_Cave/scripts.pory"
-	.string "Post$"
+# 183 "data/maps/Route203_Cave/scripts.pory"
+	.string "Don’t get too comfortable. Team Aqua\n"
+	.string "will strike back with even more force!$"
 
 Route203_Cave_Text_AquaGrunt5_Intro::
-# 200 "data/maps/Route203_Cave/scripts.pory"
-	.string "Intro$"
+# 187 "data/maps/Route203_Cave/scripts.pory"
+	.string "You’ve come far, but this is where your\n"
+	.string "journey ends! Team Aqua will crush you!$"
 
 Route203_Cave_Text_AquaGrunt5_Defeat::
-# 205 "data/maps/Route203_Cave/scripts.pory"
-	.string "Defeat$"
+# 191 "data/maps/Route203_Cave/scripts.pory"
+	.string "I can’t believe it... defeated in our own\n"
+	.string "cave...$"
 
 Route203_Cave_Text_AquaGrunt5_PostBattle::
-# 210 "data/maps/Route203_Cave/scripts.pory"
-	.string "Post$"
+# 195 "data/maps/Route203_Cave/scripts.pory"
+	.string "This isn’t over! We’ll return with a\n"
+	.string "vengeance!$"
 
 Route203_Cave_Text_AquaGrunt6_Intro::
-# 215 "data/maps/Route203_Cave/scripts.pory"
-	.string "Intro$"
+# 199 "data/maps/Route203_Cave/scripts.pory"
+	.string "You’re no match for the power of Team\n"
+	.string "Aqua! Prepare to be washed away!$"
 
 Route203_Cave_Text_AquaGrunt6_Defeat::
-# 220 "data/maps/Route203_Cave/scripts.pory"
-	.string "Defeat$"
+# 203 "data/maps/Route203_Cave/scripts.pory"
+	.string "Swept away... by a mere trainer...$"
 
 Route203_Cave_Text_AquaGrunt6_PostBattle::
-# 225 "data/maps/Route203_Cave/scripts.pory"
-	.string "Post$"
+# 207 "data/maps/Route203_Cave/scripts.pory"
+	.string "You got the better of me this time, but\n"
+	.string "Team Aqua won’t be so easily defeated\l"
+	.string "again!$"
 
 Route203_Cave_Text_AquaGrunt_Working::
-# 229 "data/maps/Route203_Cave/scripts.pory"
+# 211 "data/maps/Route203_Cave/scripts.pory"
 	.string "Can't you see that I'm working.$"
 
 Route203_Cave_Text_AquaAdmin_PreBattle::
-# 234 "data/maps/Route203_Cave/scripts.pory"
-	.string "Admin...$"
+# 214 "data/maps/Route203_Cave/scripts.pory"
+	.string "How has an intruder gotten this far?\n"
+	.string "What are these useless grunts doing?\p"
+	.string "It doesn't matter. I'll stop you\n"
+	.string "personally.$"
 
 Route203_Cave_Text_AquaAdmin_Defeat::
-# 239 "data/maps/Route203_Cave/scripts.pory"
-	.string "Defeat$"
+# 218 "data/maps/Route203_Cave/scripts.pory"
+	.string "How could this happen... I was supposed\n"
+	.string "to be second to none other than the\l"
+	.string "boss.$"
 
 Route203_Cave_Text_AquaAdmin_PostBattle::
-# 244 "data/maps/Route203_Cave/scripts.pory"
+# 222 "data/maps/Route203_Cave/scripts.pory"
 	.string "Post$"
 
 Route203_Cave_Text_RockSmashMachine::
-# 248 "data/maps/Route203_Cave/scripts.pory"
+# 226 "data/maps/Route203_Cave/scripts.pory"
 	.string "Obtained ROCK SMASH MACHINE!$"

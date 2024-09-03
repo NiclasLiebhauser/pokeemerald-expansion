@@ -32,49 +32,49 @@ script SacredIslandNorth_EventScript_Camper1 {
 }
 
 text SacredIslandNorth_Text_RichBoy1_Intro {
-    format("Intro")
+    format("Money can't buy everything, but it can certainly give me an edge! Let's see if you can keep up!")
 }
 
 text SacredIslandNorth_Text_RichBoy1_Defeat {
-    format("Defeat")
+    format("This can't be happening... how could I lose?")
 }
 
 text SacredIslandNorth_Text_RichBoy1_PostBattle {
-    format("Post")
+    format("Maybe money isn't everything after all. I'll have to rethink my strategy.")
 }
 
 text SacredIslandNorth_Text_Maniac1_Intro {
-    format("Intro")
+    format("I've spent years studying ancient Pokémon. Let me show you the power of the past!")
 }
 
 text SacredIslandNorth_Text_Maniac1_Defeat {
-    format("Defeat")
+    format("My knowledge wasn't enough...")
 }
 
 text SacredIslandNorth_Text_Maniac1_PostBattle {
-    format("Post")
+    format("It seems I need to learn even more. Next time, I'll be prepared for anything.")
 }
 
 text SacredIslandNorth_Text_Hiker1_Intro {
-    format("Intro")
+    format("These mountains have made me strong! Can you handle the power of nature?")
 }
 
 text SacredIslandNorth_Text_Hiker1_Defeat {
-    format("Defeat")
+    format("Crushed like a falling rock...")
 }
 
 text SacredIslandNorth_Text_Hiker1_PostBattle {
-    format("Post")
+    format("Even the toughest rocks can break. But I'll be back, harder and tougher than ever!")
 }
 
 text SacredIslandNorth_Text_Camper1_Intro {
-    format("Intro")
+    format("Camping out here has toughened me up! Let’s see if you can handle my wilderness skills!")
 }
 
 text SacredIslandNorth_Text_Camper1_Defeat {
-    format("Defeat")
+    format("Looks like I got lost in the battle...")
 }
 
 text SacredIslandNorth_Text_Camper1_PostBattle {
-    format("Post")
+    format("I’ll pitch my tent and try again. Next time, I won’t lose my way!")
 }

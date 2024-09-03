@@ -40,24 +40,31 @@ Route202_EventScript_BlackBelt_Text_0:
 
 Route202_Text_Swimmer1_Intro::
 # 21 "data/maps/Route202/scripts.pory"
-	.string "Intro$"
+	.string "The water is my home turf, and in it, I'm\n"
+	.string "unbeatable! Let's see if you can keep\l"
+	.string "up!$"
 
 Route202_Text_Swimmer1_Defeat::
 # 25 "data/maps/Route202/scripts.pory"
-	.string "Defeat$"
+	.string "I can't swim my way out of this one...$"
 
 Route202_Text_Swimmer1_PostBattle::
 # 29 "data/maps/Route202/scripts.pory"
-	.string "Post$"
+	.string "I guess I was all washed up this time.\n"
+	.string "I'll dive back in stronger next time!$"
 
 Route202_Text_Swimmer2_Intro::
 # 33 "data/maps/Route202/scripts.pory"
-	.string "Intro$"
+	.string "I've trained with the tides, mastering\n"
+	.string "every current. You'll be no match for\l"
+	.string "me!$"
 
 Route202_Text_Swimmer2_Defeat::
 # 37 "data/maps/Route202/scripts.pory"
-	.string "Defeat$"
+	.string "Swept away... just like that.$"
 
 Route202_Text_Swimmer2_PostBattle::
 # 41 "data/maps/Route202/scripts.pory"
-	.string "Post$"
+	.string "The ocean may be vast, but so is my\n"
+	.string "determination. I'll make waves next\l"
+	.string "time!$"

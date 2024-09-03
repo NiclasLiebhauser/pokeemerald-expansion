@@ -232,48 +232,58 @@ MagmasHideout_Text_StrengthMachine::
 
 MagmasHideout_Text_Grunt1_Intro::
 # 93 "data/maps/MagmasHideout/scripts.pory"
-	.string "Intro$"
+	.string "You’ve got a lot of nerve coming into our\n"
+	.string "hideout! Let’s see how far that gets\l"
+	.string "you!$"
 
 MagmasHideout_Text_Grunt1_Defeat::
 # 97 "data/maps/MagmasHideout/scripts.pory"
-	.string "Defeat$"
+	.string "Impossible... how could I lose in our own\n"
+	.string "base?$"
 
 MagmasHideout_Text_Grunt1_PostBattle::
 # 101 "data/maps/MagmasHideout/scripts.pory"
-	.string "Post$"
+	.string "Don’t get too comfortable. Team Magma\n"
+	.string "will rise again!$"
 
 MagmasHideout_Text_Grunt2_Intro::
 # 105 "data/maps/MagmasHideout/scripts.pory"
-	.string "Intro$"
+	.string "Intruders aren’t welcome here! Prepare\n"
+	.string "to be scorched!$"
 
 MagmasHideout_Text_Grunt2_Defeat::
 # 109 "data/maps/MagmasHideout/scripts.pory"
-	.string "Defeat$"
+	.string "No way... I’m burning out...$"
 
 MagmasHideout_Text_Grunt2_PostBattle::
 # 113 "data/maps/MagmasHideout/scripts.pory"
-	.string "Post$"
+	.string "I won’t let this defeat stand! Next time,\n"
+	.string "you’ll feel the full heat!$"
 
 MagmasHideout_Text_Grunt3_Intro::
 # 117 "data/maps/MagmasHideout/scripts.pory"
-	.string "Intro$"
+	.string "You’re not going any further! I’ll make\n"
+	.string "sure of it!$"
 
 MagmasHideout_Text_Grunt3_Defeat::
 # 121 "data/maps/MagmasHideout/scripts.pory"
-	.string "Defeat$"
+	.string "Beaten... in our own stronghold?$"
 
 MagmasHideout_Text_Grunt3_PostBattle::
 # 125 "data/maps/MagmasHideout/scripts.pory"
-	.string "Post$"
+	.string "This isn’t over! Team Magma’s power will\n"
+	.string "engulf you next time!$"
 
 MagmasHideout_Text_Grunt4_Intro::
 # 129 "data/maps/MagmasHideout/scripts.pory"
-	.string "Intro$"
+	.string "You’re deep in our territory now! You\n"
+	.string "won’t make it out unscathed!$"
 
 MagmasHideout_Text_Grunt4_Defeat::
 # 133 "data/maps/MagmasHideout/scripts.pory"
-	.string "Defeat$"
+	.string "How... how could this happen?$"
 
 MagmasHideout_Text_Grunt4_PostBattle::
 # 137 "data/maps/MagmasHideout/scripts.pory"
-	.string "Post$"
+	.string "We may have lost this battle, but the\n"
+	.string "fire of Team Magma never dies!$"
