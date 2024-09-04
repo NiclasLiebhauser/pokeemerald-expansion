@@ -222,7 +222,7 @@ script SacredMountain_EventScript_Giovanni {
     clearflag(FLAG_HIDE_GIRATINA)
     addobject(LOCALID_GIRATINA)
     fadescreen(FADE_FROM_BLACK)
-
+    delay(90)
     call(SacredMountain_EventScript_DoGiratinaBattle)
 
     release
@@ -444,6 +444,9 @@ script SacredMountain_EventScript_Arceus {
     playmoncry(SPECIES_ARCEUS, CRY_MODE_ENCOUNTER)
     waitmoncry
     trainerbattle_no_intro(TRAINER_ARCEUS, format("Well done. You have triumphed over a god."))
+    message(format("ARCEUS: Thy reward for triumphing o'er me shall be thy freedom.\pGo forth and live thy life amongst these people.\pAt the end of thy journey, I shall await thee.\p"))
+    waitmessage
+    closemessage
     call(SacredMountain_EventScript_Credits)
 }
 
@@ -452,15 +455,15 @@ text SacredMountain_Text_Spenser1 {
 }
 
 text SacredMountain_Text_Spenser2 {
-    format("We shall use the power of the orbs you have collected to restore this region to its original state. Maybe then we will finally discern who was behind all this.")
+    format("We shall use the power of the orbs you have collected to restore this region to its original state.\pMaybe then we will finally discern who was behind all this.")
 }
 
 text SacredMountain_Text_Giovanni1 {
-    format("GIOVANNI: I have to thank you for powering up the orbs again. After I gave Archie the blue orb to destroy Hoen, it lost all of its power. Yet here we are. I will take those thank you and become the de facto ruler of this dimension.")
+    format("GIOVANNI: I have to thank you for powering up the orbs again.\pAfter I gave Archie the blue orb to destroy Hoen, it lost all of its power.\pYet here we are. My CHAIN will steal all that energy from you to power itself up.")
 }
 
 text SacredMountain_Text_Giovanni2 {
-    format("GIOVANNI: Yes! With the power of my red chain and the energy of the orbs at the peak. I succeeded at last in summoning the mighty rulers of space and time. Welcome Dialga and Palkia.\pMy, new slaves. You will do my bidding.\pIncidentally old man. I don't think that I have any use for you anymore.")
+    format("GIOVANNI: Yes! With the power of my RED CHAIN and the energy of the orbs at the peak. I succeeded at last in summoning the mighty rulers of space and time.\pWelcome Dialga and Palkia.\nMy, new slaves. You will do my bidding.\pIncidentally old man. I don't think that I have any use for you anymore.")
 }
 
 text SacredMountain_Text_Giovanni_PreBattle {
@@ -472,7 +475,7 @@ text SacredMountain_Text_Giovanni_Deafeat {
 }
 
 text SacredMountain_Text_Giovanni_PostBattle {
-    format("No! This is inconceivable.\nHow... how did I lose.\pYou leave me no choice. I would not\n wish this upon my worst enemy...")
+    format("No! This is inconceivable.\nHow... how did I lose.\pYou leave me no choice. I shall summon darkness itself to crush you.")
 }
 
 text SacredMountain_Text_Giovanni_CallForGiratina {
@@ -480,7 +483,7 @@ text SacredMountain_Text_Giovanni_CallForGiratina {
 }
 
 text SacredMountain_Text_Giovanni_PostBattleGiratina {
-    format("Impossible! How could GIRATINA lose?\nIt is the strongest POKéMON known to man.\pNo...\pI can not accept this. RED NECLACE, give GIRATINA the power to continue battle!")
+    format("Impossible! How could GIRATINA lose?\nIt is the strongest POKéMON known to man.\pNo...\pI can not accept this. RED CHAIN, give GIRATINA the power to continue battle!")
 }
 
 text SacredMountain_Text_Giovanni_Giratina_Kills_Giovanni {
@@ -488,11 +491,11 @@ text SacredMountain_Text_Giovanni_Giratina_Kills_Giovanni {
 }
 
 text SacredMountain_Text_Arceus_Opening {
-    format("The offender has been caught, thanks to thee. Thy purpose is finished, thus thine life will be forfeit to return back to the endless void of space and time.\pPrepare yourself, servant, for thine existence will cease to exist in mere moments.\p")
+    format("ARCEUS: The offender hath been caught, thanks to thee.\pThy purpose here is fulfilled, and thus thy life shall be forfeit, to return unto the endless void of space and time.\pPrepare thyself, servant, for thine existence shall cease in but mere moments.\p")
 }
 
 text SacredMountain_Text_Arceus_Challange {
-    format("The flute grants thee the divine right to challange me. But be prepared and do not take me lightly.")
+    format("AREUS: The flute granteth thee the divine right to challenge me. Yet be thou prepared, and take not mine strength lightly.")
 }
 
 

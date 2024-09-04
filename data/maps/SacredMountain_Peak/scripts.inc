@@ -353,6 +353,8 @@ SacredMountain_EventScript_Giovanni::
 	addobject 4
 # 224 "data/maps/SacredMountain_Peak/scripts.pory"
 	fadescreen FADE_FROM_BLACK
+# 225 "data/maps/SacredMountain_Peak/scripts.pory"
+	delay 90
 # 226 "data/maps/SacredMountain_Peak/scripts.pory"
 	call SacredMountain_EventScript_DoGiratinaBattle
 # 228 "data/maps/SacredMountain_Peak/scripts.pory"
@@ -680,71 +682,77 @@ SacredMountain_EventScript_Arceus::
 # 446 "data/maps/SacredMountain_Peak/scripts.pory"
 	trainerbattle_no_intro TRAINER_ARCEUS, SacredMountain_EventScript_Arceus_Text_1
 # 447 "data/maps/SacredMountain_Peak/scripts.pory"
+	message SacredMountain_EventScript_Arceus_Text_2
+# 448 "data/maps/SacredMountain_Peak/scripts.pory"
+	waitmessage
+# 449 "data/maps/SacredMountain_Peak/scripts.pory"
+	closemessage
+# 450 "data/maps/SacredMountain_Peak/scripts.pory"
 	call SacredMountain_EventScript_Credits
 	return
 
 
-# 499 "data/maps/SacredMountain_Peak/scripts.pory"
-SacredMountain_Movement_Giovanni_WalkOn:
-# 500 "data/maps/SacredMountain_Peak/scripts.pory"
-	walk_up
-# 500 "data/maps/SacredMountain_Peak/scripts.pory"
-	walk_up
-# 500 "data/maps/SacredMountain_Peak/scripts.pory"
-	walk_up
-# 500 "data/maps/SacredMountain_Peak/scripts.pory"
-	walk_up
-# 500 "data/maps/SacredMountain_Peak/scripts.pory"
-	walk_up
-# 500 "data/maps/SacredMountain_Peak/scripts.pory"
-	walk_up
-# 500 "data/maps/SacredMountain_Peak/scripts.pory"
-	walk_up
-# 500 "data/maps/SacredMountain_Peak/scripts.pory"
-	walk_up
-# 500 "data/maps/SacredMountain_Peak/scripts.pory"
-	walk_up
-# 501 "data/maps/SacredMountain_Peak/scripts.pory"
-	walk_right
 # 502 "data/maps/SacredMountain_Peak/scripts.pory"
+SacredMountain_Movement_Giovanni_WalkOn:
+# 503 "data/maps/SacredMountain_Peak/scripts.pory"
+	walk_up
+# 503 "data/maps/SacredMountain_Peak/scripts.pory"
+	walk_up
+# 503 "data/maps/SacredMountain_Peak/scripts.pory"
+	walk_up
+# 503 "data/maps/SacredMountain_Peak/scripts.pory"
+	walk_up
+# 503 "data/maps/SacredMountain_Peak/scripts.pory"
+	walk_up
+# 503 "data/maps/SacredMountain_Peak/scripts.pory"
+	walk_up
+# 503 "data/maps/SacredMountain_Peak/scripts.pory"
+	walk_up
+# 503 "data/maps/SacredMountain_Peak/scripts.pory"
+	walk_up
+# 503 "data/maps/SacredMountain_Peak/scripts.pory"
+	walk_up
+# 504 "data/maps/SacredMountain_Peak/scripts.pory"
+	walk_right
+# 505 "data/maps/SacredMountain_Peak/scripts.pory"
 	face_up
 	step_end
 
-# 505 "data/maps/SacredMountain_Peak/scripts.pory"
+# 508 "data/maps/SacredMountain_Peak/scripts.pory"
 SacredMountain_Movement_Giovanni_Push:
-# 506 "data/maps/SacredMountain_Peak/scripts.pory"
+# 509 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_fast_up
 	step_end
 
-# 509 "data/maps/SacredMountain_Peak/scripts.pory"
+# 512 "data/maps/SacredMountain_Peak/scripts.pory"
 SacredMountain_Movement_Spenser_PushedBack:
-# 510 "data/maps/SacredMountain_Peak/scripts.pory"
+# 513 "data/maps/SacredMountain_Peak/scripts.pory"
 	jump_up
-# 511 "data/maps/SacredMountain_Peak/scripts.pory"
+# 514 "data/maps/SacredMountain_Peak/scripts.pory"
 	face_down
 	step_end
 
-# 514 "data/maps/SacredMountain_Peak/scripts.pory"
+# 517 "data/maps/SacredMountain_Peak/scripts.pory"
 SacredMountain_Movement_Spenser_PushedOff:
-# 515 "data/maps/SacredMountain_Peak/scripts.pory"
+# 518 "data/maps/SacredMountain_Peak/scripts.pory"
 	jump_2_up
-# 515 "data/maps/SacredMountain_Peak/scripts.pory"
+# 518 "data/maps/SacredMountain_Peak/scripts.pory"
 	jump_2_up
 	step_end
 
-# 518 "data/maps/SacredMountain_Peak/scripts.pory"
+# 521 "data/maps/SacredMountain_Peak/scripts.pory"
 SacredMountain_Movement_Camera_PanUp:
-# 519 "data/maps/SacredMountain_Peak/scripts.pory"
+# 522 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_slow_up
 	step_end
 
-# 522 "data/maps/SacredMountain_Peak/scripts.pory"
+# 525 "data/maps/SacredMountain_Peak/scripts.pory"
 SacredMountain_Movement_Camera_PanDown:
-# 523 "data/maps/SacredMountain_Peak/scripts.pory"
+# 526 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_slow_down
-# 523 "data/maps/SacredMountain_Peak/scripts.pory"
+# 526 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_slow_down
-# 523 "data/maps/SacredMountain_Peak/scripts.pory"
+# 526 "data/maps/SacredMountain_Peak/scripts.pory"
 	walk_slow_down
 	step_end
 
@@ -780,8 +788,18 @@ SacredMountain_EventScript_Arceus_Text_1:
 	.string "Well done. You have triumphed over a\n"
 	.string "god.$"
 
+SacredMountain_EventScript_Arceus_Text_2:
+# 447 "data/maps/SacredMountain_Peak/scripts.pory"
+	.string "ARCEUS: Thy reward for triumphing o'er\n"
+	.string "me shall be thy freedom.\p"
+	.string "Go forth and live thy life amongst\n"
+	.string "these people.\p"
+	.string "At the end of thy journey, I shall await\n"
+	.string "thee.\p"
+	.string "$"
+
 SacredMountain_Text_Spenser1::
-# 450 "data/maps/SacredMountain_Peak/scripts.pory"
+# 453 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "SPENSER: Finally, you made it. Reaching\n"
 	.string "this point in space and time means you\l"
 	.string "must have beaten Archie and Maxie, yet\l"
@@ -789,83 +807,86 @@ SacredMountain_Text_Spenser1::
 	.string "timeline still exists...$"
 
 SacredMountain_Text_Spenser2::
-# 454 "data/maps/SacredMountain_Peak/scripts.pory"
+# 457 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "We shall use the power of the orbs you\n"
 	.string "have collected to restore this region\l"
-	.string "to its original state. Maybe then we will\l"
-	.string "finally discern who was behind all this.$"
+	.string "to its original state.\p"
+	.string "Maybe then we will finally discern who\n"
+	.string "was behind all this.$"
 
 SacredMountain_Text_Giovanni1::
-# 458 "data/maps/SacredMountain_Peak/scripts.pory"
+# 461 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "GIOVANNI: I have to thank you for\n"
-	.string "powering up the orbs again. After I\l"
-	.string "gave Archie the blue orb to destroy\l"
-	.string "Hoen, it lost all of its power. Yet here\l"
-	.string "we are. I will take those thank you and\l"
-	.string "become the de facto ruler of this\l"
-	.string "dimension.$"
+	.string "powering up the orbs again.\p"
+	.string "After I gave Archie the blue orb to\n"
+	.string "destroy Hoen, it lost all of its power.\p"
+	.string "Yet here we are. My CHAIN will steal all\n"
+	.string "that energy from you to power itself\l"
+	.string "up.$"
 
 SacredMountain_Text_Giovanni2::
-# 462 "data/maps/SacredMountain_Peak/scripts.pory"
-	.string "GIOVANNI: Yes! With the power of my red\n"
-	.string "chain and the energy of the orbs at the\l"
+# 465 "data/maps/SacredMountain_Peak/scripts.pory"
+	.string "GIOVANNI: Yes! With the power of my RED\n"
+	.string "CHAIN and the energy of the orbs at the\l"
 	.string "peak. I succeeded at last in summoning\l"
-	.string "the mighty rulers of space and time.\l"
-	.string "Welcome Dialga and Palkia.\p"
+	.string "the mighty rulers of space and time.\p"
+	.string "Welcome Dialga and Palkia.\n"
 	.string "My, new slaves. You will do my bidding.\p"
 	.string "Incidentally old man. I don't think that\n"
 	.string "I have any use for you anymore.$"
 
 SacredMountain_Text_Giovanni_PreBattle::
-# 466 "data/maps/SacredMountain_Peak/scripts.pory"
+# 469 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "GIOVANNI: So you want to stop me?\n"
 	.string "Come an try.$"
 
 SacredMountain_Text_Giovanni_Deafeat::
-# 470 "data/maps/SacredMountain_Peak/scripts.pory"
+# 473 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "Lost to a mere child...$"
 
 SacredMountain_Text_Giovanni_PostBattle::
-# 474 "data/maps/SacredMountain_Peak/scripts.pory"
+# 477 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "No! This is inconceivable.\n"
 	.string "How... how did I lose.\p"
-	.string "You leave me no choice. I would not\n"
-	.string "wish this upon my worst enemy...$"
+	.string "You leave me no choice. I shall summon\n"
+	.string "darkness itself to crush you.$"
 
 SacredMountain_Text_Giovanni_CallForGiratina::
-# 478 "data/maps/SacredMountain_Peak/scripts.pory"
+# 481 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "Let the rule of darkness be eternal.\p"
 	.string "Come forth GIRATINA!$"
 
 SacredMountain_Text_Giovanni_PostBattleGiratina::
-# 482 "data/maps/SacredMountain_Peak/scripts.pory"
+# 485 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "Impossible! How could GIRATINA lose?\n"
 	.string "It is the strongest POKéMON known to\l"
 	.string "man.\p"
 	.string "No...\p"
-	.string "I can not accept this. RED NECLACE,\n"
-	.string "give GIRATINA the power to continue\l"
-	.string "battle!$"
+	.string "I can not accept this. RED CHAIN, give\n"
+	.string "GIRATINA the power to continue battle!$"
 
 SacredMountain_Text_Giovanni_Giratina_Kills_Giovanni::
-# 486 "data/maps/SacredMountain_Peak/scripts.pory"
+# 489 "data/maps/SacredMountain_Peak/scripts.pory"
 	.string "Huh? GIRATINA?\p"
 	.string "What are you doing?\p"
 	.string "No! Stop...!$"
 
 SacredMountain_Text_Arceus_Opening::
-# 490 "data/maps/SacredMountain_Peak/scripts.pory"
-	.string "The offender has been caught, thanks\n"
-	.string "to thee. Thy purpose is finished, thus\l"
-	.string "thine life will be forfeit to return back\l"
-	.string "to the endless void of space and time.\p"
-	.string "Prepare yourself, servant, for thine\n"
-	.string "existence will cease to exist in mere\l"
+# 493 "data/maps/SacredMountain_Peak/scripts.pory"
+	.string "ARCEUS: The offender hath been caught,\n"
+	.string "thanks to thee.\p"
+	.string "Thy purpose here is fulfilled, and thus\n"
+	.string "thy life shall be forfeit, to return\l"
+	.string "unto the endless void of space and\l"
+	.string "time.\p"
+	.string "Prepare thyself, servant, for thine\n"
+	.string "existence shall cease in but mere\l"
 	.string "moments.\p"
 	.string "$"
 
 SacredMountain_Text_Arceus_Challange::
-# 494 "data/maps/SacredMountain_Peak/scripts.pory"
-	.string "The flute grants thee the divine right\n"
-	.string "to challange me. But be prepared and do\l"
-	.string "not take me lightly.$"
+# 497 "data/maps/SacredMountain_Peak/scripts.pory"
+	.string "AREUS: The flute granteth thee the\n"
+	.string "divine right to challenge me. Yet be\l"
+	.string "thou prepared, and take not mine\l"
+	.string "strength lightly.$"

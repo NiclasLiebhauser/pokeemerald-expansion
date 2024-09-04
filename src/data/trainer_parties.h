@@ -12159,13 +12159,13 @@ static const struct TrainerMon sParty_Arceus[] = {
     },
     {
         .iv = TRAINER_PARTY_IVS(31, 0, 31, 31, 31, 31),
-        .ev = TRAINER_PARTY_EVS(252, 0, 0, 252, 0, 0),
+        .ev = TRAINER_PARTY_EVS(0, 0, 0, 252, 0, 252),
         .nature = NATURE_MODEST,
         .lvl = 80,
-        .species = SPECIES_GLISCOR,
-        .ability = ABILITY_POISON_HEAL,
-        .heldItem = ITEM_TOXIC_ORB,
-        .moves = { MOVE_EARTHQUAKE, MOVE_ROOST, MOVE_TOXIC, MOVE_U_TURN }
+        .species = SPECIES_GARDEVOIR,
+        .ability = ABILITY_TRACE,
+        .heldItem = ITEM_FOCUS_SASH,
+        .moves = { MOVE_PSYCHIC, MOVE_MOONBLAST, MOVE_CALM_MIND, MOVE_MYSTICAL_FIRE }
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
