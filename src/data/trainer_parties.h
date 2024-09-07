@@ -12139,7 +12139,7 @@ static const struct TrainerMon sParty_Anabel_2[] = {
 static const struct TrainerMon sParty_Arceus[] = {
     {
         .iv = TRAINER_PARTY_IVS(31, 30, 31, 30, 30, 31),
-        .ev = TRAINER_PARTY_EVS(0, 0, 252, 252, 0, 0),
+        //.ev = TRAINER_PARTY_EVS(0, 0, 252, 252, 0, 0),
         .nature = NATURE_TIMID,
         .lvl = 80,
         .species = SPECIES_ROSERADE,
@@ -12149,7 +12149,7 @@ static const struct TrainerMon sParty_Arceus[] = {
     },
     {
         .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-        .ev = TRAINER_PARTY_EVS(0, 252, 0, 0, 0, 252),
+        //.ev = TRAINER_PARTY_EVS(0, 252, 0, 0, 0, 252),
         .nature = NATURE_JOLLY,
         .lvl = 80,
         .species = SPECIES_GARCHOMP,
@@ -12159,7 +12159,7 @@ static const struct TrainerMon sParty_Arceus[] = {
     },
     {
         .iv = TRAINER_PARTY_IVS(31, 0, 31, 31, 31, 31),
-        .ev = TRAINER_PARTY_EVS(0, 0, 0, 252, 0, 252),
+        //.ev = TRAINER_PARTY_EVS(0, 0, 0, 252, 0, 252),
         .nature = NATURE_MODEST,
         .lvl = 80,
         .species = SPECIES_GARDEVOIR,
@@ -12168,18 +12168,18 @@ static const struct TrainerMon sParty_Arceus[] = {
         .moves = { MOVE_PSYCHIC, MOVE_MOONBLAST, MOVE_CALM_MIND, MOVE_MYSTICAL_FIRE }
     },
     {
-    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
-    .nature = NATURE_ADAMANT,
-    .lvl = 80,
-    .species = SPECIES_DIALGA,
-    .ability = ABILITY_PRESSURE,
-    .heldItem = ITEM_ADAMANT_ORB,
-    .moves = { MOVE_FLASH_CANNON, MOVE_ROAR_OF_TIME, MOVE_EARTH_POWER, MOVE_AURA_SPHERE }
+        .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+        //.ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .lvl = 80,
+        .species = SPECIES_DIALGA,
+        .ability = ABILITY_PRESSURE,
+        .heldItem = ITEM_ADAMANT_ORB,
+        .moves = { MOVE_FLASH_CANNON, MOVE_ROAR_OF_TIME, MOVE_EARTH_POWER, MOVE_AURA_SPHERE }
     },
     {
         .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-        .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
+        //.ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
         .nature = NATURE_MODEST,
         .lvl = 80,
         .species = SPECIES_PALKIA,
@@ -12189,7 +12189,7 @@ static const struct TrainerMon sParty_Arceus[] = {
     },
     {
         .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-        .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
+        //.ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 0),
         .nature = NATURE_JOLLY,
         .lvl = 80,
         .species = SPECIES_ARCEUS,
