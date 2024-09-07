@@ -199,12 +199,17 @@ BlackVoid_EventScript_WarpIntoMap::
 
 BlackVoid_Text_Intro::
 # 114 "data/maps/BlackVoid/scripts.pory"
-	.string "Intro\p"
+	.string "To save the world your existence has\n"
+	.string "spontaneously come into being.\p"
+	.string "When creating you our god had asked\n"
+	.string "himself various questions, like...\p"
 	.string "$"
 
 BlackVoid_Text_Outro::
 # 118 "data/maps/BlackVoid/scripts.pory"
-	.string "Outro\p"
+	.string "Be on your way to save this timeline.\p"
+	.string "My servant will await you at the end of\n"
+	.string "the time tunnel.\p"
 	.string "$"
 
 BlackVoid_Text_WhereAreYouFrom::
@@ -221,45 +226,76 @@ BlackVoid_Text_WhatIsMotivation::
 
 BlackVoid_Text_Comment_Kanto::
 # 135 "data/maps/BlackVoid/scripts.pory"
-	.string "KANTO\p"
+	.string "A region rich in history and tradition,\n"
+	.string "Kanto is home to some of the most\l"
+	.string "iconic creatures and towns.\p"
+	.string "Known for its diversity in geography,\n"
+	.string "from forests to caves, it hosts the\l"
+	.string "first Pokémon League in the series.\p"
 	.string "$"
 
 BlackVoid_Text_Comment_Johto::
 # 139 "data/maps/BlackVoid/scripts.pory"
-	.string "JOHTO\p"
+	.string "A region steeped in mythology and\n"
+	.string "ancient lore.\p"
+	.string "It features serene landscapes and a\n"
+	.string "strong connection to nature, with\l"
+	.string "landmarks like the Bell Tower and Ruins\l"
+	.string "of Alph.\p"
 	.string "$"
 
 BlackVoid_Text_Comment_Hoenn::
 # 143 "data/maps/BlackVoid/scripts.pory"
-	.string "HOENN\p"
+	.string "A tropical region with a variety of\n"
+	.string "climates, Hoenn is characterized by its\l"
+	.string "islands, rainforests, and volcanoes.\p"
+	.string "Its unique terrain promotes\n"
+	.string "environmental themes, and it boasts\l"
+	.string "legendary Pokémon tied to land, sea,\l"
+	.string "and sky.\p"
 	.string "$"
 
 BlackVoid_Text_Comment_Calm::
 # 147 "data/maps/BlackVoid/scripts.pory"
-	.string "Calm\p"
+	.string "Composed and serene, maintaining a\n"
+	.string "sense of peace and control, even in\l"
+	.string "stressful or uncertain situations.\p"
 	.string "$"
 
 BlackVoid_Text_Comment_Excited::
 # 151 "data/maps/BlackVoid/scripts.pory"
-	.string "Excited\p"
+	.string "Enthusiastic and full of energy, often\n"
+	.string "eager and looking forward to upcoming\l"
+	.string "events or experiences.\p"
 	.string "$"
 
 BlackVoid_Text_Comment_Joyful::
 # 155 "data/maps/BlackVoid/scripts.pory"
-	.string "Joyful\p"
+	.string "Exuding happiness and delight, often\n"
+	.string "radiating positivity and contentment\l"
+	.string "in their interactions and outlook on\l"
+	.string "life.\p"
 	.string "$"
 
 BlackVoid_Text_Comment_Power::
 # 159 "data/maps/BlackVoid/scripts.pory"
-	.string "Power\p"
+	.string "I see you are driven by strength,\n"
+	.string "confidenence, and control over your\l"
+	.string "actions.\p"
 	.string "$"
 
 BlackVoid_Text_Comment_Adventure::
 # 163 "data/maps/BlackVoid/scripts.pory"
-	.string "Adventure\p"
+	.string "I see you are curios and have a desire\n"
+	.string "for exploration, thriving on new\l"
+	.string "experiences and the excitement of the\l"
+	.string "unknown.\p"
 	.string "$"
 
 BlackVoid_Text_Comment_Mysteries::
 # 167 "data/maps/BlackVoid/scripts.pory"
-	.string "Mysteries\p"
+	.string "I see you are intrigued by the unknown,\n"
+	.string "fascinated by solving puzzles,\l"
+	.string "uncovering hidden truths, or exploring\l"
+	.string "the enigmatic aspects of life.\p"
 	.string "$"

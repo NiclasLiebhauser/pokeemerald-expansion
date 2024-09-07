@@ -1,0 +1,71 @@
+mapscripts SacredCity_House3_MapScripts {}
+
+script SacredCity_House3_EventScript_TM_Shop {
+    lock
+    faceplayer
+    message(format("I have a great collection of CDs from the olden days. Wanna buy?"))
+    waitmessage
+    pokemart(SacredCity_House3_Mart_TM_Shop)
+    msgbox(format("Have a nice day."))
+    release
+    end
+}
+
+mart SacredCity_House3_Mart_TM_Shop {
+    ITEM_TM01
+    ITEM_TM02
+    ITEM_TM03
+    ITEM_TM04
+    ITEM_TM05
+    ITEM_TM06
+    ITEM_TM07
+    ITEM_TM08
+    ITEM_TM09
+    ITEM_TM10
+    ITEM_TM11
+    ITEM_TM12
+    ITEM_TM13
+    ITEM_TM14
+    ITEM_TM15
+    ITEM_TM16
+    ITEM_TM17
+    ITEM_TM18
+    ITEM_TM19
+    ITEM_TM20
+    ITEM_TM21
+    ITEM_TM22
+    ITEM_TM23
+    ITEM_TM24
+    ITEM_TM25
+    ITEM_TM26
+    ITEM_TM27
+    ITEM_TM28
+    ITEM_TM29
+    ITEM_TM30
+    ITEM_TM31
+    ITEM_TM32
+    ITEM_TM33
+    ITEM_TM34
+    ITEM_TM35
+    ITEM_TM36
+    ITEM_TM37
+    ITEM_TM38
+    ITEM_TM39
+    ITEM_TM40
+    ITEM_TM41
+    ITEM_TM42
+    ITEM_TM43
+    ITEM_TM44
+    ITEM_TM45
+    ITEM_TM46
+    ITEM_TM47
+    ITEM_TM48
+    ITEM_TM49
+    ITEM_TM50
+    ITEM_TM51
+    ITEM_TM52
+    ITEM_TM53
+    ITEM_TM54
+    ITEM_TM55
+    ITEM_TM56
+}

@@ -100,13 +100,13 @@ AncientGrotto_EventScript_Kyogre_2:
 # 65 "data/maps/AncientGrotto/scripts.pory"
 	setvar VAR_LAST_TALKED, 1
 # 66 "data/maps/AncientGrotto/scripts.pory"
-	setwildbattle SPECIES_KYOGRE_PRIMAL, 50
+	setwildbattle SPECIES_KYOGRE_PRIMAL, 55
 # 67 "data/maps/AncientGrotto/scripts.pory"
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 # 68 "data/maps/AncientGrotto/scripts.pory"
 	setflag FLAG_NO_CATCHING
 # 69 "data/maps/AncientGrotto/scripts.pory"
-	settotemboost B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1, 1, 1
+	settotemboost B_POSITION_OPPONENT_LEFT, 0, 3, 0, 0, 3, 1, 1
 # 70 "data/maps/AncientGrotto/scripts.pory"
 	special BattleSetup_StartLegendaryBattle
 # 71 "data/maps/AncientGrotto/scripts.pory"

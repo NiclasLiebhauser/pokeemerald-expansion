@@ -1,1 +1,46 @@
 mapscripts SacredCity_House2_MapScripts {}
+
+script SacredCity_House2_EventScript_HeldItem_Shop {
+    lock
+    faceplayer
+    message(format("I have some knicks and knacks. POKéMON usually like to wear these."))
+    waitmessage
+    pokemart(SacredCity_House2_Mart_HeldItem_Shop)
+    msgbox(format("Have a nice day."))
+    release
+    end
+}
+
+mart SacredCity_House2_Mart_HeldItem_Shop {
+    ITEM_LEFTOVERS
+    ITEM_WHITE_HERB
+    ITEM_QUICK_CLAW
+    ITEM_MENTAL_HERB
+    ITEM_BRIGHT_POWDER
+    ITEM_CHOICE_BAND
+    ITEM_FOCUS_BAND
+    ITEM_FOCUS_SASH
+    ITEM_SCOPE_LENS
+    ITEM_LIFE_ORB
+    ITEM_EXPERT_BELT
+    ITEM_CHOICE_SCARF
+    ITEM_CHOICE_SPECS
+    ITEM_SAFETY_GOGGLES
+    ITEM_AIR_BALLOON
+    ITEM_ASSAULT_VEST
+    ITEM_WEAKNESS_POLICY
+    ITEM_LIGHT_CLAY
+    ITEM_HEAVY_DUTY_BOOTS
+    ITEM_BLACK_SLUDGE
+    ITEM_ROCKY_HELMET
+    ITEM_MUSCLE_BAND
+    ITEM_WISE_GLASSES
+    ITEM_SHELL_BELL
+    ITEM_RED_CARD
+    ITEM_FLAME_ORB
+    ITEM_TOXIC_ORB
+    ITEM_METRONOME
+    ITEM_IRON_BALL
+    ITEM_POWER_HERB
+    ITEM_QUICK_POWDER
+}

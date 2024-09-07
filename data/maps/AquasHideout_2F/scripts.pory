@@ -221,7 +221,7 @@ text AquasHideout_2F_Text_DiveMachine {
 }
 
 text AquasHideout_2F_Text_Archie_PreBattel {
-    format("It was all my fault. If he hadn't given me the BLUE ORB on that fate full day... then... maybe...\pBut what am I crying to you about that? I am Archie, the leader of the strongest team in all of Hoen. We achieved our goal of raising the sea level to improve life on Earth.\pExcept this whole situation makes me feel miserable.\pPlease end my pain.")
+    format("It was all my fault. If he hadn't given me the BLUE ORB on that fate full day... then... maybe...\pBut what am I crying to you about that? I am Archie, the leader of the strongest team in all of Hoenn.\pWe achieved our goal of raising the sea level to improve life on Earth.\pExcept this whole situation makes me feel miserable.\pPlease end my pain.")
 }
 
 text AquasHideout_2F_Text_Archie_PostBattel {

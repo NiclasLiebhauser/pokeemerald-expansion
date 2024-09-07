@@ -51,7 +51,13 @@
     F(STEEL_WING) \
     F(SKILL_SWAP) \
     F(SNATCH) \
-    F(OVERHEAT)
+    F(OVERHEAT) \
+    F(ICE_PUNCH) \
+    F(THUNDER_PUNCH) \
+    F(FIRE_PUNCH) \
+    F(HYDRO_PUMP) \
+    F(ROCK_SLIDE) \
+    F(STONE_EDGE)  
 
 #define FOREACH_HM(F) \
     F(CUT) \

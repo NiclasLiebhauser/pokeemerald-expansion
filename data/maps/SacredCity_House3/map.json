@@ -1,7 +1,7 @@
 {
-  "id": "MAP_SACRED_CITY_HOUSE1",
-  "name": "SacredCity_House1",
-  "layout": "LAYOUT_SACRED_CITY_HOUSE1",
+  "id": "MAP_SACRED_CITY_HOUSE3",
+  "name": "SacredCity_House3",
+  "layout": "LAYOUT_SACRED_CITY_HOUSE3",
   "music": "MUS_RG_POKE_TOWER",
   "region_map_section": "MAPSEC_SACRED_CITY",
   "requires_flash": false,
@@ -15,16 +15,29 @@
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 2,
-      "y": 3,
+      "graphics_id": "OBJ_EVENT_GFX_BIG_SNORLAX_DOLL",
+      "x": 1,
+      "y": 6,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SacredCity_House1_Angler",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_COOK",
+      "x": 6,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SacredCity_House3_EventScript_TM_Shop",
       "flag": "0"
     }
   ],
@@ -34,14 +47,14 @@
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_SACRED_CITY",
-      "dest_warp_id": "0"
+      "dest_warp_id": "5"
     },
     {
       "x": 4,
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_SACRED_CITY",
-      "dest_warp_id": "0"
+      "dest_warp_id": "5"
     }
   ],
   "coord_events": [

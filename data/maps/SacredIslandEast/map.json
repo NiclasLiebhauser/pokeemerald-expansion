@@ -105,7 +105,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
-      "script": "SacredIslandEast_EventScript_Fischerman1",
+      "script": "SacredIslandEast_EventScript_Fisherman1",
       "flag": "0"
     },
     {
@@ -131,7 +131,7 @@
       "movement_range_y": 4,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
-      "script": "SacredIslandEast_EventScript_BirdKeeper1",
+      "script": "SacredIslandEast_EventScript_Birdkeeper1",
       "flag": "0"
     },
     {

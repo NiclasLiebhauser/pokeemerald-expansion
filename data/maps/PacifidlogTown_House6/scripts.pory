@@ -1,1 +1,81 @@
 mapscripts PacifidlogTown_House6_MapScripts {}
+
+script PacifidlogTown_House6_MoveRelearnersHouse_EventScript_MoveRelearner {
+	lock
+	faceplayer
+	waitmovement(0)
+    if(flag(FLAG_TEMP_1))
+    {
+        call(PacifidlogTown_House6_MoveRelearnersHouse_EventScript_AskTeachMove)
+    }
+	msgbox(PacifidlogTown_House6_MoveRelearnersHouse_Text_ImTheMoveTutor, MSGBOX_DEFAULT)
+	setflag(FLAG_TEMP_1)
+	call(PacifidlogTown_House6_MoveRelearnersHouse_EventScript_AskTeachMove)
+	end    
+}
+
+script PacifidlogTown_House6_MoveRelearnersHouse_EventScript_AskTeachMove {
+	checkmoney(1000)
+    if(var(VAR_RESULT) == FALSE)
+    {
+        call(PacifidlogTown_House6_MoveRelearnersHouse_EventScript_ComeBackWithMoney)
+    }
+	msgbox(PacifidlogTown_House6_MoveRelearnersHouse_Text_ThatsAHeartScaleWantMeToTeachMove, MSGBOX_YESNO)
+    waitmessage
+	if(var(VAR_RESULT) == NO)
+    {
+        call(PacifidlogTown_House6_MoveRelearnersHouse_EventScript_ComeBackWithMoney)
+    }
+    call(PacifidlogTown_House6_MoveRelearnersHouse_EventScript_ChooseMon)
+	end
+}
+
+script PacifidlogTown_House6_MoveRelearnersHouse_EventScript_ComeBackWithMoney {
+	msgbox(PacifidlogTown_House6_MoveRelearnersHouse_Text_ComeBackWithMoney, MSGBOX_DEFAULT)
+	release
+	end
+}
+
+script PacifidlogTown_House6_MoveRelearnersHouse_EventScript_ChooseMon {
+	msgbox(FallarborTown_MoveRelearnersHouse_Text_TutorWhichMon, MSGBOX_DEFAULT)
+	special(ChooseMonForMoveRelearner)
+	waitstate
+    if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN)
+    {
+        call(PacifidlogTown_House6_MoveRelearnersHouse_EventScript_ComeBackWithMoney)
+    }
+	special(IsSelectedMonEgg)
+	goto_if_eq(VAR_RESULT, TRUE, FallarborTown_MoveRelearnersHouse_EventScript_CantTeachEgg)
+	goto_if_eq(VAR_0x8005, 0, FallarborTown_MoveRelearnersHouse_EventScript_NoMoveToTeachMon)
+	call(PacifidlogTown_House6_MoveRelearnersHouse_EventScript_ChooseMove)
+	end
+}
+
+script PacifidlogTown_House6_MoveRelearnersHouse_EventScript_ChooseMove {
+	msgbox(FallarborTown_MoveRelearnersHouse_Text_TeachWhichMove, MSGBOX_DEFAULT)
+	special(TeachMoveRelearnerMove)
+	waitstate
+	goto_if_eq(VAR_0x8004, 0, PacifidlogTown_House6_MoveRelearnersHouse_EventScript_ChooseMon)
+    showmoneybox(0,0)
+    delay(30)
+    removemoney(1000)
+    playse(SE_SHOP)
+    updatemoneybox
+    waitse
+    delay(30)
+    hidemoneybox
+	call(PacifidlogTown_House6_MoveRelearnersHouse_EventScript_ComeBackWithMoney)
+	end
+}
+
+text PacifidlogTown_House6_MoveRelearnersHouse_Text_ComeBackWithMoney {
+	format("If your POKéMON need to learn a move,\ncome back with ¥1000.")
+}
+
+text PacifidlogTown_House6_MoveRelearnersHouse_Text_ThatsAHeartScaleWantMeToTeachMove {
+    format("You seem to have the required sum on you. Let me guess, you want me to teach a move?")    
+}
+
+text PacifidlogTown_House6_MoveRelearnersHouse_Text_ImTheMoveTutor {
+    format("I'm the MOVE TUTOR.\pI know all the moves that POKéMON\nlearn--every one of them--and I can\lteach POKéMON those moves.\pI can teach a move to a POKéMON\nof yours if you'd like.\pI'll do it for ¥1000.")
+}

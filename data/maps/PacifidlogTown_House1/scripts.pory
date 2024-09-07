@@ -67,7 +67,7 @@ script PacifidlogTown_House1_EventScript_Boy_ThankYou {
         message(format("Oh you have traded a good haul of {STR_VAR_1}. Here take this.\p"))
         waitmessage
         playfanfare(MUS_OBTAIN_ITEM)
-        giveitem(ITEM_PEARL_STRING)
+        giveitem(ITEM_GOLD_BOTTLE_CAP)
         waitfanfare
     }
 

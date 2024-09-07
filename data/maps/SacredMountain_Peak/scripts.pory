@@ -459,11 +459,11 @@ text SacredMountain_Text_Spenser2 {
 }
 
 text SacredMountain_Text_Giovanni1 {
-    format("GIOVANNI: I have to thank you for powering up the orbs again.\pAfter I gave Archie the blue orb to destroy Hoen, it lost all of its power.\pYet here we are. My CHAIN will steal all that energy from you to power itself up.")
+    format("GIOVANNI: I have to thank you for powering up the orbs again.\pAfter I gave Archie the blue orb to destroy Hoenn, it lost all of its power.\pYet here we are. My CHAIN will steal all that energy from you to power itself up.")
 }
 
 text SacredMountain_Text_Giovanni2 {
-    format("GIOVANNI: Yes! With the power of my RED CHAIN and the energy of the orbs at the peak. I succeeded at last in summoning the mighty rulers of space and time.\pWelcome Dialga and Palkia.\nMy, new slaves. You will do my bidding.\pIncidentally old man. I don't think that I have any use for you anymore.")
+    format("GIOVANNI: Yes! With the full power of my RED CHAIN thanks to the energy of the orbs. I succeeded at last in summoning the mighty rulers of space and time.\pWelcome Dialga and Palkia.\nMy, new slaves. You will do my bidding.\pIncidentally old man. I don't think that I have any use for you anymore.")
 }
 
 text SacredMountain_Text_Giovanni_PreBattle {

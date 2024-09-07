@@ -49,6 +49,7 @@ script PacifidlogTown_EventScript_Fisherman_Takes_Milk {
 }
 
 script PacifidlogTown_EventScript_Fisherman_Thank_You {
+    bufferitemname(STR_VAR_1, ITEM_MOOMOO_MILK)
     msgbox(PacifidlogTown_Text_Fisherman_Thank_You_For_The_Milk, MSGBOX_NPC)
     return
 }

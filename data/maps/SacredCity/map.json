@@ -120,7 +120,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
+      "trainer_sight_or_berry_tree_id": "4",
       "script": "SacredCity_EventScript_HexManiac1",
       "flag": "0"
     },
@@ -133,7 +133,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
+      "trainer_sight_or_berry_tree_id": "4",
       "script": "SacredCity_EventScript_Psychic2",
       "flag": "0"
     },
@@ -146,7 +146,7 @@
       "movement_range_x": 4,
       "movement_range_y": 4,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
+      "trainer_sight_or_berry_tree_id": "4",
       "script": "SacredCity_EventScript_Psychic1",
       "flag": "0"
     }
@@ -185,6 +185,13 @@
       "y": 26,
       "elevation": 0,
       "dest_map": "MAP_SACRED_CITY_POKEMON_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 49,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_SACRED_CITY_HOUSE3",
       "dest_warp_id": "0"
     }
   ],

@@ -5,9 +5,9 @@ script SacredIslandEast_EventScript_BattleGirl1 {
     msgbox(SacredIslandEast_Text_BattleGirl1_PostBattle, MSGBOX_AUTOCLOSE)
 }
 
-script SacredIslandEast_EventScript_Fischerman1 {
-    trainerbattle_single(TRAINER_FISHERMAN_SI_EAST_1, SacredIslandEast_Text_Fischerman1_Intro, SacredIslandEast_Text_Fischerman1_Defeat)
-    msgbox(SacredIslandEast_Text_Fischerman1_PostBattle, MSGBOX_AUTOCLOSE)
+script SacredIslandEast_EventScript_Fisherman1 {
+    trainerbattle_single(TRAINER_FISHERMAN_SI_EAST_1, SacredIslandEast_Text_Fisherman1_Intro, SacredIslandEast_Text_Fisherman1_Defeat)
+    msgbox(SacredIslandEast_Text_Fisherman1_PostBattle, MSGBOX_AUTOCLOSE)
 }
 
 script SacredIslandEast_EventScript_Picnicker1 {
@@ -15,9 +15,9 @@ script SacredIslandEast_EventScript_Picnicker1 {
     msgbox(SacredIslandEast_Text_Picnicker1_PostBattle, MSGBOX_AUTOCLOSE)
 }
 
-script SacredIslandEast_EventScript_BirdKeeper1 {
-    trainerbattle_single(TRAINER_BIRD_KEEPER_SI_EAST_1, SacredIslandEast_Text_BirdKeeper1_Intro, SacredIslandEast_Text_BirdKeeper1_Defeat)
-    msgbox(SacredIslandEast_Text_BirdKeeper1_PostBattle, MSGBOX_AUTOCLOSE)
+script SacredIslandEast_EventScript_Birdkeeper1 {
+    trainerbattle_single(TRAINER_BIRD_KEEPER_SI_EAST_1, SacredIslandEast_Text_Birdkeeper1_Intro, SacredIslandEast_Text_Birdkeeper1_Defeat)
+    msgbox(SacredIslandEast_Text_Birdkeeper1_PostBattle, MSGBOX_AUTOCLOSE)
 }
 
 script SacredIslandEast_EventScript_Lady1 {
@@ -26,61 +26,61 @@ script SacredIslandEast_EventScript_Lady1 {
 }
 
 text SacredIslandEast_Text_BattleGirl1_Intro {
-    format("Intro")
+    format("My fighting spirit burns brighter than ever! Prepare yourself for a real challenge!")
 }
 
 text SacredIslandEast_Text_BattleGirl1_Defeat {
-    format("Defeat")
+    format("No... I wasn’t strong enough...")
 }
 
 text SacredIslandEast_Text_BattleGirl1_PostBattle {
-    format("Post")
+    format("I’ll keep training! Next time, you won’t stand a chance against my fighting spirit!")
 }
 
-text SacredIslandEast_Text_Fischerman1_Intro {
-    format("Intro")
+text SacredIslandEast_Text_Fisherman1_Intro {
+    format("The waters around this island are teeming with life! Let’s see if you can handle what I’ve caught!")
 }
 
-text SacredIslandEast_Text_Fischerman1_Defeat {
-    format("Defeat")
+text SacredIslandEast_Text_Fisherman1_Defeat {
+    format("I lost... reeled in too soon...")
 }
 
-text SacredIslandEast_Text_Fischerman1_PostBattle {
-    format("Post")
+text SacredIslandEast_Text_Fisherman1_PostBattle {
+    format("Next time, I’ll have an even bigger catch! You won’t be so lucky!")
 }
 
 text SacredIslandEast_Text_Picnicker1_Intro {
-    format("Intro")
+    format("A picnic and a battle? This island is perfect for both! Let’s have some fun!")
 }
 
 text SacredIslandEast_Text_Picnicker1_Defeat {
-    format("Defeat")
+    format("Oh no, I lost... so much for a perfect day.")
 }
 
 text SacredIslandEast_Text_Picnicker1_PostBattle {
-    format("Post")
+    format("That was fun! But next time, I’ll make sure to win!")
 }
 
-text SacredIslandEast_Text_BirdKeeper1_Intro {
-    format("Intro")
+text SacredIslandEast_Text_Birdkeeper1_Intro {
+    format("The skies are my domain, and my birds rule it! Let’s see if you can reach my level!")
 }
 
-text SacredIslandEast_Text_BirdKeeper1_Defeat {
-    format("Defeat")
+text SacredIslandEast_Text_Birdkeeper1_Defeat {
+    format("Grounded... how could this happen?")
 }
 
-text SacredIslandEast_Text_BirdKeeper1_PostBattle {
-    format("Post")
+text SacredIslandEast_Text_Birdkeeper1_PostBattle {
+    format("Next time, my birds will soar higher, and you won’t be able to stop us!")
 }
 
 text SacredIslandEast_Text_Lady1_Intro {
-    format("Intro")
+    format("This island is beautiful, but not as beautiful as my victory will be! Let’s battle!")
 }
 
 text SacredIslandEast_Text_Lady1_Defeat {
-    format("Defeat")
+    format("How... could I lose?")
 }
 
 text SacredIslandEast_Text_Lady1_PostBattle {
-    format("Post")
+    format("I may have lost this time, but next time, I’ll win with grace and elegance!")
 }

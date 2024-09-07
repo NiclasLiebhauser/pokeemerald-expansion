@@ -8,7 +8,7 @@ SacredCity_House1_Angler::
 # 7 "data/maps/SacredCity_House1/scripts.pory"
 	faceplayer
 # 8 "data/maps/SacredCity_House1/scripts.pory"
-	goto_if_set FLAG_RECEIVED_SUPER_ROD, SacredCity_House1_Angler_2
+	goto_if_unset FLAG_RECEIVED_SUPER_ROD, SacredCity_House1_Angler_2
 # 19 "data/maps/SacredCity_House1/scripts.pory"
 	message SacredCity_House1_Angler_Text_1
 # 20 "data/maps/SacredCity_House1/scripts.pory"

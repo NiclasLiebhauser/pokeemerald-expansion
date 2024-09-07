@@ -98,13 +98,13 @@ InfernoCavern_3F_EventScript_Groudon_2:
 # 64 "data/maps/InfernoCavern_3F/scripts.pory"
 	setvar VAR_LAST_TALKED, 1
 # 65 "data/maps/InfernoCavern_3F/scripts.pory"
-	setwildbattle SPECIES_GROUDON_PRIMAL, 50
+	setwildbattle SPECIES_GROUDON_PRIMAL, 55
 # 66 "data/maps/InfernoCavern_3F/scripts.pory"
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 # 67 "data/maps/InfernoCavern_3F/scripts.pory"
 	setflag FLAG_NO_CATCHING
 # 68 "data/maps/InfernoCavern_3F/scripts.pory"
-	settotemboost B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1, 1, 1
+	settotemboost B_POSITION_OPPONENT_LEFT, 0, 3, 0, 0, 3, 1, 1
 # 69 "data/maps/InfernoCavern_3F/scripts.pory"
 	special BattleSetup_StartLegendaryBattle
 # 70 "data/maps/InfernoCavern_3F/scripts.pory"

@@ -673,7 +673,8 @@
     "SacredCity_House1",
     "SacredCity_House2",
     "SacredCity_PokemonCenter",
-    "SacredCity_PokemonMart"
+    "SacredCity_PokemonMart",
+    "SacredCity_House3"
   ],
   "gMapGroup_SacredMountainDungeon": [
     "SacredMountain_1F",

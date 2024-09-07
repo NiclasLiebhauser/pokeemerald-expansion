@@ -62,10 +62,10 @@ script InfernoCavern_3F_EventScript_Groudon {
         delay(40)
         waitmoncry
         setvar(VAR_LAST_TALKED, LOCALID_GROUDON)
-        setwildbattle(SPECIES_GROUDON_PRIMAL, 50)
+        setwildbattle(SPECIES_GROUDON_PRIMAL, 55)
         setflag(FLAG_SYS_CTRL_OBJ_DELETE)
         setflag(FLAG_NO_CATCHING)
-        settotemboost(B_POSITION_OPPONENT_LEFT, 1, 1, 1, 1, 1, 1, 1)
+        settotemboost(B_POSITION_OPPONENT_LEFT, 0, 3, 0, 0, 3, 1, 1)
         special(BattleSetup_StartLegendaryBattle)
         waitstate
         clearflag(FLAG_SYS_CTRL_OBJ_DELETE)

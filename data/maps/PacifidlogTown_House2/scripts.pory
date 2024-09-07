@@ -7,7 +7,6 @@ script EventScript_Fortune_Teller {
     showmoneybox(0, 0)
     msgbox(format("I am the local fortune teller. Should I tell your fortune for ¥50?"), MSGBOX_YESNO)
     waitmessage
-    hidemoneybox
 
     if(var(VAR_RESULT) == YES)
     {
@@ -128,13 +127,13 @@ script EventScript_Tell_Fortune_WhereToGo {
 
 script EventScript_Tell_Fortune_Money {
     getmondexentry(SPECIES_MAGIKARP, GET_SEEN)
-    if(!flag(FLAG_RECEIVED_OLD_ROD))
+    if(!flag(FLAG_PACIFIDLOGTOWN_DELIVERED_MILK))
     {
         message(format("There is a fisherman in PACIFIDLOG TOWN the spirits want you to help him. For he will also help you.\p"))
     }
     elif(var(VAR_RESULT) == TRUE)
     {
-        message(format("There is a common type of water POKéMON which the someone seeks. Learn of that species whereabouts."))
+        message(format("There is a common type of carp POKéMON which the someone seeks. Learn of that species whereabouts.\p"))
     }
     else
     {
@@ -162,7 +161,7 @@ script EventScript_Tell_Fortune_Evolution {
 script EventScript_Tell_Fortune_Training {
     if(flag(FLAG_PLAYER_CAN_USE_CUT))
     {
-        message(format("Seek out the north-western corner of the forest on SACRED ISLAND it will be the ideal spot for training.\p"))
+        message(format("Seek out the north-western corner of the dense forest on SACRED ISLAND it will be the ideal spot for training.\p"))
     }
     else
     {

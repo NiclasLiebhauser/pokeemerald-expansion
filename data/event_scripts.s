@@ -1214,3 +1214,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/SacredCity_PokemonCenter/scripts.inc"
 
 	.include "data/maps/SacredCity_PokemonMart/scripts.inc"
+
+	.include "data/maps/SacredCity_House3/scripts.inc"

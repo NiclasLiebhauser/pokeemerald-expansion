@@ -109,7 +109,7 @@ PacifidlogTown_House1_EventScript_Boy_ThankYou_2:
 # 69 "data/maps/PacifidlogTown_House1/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
 # 70 "data/maps/PacifidlogTown_House1/scripts.pory"
-	giveitem ITEM_PEARL_STRING
+	giveitem ITEM_GOLD_BOTTLE_CAP
 # 71 "data/maps/PacifidlogTown_House1/scripts.pory"
 	waitfanfare
 	goto PacifidlogTown_House1_EventScript_Boy_ThankYou_1

@@ -8771,7 +8771,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 35,
         .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_STEEL, TYPE_PSYCHIC),
-        .catchRate = 3,
+        .catchRate = 9,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 103,
         .evYield_Defense = 1,
         .itemRare = ITEM_METAL_COAT,
@@ -8827,7 +8827,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 55,
         .baseSpDefense = 80,
         .types = MON_TYPES(TYPE_STEEL, TYPE_PSYCHIC),
-        .catchRate = 3,
+        .catchRate = 9,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 147 : 153,
         .evYield_Defense = 2,
         .itemRare = ITEM_METAL_COAT,
@@ -8881,7 +8881,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpAttack  = 95,
         .baseSpDefense = 90,
         .types = MON_TYPES(TYPE_STEEL, TYPE_PSYCHIC),
-        .catchRate = 3,
+        .catchRate = 9,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 300,
     #elif P_UPDATED_EXP_YIELDS >= GEN_5

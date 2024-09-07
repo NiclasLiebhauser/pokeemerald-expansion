@@ -120,7 +120,7 @@
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_MUDKIP"
+                "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 20,
@@ -1297,7 +1297,7 @@
           "map": "MAP_UNDERWATER_ROUTE205",
           "base_label": "gUnderwater_Route2050",
           "water_mons": {
-            "encounter_rate": 4,
+            "encounter_rate": 6,
             "mons": [
               {
                 "min_level": 50,
@@ -1331,7 +1331,7 @@
           "map": "MAP_UNDERWATER_ROUTE206",
           "base_label": "gUnderwater_Route2060",
           "water_mons": {
-            "encounter_rate": 4,
+            "encounter_rate": 6,
             "mons": [
               {
                 "min_level": 50,

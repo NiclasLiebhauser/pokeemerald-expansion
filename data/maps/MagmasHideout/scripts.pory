@@ -59,6 +59,16 @@ script MagmasHideout_EventScript_StrengthGrunt{
     end
 }
 
+script MagmasHideout_EventScript_MagmaGruntBlock {
+    lock
+    faceplayer
+
+    msgbox(format("You can't pass here. Order from the boss.\nAsk him if you wanna pass."), MSGBOX_NPC)
+
+    release
+    end
+}
+
 script MagmasHideout_EventScript_Crow {
     lock
     faceplayer

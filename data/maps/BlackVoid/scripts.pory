@@ -112,11 +112,11 @@ script BlackVoid_EventScript_WarpIntoMap {
 }
 
 text BlackVoid_Text_Intro {
-    format("Intro\p")
+    format("To save the world your existence has spontaneously come into being.\pWhen creating you our god had asked himself various questions, like...\p")
 }
 
 text BlackVoid_Text_Outro {
-    format("Outro\p")
+    format("Be on your way to save this timeline.\pMy servant will await you at the end of the time tunnel.\p")
 }
 
 
@@ -133,37 +133,37 @@ text BlackVoid_Text_WhatIsMotivation {
 }
 
 text BlackVoid_Text_Comment_Kanto {
-    format("KANTO\p")
+    format("A region rich in history and tradition, Kanto is home to some of the most iconic creatures and towns.\pKnown for its diversity in geography, from forests to caves, it hosts the first Pokémon League in the series.\p")
 }
 
 text BlackVoid_Text_Comment_Johto {
-    format("JOHTO\p")
+    format("A region steeped in mythology and ancient lore.\pIt features serene landscapes and a strong connection to nature, with landmarks like the Bell Tower and Ruins of Alph.\p")
 }
 
 text BlackVoid_Text_Comment_Hoenn {
-    format("HOENN\p")
+    format("A tropical region with a variety of climates, Hoenn is characterized by its islands, rainforests, and volcanoes.\pIts unique terrain promotes environmental themes, and it boasts legendary Pokémon tied to land, sea, and sky.\p")
 }
 
 text BlackVoid_Text_Comment_Calm {
-    format("Calm\p")
+    format("Composed and serene, maintaining a sense of peace and control, even in stressful or uncertain situations.\p")
 }
 
 text BlackVoid_Text_Comment_Excited {
-    format("Excited\p")
+    format("Enthusiastic and full of energy, often eager and looking forward to upcoming events or experiences.\p")
 }
 
 text BlackVoid_Text_Comment_Joyful {
-    format("Joyful\p")
+    format("Exuding happiness and delight, often radiating positivity and contentment in their interactions and outlook on life.\p")
 }
 
 text BlackVoid_Text_Comment_Power {
-    format("Power\p")
+    format("I see you are driven by strength, confidenence, and control over your actions.\p")
 }
 
 text BlackVoid_Text_Comment_Adventure {
-    format("Adventure\p")
+    format("I see you are curios and have a desire for exploration, thriving on new experiences and the excitement of the unknown.\p")
 }
 
 text BlackVoid_Text_Comment_Mysteries {
-    format("Mysteries\p")
+    format("I see you are intrigued by the unknown, fascinated by solving puzzles, uncovering hidden truths, or exploring the enigmatic aspects of life.\p")
 }

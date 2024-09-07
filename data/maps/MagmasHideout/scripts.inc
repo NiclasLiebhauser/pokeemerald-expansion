@@ -83,114 +83,126 @@ MagmasHideout_EventScript_StrengthGrunt_2:
 	goto MagmasHideout_EventScript_StrengthGrunt_1
 
 
-MagmasHideout_EventScript_Crow::
+MagmasHideout_EventScript_MagmaGruntBlock::
 # 63 "data/maps/MagmasHideout/scripts.pory"
 	lock
 # 64 "data/maps/MagmasHideout/scripts.pory"
 	faceplayer
-# 65 "data/maps/MagmasHideout/scripts.pory"
-	message MagmasHideout_EventScript_Crow_Text_0
 # 66 "data/maps/MagmasHideout/scripts.pory"
-	waitmessage
-# 67 "data/maps/MagmasHideout/scripts.pory"
-	pokemart MagmasHideout_Crow
+	msgbox MagmasHideout_EventScript_MagmaGruntBlock_Text_0, MSGBOX_NPC
 # 68 "data/maps/MagmasHideout/scripts.pory"
+	release
+	end
+
+
+MagmasHideout_EventScript_Crow::
+# 73 "data/maps/MagmasHideout/scripts.pory"
+	lock
+# 74 "data/maps/MagmasHideout/scripts.pory"
+	faceplayer
+# 75 "data/maps/MagmasHideout/scripts.pory"
+	message MagmasHideout_EventScript_Crow_Text_0
+# 76 "data/maps/MagmasHideout/scripts.pory"
+	waitmessage
+# 77 "data/maps/MagmasHideout/scripts.pory"
+	pokemart MagmasHideout_Crow
+# 78 "data/maps/MagmasHideout/scripts.pory"
 	msgbox MagmasHideout_EventScript_Crow_Text_1
-# 69 "data/maps/MagmasHideout/scripts.pory"
+# 79 "data/maps/MagmasHideout/scripts.pory"
 	release
 	end
 
 
 MagmasHideout_EventScript_Grunt1::
-# 74 "data/maps/MagmasHideout/scripts.pory"
+# 84 "data/maps/MagmasHideout/scripts.pory"
 	trainerbattle_single TRAINER_MAGMA_GRUNT_MAGMAHQ_1, MagmasHideout_Text_Grunt1_Intro, MagmasHideout_Text_Grunt1_Defeat
-# 75 "data/maps/MagmasHideout/scripts.pory"
+# 85 "data/maps/MagmasHideout/scripts.pory"
 	msgbox MagmasHideout_Text_Grunt1_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 MagmasHideout_EventScript_Grunt2::
-# 79 "data/maps/MagmasHideout/scripts.pory"
+# 89 "data/maps/MagmasHideout/scripts.pory"
 	trainerbattle_single TRAINER_MAGMA_GRUNT_MAGMAHQ_2, MagmasHideout_Text_Grunt2_Intro, MagmasHideout_Text_Grunt2_Defeat
-# 80 "data/maps/MagmasHideout/scripts.pory"
+# 90 "data/maps/MagmasHideout/scripts.pory"
 	msgbox MagmasHideout_Text_Grunt2_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 MagmasHideout_EventScript_Grunt3::
-# 84 "data/maps/MagmasHideout/scripts.pory"
+# 94 "data/maps/MagmasHideout/scripts.pory"
 	trainerbattle_single TRAINER_MAGMA_GRUNT_MAGMAHQ_3, MagmasHideout_Text_Grunt3_Intro, MagmasHideout_Text_Grunt3_Defeat
-# 85 "data/maps/MagmasHideout/scripts.pory"
+# 95 "data/maps/MagmasHideout/scripts.pory"
 	msgbox MagmasHideout_Text_Grunt3_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 MagmasHideout_EventScript_Grunt4::
-# 89 "data/maps/MagmasHideout/scripts.pory"
+# 99 "data/maps/MagmasHideout/scripts.pory"
 	trainerbattle_single TRAINER_MAGMA_GRUNT_MAGMAHQ_4, MagmasHideout_Text_Grunt4_Intro, MagmasHideout_Text_Grunt4_Defeat
-# 90 "data/maps/MagmasHideout/scripts.pory"
+# 100 "data/maps/MagmasHideout/scripts.pory"
 	msgbox MagmasHideout_Text_Grunt4_PostBattle, MSGBOX_AUTOCLOSE
 	return
 
 
 	.align 2
-# 141 "data/maps/MagmasHideout/scripts.pory"
-MagmasHideout_Crow:
-# 142 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_FIRE_STONE
-# 143 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_LEAF_STONE
-# 144 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_ICE_STONE
-# 145 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_WATER_STONE
-# 146 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_THUNDER_STONE
-# 147 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_SUN_STONE
-# 148 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_DAWN_STONE
-# 149 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_DUSK_STONE
-# 150 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_SHINY_STONE
 # 151 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_DEEP_SEA_SCALE
+MagmasHideout_Crow:
 # 152 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_DEEP_SEA_TOOTH
+	.2byte ITEM_FIRE_STONE
 # 153 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_GALARICA_CUFF
+	.2byte ITEM_LEAF_STONE
 # 154 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_GALARICA_WREATH
+	.2byte ITEM_ICE_STONE
 # 155 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_ELECTIRIZER
+	.2byte ITEM_WATER_STONE
 # 156 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_KINGS_ROCK
+	.2byte ITEM_THUNDER_STONE
 # 157 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_LINKING_CORD
+	.2byte ITEM_SUN_STONE
 # 158 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_MAGMARIZER
+	.2byte ITEM_DAWN_STONE
 # 159 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_METAL_COAT
+	.2byte ITEM_DUSK_STONE
 # 160 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_PROTECTOR
+	.2byte ITEM_SHINY_STONE
 # 161 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_RAZOR_CLAW
+	.2byte ITEM_DEEP_SEA_SCALE
 # 162 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_RAZOR_FANG
+	.2byte ITEM_DEEP_SEA_TOOTH
 # 163 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_REAPER_CLOTH
+	.2byte ITEM_GALARICA_CUFF
 # 164 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_UPGRADE
+	.2byte ITEM_GALARICA_WREATH
 # 165 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_PRISM_SCALE
+	.2byte ITEM_ELECTIRIZER
 # 166 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_PEAT_BLOCK
+	.2byte ITEM_KINGS_ROCK
 # 167 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_DRAGON_SCALE
+	.2byte ITEM_LINKING_CORD
 # 168 "data/maps/MagmasHideout/scripts.pory"
-	.2byte ITEM_BLACK_AUGURITE
+	.2byte ITEM_MAGMARIZER
 # 169 "data/maps/MagmasHideout/scripts.pory"
+	.2byte ITEM_METAL_COAT
+# 170 "data/maps/MagmasHideout/scripts.pory"
+	.2byte ITEM_PROTECTOR
+# 171 "data/maps/MagmasHideout/scripts.pory"
+	.2byte ITEM_RAZOR_CLAW
+# 172 "data/maps/MagmasHideout/scripts.pory"
+	.2byte ITEM_RAZOR_FANG
+# 173 "data/maps/MagmasHideout/scripts.pory"
+	.2byte ITEM_REAPER_CLOTH
+# 174 "data/maps/MagmasHideout/scripts.pory"
+	.2byte ITEM_UPGRADE
+# 175 "data/maps/MagmasHideout/scripts.pory"
+	.2byte ITEM_PRISM_SCALE
+# 176 "data/maps/MagmasHideout/scripts.pory"
+	.2byte ITEM_PEAT_BLOCK
+# 177 "data/maps/MagmasHideout/scripts.pory"
+	.2byte ITEM_DRAGON_SCALE
+# 178 "data/maps/MagmasHideout/scripts.pory"
+	.2byte ITEM_BLACK_AUGURITE
+# 179 "data/maps/MagmasHideout/scripts.pory"
 	.2byte ITEM_DUBIOUS_DISC
 	.2byte ITEM_NONE
 
@@ -217,13 +229,19 @@ MagmasHideout_EventScript_StrengthGrunt_Text_2:
 	.string "Take it. I don't want it anymore.\p"
 	.string "$"
 
+MagmasHideout_EventScript_MagmaGruntBlock_Text_0:
+# 66 "data/maps/MagmasHideout/scripts.pory"
+	.string "You can't pass here. Order from the\n"
+	.string "boss.\n"
+	.string "Ask him if you wanna pass.$"
+
 MagmasHideout_EventScript_Crow_Text_0:
-# 65 "data/maps/MagmasHideout/scripts.pory"
+# 75 "data/maps/MagmasHideout/scripts.pory"
 	.string "Hey, they call me Crow because I like\n"
 	.string "shiny stuff. Wanna buy something?$"
 
 MagmasHideout_EventScript_Crow_Text_1:
-# 68 "data/maps/MagmasHideout/scripts.pory"
+# 78 "data/maps/MagmasHideout/scripts.pory"
 	.string "Come by from time to time.$"
 
 MagmasHideout_Text_StrengthMachine::
@@ -231,59 +249,59 @@ MagmasHideout_Text_StrengthMachine::
 	.string "Obtained STRENGTH MACHINE!$"
 
 MagmasHideout_Text_Grunt1_Intro::
-# 93 "data/maps/MagmasHideout/scripts.pory"
+# 103 "data/maps/MagmasHideout/scripts.pory"
 	.string "You’ve got a lot of nerve coming into our\n"
 	.string "hideout! Let’s see how far that gets\l"
 	.string "you!$"
 
 MagmasHideout_Text_Grunt1_Defeat::
-# 97 "data/maps/MagmasHideout/scripts.pory"
+# 107 "data/maps/MagmasHideout/scripts.pory"
 	.string "Impossible... how could I lose in our own\n"
 	.string "base?$"
 
 MagmasHideout_Text_Grunt1_PostBattle::
-# 101 "data/maps/MagmasHideout/scripts.pory"
+# 111 "data/maps/MagmasHideout/scripts.pory"
 	.string "Don’t get too comfortable. Team Magma\n"
 	.string "will rise again!$"
 
 MagmasHideout_Text_Grunt2_Intro::
-# 105 "data/maps/MagmasHideout/scripts.pory"
+# 115 "data/maps/MagmasHideout/scripts.pory"
 	.string "Intruders aren’t welcome here! Prepare\n"
 	.string "to be scorched!$"
 
 MagmasHideout_Text_Grunt2_Defeat::
-# 109 "data/maps/MagmasHideout/scripts.pory"
+# 119 "data/maps/MagmasHideout/scripts.pory"
 	.string "No way... I’m burning out...$"
 
 MagmasHideout_Text_Grunt2_PostBattle::
-# 113 "data/maps/MagmasHideout/scripts.pory"
+# 123 "data/maps/MagmasHideout/scripts.pory"
 	.string "I won’t let this defeat stand! Next time,\n"
 	.string "you’ll feel the full heat!$"
 
 MagmasHideout_Text_Grunt3_Intro::
-# 117 "data/maps/MagmasHideout/scripts.pory"
+# 127 "data/maps/MagmasHideout/scripts.pory"
 	.string "You’re not going any further! I’ll make\n"
 	.string "sure of it!$"
 
 MagmasHideout_Text_Grunt3_Defeat::
-# 121 "data/maps/MagmasHideout/scripts.pory"
+# 131 "data/maps/MagmasHideout/scripts.pory"
 	.string "Beaten... in our own stronghold?$"
 
 MagmasHideout_Text_Grunt3_PostBattle::
-# 125 "data/maps/MagmasHideout/scripts.pory"
+# 135 "data/maps/MagmasHideout/scripts.pory"
 	.string "This isn’t over! Team Magma’s power will\n"
 	.string "engulf you next time!$"
 
 MagmasHideout_Text_Grunt4_Intro::
-# 129 "data/maps/MagmasHideout/scripts.pory"
+# 139 "data/maps/MagmasHideout/scripts.pory"
 	.string "You’re deep in our territory now! You\n"
 	.string "won’t make it out unscathed!$"
 
 MagmasHideout_Text_Grunt4_Defeat::
-# 133 "data/maps/MagmasHideout/scripts.pory"
+# 143 "data/maps/MagmasHideout/scripts.pory"
 	.string "How... how could this happen?$"
 
 MagmasHideout_Text_Grunt4_PostBattle::
-# 137 "data/maps/MagmasHideout/scripts.pory"
+# 147 "data/maps/MagmasHideout/scripts.pory"
 	.string "We may have lost this battle, but the\n"
 	.string "fire of Team Magma never dies!$"
