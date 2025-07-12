@@ -165,18 +165,28 @@ string generate_map_header_text(Json map_data, Json layouts_data) {
          << "\t.byte "  << json_to_string(map_data, "weather") << "\n"
          << "\t.byte "  << json_to_string(map_data, "map_type") << "\n";
 
-    if (version != "firered")
+    if (version != "firered" && version != "emerald")
         text << "\t.2byte 0\n";
 
     if (version == "ruby")
         text << "\t.byte " << json_to_string(map_data, "show_map_name") << "\n";
-    else if (version == "emerald" || version == "firered")
+    else if (version == "emerald" || version == "firered") {
         text << "\tmap_header_flags "
              << "allow_cycling=" << json_to_string(map_data, "allow_cycling") << ", "
              << "allow_escaping=" << json_to_string(map_data, "allow_escaping") << ", "
              << "allow_running=" << json_to_string(map_data, "allow_running") << ", "
-             << "show_map_name=" << json_to_string(map_data, "show_map_name") << "\n";
-
+             << "show_map_name=" << json_to_string(map_data, "show_map_name") << ", "
+             << "DREAM_MAP_GROUP=";
+        if (map_data.object_items().find("DREAM_MAP_GROUP") != map_data.object_items().end())
+            text << json_to_string(map_data, "DREAM_MAP_GROUP") << ", ";
+        else
+            text << "0, ";
+        text << "DREAM_MAP_ID=";
+        if (map_data.object_items().find("DREAM_MAP_ID") != map_data.object_items().end())
+            text << json_to_string(map_data, "DREAM_MAP_ID") << "\n";
+        else
+            text << "0\n";
+    }
     if (version == "firered")
         text << "\t.byte " << json_to_string(map_data, "floor_number") << "\n";
 

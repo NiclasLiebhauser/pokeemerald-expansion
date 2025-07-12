@@ -1,6 +1,10 @@
 #ifndef GUARD_FIELD_PLAYER_AVATAR_H
 #define GUARD_FIELD_PLAYER_AVATAR_H
 
+#include "gba/types.h"
+#include "global.h"
+#include "global.fieldmap.h"
+
 void PlayerStep(u8 direction, u16 newKeys, u16 heldKeys);
 bool8 TryDoMetatileBehaviorForcedMovement();
 void ClearPlayerAvatarInfo(void);
