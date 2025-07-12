@@ -1,3 +1,4 @@
+#include "aqua_comp/hooks.h"
 #include "global.h"
 #include "new_game.h"
 #include "random.h"
@@ -213,6 +214,8 @@ void NewGameInitData(void)
     ResetItemFlags();
     ResetDexNav();
     ClearFollowerNPCData();
+
+    aqua_comp_init_new_game();
 }
 
 static void ResetMiniGamesRecords(void)
