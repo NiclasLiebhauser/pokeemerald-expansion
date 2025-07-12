@@ -839,7 +839,7 @@ const struct Tileset gTileset_Nightshade =
     .palettes = gTilesetPalettes_Nightshade,
     .metatiles = gMetatiles_Nightshade,
     .metatileAttributes = gMetatileAttributes_Nightshade,
-    .callback = NULL,
+    .callback = InitTilesetAnim_Nightshade,
 };
 
 const struct Tileset gTileset_Nightshade_Horror =
@@ -850,5 +850,5 @@ const struct Tileset gTileset_Nightshade_Horror =
     .palettes = gTilesetPalettes_Nightshade_Horror,
     .metatiles = gMetatiles_Nightshade_Horror,
     .metatileAttributes = gMetatileAttributes_Nightshade_Horror,
-    .callback = NULL,
+    .callback = InitTilesetAnim_Nightshade_Horror,
 };
