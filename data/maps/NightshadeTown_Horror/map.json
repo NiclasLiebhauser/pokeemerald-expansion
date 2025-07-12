@@ -1,7 +1,7 @@
 {
-  "id": "MAP_NIGHTSHADE_TOWN",
-  "name": "NightshadeTown",
-  "layout": "LAYOUT_NIGHTSHADE_TOWN",
+  "id": "MAP_NIGHTSHADE_TOWN_HORROR",
+  "name": "NightshadeTown_Horror",
+  "layout": "LAYOUT_NIGHTSHADE_TOWN_HORROR",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_NIGHTSHADE_TOWN",
   "requires_flash": false,
@@ -18,5 +18,5 @@
   "coord_events": [],
   "bg_events": [],
   "DREAM_MAP_GROUP": 0,
-  "DREAM_MAP_ID": 58
+  "DREAM_MAP_ID": 57
 }
