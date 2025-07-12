@@ -8,6 +8,7 @@
 #include "constants/hold_effects.h"
 #include "constants/moves.h"
 #include "constants/contest.h"
+#include "constants/pokemon.h"
 
 // The Gen. 4+ contest data comes from urpg's contest movedex.
 
@@ -21135,6 +21136,24 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             .sheerForceBoost = SHEER_FORCE_BOOST,
         }),
         .battleAnimScript = gBattleAnimMove_MalignantChain,
+    },
+
+    // Team Aqua Competition extension moves
+    [MOVE_DREAM] = {
+        .name = COMPOUND_STRING("Dream"),
+        .description = COMPOUND_STRING(
+            "Dream and heals or hurt\n"
+            "depending on mental state."
+        ),
+        .effect = EFFECT_DO_NOTHING,
+        .power = 1,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_SleepTalk,
     },
 
     // Z-Moves

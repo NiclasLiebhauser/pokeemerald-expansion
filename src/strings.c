@@ -321,6 +321,7 @@ const u8 gText_ChoosePokemonCancel[] = _("Choose POKéMON or CANCEL.");
 const u8 gText_ChoosePokemonConfirm[] = _("Choose POKéMON and confirm.");
 const u8 gText_SendWhichMonToPC[] = _("Send which POKéMON to the PC?");
 const u8 gText_MoveItemWhere[] = _("Move item to where?");
+const u8 gText_NoGoodSleepingPlace[] = _("This is not a good place to rest.");
 const u8 gText_XsYAnd[] = _("{STR_VAR_1}'s {STR_VAR_2} and\n");
 const u8 gText_XsYWereSwapped[] = _("{STR_VAR_1}'s {STR_VAR_2} were swapped!{PAUSE_UNTIL_PRESS}");
 const u8 gText_EnjoyCycling[] = _("Let's enjoy cycling!");

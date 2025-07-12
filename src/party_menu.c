@@ -1,3 +1,5 @@
+#include "aqua_comp/hooks.h"
+
 #include "global.h"
 #include "malloc.h"
 #include "battle.h"
@@ -149,6 +151,7 @@ enum {
 #if OW_DEFOG_FIELD_MOVE == TRUE
     FIELD_MOVE_DEFOG,
 #endif
+    FIELD_MOVE_DREAM,
     FIELD_MOVES_COUNT
 };
 
@@ -4023,6 +4026,10 @@ static void CursorCb_FieldMove(u8 taskId)
                 gPartyMenu.exitCallback = CB2_OpenFlyMap;
                 Task_ClosePartyMenu(taskId);
                 break;
+            case FIELD_MOVE_DREAM:
+	        aqua_comp_toggle_dream_mode(taskId);
+                Task_ClosePartyMenu(taskId);
+		break;
             default:
                 gPartyMenu.exitCallback = CB2_ReturnToField;
                 Task_ClosePartyMenu(taskId);
