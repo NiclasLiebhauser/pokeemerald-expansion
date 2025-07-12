@@ -210,3 +210,6 @@ const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/
 
 const u16 gMetatiles_Nightshade[] = INCBIN_U16("data/tilesets/secondary/nightshade/metatiles.bin");
 const u16 gMetatileAttributes_Nightshade[] = INCBIN_U16("data/tilesets/secondary/nightshade/metatile_attributes.bin");
+
+const u16 gMetatiles_Nightshade_Horror[] = INCBIN_U16("data/tilesets/secondary/nightshade_horror/metatiles.bin");
+const u16 gMetatileAttributes_Nightshade_Horror[] = INCBIN_U16("data/tilesets/secondary/nightshade_horror/metatile_attributes.bin");

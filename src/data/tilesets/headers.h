@@ -841,3 +841,14 @@ const struct Tileset gTileset_Nightshade =
     .metatileAttributes = gMetatileAttributes_Nightshade,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Nightshade_Horror =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Nightshade_Horror,
+    .palettes = gTilesetPalettes_Nightshade_Horror,
+    .metatiles = gMetatiles_Nightshade_Horror,
+    .metatileAttributes = gMetatileAttributes_Nightshade_Horror,
+    .callback = NULL,
+};
