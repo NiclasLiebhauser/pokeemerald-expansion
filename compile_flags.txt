@@ -1,0 +1,8 @@
+-iquote
+include
+-Wno-trigraphs
+-Wno-unused-includes
+-DMODERN=1
+-DTESTING=0
+-D__INTELLISENSE__=1
+-std=gnu17
