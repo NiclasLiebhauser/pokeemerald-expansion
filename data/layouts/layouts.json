@@ -4430,6 +4430,26 @@
       "secondary_tileset": "gTileset_Nightshade_Horror",
       "border_filepath": "data/layouts/NightshadeTown_Horror/border.bin",
       "blockdata_filepath": "data/layouts/NightshadeTown_Horror/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIGHTSHADE_TOWN_MART",
+      "name": "NightshadeTown_Mart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/NightshadeTown_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/NightshadeTown_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIGHTSHADE_TOWN_HORROR_MART",
+      "name": "NightshadeTown_Horror_Mart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/NightshadeTown_Horror_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/NightshadeTown_Horror_Mart/map.bin"
     }
   ]
 }

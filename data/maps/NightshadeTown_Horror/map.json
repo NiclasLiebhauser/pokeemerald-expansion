@@ -28,9 +28,18 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 22,
+      "y": 43,
+      "elevation": 0,
+      "dest_map": "MAP_NIGHTSHADE_TOWN_HORROR_MART",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [],
   "bg_events": [],
   "DREAM_MAP_GROUP": 0,
+  "DREAM_MAP_HOUR": 24,
   "DREAM_MAP_ID": 57
 }
