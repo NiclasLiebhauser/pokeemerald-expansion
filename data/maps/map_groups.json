@@ -626,9 +626,11 @@
     "Route124_DivingTreasureHuntersHouse"
   ],
   "gMapGroup_IndoorNightshade": [
-    "NightshadeTown_Mart"
+    "NightshadeTown_Mart",
+    "NightshadeTown_PokemonCenter_1F"
   ],
   "gMapGroup_IndoorNightshade_Horror": [
-    "NightshadeTown_Horror_Mart"
+    "NightshadeTown_Horror_Mart",
+    "NightshadeTown_Horror_PokemonCenter_1F"
   ]
 }

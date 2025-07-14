@@ -1165,3 +1165,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/NightshadeTown_Mart/scripts.inc"
 
 	.include "data/maps/NightshadeTown_Horror_Mart/scripts.inc"
+
+	.include "data/maps/NightshadeTown_Horror_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/NightshadeTown_PokemonCenter_1F/scripts.inc"

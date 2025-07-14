@@ -35,10 +35,18 @@
       "elevation": 0,
       "dest_map": "MAP_NIGHTSHADE_TOWN_MART",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_NIGHTSHADE_TOWN_POKEMON_CENTER_1F",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
   "bg_events": [],
   "DREAM_MAP_GROUP": 0,
+  "DREAM_MAP_HOUR": 12,
   "DREAM_MAP_ID": 58
 }
