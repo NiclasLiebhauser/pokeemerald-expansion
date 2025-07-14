@@ -164,7 +164,10 @@ struct MapHeader
                                     // but the 5 bit sized bitfield is required to match
     /* 0x19 */ u8 DREAM_MAP_GROUP;
     /* 0x1A */ u8 DREAM_MAP_ID;
-    /* 0x1B */ u8 battleType;
+    /* 0x1B */ u8 DREAM_MAP_HOUR;
+    /* 0x1C */ u8 dummy1;
+    /* 0x1C */ u8 dummy2[2];
+    /* 0x1F */ u8 battleType;
 };
 
 

@@ -183,9 +183,14 @@ string generate_map_header_text(Json map_data, Json layouts_data) {
             text << "0, ";
         text << "DREAM_MAP_ID=";
         if (map_data.object_items().find("DREAM_MAP_ID") != map_data.object_items().end())
-            text << json_to_string(map_data, "DREAM_MAP_ID") << "\n";
+            text << json_to_string(map_data, "DREAM_MAP_ID") << ", ";
         else
-            text << "0\n";
+            text << "0, ";
+        text << "DREAM_MAP_HOUR=";
+        if (map_data.object_items().find("DREAM_MAP_HOUR") != map_data.object_items().end())
+            text << json_to_string(map_data, "DREAM_MAP_HOUR") << "\n";
+        else
+            text << "12\n";
     }
     if (version == "firered")
         text << "\t.byte " << json_to_string(map_data, "floor_number") << "\n";
