@@ -63,10 +63,12 @@ static void aqua_comp_dream_cb(void)
 }
 
 static bool8 aqua_comp_valid_dream_loc(const struct MapLayout *map_layout,
+				       const struct MapEvents *map_events,
 				       u16 x, u16 y)
 {
 	u16 block;
 	u8 collision;
+	u16 i;
 
 	if (x < 0 || x >= map_layout->width || y < 0 || y >= map_layout->height)
 		return FALSE;
@@ -75,10 +77,18 @@ static bool8 aqua_comp_valid_dream_loc(const struct MapLayout *map_layout,
 	if (block == MAPGRID_UNDEFINED)
 		return FALSE;
 
+	/* check for impassable terrain */
 	collision = (block & MAPGRID_COLLISION_MASK) >> MAPGRID_COLLISION_SHIFT;
-
 	if (collision != COLLISION_NONE)
 		return FALSE;
+
+	/* check for any object event collissions */
+	for (i = 0; i < map_events->objectEventCount; i++) {
+		const struct ObjectEventTemplate *t = &map_events->objectEvents[i];
+
+		if (t->x == x && t->y == y)
+			return FALSE;
+	}
 
 	return TRUE;
 }
@@ -103,6 +113,7 @@ static bool8 aqua_comp_next_dream_loc(u16 *in_out_x, u16 *in_out_y, u16 *i,
 }
 
 static bool8 aqua_comp_select_dream_loc(const struct MapLayout *map_layout,
+					const struct MapEvents *map_events,
 					u16 *in_out_x, u16 *in_out_y)
 {
 	u16 origin_x = *in_out_x;
@@ -110,7 +121,7 @@ static bool8 aqua_comp_select_dream_loc(const struct MapLayout *map_layout,
 	u16 i = 0;
 
 	while (aqua_comp_next_dream_loc(in_out_x, in_out_y, &i, origin_x, origin_y)) {
-		if (aqua_comp_valid_dream_loc(map_layout, *in_out_x, *in_out_y))
+		if (aqua_comp_valid_dream_loc(map_layout, map_events, *in_out_x, *in_out_y))
 			return TRUE;
 	}
 
@@ -121,6 +132,7 @@ bool8 aqua_comp_set_up_dream_toggle(void)
 {
 	const struct MapHeader *map_header;
 	const struct MapLayout *map_layout;
+	const struct MapEvents *map_events;
 	u8 target_map_group;
 	u8 target_map_id;
 	u16 x;
@@ -128,12 +140,10 @@ bool8 aqua_comp_set_up_dream_toggle(void)
 
 	target_map_group = gMapHeader.DREAM_MAP_GROUP;
 	target_map_id = gMapHeader.DREAM_MAP_ID;
-	if (!target_map_id)
-		return FALSE;
 
 	map_header = Overworld_GetMapHeaderByGroupAndId(
-		MAP_GROUP(MAP_NIGHTSHADE_TOWN),
-		MAP_NUM(MAP_NIGHTSHADE_TOWN));
+		target_map_group, target_map_id);
+	map_events = map_header->events;
 	map_layout = GetMapLayout(map_header->mapLayoutId);
 	if (!map_header || !map_layout)
 		return FALSE;
@@ -141,7 +151,7 @@ bool8 aqua_comp_set_up_dream_toggle(void)
 	x = gSaveBlock1Ptr->pos.x;
 	y = gSaveBlock1Ptr->pos.y;
 
-	if (!aqua_comp_select_dream_loc(map_layout, &x, &y))
+	if (!aqua_comp_select_dream_loc(map_layout, map_events, &x, &y))
 		return FALSE;
 
 	SetWarpDestination(target_map_group, target_map_id,
