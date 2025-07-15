@@ -433,7 +433,10 @@
     "TerraCave_Entrance",
     "TerraCave_End",
     "AlteringCave",
-    "MeteorFalls_StevensCave"
+    "MeteorFalls_StevensCave",
+    "NightmareCavern",
+    "NightmareCavernF1",
+    "NightmareCavernF2"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

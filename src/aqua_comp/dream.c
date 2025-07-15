@@ -98,10 +98,10 @@ static bool8 aqua_comp_next_dream_loc(u16 *in_out_x, u16 *in_out_y, u16 *i,
 {
 	static const struct Coords8 c[] = {
 		{0, 0}, {-1, 0}, {1, 0}, {0, -1}, {0, 1},
-		{-1, -1}, {1, -1}, {1, -1}, {1, 1},
+		{-1, -1}, {1, -1}, {-1, 1}, {1, 1},
 	};
 
-	if (*i > ARRAY_COUNT(c))
+	if (*i >= ARRAY_COUNT(c))
 		return FALSE;
 
 	*in_out_x = (s16)origin_x + c[*i].x;
@@ -140,6 +140,9 @@ bool8 aqua_comp_set_up_dream_toggle(void)
 
 	target_map_group = gMapHeader.DREAM_MAP_GROUP;
 	target_map_id = gMapHeader.DREAM_MAP_ID;
+
+	if (target_map_group == 0xff || target_map_id == 0xff)
+		return FALSE;
 
 	map_header = Overworld_GetMapHeaderByGroupAndId(
 		target_map_group, target_map_id);

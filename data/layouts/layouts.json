@@ -4470,6 +4470,36 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/NightshadeTown_PokemonCenter_1F/border.bin",
       "blockdata_filepath": "data/layouts/NightshadeTown_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIGHTMARE_CAVERN_F1",
+      "name": "NightmareCavernF1_Layout",
+      "width": 18,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/NightmareCavernF1/border.bin",
+      "blockdata_filepath": "data/layouts/NightmareCavernF1/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIGHTMARE_CAVERN",
+      "name": "NightmareCavern_Layout",
+      "width": 30,
+      "height": 35,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/NightmareCavern/border.bin",
+      "blockdata_filepath": "data/layouts/NightmareCavern/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIGHTMARE_CAVERN_F2",
+      "name": "NightmareCavernF2_Layout",
+      "width": 32,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/NightmareCavernF2/border.bin",
+      "blockdata_filepath": "data/layouts/NightmareCavernF2/map.bin"
     }
   ]
 }
