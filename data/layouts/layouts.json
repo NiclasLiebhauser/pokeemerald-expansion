@@ -4474,7 +4474,7 @@
     {
       "id": "LAYOUT_NIGHTMARE_CAVERN_F1",
       "name": "NightmareCavernF1_Layout",
-      "width": 18,
+      "width": 27,
       "height": 12,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
@@ -4484,7 +4484,7 @@
     {
       "id": "LAYOUT_NIGHTMARE_CAVERN",
       "name": "NightmareCavern_Layout",
-      "width": 30,
+      "width": 32,
       "height": 35,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
@@ -4495,11 +4495,31 @@
       "id": "LAYOUT_NIGHTMARE_CAVERN_F2",
       "name": "NightmareCavernF2_Layout",
       "width": 32,
-      "height": 26,
+      "height": 32,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/NightmareCavernF2/border.bin",
       "blockdata_filepath": "data/layouts/NightmareCavernF2/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIGHTSHADE_OUTKIRTS",
+      "name": "NightshadeOutkirts_Layout",
+      "width": 36,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Nightshade",
+      "border_filepath": "data/layouts/NightshadeOutkirts/border.bin",
+      "blockdata_filepath": "data/layouts/NightshadeOutkirts/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIGHTSHADE_OUTSKIRTS_HORROR",
+      "name": "NightshadeOutskirtsHorror_Layout",
+      "width": 36,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Nightshade_Horror",
+      "border_filepath": "data/layouts/NightshadeOutskirtsHorror/border.bin",
+      "blockdata_filepath": "data/layouts/NightshadeOutskirtsHorror/map.bin"
     }
   ]
 }

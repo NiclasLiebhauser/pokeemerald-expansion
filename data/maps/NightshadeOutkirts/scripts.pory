@@ -1,0 +1,177 @@
+raw `
+NightshadeOutkirts_MapScripts::
+	.byte 0
+
+NightshadeOutskirts_EventScript_Tim::
+	lock
+	faceplayer
+	goto_if_set FLAG_CUT_FOUND, NightshadeOutskirts_Text_Got_Cut
+	goto_if_set FLAG_TIM_INTRODUCED, NightshadeOutskirts_Text_Tim_Cut
+	msgbox NightshadeOutskirts_Text_Tim_Introduction, MSGBOX_DEFAULT
+	closemessage
+	turnobject LOCALID_TIM, DIR_NORTH
+	special SpawnCameraObject
+	applymovement LOCALID_CAMERA, NightshadeOutskirts_Pan_To_Cut
+	waitmovement 0
+	msgbox NightshadeOutskirts_Text_Tim_Over_There, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_CAMERA, NightshadeOutskirts_Pan_From_Cut
+	waitmovement 0
+	special RemoveCameraObject
+	turnobject LOCALID_TIM, DIR_SOUTH
+	setflag FLAG_TIM_INTRODUCED
+	end
+
+NightshadeOutskirts_Text_Tim_Cut::
+	msgbox NightshadeOutskirts_Text_Tim_Needs_Cut, MSGBOX_DEFAULT
+	closemessage
+	end
+
+NightshadeOutskirts_Text_Got_Cut::
+	applymovement LOCALID_TIM, Common_Movement_Heart_Emote
+	waitmovement 0
+	goto_if_unset FLAG_TIM_INTRODUCED, NightshadeOutskirts_Text_Cut_Before_Introduction
+	msgbox NightshadeOutskirts_Text_Tim_Got_Cut, MSGBOX_DEFAULT
+	closemessage
+	delay 30
+NightshadeOutskirts_No_Text_Got_Cut::
+	goto_if_unset FLAG_CUT_BUSH1_PERM, NightshadeOutskirts_Text_Cut_And_Reward
+	goto_if_unset FLAG_CUT_BUSH2_PERM, NightshadeOutskirts_Text_Cut_And_Reward
+	goto NightshadeOutskirts_Text_Cut_Reward
+	end
+
+NightshadeOutskirts_Text_Cut_Before_Introduction::
+	msgbox NightshadeOutskirts_Text_Cut_Before_Intro, MSGBOX_DEFAULT
+	closemessage
+	delay 40
+	setflag FLAG_TIM_INTRODUCED
+	goto NightshadeOutskirts_No_Text_Got_Cut
+	end
+
+NightshadeOutskirts_Text_Cut_And_Reward::
+	msgbox NightshadeOutskirts_Text_Tim_Uses_Cut, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_TIM, NightshadeOutskirts_Text_Cut_And_Reward_Init_Cut
+	delay 10
+	waitmovement 0
+	applymovement LOCALID_BUSH1, Movement_CutTreeDown
+	applymovement LOCALID_BUSH2, Movement_CutTreeDown
+	waitmovement 0
+	setflag FLAG_CUT_BUSH1_PERM
+	setflag FLAG_CUT_BUSH2_PERM
+	removeobject LOCALID_BUSH1
+	removeobject LOCALID_BUSH2
+	faceplayer
+	goto NightshadeOutskirts_Tim_Quest_Complete
+	end
+
+NightshadeOutskirts_Text_Cut_Reward::
+	msgbox NightshadeOutskirts_Text_Tim_Reward, MSGBOX_DEFAULT
+	closemessage
+	goto NightshadeOutskirts_Tim_Quest_Complete
+	end
+
+NightshadeOutskirts_Tim_Quest_Complete::
+	addmoney 500
+	goto_if_eq VAR_FACING, DIR_NORTH, NightshadeOutskirts_Tim_Run_Off_Init1
+	goto NightshadeOutskirts_Tim_Run_Off
+	end
+
+NightshadeOutskirts_Tim_Run_Off_Init1::
+	applymovement LOCALID_TIM, NightshadeOutskirts_Run_Off_Dodge
+	waitmovement 0
+	goto NightshadeOutskirts_Tim_Run_Off
+	end
+
+NightshadeOutskirts_Tim_Run_Off::
+	applymovement LOCALID_TIM, NightshadeOutskirts_Run_off
+	waitmovement 0
+	setflag FLAG_HIDE_TIM_OUTSKIRTS
+	removeobject VAR_LAST_TALKED
+	end
+
+NightshadeOutskirts_Text_Cut_And_Reward_Init_Cut:
+	face_left
+	step_end
+
+NightshadeOutskirts_Pan_To_Cut:
+	walk_slow_diag_northeast
+	walk_slow_diag_northeast
+	walk_slow_diag_northeast
+	walk_slow_diag_northeast
+	walk_slow_diag_northeast
+	walk_slow_diag_northeast
+	walk_slow_diag_northeast
+	walk_slow_diag_northeast
+	walk_slow_diag_northeast
+	step_end
+
+NightshadeOutskirts_Pan_From_Cut:
+	walk_slow_diag_southwest
+	walk_slow_diag_southwest
+	walk_slow_diag_southwest
+	walk_slow_diag_southwest
+	walk_slow_diag_southwest
+	walk_slow_diag_southwest
+	walk_slow_diag_southwest
+	walk_slow_diag_southwest
+	walk_slow_diag_southwest
+	step_end
+
+NightshadeOutskirts_Run_Off_Dodge:
+	walk_fast_right
+	walk_fast_down
+	walk_fast_down
+	walk_fast_left
+	step_end
+
+NightshadeOutskirts_Run_off:
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+NightshadeOutskirts_Text_Tim_Introduction::
+	.string "Hey, I am Tim.\n"
+	.string "Nice to meet you!\p"
+	.string "I recently saw a mysterious creature\n"
+	.string "but it fled into the woods.\p"
+	.string "It reminded me of an ancient being that\n"
+	.string "my grandparents always talked about.\p"
+	.string "There are many bushes and trees in the\n"
+	.string "way.\p"
+	.string "But I lost something needed to get rid\n"
+	.string "of all these obstacles...$"
+
+NightshadeOutskirts_Text_Tim_Over_There::
+	.string "I must have lost it over there...$"
+
+NightshadeOutskirts_Text_Tim_Needs_Cut::
+	.string "Please find it for me.\n"
+	.string "We must hurry!\p"
+	.string "I am too busy with preparations...$"
+
+NightshadeOutskirts_Text_Tim_Got_Cut::
+	.string "Thanks for finding cut.\n"
+	.string "Now I can get to work.$"
+
+NightshadeOutskirts_Text_Cut_Before_Intro::
+	.string "Hey, I am Tim.\n"
+	.string "Nice to meet you!\p"
+	.string "It looks like you already found\n"
+	.string "cut... This makes my life easier!\p"
+	.string "I can go after the mysterious\n"
+	.string "creature I recently saw.$"
+
+NightshadeOutskirts_Text_Tim_Uses_Cut::
+	.string "However, let me free this way\n"
+	.string "for you and I will give you some\p"
+	.string "¥500 as a reward as well.$"
+
+NightshadeOutskirts_Text_Tim_Reward::
+	.string "I will give you ¥500 as a reward.$"
+`

@@ -698,7 +698,7 @@
     },
     {
       "id": "MAPSEC_NIGHTSHADE_TOWN",
-      "name": "NIGHTSHADE TOWN",
+      "name": "NIGHTSHADE",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1710,6 +1710,10 @@
       "y": 4,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_OUTSKIRTS",
+      "name": "OUTSKIRTS"
     }
   ]
 }

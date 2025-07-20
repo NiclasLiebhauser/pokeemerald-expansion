@@ -1,0 +1,14 @@
+raw `
+NightmareCavernF1_MapScripts::
+	.byte 0
+
+NightmareCavernF1_Event_Ancient_Text::
+	msgbox NightmareCavernF1_Ancient_Text, MSGBOX_SIGN
+	end
+
+NightmareCavernF1_Ancient_Text::
+	.string "Cling to the neverending wakeness.\n"
+	.string "Stay clear of the haunting dreams.\p"
+	.string "Divided we enforce madness\n"
+	.string "United we strip the seams.$"
+`

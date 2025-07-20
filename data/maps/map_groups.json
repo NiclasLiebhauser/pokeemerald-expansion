@@ -96,7 +96,9 @@
     "Underwater_Route105",
     "Underwater_Route125",
     "NightshadeTown",
-    "NightshadeTown_Horror"
+    "NightshadeTown_Horror",
+    "NightshadeOutskirtsHorror",
+    "NightshadeOutkirts"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

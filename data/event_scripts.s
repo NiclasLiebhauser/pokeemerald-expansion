@@ -1175,3 +1175,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/NightmareCavern/scripts.inc"
 
 	.include "data/maps/NightmareCavernF2/scripts.inc"
+
+	.include "data/maps/NightshadeOutkirts/scripts.inc"
+
+	.include "data/maps/NightshadeOutskirtsHorror/scripts.inc"

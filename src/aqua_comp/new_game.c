@@ -25,6 +25,9 @@ static void aqua_comp_prepare_startup_team(void) {
 
 	CreateMon(&starter, 10, 10, 10, 10, 10, 10, 10);
 	SetMonMoveSlot(&starter, MOVE_DREAM, 0);
+	SetMonMoveSlot(&starter, MOVE_CUT, 1);
+	SetMonMoveSlot(&starter, MOVE_STRENGTH, 2);
+	SetMonMoveSlot(&starter, MOVE_SURF, 3);
 	GiveMonToPlayer(&starter);
 }
 

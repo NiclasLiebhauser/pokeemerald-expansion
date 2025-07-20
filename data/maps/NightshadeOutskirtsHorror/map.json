@@ -1,0 +1,116 @@
+{
+  "id": "MAP_NIGHTSHADE_OUTSKIRTS_HORROR",
+  "name": "NightshadeOutskirtsHorror",
+  "layout": "LAYOUT_NIGHTSHADE_OUTSKIRTS_HORROR",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_NIGHTSHADE_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_NIGHTSHADE_TOWN_HORROR",
+      "offset": -10,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 5,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_ACRO_BIKE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ACRO_BIKE_FOUND"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 23,
+      "y": 13,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_HM_DIVE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_DIVE_FOUND"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 23,
+      "y": 22,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_HM_SURF",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_SURF_FOUND"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "x": 6,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_StrengthBoulder",
+      "flag": "FLAG_TEMP_1"
+    }
+  ],
+  "warp_events": [
+    {
+      "warp_id": "NIGHTMARE_CAVERN_ENTRY_OUTSKIRTS",
+      "x": 8,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_NIGHTMARE_CAVERN",
+      "dest_warp_id": "NIGHTMARE_CAVERN_EXIT"
+    },
+    {
+      "warp_id": "OUTSKIRTS_TO_NIGHTMARE_CAVERN",
+      "x": 24,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_NIGHTMARE_CAVERN_F2",
+      "dest_warp_id": "NIGHTMARE_CAVERN_TO_OUTSKIRTS"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 20,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "OutskirtsHorror_Script_Greg_House_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "OutskirtsHorror_Script_Greg_House_Closed"
+    }
+  ],
+  "DREAM_MAP_GROUP": 0,
+  "DREAM_MAP_HOUR": 24,
+  "DREAM_MAP_ID": 60
+}

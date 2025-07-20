@@ -1,0 +1,16 @@
+raw `
+NightmareCavern_MapScripts::
+	.byte 0
+
+NightmareCavern_Event_Ancient_Text::
+	msgbox NightmareCavern_Ancient_Text, MSGBOX_SIGN
+	end
+
+NightmareCavern_Ancient_Text::
+	.string "There is a pretty unreadable message\n"
+	.string "carved into the wall. It states:\p"
+	.string "We are... ...prot... ...cave.\n"
+	.string "Dark...ss shall hi... ...ence.\p"
+	.string "...ry of... ...dreams\n"
+	.string "...haunt... ...th.$"
+`

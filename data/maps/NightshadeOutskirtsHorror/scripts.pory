@@ -1,0 +1,22 @@
+raw `
+NightshadeOutskirtsHorror_MapScripts::
+	.byte 0
+
+OutskirtsHorror_Script_Greg_House_Sign::
+	msgbox OutskirtsHorror_Greg_House_Sign, MSGBOX_SIGN
+	end
+
+OutskirtsHorror_Script_Greg_House_Closed::
+	msgbox OutskirtsHorror_Greg_House_Closed_Sign, MSGBOX_AUTOCLOSE
+	end
+
+OutskirtsHorror_Greg_House_Sign:
+	.string "Greg's House\n"
+	.string "Team Lead of Mining Operations$"
+
+OutskirtsHorror_Greg_House_Closed_Sign:
+	.string "The door is locked.\p"
+	.string "It appears like the owner\n"
+	.string "abandoned the building.$"
+
+`

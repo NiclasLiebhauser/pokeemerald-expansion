@@ -1,0 +1,98 @@
+{
+  "id": "MAP_NIGHTSHADE_OUTKIRTS",
+  "name": "NightshadeOutkirts",
+  "layout": "LAYOUT_NIGHTSHADE_OUTKIRTS",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_NIGHTSHADE_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_NIGHTSHADE_TOWN",
+      "offset": -10,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 27,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_HM_CUT",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_CUT_FOUND"
+    },
+    {
+      "local_id": "LOCALID_BUSH1",
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 15,
+      "y": 21,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_CUT_BUSH1_PERM"
+    },
+    {
+      "local_id": "LOCALID_BUSH2",
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 16,
+      "y": 21,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_CUT_BUSH2_PERM"
+    },
+    {
+      "local_id": "LOCALID_TIM",
+      "graphics_id": "OBJ_EVENT_GFX_BRANDON",
+      "x": 17,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NightshadeOutskirts_EventScript_Tim",
+      "flag": "FLAG_HIDE_TIM_OUTSKIRTS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "x": 7,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_StrengthBoulder",
+      "flag": "FLAG_TEMP_1"
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": [],
+  "DREAM_MAP_GROUP": 0,
+  "DREAM_MAP_HOUR": 12,
+  "DREAM_MAP_ID": 59
+}

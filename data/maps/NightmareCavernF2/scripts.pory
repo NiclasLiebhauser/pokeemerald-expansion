@@ -1,0 +1,20 @@
+raw `
+NightmareCavernF2_MapScripts::
+	.byte 0
+
+NightmareCavernF2_Event_Ancient_Text::
+	msgbox NightmareCavernF2_Ancient_Text, MSGBOX_SIGN
+	end
+
+NightmareCavernF2_Event_Sign_Text::
+	msgbox NightmareCavernF2_Sign_Text, MSGBOX_SIGN
+	end
+
+NightmareCavernF2_Ancient_Text::
+	.string "“Protectorate of our Gods”\n"
+	.string "Shelter to the weak.$"
+
+NightmareCavernF2_Sign_Text::
+	.string "“Sacred Hideout”\n"
+	.string "Do not litter or disturb the wildlife.$"
+`
