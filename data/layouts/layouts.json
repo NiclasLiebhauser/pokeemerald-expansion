@@ -4542,24 +4542,24 @@
       "blockdata_filepath": "data/layouts/NightshadeTown_Horror_MansionF3/map.bin"
     },
     {
-      "id": "LAYOUT_NIGHTSCHADE_TOWN_HOT_SPRING_1F",
-      "name": "NightschadeTown_HotSpring_1F_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding",
-      "border_filepath": "data/layouts/NightschadeTown_HotSpring_1F/border.bin",
-      "blockdata_filepath": "data/layouts/NightschadeTown_HotSpring_1F/map.bin"
-    },
-    {
-      "id": "LAYOUT_NIGHTSCHADE_TOWN_HORROR_HOT_SPRING_1F",
-      "name": "NightschadeTown_Horror_HotSpring_1F_Layout",
+      "id": "LAYOUT_NIGHTSHADE_TOWN_HOT_SPRING_1F",
+      "name": "NightshadeTown_HotSpring_1F_Layout",
       "width": 12,
       "height": 8,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
-      "border_filepath": "data/layouts/NightschadeTown_Horror_HotSpring_1F/border.bin",
-      "blockdata_filepath": "data/layouts/NightschadeTown_Horror_HotSpring_1F/map.bin"
+      "border_filepath": "data/layouts/NightshadeTown_HotSpring_1F/border.bin",
+      "blockdata_filepath": "data/layouts/NightshadeTown_HotSpring_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIGHTSHADE_TOWN_HORROR_HOT_SPRING_1F",
+      "name": "NightshadeTown_Horror_HotSpring_1F_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/NightshadeTown_Horror_HotSpring_1F/border.bin",
+      "blockdata_filepath": "data/layouts/NightshadeTown_Horror_HotSpring_1F/map.bin"
     }
   ]
 }
