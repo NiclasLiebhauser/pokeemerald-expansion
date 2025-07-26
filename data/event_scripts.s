@@ -1179,3 +1179,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/NightshadeOutkirts/scripts.inc"
 
 	.include "data/maps/NightshadeOutskirtsHorror/scripts.inc"
+
+	.include "data/maps/NightshadeTown_MansionF1/scripts.inc"
+
+	.include "data/maps/NightshadeTown_Horror_MansionF3/scripts.inc"
