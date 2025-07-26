@@ -16,5 +16,7 @@
   "object_events": [],
   "warp_events": [],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "DREAM_MAP_GROUP": 35,
+  "DREAM_MAP_ID": 5
 }
