@@ -641,7 +641,9 @@
     "NightshadeTown_Inn_2F",
     "NightshadeTown_HouseA_1F",
     "NightshadeTown_HouseB_1F",
-    "NightshadeTown_HouseB_2F"
+    "NightshadeTown_HouseB_2F",
+    "NightshadeTown_Apartments_1F",
+    "NightshadeTown_Apartments_2F"
   ],
   "gMapGroup_IndoorNightshade_Horror": [
     "NightshadeTown_Horror_Mart",
@@ -654,6 +656,8 @@
     "NightshadeTown_Horror_Inn_2F",
     "NightshadeTown_Horror_HouseA_1F",
     "NightshadeTown_Horror_HouseB_1F",
-    "NightshadeTown_Horror_HouseB_2F"
+    "NightshadeTown_Horror_HouseB_2F",
+    "NightshadeTown_Horror_Apartments_1F",
+    "NightshadeTown_Horror_Apartments_2F"
   ]
 }

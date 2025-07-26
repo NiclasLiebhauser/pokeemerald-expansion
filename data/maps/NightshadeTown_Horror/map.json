@@ -117,6 +117,13 @@
       "elevation": 0,
       "dest_map": "MAP_NIGHTSHADE_TOWN_HORROR_HOUSE_B_1F",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_NIGHTSHADE_TOWN_HORROR_APARTMENTS_1F",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
