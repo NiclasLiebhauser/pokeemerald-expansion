@@ -16,15 +16,15 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 5,
-      "y": 7,
+      "x": 2,
+      "y": 12,
       "elevation": 0,
       "dest_map": "MAP_NIGHTSHADE_TOWN",
       "dest_warp_id": "6"
     },
     {
-      "x": 6,
-      "y": 7,
+      "x": 3,
+      "y": 12,
       "elevation": 0,
       "dest_map": "MAP_NIGHTSHADE_TOWN",
       "dest_warp_id": "6"

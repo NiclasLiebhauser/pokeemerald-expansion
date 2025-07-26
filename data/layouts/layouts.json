@@ -4644,8 +4644,8 @@
     {
       "id": "LAYOUT_NIGHTSHADE_TOWN_HOUSE_A_1F",
       "name": "NightshadeTown_HouseA_1F_Layout",
-      "width": 12,
-      "height": 8,
+      "width": 15,
+      "height": 13,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/NightshadeTown_HouseA_1F/border.bin",
@@ -4654,8 +4654,8 @@
     {
       "id": "LAYOUT_NIGHTSHADE_TOWN_HORROR_HOUSE_A_1F",
       "name": "NightshadeTown_Horror_HouseA_1F_Layout",
-      "width": 12,
-      "height": 8,
+      "width": 15,
+      "height": 13,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/NightshadeTown_Horror_HouseA_1F/border.bin",

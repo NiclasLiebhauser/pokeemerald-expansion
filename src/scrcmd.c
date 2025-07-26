@@ -101,6 +101,8 @@ static u8 *const sScriptStringVars[] =
     gStringVar1,
     gStringVar2,
     gStringVar3,
+    gStringVar4,
+    gStringVar5
 };
 
 bool8 ScrCmd_nop(struct ScriptContext *ctx)

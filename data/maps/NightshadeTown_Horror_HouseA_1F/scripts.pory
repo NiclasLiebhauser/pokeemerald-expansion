@@ -1,0 +1,99 @@
+mapscripts NightshadeTown_Horror_HouseA_1F_MapScripts {}
+
+const COLOR_PUZZLE_HINT_ADD_01_MON_01 = 1
+const COLOR_PUZZLE_HINT_ADD_01_MON_02 = 2
+const COLOR_PUZZLE_HINT_ADD_01_MON_03 = 3
+const COLOR_PUZZLE_HINT_SUBTRACT_01_MON_01 = 8
+const COLOR_PUZZLE_HINT_SUBTRACT_01_MON_02 = 6
+const COLOR_PUZZLE_HINT_SUBTRACT_01_MON_03 = 2
+const COLOR_PUZZLE_HINT_MULTIPLY_01_MON_01 = 10
+const COLOR_PUZZLE_HINT_MULTIPLY_01_MON_02 = 5
+const COLOR_PUZZLE_HINT_MULTIPLY_01_MON_03 = 50
+const COLOR_PUZZLE_HINT_DIVIDE_01_MON_01 = 100
+const COLOR_PUZZLE_HINT_DIVIDE_01_MON_02 = 4
+const COLOR_PUZZLE_HINT_DIVIDE_01_MON_03 = 25
+
+script EventScript_Color_Puzzle_Add {
+    lock
+    random(4)
+    switch(var(VAR_RESULT)) {
+        case 0:
+            call(Common_EventScript_Puzzle_Hint_Add_01)
+        case 1:
+            call(Common_EventScript_Puzzle_Hint_Subtract_01)
+        case 2:
+            call(Common_EventScript_Puzzle_Hint_Multiply_01)
+        case 3:
+            call(Common_EventScript_Puzzle_Hint_Divide_01)
+    }
+
+    release
+}
+
+script Common_EventScript_Puzzle_Setup {
+    copyvar(VAR_COLOR_PUZZLE_1, VAR_TEMP_0)
+    copyvar(VAR_COLOR_PUZZLE_2, VAR_TEMP_1)
+    copyvar(VAR_COLOR_PUZZLE_3, VAR_TEMP_2)
+    copyvar(VAR_COLOR_PUZZLE_SOLUTION, VAR_TEMP_3)
+    bufferspeciesname(STR_VAR_1, VAR_COLOR_PUZZLE_1)
+    bufferspeciesname(STR_VAR_2, VAR_COLOR_PUZZLE_2)
+    bufferspeciesname(STR_VAR_3, VAR_COLOR_PUZZLE_3)
+    bufferspeciesname(STR_VAR_5, VAR_COLOR_PUZZLE_SOLUTION)
+    return
+}
+
+script Common_EventScript_Puzzle_Hint_Add_01 {
+    setvar(VAR_TEMP_0, COLOR_PUZZLE_HINT_ADD_01_MON_01)
+    setvar(VAR_TEMP_1, COLOR_PUZZLE_HINT_ADD_01_MON_02)
+    setvar(VAR_TEMP_2, 0)
+    setvar(VAR_TEMP_3, COLOR_PUZZLE_HINT_ADD_01_MON_03)
+    call(Common_EventScript_Puzzle_Setup)
+    msgbox(Common_Text_Color_Puzzle_Hint_Add_01, MSGBOX_DEFAULT)
+    return
+}
+
+script Common_EventScript_Puzzle_Hint_Subtract_01 {
+    setvar(VAR_TEMP_0, COLOR_PUZZLE_HINT_SUBTRACT_01_MON_01)
+    setvar(VAR_TEMP_1, COLOR_PUZZLE_HINT_SUBTRACT_01_MON_02)
+    setvar(VAR_TEMP_2, 0)
+    setvar(VAR_TEMP_3, COLOR_PUZZLE_HINT_SUBTRACT_01_MON_03)
+    call(Common_EventScript_Puzzle_Setup)
+    msgbox(Common_Text_Color_Puzzle_Hint_Subtract_01, MSGBOX_DEFAULT)
+    return
+}
+
+script Common_EventScript_Puzzle_Hint_Multiply_01 {
+    setvar(VAR_TEMP_0, COLOR_PUZZLE_HINT_MULTIPLY_01_MON_01)
+    setvar(VAR_TEMP_1, COLOR_PUZZLE_HINT_MULTIPLY_01_MON_02)
+    setvar(VAR_TEMP_2, 0)
+    setvar(VAR_TEMP_3, COLOR_PUZZLE_HINT_MULTIPLY_01_MON_03)
+    call(Common_EventScript_Puzzle_Setup)
+    msgbox(Common_Text_Color_Puzzle_Hint_Multiply_01, MSGBOX_DEFAULT)
+    return
+}
+
+script Common_EventScript_Puzzle_Hint_Divide_01 {
+    setvar(VAR_TEMP_0, COLOR_PUZZLE_HINT_DIVIDE_01_MON_01)
+    setvar(VAR_TEMP_1, COLOR_PUZZLE_HINT_DIVIDE_01_MON_02)
+    setvar(VAR_TEMP_2, 0)
+    setvar(VAR_TEMP_3, COLOR_PUZZLE_HINT_DIVIDE_01_MON_03)
+    call(Common_EventScript_Puzzle_Setup)
+    msgbox(Common_Text_Color_Puzzle_Hint_Divide_01, MSGBOX_DEFAULT)
+    return
+}
+
+text Common_Text_Color_Puzzle_Hint_Add_01 {
+    format("{COLOR BLUE}{STR_VAR_1} {COLOR BLUE}{STR_VAR_2} {COLOR DARK_GRAY} = {COLOR BLUE}{STR_VAR_5}")
+}
+
+text Common_Text_Color_Puzzle_Hint_Subtract_01 {
+    format("{COLOR BLUE}{STR_VAR_1} {COLOR GREEN}{STR_VAR_2} {COLOR DARK_GRAY} = {COLOR BLUE}{STR_VAR_5}")
+}
+
+text Common_Text_Color_Puzzle_Hint_Multiply_01 {
+    format("{COLOR BLUE}{STR_VAR_1} {COLOR RED}{STR_VAR_2} {COLOR DARK_GRAY} = {COLOR BLUE}{STR_VAR_5}")
+}
+
+text Common_Text_Color_Puzzle_Hint_Divide_01 {
+    format("{COLOR BLUE}{STR_VAR_1} {COLOR LIGHT_RED}{STR_VAR_2} {COLOR DARK_GRAY} = {COLOR BLUE}{STR_VAR_5}")
+}
