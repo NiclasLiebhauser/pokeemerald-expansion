@@ -4640,6 +4640,26 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/NightshadeTown_Horror_Inn_2F/border.bin",
       "blockdata_filepath": "data/layouts/NightshadeTown_Horror_Inn_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIGHTSHADE_TOWN_HOUSE_A_1F",
+      "name": "NightshadeTown_HouseA_1F_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/NightshadeTown_HouseA_1F/border.bin",
+      "blockdata_filepath": "data/layouts/NightshadeTown_HouseA_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIGHTSHADE_TOWN_HORROR_HOUSE_A_1F",
+      "name": "NightshadeTown_Horror_HouseA_1F_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/NightshadeTown_Horror_HouseA_1F/border.bin",
+      "blockdata_filepath": "data/layouts/NightshadeTown_Horror_HouseA_1F/map.bin"
     }
   ]
 }
