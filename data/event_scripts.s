@@ -1207,3 +1207,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/NightshadeTown_HouseA_1F/scripts.inc"
 
 	.include "data/maps/NightshadeTown_Horror_HouseA_1F/scripts.inc"
+
+	.include "data/maps/NightshadeTown_HouseB_1F/scripts.inc"
+
+	.include "data/maps/NightshadeTown_HouseB_2F/scripts.inc"
+
+	.include "data/maps/NightshadeTown_Horror_HouseB_2F/scripts.inc"
+
+	.include "data/maps/NightshadeTown_Horror_HouseB_1F/scripts.inc"
