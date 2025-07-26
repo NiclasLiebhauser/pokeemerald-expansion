@@ -1,7 +1,7 @@
 {
-  "id": "MAP_NIGHTSHADE_TOWN_MANSION_F1",
-  "name": "NightshadeTown_MansionF1",
-  "layout": "LAYOUT_NIGHTSHADE_TOWN_MANSION_F1",
+  "id": "MAP_NIGHTSHADE_TOWN_MANSION_F3",
+  "name": "NightshadeTown_MansionF3",
+  "layout": "LAYOUT_NIGHTSHADE_TOWN_MANSION_F3",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_NIGHTSHADE_TOWN",
   "requires_flash": false,
@@ -18,5 +18,5 @@
   "coord_events": [],
   "bg_events": [],
   "DREAM_MAP_GROUP": 35,
-  "DREAM_MAP_ID": 2
+  "DREAM_MAP_ID": 4
 }

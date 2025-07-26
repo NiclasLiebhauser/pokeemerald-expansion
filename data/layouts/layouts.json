@@ -4560,6 +4560,46 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/NightshadeTown_Horror_HotSpring_1F/border.bin",
       "blockdata_filepath": "data/layouts/NightshadeTown_Horror_HotSpring_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIGHTSHADE_TOWN_MANSION_F2",
+      "name": "NightshadeTown_MansionF2_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/NightshadeTown_MansionF2/border.bin",
+      "blockdata_filepath": "data/layouts/NightshadeTown_MansionF2/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIGHTSHADE_TOWN_MANSION_F3",
+      "name": "NightshadeTown_MansionF3_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/NightshadeTown_MansionF3/border.bin",
+      "blockdata_filepath": "data/layouts/NightshadeTown_MansionF3/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIGHTSHADE_TOWN_HORROR_MANSION_F1",
+      "name": "NightshadeTown_Horror_MansionF1_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/NightshadeTown_Horror_MansionF1/border.bin",
+      "blockdata_filepath": "data/layouts/NightshadeTown_Horror_MansionF1/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIGHTSHADE_TOWN_HORROR_MANSION_F2",
+      "name": "NightshadeTown_Horror_MansionF2_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/NightshadeTown_Horror_MansionF2/border.bin",
+      "blockdata_filepath": "data/layouts/NightshadeTown_Horror_MansionF2/map.bin"
     }
   ]
 }
