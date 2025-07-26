@@ -14,7 +14,22 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 8,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_NIGHTSHADE_TOWN",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 9,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_NIGHTSHADE_TOWN",
+      "dest_warp_id": "4"
+    }
+  ],
   "coord_events": [],
   "bg_events": [],
   "DREAM_MAP_GROUP": 35,
