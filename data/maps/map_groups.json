@@ -633,11 +633,13 @@
   "gMapGroup_IndoorNightshade": [
     "NightshadeTown_Mart",
     "NightshadeTown_PokemonCenter_1F",
-    "NightshadeTown_MansionF1"
+    "NightshadeTown_MansionF1",
+    "NightschadeTown_HotSpring_1F"
   ],
   "gMapGroup_IndoorNightshade_Horror": [
     "NightshadeTown_Horror_Mart",
     "NightshadeTown_Horror_PokemonCenter_1F",
-    "NightshadeTown_Horror_MansionF3"
+    "NightshadeTown_Horror_MansionF3",
+    "NightschadeTown_Horror_HotSpring_1F"
   ]
 }
