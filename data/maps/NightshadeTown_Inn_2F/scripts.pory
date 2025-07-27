@@ -125,8 +125,7 @@ NightshadeTown_Inn_2F_Text_Greg_1:
 	.string "Greetings youngling. I am the ol'\n"
 	.string "Greg. Back in the days...\p"
 	.string "I lost something very valuable.\n"
-	.string "The rest is history...\p"
-	.string "Now I am forced to reside here because\n"
+	.string "Now I am forced to reside here because\l"
 	.string "my company decided to shut down the\l"
 	.string "mining operation.\p"
 	.string "They flooded the area in the outskirts\n"
@@ -160,8 +159,8 @@ NightshadeTown_Inn_2F_Text_Greg_Is_Sad:
 	.string "... ... I see.$"
 
 NightshadeTown_Inn_2F_Text_Give_Nugget:
-	.string "Thank you so much! Now I free from\n"
-	.string "the shackles of poverty!$"
+	.string "Thank you so much! Now I am free\n"
+	.string "from the shackles of poverty!$"
 
 NightshadeTown_Inn_2F_Text_Greg_Ending:
 	.string "I am sure we will see each other\n"
