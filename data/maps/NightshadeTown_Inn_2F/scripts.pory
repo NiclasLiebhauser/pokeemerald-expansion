@@ -1,0 +1,179 @@
+raw `
+NightshadeTown_Inn_2F_MapScripts::
+	.byte 0
+
+NightshadeTown_Inn_2F_Event_Stone::
+	msgbox NightshadeTown_Inn_2F_Text_Stone, MSGBOX_SIGN
+	end
+
+NightshadeTown_Inn_2F_Event_Jenny::
+	lock
+	faceplayer
+	msgbox NightshadeTown_Inn_2F_Text_Jenny, MSGBOX_DEFAULT
+	release
+	end
+
+NightshadeTown_Inn_2F_Event_Greg::
+	goto_if_set FLAG_GREG_INTRODUCED, NightshadeTown_Inn_2F_Event_Greg_Nugget
+	msgbox NightshadeTown_Inn_2F_Text_Greg_0, MSGBOX_DEFAULT
+	closemessage
+	delay 10
+	faceplayer
+	checkitem ITEM_NUGGET
+	goto_if_eq VAR_RESULT, TRUE, NightshadeTown_Inn_2F_Event_Greg_Got_Nugget_Intro
+	msgbox NightshadeTown_Inn_2F_Text_Greg_1, MSGBOX_DEFAULT
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	setflag FLAG_GREG_INTRODUCED
+	end
+
+NightshadeTown_Inn_2F_Event_Greg_Nugget::
+	faceplayer
+	checkitem ITEM_NUGGET
+	goto_if_eq VAR_RESULT, TRUE, NightshadeTown_Inn_2F_Event_Greg_Got_Nugget
+	msgbox NightshadeTown_Inn_2F_Text_Greg_Nugget, MSGBOX_DEFAULT
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	end
+
+NightshadeTown_Inn_2F_Event_Greg_Got_Nugget_Intro::
+	applymovement LOCALID_GREG, Common_Movement_ExclamationMark
+	waitmovement 0
+	setflag FLAG_GREG_INTRODUCED
+	msgbox NightshadeTown_Inn_2F_Text_Greg_Nugget_Got_Nugget_Intro, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, NightshadeTown_Inn_2F_Give_Nugget
+	setflag FLAG_GREG_SAD
+	goto NightshadeTown_Inn_2F_Event_Greg_Is_Sad
+	end
+
+NightshadeTown_Inn_2F_Event_Greg_Got_Nugget::
+	goto_if_set FLAG_GREG_SAD, NightshadeTown_Inn_2F_Event_Greg_Got_Nugget_Sad
+	applymovement LOCALID_GREG, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox NightshadeTown_Inn_2F_Text_Greg_Nugget_Got_Nugget, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, NightshadeTown_Inn_2F_Give_Nugget
+	setflag FLAG_GREG_SAD
+	goto NightshadeTown_Inn_2F_Event_Greg_Is_Sad
+	end
+
+NightshadeTown_Inn_2F_Event_Greg_Got_Nugget_Sad::
+	msgbox NightshadeTown_Inn_2F_Text_Greg_Nugget_Got_Nugget_Sad, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, NightshadeTown_Inn_2F_Give_Nugget
+	goto NightshadeTown_Inn_2F_Event_Greg_Is_Sad
+	end
+
+NightshadeTown_Inn_2F_Event_Greg_Is_Sad::
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	delay 40
+	msgbox NightshadeTown_Inn_2F_Text_Greg_Is_Sad, MSGBOX_DEFAULT
+	closemessage
+	end
+
+NightshadeTown_Inn_2F_Give_Nugget::
+	closemessage
+	applymovement LOCALID_GREG, Common_Movement_Heart_Emote
+	waitmovement 0
+	delay 10
+	msgbox NightshadeTown_Inn_2F_Text_Give_Nugget, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, NightshadeTown_Inn_2F_Player_Goodbye
+	waitmovement 0
+	applymovement LOCALID_GREG, NightshadeTown_Inn_2F_Greg_Goodbye
+	waitmovement 0
+	msgbox NightshadeTown_Inn_2F_Text_Greg_Ending, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_GREG, NightshadeTown_Inn_2F_Greg_Run_Off
+	waitmovement 0
+	setflag FLAG_GREG_GOT_NUGGET
+	removeobject VAR_LAST_TALKED
+	release
+	end
+
+NightshadeTown_Inn_2F_Player_Goodbye:
+	walk_slow_down
+	walk_slow_right
+	walk_slow_right
+	face_left
+	step_end
+
+NightshadeTown_Inn_2F_Greg_Goodbye:
+	walk_slow_down
+	walk_slow_down
+	walk_slow_right
+	step_end
+
+NightshadeTown_Inn_2F_Greg_Run_Off:
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_up
+	step_end
+
+NightshadeTown_Inn_2F_Text_Greg_0:
+	.string "... ... ... ...\n"
+	.string "... I wish.$"
+
+NightshadeTown_Inn_2F_Text_Greg_1:
+	.string "Greetings youngling. I am the ol'\n"
+	.string "Greg. Back in the days...\p"
+	.string "I lost something very valuable.\n"
+	.string "The rest is history...\p"
+	.string "Now I am forced to reside here because\n"
+	.string "my company decided to shut down the\l"
+	.string "mining operation.\p"
+	.string "They flooded the area in the outskirts\n"
+	.string "of Nightshade...\p"
+	.string "Unfortunately they also flooded the\n"
+	.string "grand cavern where I hid the nugget\l"
+	.string "that would finance my retirement.\p"
+
+NightshadeTown_Inn_2F_Text_Greg_Nugget:
+	.string "What a grave mistake...\n"
+	.string "I wish I could have saved everything...$"
+
+NightshadeTown_Inn_2F_Text_Greg_Nugget_Got_Nugget_Intro:
+	.string "I see you have a nugget and it looks\n"
+	.string "just like the one I have lost so long\l"
+	.string "ago...\p"
+	.string "I beg you. Please give it to me and\n"
+	.string "get me out of this inn that I have\l"
+	.string "been stuck in for so long...$"
+
+NightshadeTown_Inn_2F_Text_Greg_Nugget_Got_Nugget:
+	.string "Oh you found my nugget! I am so glad\n"
+	.string "that it exists.\p"
+	.string "Please give it to me... I have been\n"
+	.string "stuck in this inn for an eternity.$"
+
+NightshadeTown_Inn_2F_Text_Greg_Nugget_Got_Nugget_Sad:
+	.string "Have you changed your mind?$"
+
+NightshadeTown_Inn_2F_Text_Greg_Is_Sad:
+	.string "... ... I see.$"
+
+NightshadeTown_Inn_2F_Text_Give_Nugget:
+	.string "Thank you so much! Now I free from\n"
+	.string "the shackles of poverty!$"
+
+NightshadeTown_Inn_2F_Text_Greg_Ending:
+	.string "I am sure we will see each other\n"
+	.string "in the future. Farewell!$"
+
+NightshadeTown_Inn_2F_Text_Stone:
+	.string "It looks like there is a fossil of\n"
+	.string "an ancient egg in the showcase.\p"
+	.string "Even though it is so old, it never\n"
+	.string "lost its aquamarine appearance.$"
+
+NightshadeTown_Inn_2F_Text_Jenny:
+	.string "Somehow I came to this city. This inn\n"
+	.string "is just the right place to stay.$"
+`

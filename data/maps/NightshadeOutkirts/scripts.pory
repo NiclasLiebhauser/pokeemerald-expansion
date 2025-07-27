@@ -25,6 +25,8 @@ NightshadeOutskirts_EventScript_Tim::
 NightshadeOutskirts_Text_Tim_Cut::
 	msgbox NightshadeOutskirts_Text_Tim_Needs_Cut, MSGBOX_DEFAULT
 	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
 	end
 
 NightshadeOutskirts_Text_Got_Cut::
@@ -168,9 +170,8 @@ NightshadeOutskirts_Text_Cut_Before_Intro::
 	.string "creature I recently saw.$"
 
 NightshadeOutskirts_Text_Tim_Uses_Cut::
-	.string "However, let me free this way\n"
-	.string "for you and I will give you some\p"
-	.string "¥500 as a reward as well.$"
+	.string "But first... Let me free this way\n"
+	.string "and give you ¥500 as a reward.$"
 
 NightshadeOutskirts_Text_Tim_Reward::
 	.string "I will give you ¥500 as a reward.$"

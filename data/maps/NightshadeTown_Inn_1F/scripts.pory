@@ -1,0 +1,178 @@
+raw `
+NightshadeTown_Inn_1F_MapScripts::
+	.byte 0
+
+NightshadeTown_Inn_1F_Event_Sign_Left::
+	msgbox NightshadeTown_Inn_1F_Text_Sign_Left, MSGBOX_SIGN
+	end
+
+NightshadeTown_inn_1F_Event_Sign_Right::
+	msgbox NightshadeTown_Inn_1F_Text_Sign_Right, MSGBOX_SIGN
+	end
+
+NightshadeTown_Inn_1F_Event_Melissa::
+	lock
+	faceplayer
+	goto_if_set FLAG_MELISSA_RANTED, NightshadeTown_Inn_1F_Event_Melissa_Init
+	goto_if_set FLAG_GREG_GOT_NUGGET, NightshadeTown_Inn_1F_Event_Melissa_Greg
+	goto_if_eq VAR_TEMP_1, 0, NightshadeTown_Inn_1F_Event_Melissa_1
+NightshadeTown_Inn_1F_Event_Melissa_Ranted::
+	goto_if_eq VAR_TEMP_1, 1, NightshadeTown_Inn_1F_Event_Melissa_2
+	goto_if_eq VAR_TEMP_1, 2, NightshadeTown_Inn_1F_Event_Melissa_3
+	end
+
+NightshadeTown_Inn_1F_Event_Melissa_Init::
+	goto_if_eq VAR_TEMP_1, 1, NightshadeTown_Inn_1F_Event_Melissa_4
+	goto_if_eq VAR_TEMP_1, 2, NightshadeTown_Inn_1F_Event_Melissa_3
+	setvar VAR_TEMP_1, 1
+	goto NightshadeTown_Inn_1F_Event_Melissa_Init
+	end
+
+NightshadeTown_Inn_1F_Event_Melissa_Greg::
+	goto_if_set FLAG_GREG_SAD, NightshadeTown_Inn_1F_Event_Melissa_Greg_Rant
+	msgbox NightshadeTown_Inn_1F_Text_Melissa_Greg_Gift, MSGBOX_DEFAULT
+	giveitem ITEM_LUCKY_EGG
+	setflag FLAG_GREG_GIFT_RECEIVED
+NightshadeTown_Inn_1F_Event_Melissa_Greg_Rant::
+	msgbox NightshadeTown_Inn_1F_Text_Melissa_Greg_Thanks, MSGBOX_DEFAULT
+	setflag FLAG_MELISSA_RANTED
+	release
+	end
+
+NightshadeTown_Inn_1F_Event_Melissa_1::
+	setvar VAR_TEMP_1, 1
+	msgbox NightshadeTown_Inn_1F_Text_Melissa_1, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+NightshadeTown_Inn_1F_Event_Melissa_2::
+	setvar VAR_TEMP_1, 2
+	msgbox NightshadeTown_Inn_1F_Text_Melissa_2, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+NightshadeTown_Inn_1F_Event_Melissa_3::
+	setvar VAR_TEMP_1, 1
+	msgbox NightshadeTown_Inn_1F_Text_Melissa_3, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+NightshadeTown_Inn_1F_Event_Melissa_4::
+	setvar VAR_TEMP_1, 2
+	msgbox NightshadeTown_Inn_1F_Text_Melissa_4, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+NightshadeTown_Inn_1F_Event_Maxwell::
+	lock
+	goto_if_set FLAG_MAXWELL_CONFESSED, NightshadeTown_Inn_1F_Event_Maxwell_Someday
+	msgbox NightshadeTown_Inn_1F_Text_Maxwell, MSGBOX_DEFAULT
+	closemessage
+	delay 10
+	faceplayer
+	applymovement LOCALID_MAXWELL, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox NightshadeTown_Inn_1F_Text_Maxwell_Ask, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, NightshadeTown_Inn_1F_Event_Maxwell_Yes
+	msgbox NightshadeTown_Inn_1F_Text_Maxwell_No, MSGBOX_DEFAULT
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+NightshadeTown_Inn_1F_Event_Maxwell_Yes::
+	msgbox NightshadeTown_Inn_1F_Text_Maxwell_Yes, MSGBOX_DEFAULT
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	setflag FLAG_MAXWELL_CONFESSED
+	release
+	end
+
+
+NightshadeTown_Inn_1F_Event_Maxwell_Someday::
+	msgbox NightshadeTown_Inn_1F_Text_Maxwell_Someday, MSGBOX_DEFAULT
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+NightshadeTown_Inn_1F_Event_Big_Chungus::
+	lock
+	faceplayer
+	msgbox NightshadeTown_Inn_1F_Text_Big_Chungus, MSGBOX_DEFAULT
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+NightshadeTown_Inn_1F_Text_Melissa_Greg_Gift:
+	.string "Hey Greg just passed by and gave me\n"
+	.string "this. I am supposed to give it to you.$"
+
+NightshadeTown_Inn_1F_Text_Melissa_Greg_Thanks:
+	.string "Thank you so much for helping Greg.\n"
+	.string "I always felt so sorry for him.\p"
+	.string "That's why I let him live here for\n"
+	.string "no money at all.\p"
+	.string "Even though I like Greg, it was hard\n"
+	.string "operating the inn with the missing\l"
+	.string "revenue of his room.$"
+
+NightshadeTown_Inn_1F_Text_Melissa_1:
+	.string "Welcome to Nightshade's best Inn!\n"
+	.string "I am Melissa, how can I help you?$"
+
+NightshadeTown_Inn_1F_Text_Melissa_2:
+	.string "Unfortunately we cannot offer you\n"
+	.string "a stay for tonight.\p"
+	.string "Ol' Greg always rents one of\n"
+	.string "our rooms after all...$"
+
+NightshadeTown_Inn_1F_Text_Melissa_3:
+	.string "Would you like to dine here?\n"
+	.string "We offer exquisite meals.\p"
+	.string "At least that's what my patrons\n"
+	.string "always express.$"
+
+NightshadeTown_Inn_1F_Text_Melissa_4:
+	.string "I think we have a room available.$"
+
+NightshadeTown_Inn_1F_Text_Maxwell:
+	.string "Oh Melissa... ... ...$"
+
+NightshadeTown_Inn_1F_Text_Maxwell_Ask:
+	.string "Did you just hear me?$"
+
+NightshadeTown_Inn_1F_Text_Maxwell_No:
+	.string "Good. Better stay out of the way\n"
+	.string "between me and... my happiness.$"
+
+NightshadeTown_Inn_1F_Text_Maxwell_Yes:
+	.string "Well uhm...\n"
+	.string "... ... ...\p"
+	.string "I sort of like her. Maybe someday\n"
+	.string "I will ask her out.$"
+
+NightshadeTown_Inn_1F_Text_Maxwell_Someday:
+	.string "Someday it will happen.$"
+
+NightshadeTown_Inn_1F_Text_Big_Chungus:
+	.string "The food here is just brilliant. If\n"
+	.string "I could, I would eat here every day.$"
+
+NightshadeTown_Inn_1F_Text_Sign_Left:
+	.string "An old poster advertising jewelery\n"
+	.string "from Nightshade's mine.$"
+
+NightshadeTown_Inn_1F_Text_Sign_Right:
+	.string "The painting displays a lushious\n"
+	.string "and vibrant depiction of nature.$"
+`

@@ -666,12 +666,12 @@
 #define FLAG_ACRO_BIKE_FOUND                   0x26B
 #define FLAG_NUGGET_FOUND                      0x26C
 #define FLAG_MACHO_BRACE_FOUND                 0x26D
-#define FLAG_UNUSED_0x26E  0x26E // Unused Flag
-#define FLAG_UNUSED_0x26F  0x26F // Unused Flag
-#define FLAG_UNUSED_0x270  0x270 // Unused Flag
-#define FLAG_UNUSED_0x271  0x271 // Unused Flag
-#define FLAG_UNUSED_0x272  0x272 // Unused Flag
-#define FLAG_UNUSED_0x273  0x273 // Unused Flag
+#define FLAG_MAXWELL_CONFESSED                 0x26E
+#define FLAG_GREG_INTRODUCED                   0x26F
+#define FLAG_GREG_SAD                          0x270
+#define FLAG_GREG_GOT_NUGGET                   0x271
+#define FLAG_GREG_GIFT_RECEIVED                0x272
+#define FLAG_MELISSA_RANTED                    0x273
 #define FLAG_UNUSED_0x274  0x274 // Unused Flag
 #define FLAG_UNUSED_0x275  0x275 // Unused Flag
 #define FLAG_UNUSED_0x276  0x276 // Unused Flag
