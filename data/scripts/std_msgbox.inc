@@ -42,6 +42,12 @@ Std_MsgboxPokenav:
 	waitmessage
 	return
 
+Std_MsgboxNumber:
+	message NULL
+	waitmessage
+	numberbox 24, 4
+	return
+
 EventScript_UnusedReturn:
 	return
 

@@ -1780,6 +1780,24 @@ bool8 ScrCmd_yesnobox(struct ScriptContext *ctx)
     }
 }
 
+bool8 ScrCmd_numberbox(struct ScriptContext *ctx)
+{
+    u8 left = ScriptReadByte(ctx);
+    u8 top = ScriptReadByte(ctx);
+
+    Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
+
+    if (ScriptMenu_Number(left, top) == TRUE)
+    {
+        ScriptContext_Stop();
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
+
 static void DynamicMultichoiceSortList(struct ListMenuItem *items, u32 count)
 {
     u32 i,j;

@@ -1,4 +1,7 @@
+#include "gba/defines.h"
+#include "gba/io_reg.h"
 #include "global.h"
+#include "list_menu.h"
 #include "malloc.h"
 #include "bg.h"
 #include "blit.h"
@@ -23,6 +26,9 @@
 #include "window.h"
 #include "config/overworld.h"
 #include "constants/songs.h"
+
+#define MAX_NUMBER_INPUT_DIGITS 4
+#define NUMBER_MENU_CURSOR_WIDTH 5
 
 struct MenuInfoIcon
 {
@@ -67,10 +73,21 @@ static EWRAM_DATA struct Menu sMenu = {0};
 static EWRAM_DATA u16 sTileNum = 0;
 static EWRAM_DATA u8 sPaletteNum = 0;
 static EWRAM_DATA u8 sYesNoWindowId = 0;
+static EWRAM_DATA u8 sNumberWindowId = 0;
+static EWRAM_DATA u16 sNumberWindowContent = 0;
 static EWRAM_DATA u8 sHofPCTopBarWindowId = 0;
 static EWRAM_DATA bool8 sScheduledBgCopiesToVram[4] = {FALSE};
 static EWRAM_DATA u16 sTempTileDataBufferIdx = 0;
 static EWRAM_DATA void *sTempTileDataBuffer[0x20] = {NULL};
+
+static const u16 sPowersOfTen[] =
+{
+             1,
+            10,
+           100,
+          1000,
+         10000,
+};
 
 const u16 gStandardMenuPalette[] = INCBIN_U16("graphics/interface/std_menu.gbapal");
 
@@ -102,6 +119,17 @@ static const struct WindowTemplate sYesNo_WindowTemplates =
     .tilemapTop = 9,
     .width = 5,
     .height = 4,
+    .paletteNum = 15,
+    .baseBlock = 0x125
+};
+
+static const struct WindowTemplate sNumber_WindowTemplates =
+{
+    .bg = 0,
+    .tilemapLeft = 25,
+    .tilemapTop = 11,
+    .width = 3,
+    .height = 2,
     .paletteNum = 15,
     .baseBlock = 0x125
 };
@@ -582,6 +610,11 @@ void DisplayItemMessageOnField(u8 taskId, const u8 *string, TaskFunc callback)
 void DisplayYesNoMenuDefaultYes(void)
 {
     CreateYesNoMenu(&sYesNo_WindowTemplates, STD_WINDOW_BASE_TILE_NUM, STD_WINDOW_PALETTE_NUM, 0);
+}
+
+void DisplayNumberMenu(void)
+{
+    CreateNumberMenu(&sNumber_WindowTemplates, STD_WINDOW_BASE_TILE_NUM, STD_WINDOW_PALETTE_NUM);
 }
 
 void DisplayYesNoMenuWithDefault(u8 initialCursorPos)
@@ -1068,6 +1101,55 @@ void RedrawMenuCursor(u8 oldPos, u8 newPos)
     AddTextPrinterParameterized(sMenu.windowId, sMenu.fontId, gText_SelectorArrow3, sMenu.left, sMenu.optionHeight * newPos + sMenu.top, 0, 0);
 }
 
+void RedrawNumberMenuCursor()
+{
+    u8 cursorWith = NUMBER_MENU_CURSOR_WIDTH;
+    u8 cursorCleanPos = MAX_NUMBER_INPUT_DIGITS - sMenu.cursorPos - 1;
+    u8 cursorPos = cursorWith * cursorCleanPos + cursorCleanPos;
+    FillWindowPixelRect(sMenu.windowId, PIXEL_FILL(2), cursorPos, 0, NUMBER_MENU_CURSOR_WIDTH, 1);
+}
+
+void RedrawNumberWindowContent()
+{
+    FillWindowPixelBuffer(sMenu.windowId, PIXEL_FILL(1));
+    RedrawNumberMenuCursor();
+    ConvertIntToDecimalStringN(gStringVar1, sNumberWindowContent, STR_CONV_MODE_LEADING_ZEROS, MAX_NUMBER_INPUT_DIGITS);
+    AddTextPrinterParameterized(sMenu.windowId, sMenu.fontId, gStringVar1, sMenu.left, sMenu.top, 0, 0);
+}
+
+void UpdateNumberWindowContent(s8 increaseDecrease)
+{
+    u8 cursorPos;
+    u16 pow10, currentDigit, newDigit;
+
+    cursorPos = abs(sMenu.cursorPos) > MAX_NUMBER_INPUT_DIGITS ? MAX_NUMBER_INPUT_DIGITS : abs(sMenu.cursorPos);
+    pow10 = sPowersOfTen[cursorPos];
+
+    currentDigit = (sNumberWindowContent / pow10) % 10;
+    newDigit = increaseDecrease > 0
+            ? (currentDigit + 1) % 10
+            : (currentDigit == 0 ? 9 : currentDigit - 1);
+
+    sNumberWindowContent -= currentDigit * pow10;
+    sNumberWindowContent += newDigit * pow10;
+    RedrawNumberWindowContent();
+}
+
+u8 NumberMenu_MoveCursor(s8 cursorDelta)
+{
+    int newPos = sMenu.cursorPos + cursorDelta;
+
+    if (newPos < sMenu.minCursorPos)
+        sMenu.cursorPos = sMenu.maxCursorPos;
+    else if (newPos > sMenu.maxCursorPos)
+        sMenu.cursorPos = sMenu.minCursorPos;
+    else
+        sMenu.cursorPos += cursorDelta;
+
+    RedrawNumberWindowContent();
+    return sMenu.cursorPos;
+}
+
 u8 Menu_MoveCursor(s8 cursorDelta)
 {
     u8 oldPos = sMenu.cursorPos;
@@ -1221,6 +1303,48 @@ s8 Menu_ProcessInputNoWrapAround_other(void)
     return MENU_NOTHING_CHOSEN;
 }
 
+s16 Menu_ProcessInputNumber()
+{
+    if (JOY_NEW(A_BUTTON))
+    {
+        if (!sMenu.APressMuted)
+            PlaySE(SE_SELECT);
+        return sNumberWindowContent;
+    }
+    else if (JOY_NEW(B_BUTTON))
+    {
+        return MENU_B_PRESSED;
+    }
+    else if (JOY_NEW(DPAD_LEFT))
+    {
+        PlaySE(SE_SELECT);
+        NumberMenu_MoveCursor(1);
+        return MENU_NOTHING_CHOSEN;
+    }
+    else if (JOY_NEW(DPAD_RIGHT))
+    {
+        PlaySE(SE_SELECT);
+        NumberMenu_MoveCursor(-1);
+        return MENU_NOTHING_CHOSEN;
+    }
+    //Todo: Handle holding button
+    else if (JOY_NEW(DPAD_UP))
+    {
+        PlaySE(SE_SELECT);
+        UpdateNumberWindowContent(1);
+        return MENU_NOTHING_CHOSEN;
+    }
+    //Todo: Handle holding button
+    else if (JOY_NEW(DPAD_DOWN))
+    {
+        PlaySE(SE_SELECT);
+        UpdateNumberWindowContent(-1);
+        return MENU_NOTHING_CHOSEN;
+    }
+
+    return MENU_NOTHING_CHOSEN;
+}
+
 void PrintMenuActionTextsAtPos(u8 windowId, u8 fontId, u8 left, u8 top, u8 lineHeight, u8 itemCount, const struct MenuAction *menuActions)
 {
     u8 i;
@@ -1343,6 +1467,12 @@ void EraseYesNoWindow(void)
 {
     ClearStdWindowAndFrameToTransparent(sYesNoWindowId, TRUE);
     RemoveWindow(sYesNoWindowId);
+}
+
+void EraseNumberWindow(void)
+{
+    ClearStdWindowAndFrameToTransparent(sNumberWindowId, TRUE);
+    RemoveWindow(sNumberWindowId);
 }
 
 static void PrintMenuActionGridText(u8 windowId, u8 fontId, u8 left, u8 top, u8 width, u8 height, u8 columns, u8 rows, const struct MenuAction *menuActions)
@@ -1700,6 +1830,29 @@ u8 InitMenuInUpperLeftCorner(u8 windowId, u8 itemCount, u8 initialCursorPos, boo
     return Menu_MoveCursor(0);
 }
 
+u8 InitMenuInUpperLeftCornerNoCursor(u8 windowId, u8 itemCount, u8 initialCursorPos, bool8 APressMuted)
+{
+    s32 pos;
+
+    sMenu.left = 0;
+    sMenu.top = 1;
+    sMenu.minCursorPos = 0;
+    sMenu.maxCursorPos = itemCount - 1;
+    sMenu.windowId = windowId;
+    sMenu.fontId = FONT_NORMAL;
+    sMenu.optionHeight = 16;
+    sMenu.APressMuted = APressMuted;
+
+    pos = initialCursorPos;
+
+    if (pos < 0 || pos > sMenu.maxCursorPos)
+        sMenu.cursorPos = 0;
+    else
+        sMenu.cursorPos = pos;
+
+    return 0;
+}
+
 // There is no muted version of this function, so the version that plays sound when A is pressed is the "Normal" one.
 u8 InitMenuInUpperLeftCornerNormal(u8 windowId, u8 itemCount, u8 initialCursorPos)
 {
@@ -1766,6 +1919,34 @@ void CreateYesNoMenu(const struct WindowTemplate *window, u16 baseTileNum, u8 pa
 
     AddTextPrinter(&printer, TEXT_SKIP_DRAW, NULL);
     InitMenuInUpperLeftCornerNormal(sYesNoWindowId, 2, initialCursorPos);
+}
+
+void CreateNumberMenu(const struct WindowTemplate *window, u16 baseTileNum, u8 paletteNum)
+{
+    struct TextPrinterTemplate printer;
+
+    sNumberWindowContent = 0;
+    sNumberWindowId = AddWindow(window);
+    DrawStdFrameWithCustomTileAndPalette(sNumberWindowId, TRUE, baseTileNum, paletteNum);
+
+    ConvertIntToDecimalStringN(gStringVar1, sNumberWindowContent, STR_CONV_MODE_LEADING_ZEROS, MAX_NUMBER_INPUT_DIGITS);
+    printer.currentChar = gStringVar1;
+    printer.windowId = sNumberWindowId;
+    printer.fontId = FONT_NORMAL;
+    printer.x = 0;
+    printer.y = 1;
+    printer.currentX = printer.x;
+    printer.currentY = printer.y;
+    printer.fgColor = GetFontAttribute(FONT_NORMAL, FONTATTR_COLOR_FOREGROUND);
+    printer.bgColor = GetFontAttribute(FONT_NORMAL, FONTATTR_COLOR_BACKGROUND);
+    printer.shadowColor = GetFontAttribute(FONT_NORMAL, FONTATTR_COLOR_SHADOW);
+    printer.unk = GetFontAttribute(FONT_NORMAL, FONTATTR_UNKNOWN);
+    printer.letterSpacing = 0;
+    printer.lineSpacing = 0;
+
+    AddTextPrinter(&printer, TEXT_SKIP_DRAW, NULL);
+    InitMenuInUpperLeftCornerNoCursor(sNumberWindowId, MAX_NUMBER_INPUT_DIGITS, 0, FALSE);
+    RedrawNumberWindowContent();
 }
 
 void PrintMenuGridTable(u8 windowId, u8 optionWidth, u8 columns, u8 rows, const struct MenuAction *menuActions)

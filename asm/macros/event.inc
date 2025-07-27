@@ -886,6 +886,14 @@
 	.byte \y
 	.endm
 
+	@ Displays a NUMBER choice box at the specified coordinates, and blocks script execution until the user makes a selection.
+	@ Their selection is stored in VAR_RESULT as a number without leading 0s. Pressing B is not blocked.
+	.macro numberbox x:req, y:req
+	.byte SCR_OP_NUMBERBOX
+	.byte \x
+	.byte \y
+	.endm
+
 	@ Displays a multichoice box from which the user can choose a selection, and blocks script execution until a selection is made.
 	@ Lists of options are predefined (sMultichoiceLists) and the one to be used is specified with multichoiceId.
 	@ If ignoreBPress is set to a non-zero value, then the user will not be allowed to back out of the multichoice with the B button.
@@ -2036,6 +2044,7 @@
 	MSGBOX_AUTOCLOSE = 6
 	MSGBOX_GETPOINTS = 9
 	MSGBOX_POKENAV = 10
+	MSGBOX_NUMBER = 11
 
 	YES = 1
 	NO  = 0

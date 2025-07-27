@@ -23,6 +23,7 @@
 #include "constants/songs.h"
 
 #include "data/script_menu.h"
+#include "window.h"
 
 struct DynamicListMenuEventArgs
 {
@@ -51,6 +52,7 @@ static void FreeListMenuItems(struct ListMenuItem *items, u32 count);
 static void Task_HandleScrollingMultichoiceInput(u8 taskId);
 static void Task_HandleMultichoiceInput(u8 taskId);
 static void Task_HandleYesNoInput(u8 taskId);
+static void Task_HandleNumberInput(u8 taskId);
 static void Task_HandleMultichoiceGridInput(u8 taskId);
 static void DrawMultichoiceMenuDynamic(u8 left, u8 top, u8 argc, struct ListMenuItem *items, bool8 ignoreBPress, u32 initialRow, u8 maxBeforeScroll, u32 callbackSet);
 static void DrawMultichoiceMenu(u8 left, u8 top, u8 multichoiceId, bool8 ignoreBPress, u8 cursorPos);
@@ -595,6 +597,26 @@ bool8 ScriptMenu_YesNo(u8 left, u8 top)
     }
 }
 
+bool8 ScriptMenu_Number(u8 left, u8 top)
+{
+    if (FuncIsActiveTask(Task_HandleNumberInput) == TRUE)
+    {
+        return FALSE;
+    }
+    else
+    {
+        u8 taskId;
+
+        gSpecialVar_Result = 0xFF;
+        DisplayNumberMenu();
+
+        taskId = CreateTask(Task_HandleNumberInput, 0x50);
+        gTasks[taskId].tIgnoreBPress = FALSE;
+
+        return TRUE;
+    }
+}
+
 // Unused
 bool8 IsScriptActive(void)
 {
@@ -626,6 +648,34 @@ static void Task_HandleYesNoInput(u8 taskId)
         break;
     }
 
+    DestroyTask(taskId);
+    ScriptContext_Enable();
+}
+
+static void Task_HandleNumberInput(u8 taskId)
+{
+    if (gTasks[taskId].tRight < 5)
+    {
+        gTasks[taskId].tRight++;
+        return;
+    }
+
+    s16 *data = gTasks[taskId].data;
+    s16 selection = Menu_ProcessInputNumber();
+    
+    switch (selection)
+    {
+    case MENU_NOTHING_CHOSEN:
+        return;
+    case MENU_B_PRESSED:
+        if (tIgnoreBPress)
+            return;
+    default:
+        gSpecialVar_Result = selection;
+        break;
+    }
+
+    EraseNumberWindow();
     DestroyTask(taskId);
     ScriptContext_Enable();
 }

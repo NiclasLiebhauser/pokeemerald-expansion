@@ -108,6 +108,7 @@ gStdScripts::
 	.4byte Std_RegisteredInMatchCall   @ STD_REGISTER_MATCH_CALL
 	.4byte Std_MsgboxGetPoints         @ MSGBOX_GETPOINTS
 	.4byte Std_MsgboxPokenav           @ MSGBOX_POKENAV
+	.4byte Std_MsgboxNumber			   @ MSGBOX_NUMBER
 gStdScripts_End::
 
 	.include "data/maps/PetalburgCity/scripts.inc"
@@ -1157,6 +1158,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/dexnav.inc"
+	.include "data/common_eventscripts.inc"
 
 	.include "data/maps/NightshadeTown/scripts.inc"
 
