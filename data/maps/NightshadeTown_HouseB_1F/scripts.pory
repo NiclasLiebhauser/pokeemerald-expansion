@@ -1,0 +1,71 @@
+raw `
+NightshadeTown_HouseB_1F_MapScripts::
+	.byte 0
+
+NightshadeTown_HouseB_1F_Event_Buff_Guy::
+	faceplayer
+	goto_if_set FLAG_PLAYER_IS_STRONG, NightshadeTown_HouseB_1F_Event_Buff_Guy_Quest_Done
+	msgbox NightshadeTown_HouseB_1F_Text_Buff_Guy, MSGBOX_DEFAULT
+	closemessage
+	special ChoosePartyMon
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, NightshadeTown_HouseB_1F_Event_Buff_Guy_Bye
+	specialvar VAR_0x8005, GetSelectedMonNicknameAndSpecies
+	waitse
+	goto_if_eq VAR_0x8005, SPECIES_MACHAMP, NightshadeTown_HouseB_1F_Event_Buff_Guy_Strong
+	goto NightshadeTown_HouseB_1F_Event_Buff_Guy_Weak
+	end
+
+NightshadeTown_HouseB_1F_Event_Buff_Guy_Bye:
+	msgbox NightshadeTown_HouseB_1F_Text_Buff_Guy_Bye, MSGBOX_DEFAULT
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	end
+
+NightshadeTown_HouseB_1F_Event_Buff_Guy_Weak::
+	msgbox NightshadeTown_HouseB_1F_Text_Buff_Guy_Weak, MSGBOX_DEFAULT
+	goto NightshadeTown_HouseB_1F_Event_Buff_Guy_Bye
+	end
+
+NightshadeTown_HouseB_1F_Event_Buff_Guy_Strong::
+	specialvar VAR_RESULT, SelectedMonHasMachoBrace
+	goto_if_eq VAR_RESULT, TRUE, NightshadeTown_HouseB_1F_Event_Buff_Guy_Very_Strong
+	msgbox NightshadeTown_HouseB_1F_Text_Buff_Guy_Strong, MSGBOX_DEFAULT
+	goto NightshadeTown_HouseB_1F_Event_Buff_Guy_Bye
+	end
+
+NightshadeTown_HouseB_1F_Event_Buff_Guy_Very_Strong::
+	msgbox NightshadeTown_HouseB_1F_Text_Buff_Guy_Very_Strong
+	giveitem ITEM_HM_STRENGTH
+	setflag FLAG_PLAYER_IS_STRONG
+NightshadeTown_HouseB_1F_Event_Buff_Guy_Quest_Done::
+	msgbox NightshadeTown_HouseB_1F_Text_Buff_Guy_Quest_Done, MSGBOX_DEFAULT
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	end
+
+NightshadeTown_HouseB_1F_Text_Buff_Guy:
+	.string "You look weak.\n"
+	.string "Show me something strong!$"
+
+NightshadeTown_HouseB_1F_Text_Buff_Guy_Bye:
+	.string "Come again when you can show\n"
+	.string "some more strength!$"
+
+NightshadeTown_HouseB_1F_Text_Buff_Guy_Weak:
+	.string "Pah! I do not sense even an ounce\n"
+	.string "of strength from {STR_VAR_1}!$"
+
+NightshadeTown_HouseB_1F_Text_Buff_Guy_Strong:
+	.string "Formidable, but not enough!\n"
+	.string "Take care of your {STR_VAR_1}.$"
+
+NightshadeTown_HouseB_1F_Text_Buff_Guy_Very_Strong:
+	.string "Yes! Your {STR_VAR_1} is strong!\n"
+	.string "Now you are strong as well!$"
+
+NightshadeTown_HouseB_1F_Text_Buff_Guy_Quest_Done:
+	.string "Train hard my friend!$"
+`

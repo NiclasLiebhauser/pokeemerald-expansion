@@ -1409,6 +1409,11 @@ bool8 LeadMonHasEffortRibbon(void)
     return GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_EFFORT_RIBBON, NULL);
 }
 
+bool8 SelectedMonHasMachoBrace(void)
+{
+    return GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_HELD_ITEM) == ITEM_MACHO_BRACE;
+}
+
 void GiveLeadMonEffortRibbon(void)
 {
     bool8 ribbonSet;
