@@ -88,5 +88,7 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NightmareCavernF2_Event_Sign_Text"
     }
-  ]
+  ],
+  "DREAM_MAP_GROUP": "255",
+  "DREAM_MAP_ID": "255"
 }
