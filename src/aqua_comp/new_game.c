@@ -41,4 +41,6 @@ void aqua_comp_init_new_game(void)
 
 	FlagSet(FLAG_SYS_POKEMON_GET);
 	FlagSet(FLAG_SYS_B_DASH);
+	for (u32 i = 0; i < ARRAY_COUNT(gBadgeFlags); i++)
+		FlagSet(gBadgeFlags[i]);
 }
