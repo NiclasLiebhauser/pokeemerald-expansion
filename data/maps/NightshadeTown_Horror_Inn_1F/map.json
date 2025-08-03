@@ -17,17 +17,25 @@
   "warp_events": [
     {
       "x": 5,
-      "y": 7,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_NIGHTSHADE_TOWN_HORROR",
       "dest_warp_id": "7"
     },
     {
       "x": 6,
-      "y": 7,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_NIGHTSHADE_TOWN_HORROR",
       "dest_warp_id": "7"
+    },
+    {
+      "warp_id": "NIGHTSHADE_TOWN_HORROR_INN_1F_TO_2F",
+      "x": 14,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_NIGHTSHADE_TOWN_HORROR_INN_2F",
+      "dest_warp_id": "NIGHTSHADE_TOWN_HORROR_INN_2F_TO_1F"
     }
   ],
   "coord_events": [],
