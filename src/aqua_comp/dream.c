@@ -1,10 +1,13 @@
 #include "aqua_comp/hooks.h"
 #include "constants/field_weather.h"
 #include "constants/maps.h"
+#include "constants/metatile_behaviors.h"
 #include "event_data.h"
 #include "event_object_movement.h"
 #include "field_screen_effect.h"
 #include "field_weather.h"
+#include "fieldmap.h"
+#include "global.fieldmap.h"
 #include "global.h"
 #include "main.h"
 #include "overworld.h"
@@ -68,6 +71,7 @@ static bool8 aqua_comp_valid_dream_loc(const struct MapLayout *map_layout,
 {
 	u16 block;
 	u8 collision;
+	u16 mb;
 	u16 i;
 
 	if (x < 0 || x >= map_layout->width || y < 0 || y >= map_layout->height)
@@ -81,6 +85,20 @@ static bool8 aqua_comp_valid_dream_loc(const struct MapLayout *map_layout,
 	collision = (block & MAPGRID_COLLISION_MASK) >> MAPGRID_COLLISION_SHIFT;
 	if (collision != COLLISION_NONE)
 		return FALSE;
+
+	/* check for metatile behavior */
+	mb = GetMetatileAttributesById(block & MAPGRID_METATILE_ID_MASK);
+	mb &= METATILE_ATTR_BEHAVIOR_MASK;
+	switch (mb) {
+		case MB_HORIZONTAL_RAIL:
+		case MB_ISOLATED_VERTICAL_RAIL:
+		case MB_VERTICAL_RAIL:
+		case MB_ISOLATED_HORIZONTAL_RAIL:
+			/* we do not allow rails */
+			return FALSE;
+		default:
+			break;
+	}
 
 	/* check for any object event collissions */
 	for (i = 0; i < map_events->objectEventCount; i++) {
