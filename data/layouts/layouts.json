@@ -4615,7 +4615,7 @@
       "id": "LAYOUT_NIGHTSHADE_TOWN_INN_2F",
       "name": "NightshadeTown_Inn_2F_Layout",
       "width": 12,
-      "height": 9,
+      "height": 10,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/NightshadeTown_Inn_2F/border.bin",

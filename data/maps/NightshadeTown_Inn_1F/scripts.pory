@@ -36,6 +36,8 @@ NightshadeTown_Inn_1F_Event_Melissa_Greg::
 NightshadeTown_Inn_1F_Event_Melissa_Greg_Rant::
 	msgbox NightshadeTown_Inn_1F_Text_Melissa_Greg_Thanks, MSGBOX_DEFAULT
 	setflag FLAG_MELISSA_RANTED
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
 	release
 	end
 
@@ -43,6 +45,8 @@ NightshadeTown_Inn_1F_Event_Melissa_1::
 	setvar VAR_TEMP_1, 1
 	msgbox NightshadeTown_Inn_1F_Text_Melissa_1, MSGBOX_DEFAULT
 	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
 	release
 	end
 
@@ -50,6 +54,8 @@ NightshadeTown_Inn_1F_Event_Melissa_2::
 	setvar VAR_TEMP_1, 2
 	msgbox NightshadeTown_Inn_1F_Text_Melissa_2, MSGBOX_DEFAULT
 	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
 	release
 	end
 
@@ -57,6 +63,8 @@ NightshadeTown_Inn_1F_Event_Melissa_3::
 	setvar VAR_TEMP_1, 1
 	msgbox NightshadeTown_Inn_1F_Text_Melissa_3, MSGBOX_DEFAULT
 	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
 	release
 	end
 
@@ -64,6 +72,8 @@ NightshadeTown_Inn_1F_Event_Melissa_4::
 	setvar VAR_TEMP_1, 2
 	msgbox NightshadeTown_Inn_1F_Text_Melissa_4, MSGBOX_DEFAULT
 	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	waitmovement 0
 	release
 	end
 

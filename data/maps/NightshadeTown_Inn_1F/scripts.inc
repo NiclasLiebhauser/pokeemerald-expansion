@@ -75,127 +75,127 @@ NightshadeTown_Inn_1F_Event_Melissa_Greg_Rant::
 # 38 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 	setflag FLAG_MELISSA_RANTED
 # 39 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	release
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 # 40 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	end
+	waitmovement 0
 # 41 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+	release
 # 42 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Event_Melissa_1::
+	end
 # 43 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	setvar VAR_TEMP_1, 1
+
 # 44 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	msgbox NightshadeTown_Inn_1F_Text_Melissa_1, MSGBOX_DEFAULT
+NightshadeTown_Inn_1F_Event_Melissa_1::
 # 45 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	closemessage
-# 46 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	release
-# 47 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	end
-# 48 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
-# 49 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Event_Melissa_2::
-# 50 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	setvar VAR_TEMP_1, 2
-# 51 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	msgbox NightshadeTown_Inn_1F_Text_Melissa_2, MSGBOX_DEFAULT
-# 52 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	closemessage
-# 53 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	release
-# 54 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	end
-# 55 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
-# 56 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Event_Melissa_3::
-# 57 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 	setvar VAR_TEMP_1, 1
-# 58 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	msgbox NightshadeTown_Inn_1F_Text_Melissa_3, MSGBOX_DEFAULT
-# 59 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+# 46 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	msgbox NightshadeTown_Inn_1F_Text_Melissa_1, MSGBOX_DEFAULT
+# 47 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 	closemessage
-# 60 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+# 48 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+# 49 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	waitmovement 0
+# 50 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 	release
-# 61 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+# 51 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 	end
-# 62 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+# 52 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 
-# 63 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Event_Melissa_4::
-# 64 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+# 53 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+NightshadeTown_Inn_1F_Event_Melissa_2::
+# 54 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 	setvar VAR_TEMP_1, 2
-# 65 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	msgbox NightshadeTown_Inn_1F_Text_Melissa_4, MSGBOX_DEFAULT
-# 66 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+# 55 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	msgbox NightshadeTown_Inn_1F_Text_Melissa_2, MSGBOX_DEFAULT
+# 56 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 	closemessage
-# 67 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+# 57 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+# 58 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	waitmovement 0
+# 59 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 	release
-# 68 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+# 60 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 	end
-# 69 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+# 61 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 
+# 62 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+NightshadeTown_Inn_1F_Event_Melissa_3::
+# 63 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	setvar VAR_TEMP_1, 1
+# 64 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	msgbox NightshadeTown_Inn_1F_Text_Melissa_3, MSGBOX_DEFAULT
+# 65 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	closemessage
+# 66 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+# 67 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	waitmovement 0
+# 68 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	release
+# 69 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	end
 # 70 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Event_Maxwell::
+
 # 71 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	lock
+NightshadeTown_Inn_1F_Event_Melissa_4::
 # 72 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	goto_if_set FLAG_MAXWELL_CONFESSED, NightshadeTown_Inn_1F_Event_Maxwell_Someday
+	setvar VAR_TEMP_1, 2
 # 73 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	msgbox NightshadeTown_Inn_1F_Text_Maxwell, MSGBOX_DEFAULT
+	msgbox NightshadeTown_Inn_1F_Text_Melissa_4, MSGBOX_DEFAULT
 # 74 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 	closemessage
 # 75 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	delay 10
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 # 76 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	faceplayer
+	waitmovement 0
 # 77 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	applymovement LOCALID_MAXWELL, Common_Movement_ExclamationMark
+	release
 # 78 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	waitmovement 0
+	end
 # 79 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	msgbox NightshadeTown_Inn_1F_Text_Maxwell_Ask, MSGBOX_YESNO
+
 # 80 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	goto_if_eq VAR_RESULT, YES, NightshadeTown_Inn_1F_Event_Maxwell_Yes
+NightshadeTown_Inn_1F_Event_Maxwell::
 # 81 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	msgbox NightshadeTown_Inn_1F_Text_Maxwell_No, MSGBOX_DEFAULT
+	lock
 # 82 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	closemessage
+	goto_if_set FLAG_MAXWELL_CONFESSED, NightshadeTown_Inn_1F_Event_Maxwell_Someday
 # 83 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
+	msgbox NightshadeTown_Inn_1F_Text_Maxwell, MSGBOX_DEFAULT
 # 84 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	waitmovement 0
-# 85 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	release
-# 86 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	end
-# 87 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
-# 88 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Event_Maxwell_Yes::
-# 89 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	msgbox NightshadeTown_Inn_1F_Text_Maxwell_Yes, MSGBOX_DEFAULT
-# 90 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 	closemessage
-# 91 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
-# 92 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+# 85 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	delay 10
+# 86 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	faceplayer
+# 87 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	applymovement LOCALID_MAXWELL, Common_Movement_ExclamationMark
+# 88 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 	waitmovement 0
+# 89 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	msgbox NightshadeTown_Inn_1F_Text_Maxwell_Ask, MSGBOX_YESNO
+# 90 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	goto_if_eq VAR_RESULT, YES, NightshadeTown_Inn_1F_Event_Maxwell_Yes
+# 91 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	msgbox NightshadeTown_Inn_1F_Text_Maxwell_No, MSGBOX_DEFAULT
+# 92 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	closemessage
 # 93 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	setflag FLAG_MAXWELL_CONFESSED
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 # 94 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	release
+	waitmovement 0
 # 95 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	end
+	release
 # 96 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+	end
 # 97 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 
 # 98 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Event_Maxwell_Someday::
+NightshadeTown_Inn_1F_Event_Maxwell_Yes::
 # 99 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	msgbox NightshadeTown_Inn_1F_Text_Maxwell_Someday, MSGBOX_DEFAULT
+	msgbox NightshadeTown_Inn_1F_Text_Maxwell_Yes, MSGBOX_DEFAULT
 # 100 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 	closemessage
 # 101 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
@@ -203,19 +203,19 @@ NightshadeTown_Inn_1F_Event_Maxwell_Someday::
 # 102 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 	waitmovement 0
 # 103 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	release
+	setflag FLAG_MAXWELL_CONFESSED
 # 104 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	end
+	release
 # 105 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+	end
 # 106 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Event_Big_Chungus::
+
 # 107 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	lock
+
 # 108 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	faceplayer
+NightshadeTown_Inn_1F_Event_Maxwell_Someday::
 # 109 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	msgbox NightshadeTown_Inn_1F_Text_Big_Chungus, MSGBOX_DEFAULT
+	msgbox NightshadeTown_Inn_1F_Text_Maxwell_Someday, MSGBOX_DEFAULT
 # 110 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 	closemessage
 # 111 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
@@ -229,132 +229,152 @@ NightshadeTown_Inn_1F_Event_Big_Chungus::
 # 115 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 
 # 116 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Melissa_Greg_Gift:
+NightshadeTown_Inn_1F_Event_Big_Chungus::
 # 117 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "Hey Greg just passed by and gave me\n"
+	lock
 # 118 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "this. I am supposed to give it to you.$"
+	faceplayer
 # 119 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+	msgbox NightshadeTown_Inn_1F_Text_Big_Chungus, MSGBOX_DEFAULT
 # 120 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Melissa_Greg_Thanks:
+	closemessage
 # 121 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "Thank you so much for helping Greg.\n"
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 # 122 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "I always felt so sorry for him.\p"
+	waitmovement 0
 # 123 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "That's why I let him live here for\n"
+	release
 # 124 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "no money at all.\p"
+	end
 # 125 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "Even though I like Greg, it was hard\n"
+
 # 126 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "operating the inn with the missing\l"
+NightshadeTown_Inn_1F_Text_Melissa_Greg_Gift:
 # 127 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "revenue of his room.$"
+	.string "Hey Greg just passed by and gave me\n"
 # 128 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+	.string "this. I am supposed to give it to you.$"
 # 129 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Melissa_1:
+
 # 130 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "Welcome to Nightshade's best Inn!\n"
+NightshadeTown_Inn_1F_Text_Melissa_Greg_Thanks:
 # 131 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "I am Melissa, how can I help you?$"
+	.string "Thank you so much for helping Greg.\n"
 # 132 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+	.string "I always felt so sorry for him.\p"
 # 133 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Melissa_2:
+	.string "That's why I let him live here for\n"
 # 134 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "Unfortunately we cannot offer you\n"
+	.string "no money at all.\p"
 # 135 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "a stay for tonight.\p"
+	.string "Even though I like Greg, it was hard\n"
 # 136 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "Ol' Greg always rents one of\n"
+	.string "operating the inn with the missing\l"
 # 137 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "our rooms after all...\p"
+	.string "revenue of his room.$"
 # 138 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "I guess you could sleep on the Couch\n"
+
 # 139 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "over there.$"
+NightshadeTown_Inn_1F_Text_Melissa_1:
 # 140 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+	.string "Welcome to Nightshade's best Inn!\n"
 # 141 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Melissa_3:
+	.string "I am Melissa, how can I help you?$"
 # 142 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "Would you like to dine here?\n"
+
 # 143 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "We offer exquisite meals.\p"
+NightshadeTown_Inn_1F_Text_Melissa_2:
 # 144 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "At least that's what my patrons\n"
+	.string "Unfortunately we cannot offer you\n"
 # 145 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "always express.$"
+	.string "a stay for tonight.\p"
 # 146 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+	.string "Ol' Greg always rents one of\n"
 # 147 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Melissa_4:
+	.string "our rooms after all...\p"
 # 148 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "I think we have a room available.\n"
+	.string "I guess you could sleep on the Couch\n"
 # 149 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "You helped out. I think you can stay\l"
+	.string "over there.$"
 # 150 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "in the room for free.$"
+
 # 151 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+NightshadeTown_Inn_1F_Text_Melissa_3:
 # 152 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Maxwell:
+	.string "Would you like to dine here?\n"
 # 153 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "Oh Melissa... ... ...$"
+	.string "We offer exquisite meals.\p"
 # 154 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+	.string "At least that's what my patrons\n"
 # 155 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Maxwell_Ask:
+	.string "always express.$"
 # 156 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "Did you just hear me?$"
+
 # 157 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+NightshadeTown_Inn_1F_Text_Melissa_4:
 # 158 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Maxwell_No:
+	.string "I think we have a room available.\n"
 # 159 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "Good. Better stay out of it.$"
+	.string "You helped out. I think you can stay\l"
 # 160 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+	.string "in the room for free.$"
 # 161 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Maxwell_Yes:
+
 # 162 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "Well uhm...\n"
+NightshadeTown_Inn_1F_Text_Maxwell:
 # 163 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "... ... ...\p"
+	.string "Oh Melissa... ... ...$"
 # 164 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "I sort of like her. Maybe someday\n"
+
 # 165 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "I'll ask her out.$"
+NightshadeTown_Inn_1F_Text_Maxwell_Ask:
 # 166 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+	.string "Did you just hear me?$"
 # 167 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Maxwell_Someday:
+
 # 168 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "Someday it will happen.$"
+NightshadeTown_Inn_1F_Text_Maxwell_No:
 # 169 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+	.string "Good. Better stay out of it.$"
 # 170 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Big_Chungus:
+
 # 171 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "The food here is just brilliant. If\n"
+NightshadeTown_Inn_1F_Text_Maxwell_Yes:
 # 172 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "I could, I would eat here every day.$"
+	.string "Well uhm...\n"
 # 173 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+	.string "... ... ...\p"
 # 174 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Sign_Left:
+	.string "I sort of like her. Maybe someday\n"
 # 175 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "An old poster advertising jewelery\n"
+	.string "I'll ask her out.$"
 # 176 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "from Nightshade's mine.$"
-# 177 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 
+# 177 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+NightshadeTown_Inn_1F_Text_Maxwell_Someday:
 # 178 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Sign_Right:
+	.string "Someday it will happen.$"
 # 179 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "The painting displays a lushious\n"
+
 # 180 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+NightshadeTown_Inn_1F_Text_Big_Chungus:
+# 181 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	.string "The food here is just brilliant. If\n"
+# 182 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	.string "I could, I would eat here every day.$"
+# 183 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+
+# 184 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+NightshadeTown_Inn_1F_Text_Sign_Left:
+# 185 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	.string "An old poster advertising jewelery\n"
+# 186 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	.string "from Nightshade's mine.$"
+# 187 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+
+# 188 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+NightshadeTown_Inn_1F_Text_Sign_Right:
+# 189 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	.string "The painting displays a lushious\n"
+# 190 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 	.string "and vibrant depiction of nature.$"

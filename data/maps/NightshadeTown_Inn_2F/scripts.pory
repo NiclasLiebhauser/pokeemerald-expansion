@@ -110,6 +110,7 @@ NightshadeTown_Inn_2F_Greg_Run_Off:
 	walk_slow_down
 	walk_slow_down
 	walk_slow_down
+	walk_slow_down
 	walk_slow_right
 	walk_slow_right
 	walk_slow_right

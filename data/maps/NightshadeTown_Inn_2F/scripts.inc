@@ -223,7 +223,7 @@ NightshadeTown_Inn_2F_Greg_Run_Off:
 # 112 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
 	walk_slow_down
 # 113 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	walk_slow_right
+	walk_slow_down
 # 114 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
 	walk_slow_right
 # 115 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
@@ -231,124 +231,126 @@ NightshadeTown_Inn_2F_Greg_Run_Off:
 # 116 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
 	walk_slow_right
 # 117 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	walk_slow_up
+	walk_slow_right
 # 118 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	step_end
+	walk_slow_up
 # 119 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-
+	step_end
 # 120 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-NightshadeTown_Inn_2F_Text_Greg_0:
+
 # 121 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "... ... ... ...\n"
+NightshadeTown_Inn_2F_Text_Greg_0:
 # 122 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "... I wish.$"
+	.string "... ... ... ...\n"
 # 123 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-
+	.string "... I wish.$"
 # 124 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-NightshadeTown_Inn_2F_Text_Greg_1:
+
 # 125 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "Greetings youngling. I am the ol'\n"
+NightshadeTown_Inn_2F_Text_Greg_1:
 # 126 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "Greg. Back in the days...\p"
+	.string "Greetings youngling. I am the ol'\n"
 # 127 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "I lost something very valuable.\n"
+	.string "Greg. Back in the days...\p"
 # 128 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "Now I am forced to reside here because\l"
+	.string "I lost something very valuable.\n"
 # 129 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "my company decided to shut down the\l"
+	.string "Now I am forced to reside here because\l"
 # 130 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "mining operation.\p"
+	.string "my company decided to shut down the\l"
 # 131 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "They flooded the area in the outskirts\n"
+	.string "mining operation.\p"
 # 132 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "of Nightshade...\p"
+	.string "They flooded the area in the outskirts\n"
 # 133 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "Unfortunately they also flooded the\n"
+	.string "of Nightshade...\p"
 # 134 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "grand cavern where I hid the nugget\l"
+	.string "Unfortunately they also flooded the\n"
 # 135 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "that would finance my retirement.\p"
+	.string "grand cavern where I hid the nugget\l"
 # 136 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-
+	.string "that would finance my retirement.\p"
 # 137 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-NightshadeTown_Inn_2F_Text_Greg_Nugget:
+
 # 138 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "What a grave mistake...\n"
+NightshadeTown_Inn_2F_Text_Greg_Nugget:
 # 139 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "I wish I could have saved everything...$"
+	.string "What a grave mistake...\n"
 # 140 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-
+	.string "I wish I could have saved everything...$"
 # 141 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-NightshadeTown_Inn_2F_Text_Greg_Nugget_Got_Nugget_Intro:
+
 # 142 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "I see you have a nugget and it looks\n"
+NightshadeTown_Inn_2F_Text_Greg_Nugget_Got_Nugget_Intro:
 # 143 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "just like the one I have lost so long\l"
+	.string "I see you have a nugget and it looks\n"
 # 144 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "ago...\p"
+	.string "just like the one I have lost so long\l"
 # 145 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "I beg you. Please give it to me and\n"
+	.string "ago...\p"
 # 146 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "get me out of this inn that I have\l"
+	.string "I beg you. Please give it to me and\n"
 # 147 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "been stuck in for so long...$"
+	.string "get me out of this inn that I have\l"
 # 148 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-
+	.string "been stuck in for so long...$"
 # 149 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-NightshadeTown_Inn_2F_Text_Greg_Nugget_Got_Nugget:
+
 # 150 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "Oh you found my nugget! I am so glad\n"
+NightshadeTown_Inn_2F_Text_Greg_Nugget_Got_Nugget:
 # 151 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "that it exists.\p"
+	.string "Oh you found my nugget! I am so glad\n"
 # 152 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "Please give it to me... I have been\n"
+	.string "that it exists.\p"
 # 153 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "stuck in this inn for an eternity.$"
+	.string "Please give it to me... I have been\n"
 # 154 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-
+	.string "stuck in this inn for an eternity.$"
 # 155 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-NightshadeTown_Inn_2F_Text_Greg_Nugget_Got_Nugget_Sad:
+
 # 156 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "Have you changed your mind?$"
+NightshadeTown_Inn_2F_Text_Greg_Nugget_Got_Nugget_Sad:
 # 157 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-
+	.string "Have you changed your mind?$"
 # 158 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-NightshadeTown_Inn_2F_Text_Greg_Is_Sad:
+
 # 159 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "... ... I see.$"
+NightshadeTown_Inn_2F_Text_Greg_Is_Sad:
 # 160 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-
+	.string "... ... I see.$"
 # 161 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-NightshadeTown_Inn_2F_Text_Give_Nugget:
+
 # 162 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "Thank you so much! Now I am free\n"
+NightshadeTown_Inn_2F_Text_Give_Nugget:
 # 163 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "from the shackles of poverty!$"
+	.string "Thank you so much! Now I am free\n"
 # 164 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-
+	.string "from the shackles of poverty!$"
 # 165 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-NightshadeTown_Inn_2F_Text_Greg_Ending:
+
 # 166 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "I am sure we will see each other\n"
+NightshadeTown_Inn_2F_Text_Greg_Ending:
 # 167 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "in the future. Farewell!$"
+	.string "I am sure we will see each other\n"
 # 168 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-
+	.string "in the future. Farewell!$"
 # 169 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-NightshadeTown_Inn_2F_Text_Stone:
-# 170 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "It looks like there is a fossil of\n"
-# 171 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "an ancient egg in the showcase.\p"
-# 172 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "Even though it is so old, it never\n"
-# 173 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "lost its aquamarine appearance.$"
-# 174 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
 
+# 170 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
+NightshadeTown_Inn_2F_Text_Stone:
+# 171 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
+	.string "It looks like there is a fossil of\n"
+# 172 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
+	.string "an ancient egg in the showcase.\p"
+# 173 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
+	.string "Even though it is so old, it never\n"
+# 174 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
+	.string "lost its aquamarine appearance.$"
 # 175 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-NightshadeTown_Inn_2F_Text_Jenny:
+
 # 176 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
-	.string "Somehow I came to this city. This inn\n"
+NightshadeTown_Inn_2F_Text_Jenny:
 # 177 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
+	.string "Somehow I came to this city. This inn\n"
+# 178 "data/maps/NightshadeTown_Inn_2F/scripts.pory"
 	.string "is just the right place to stay.$"
