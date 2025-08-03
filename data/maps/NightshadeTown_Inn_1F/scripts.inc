@@ -271,84 +271,90 @@ NightshadeTown_Inn_1F_Text_Melissa_2:
 # 136 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 	.string "Ol' Greg always rents one of\n"
 # 137 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "our rooms after all...$"
+	.string "our rooms after all...\p"
 # 138 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+	.string "I guess you could sleep on the Couch\n"
 # 139 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Melissa_3:
+	.string "over there.$"
 # 140 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "Would you like to dine here?\n"
+
 # 141 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "We offer exquisite meals.\p"
+NightshadeTown_Inn_1F_Text_Melissa_3:
 # 142 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "At least that's what my patrons\n"
+	.string "Would you like to dine here?\n"
 # 143 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "always express.$"
+	.string "We offer exquisite meals.\p"
 # 144 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+	.string "At least that's what my patrons\n"
 # 145 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Melissa_4:
+	.string "always express.$"
 # 146 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "I think we have a room available.$"
+
 # 147 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+NightshadeTown_Inn_1F_Text_Melissa_4:
 # 148 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Maxwell:
+	.string "I think we have a room available.\n"
 # 149 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "Oh Melissa... ... ...$"
+	.string "You helped out. I think you can stay\l"
 # 150 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+	.string "in the room for free.$"
 # 151 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Maxwell_Ask:
-# 152 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "Did you just hear me?$"
-# 153 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 
+# 152 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+NightshadeTown_Inn_1F_Text_Maxwell:
+# 153 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	.string "Oh Melissa... ... ...$"
 # 154 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Maxwell_No:
+
 # 155 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "Good. Better stay out of the way\n"
+NightshadeTown_Inn_1F_Text_Maxwell_Ask:
 # 156 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "between me and... my happiness.$"
+	.string "Did you just hear me?$"
 # 157 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 
 # 158 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Maxwell_Yes:
+NightshadeTown_Inn_1F_Text_Maxwell_No:
 # 159 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "Well uhm...\n"
+	.string "Good. Better stay out of it.$"
 # 160 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "... ... ...\p"
-# 161 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "I sort of like her. Maybe someday\n"
-# 162 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "I will ask her out.$"
-# 163 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 
+# 161 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+NightshadeTown_Inn_1F_Text_Maxwell_Yes:
+# 162 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	.string "Well uhm...\n"
+# 163 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	.string "... ... ...\p"
 # 164 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Maxwell_Someday:
+	.string "I sort of like her. Maybe someday\n"
 # 165 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "Someday it will happen.$"
+	.string "I'll ask her out.$"
 # 166 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 
 # 167 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Big_Chungus:
+NightshadeTown_Inn_1F_Text_Maxwell_Someday:
 # 168 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "The food here is just brilliant. If\n"
+	.string "Someday it will happen.$"
 # 169 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "I could, I would eat here every day.$"
+
 # 170 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-
+NightshadeTown_Inn_1F_Text_Big_Chungus:
 # 171 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Sign_Left:
+	.string "The food here is just brilliant. If\n"
 # 172 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "An old poster advertising jewelery\n"
+	.string "I could, I would eat here every day.$"
 # 173 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "from Nightshade's mine.$"
-# 174 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 
+# 174 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+NightshadeTown_Inn_1F_Text_Sign_Left:
 # 175 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-NightshadeTown_Inn_1F_Text_Sign_Right:
+	.string "An old poster advertising jewelery\n"
 # 176 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
-	.string "The painting displays a lushious\n"
+	.string "from Nightshade's mine.$"
 # 177 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+
+# 178 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+NightshadeTown_Inn_1F_Text_Sign_Right:
+# 179 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
+	.string "The painting displays a lushious\n"
+# 180 "data/maps/NightshadeTown_Inn_1F/scripts.pory"
 	.string "and vibrant depiction of nature.$"
