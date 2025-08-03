@@ -2,6 +2,7 @@
 #include "constants/flags.h"
 #include "constants/map_groups.h"
 #include "constants/moves.h"
+#include "constants/species.h"
 #include "event_data.h"
 #include "global.h"
 #include "global.h"
@@ -22,12 +23,32 @@ static void warp_to_game_start_location(void)
 
 static void aqua_comp_prepare_startup_team(void) {
 	struct Pokemon starter;
+	u8 machamp_nickname[POKEMON_NAME_LENGTH + 1] = _("Arnold");
 
-	CreateMon(&starter, 10, 10, 10, 10, 10, 10, 10);
-	SetMonMoveSlot(&starter, MOVE_DREAM, 0);
-	SetMonMoveSlot(&starter, MOVE_CUT, 1);
-	SetMonMoveSlot(&starter, MOVE_STRENGTH, 2);
-	SetMonMoveSlot(&starter, MOVE_SURF, 3);
+	CreateMon(&starter, SPECIES_SNORLAX, 53, USE_RANDOM_IVS, FALSE, 0,
+		  OT_ID_PLAYER_ID, 0);
+	SetMonMoveSlot(&starter, MOVE_DREAM, 3);
+	GiveMonToPlayer(&starter);
+
+	CreateMon(&starter, SPECIES_BELLOSSOM, 44, USE_RANDOM_IVS, FALSE, 0,
+		  OT_ID_PLAYER_ID, 0);
+	SetMonMoveSlot(&starter, MOVE_PETAL_DANCE, 0);
+	SetMonMoveSlot(&starter, MOVE_ACID, 1);
+	SetMonMoveSlot(&starter, MOVE_SLEEP_POWDER, 2);
+	SetMonMoveSlot(&starter, MOVE_PROTECT, 3);
+	GiveMonToPlayer(&starter);
+
+	CreateMon(&starter, SPECIES_MACHAMP, 46, USE_RANDOM_IVS, FALSE, 0,
+		  OT_ID_PLAYER_ID, 0);
+	SetMonData(&starter, MON_DATA_NICKNAME, machamp_nickname);
+	SetMonMoveSlot(&starter, MOVE_THIEF, 0);
+	SetMonMoveSlot(&starter, MOVE_VITAL_THROW, 1);
+	SetMonMoveSlot(&starter, MOVE_BRICK_BREAK, 2);
+	SetMonMoveSlot(&starter, MOVE_ROCK_TOMB, 3);
+	GiveMonToPlayer(&starter);
+
+	CreateMon(&starter, SPECIES_ZIGZAGOON, 37, USE_RANDOM_IVS, FALSE, 0,
+		  OT_ID_PLAYER_ID, 0);
 	GiveMonToPlayer(&starter);
 }
 
